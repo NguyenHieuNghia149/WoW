@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TheGioiViecLam</RootNamespace>
+    <AssemblyName>TheGioiViecLam</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\Dao.cs" />
+    <Compile Include="FPerInf_Worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPerInf_Worker.Designer.cs">
+      <DependentUpon>FPerInf_Worker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPlan_Worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPlan_Worker.Designer.cs">
+      <DependentUpon>FPlan_Worker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPost.Designer.cs">
+      <DependentUpon>FPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateSupportCenter.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CandidateSupportCenter.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FAskToReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAskToReview.Designer.cs">
+      <DependentUpon>FAskToReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCandidateSupportCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCandidateSupportCenter.Designer.cs">
+      <DependentUpon>FCandidateSupportCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DBConnection.cs" />
+    <Compile Include="FConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConfirm.Designer.cs">
+      <DependentUpon>FConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDisplay_Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDisplay_Customers.Designer.cs">
+      <DependentUpon>FDisplay_Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDisplay_Workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDisplay_Workers.Designer.cs">
+      <DependentUpon>FDisplay_Workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFavorite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFavorite.Designer.cs">
+      <DependentUpon>FFavorite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FForgetPassword.Designer.cs">
+      <DependentUpon>FForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHome.Designer.cs">
+      <DependentUpon>FHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIncome.Designer.cs">
+      <DependentUpon>FIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOrders.Designer.cs">
+      <DependentUpon>FOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FProfile_Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProfile_Customers.Designer.cs">
+      <DependentUpon>FProfile_Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FProfile_Workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProfile_Workers.Designer.cs">
+      <DependentUpon>FProfile_Workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSeeReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSeeReview.Designer.cs">
+      <DependentUpon>FSeeReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSignInforWorkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSignInforWorkers.Designer.cs">
+      <DependentUpon>FSignInforWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSignUp.Designer.cs">
+      <DependentUpon>FSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSignIn.Designer.cs">
+      <DependentUpon>FSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSignUpforWorkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSignUpforWorkers.Designer.cs">
+      <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FWorkdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FWorkdetail.Designer.cs">
+      <DependentUpon>FWorkdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FWriteReport_Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FWriteReport_Customers.Designer.cs">
+      <DependentUpon>FWriteReport_Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FWriteReport_Workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FWriteReport_Workers.Designer.cs">
+      <DependentUpon>FWriteReport_Workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FWriteReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FWriteReview.Designer.cs">
+      <DependentUpon>FWriteReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Customer.cs" />
+    <Compile Include="model\Job.cs" />
+    <Compile Include="model\JobField.cs" />
+    <Compile Include="model\Order.cs" />
+    <Compile Include="model\Post.cs" />
+    <Compile Include="model\Save.cs" />
+    <Compile Include="model\Worker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UCBookWorker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCBookWorker.Designer.cs">
+      <DependentUpon>UCBookWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucServiceReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucServiceReview.Designer.cs">
+      <DependentUpon>ucServiceReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCWorkInFor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCWorkInFor.Designer.cs">
+      <DependentUpon>UCWorkInFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCWork_Detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCWork_Detail.Designer.cs">
+      <DependentUpon>UCWork_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorldOfWorkDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorldOfWorkDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CandidateSupportCenter.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CandidateSupportCenter.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAskToReview.resx">
+      <DependentUpon>FAskToReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCandidateSupportCenter.resx">
+      <DependentUpon>FCandidateSupportCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConfirm.resx">
+      <DependentUpon>FConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDisplay_Customers.resx">
+      <DependentUpon>FDisplay_Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDisplay_Workers.resx">
+      <DependentUpon>FDisplay_Workers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFavorite.resx">
+      <DependentUpon>FFavorite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FForgetPassword.resx">
+      <DependentUpon>FForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHome.resx">
+      <DependentUpon>FHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIncome.resx">
+      <DependentUpon>FIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOrders.resx">
+      <DependentUpon>FOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPerInf_Worker.resx">
+      <DependentUpon>FPerInf_Worker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPlan_Worker.resx">
+      <DependentUpon>FPlan_Worker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPost.resx">
+      <DependentUpon>FPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProfile_Customers.resx">
+      <DependentUpon>FProfile_Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProfile_Workers.resx">
+      <DependentUpon>FProfile_Workers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSeeReview.resx">
+      <DependentUpon>FSeeReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSignInforWorkers.resx">
+      <DependentUpon>FSignInforWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSignUp.resx">
+      <DependentUpon>FSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSignIn.resx">
+      <DependentUpon>FSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSignUpforWorkers.resx">
+      <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FWorkdetail.resx">
+      <DependentUpon>FWorkdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FWriteReport_Customers.resx">
+      <DependentUpon>FWriteReport_Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FWriteReport_Workers.resx">
+      <DependentUpon>FWriteReport_Workers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FWriteReview.resx">
+      <DependentUpon>FWriteReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\UCBookWorker.resx">
+      <DependentUpon>UCBookWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucServiceReview.resx">
+      <DependentUpon>ucServiceReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCWorkInFor.resx">
+      <DependentUpon>UCWorkInFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCWork_Detail.resx">
+      <DependentUpon>UCWork_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WorldOfWorkDataSet.xsc">
+      <DependentUpon>WorldOfWorkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorldOfWorkDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorldOfWorkDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorldOfWorkDataSet.xss">
+      <DependentUpon>WorldOfWorkDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo %281%291.png" />
+    <None Include="Resources\photo %281%29.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\heart %282%29.png" />
+    <None Include="Resources\house-chimney %284%29.png" />
+    <None Include="Images\avatar\IMG_2403.JPG" />
+    <Content Include="Images\c2d3ea4e7db59e78d0af0125bcd570aa.jpg" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\google.png" />
+    <Content Include="Images\linkedin.png" />
+    <Content Include="Images\Woker.jpg" />
+    <None Include="Resources\Screenshot 2023-12-25 155117.png" />
+    <Content Include="databaseSQL.sql" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+</Project>
