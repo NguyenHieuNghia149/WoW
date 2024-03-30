@@ -23,12 +23,7 @@ namespace TheGioiViecLam
         public FFavorite(string account)
         {
             InitializeComponent();
-            //this.postID = postID; 
             this.account = account;
-            /*  uc = new UCWorkInFor();
-              Controls.Add(uc);
-              uc.Dock = DockStyle.Fill;
-              uc.AutoScroll = true;*/
             LoadDataWorkInFor();
         }
 
@@ -63,14 +58,15 @@ namespace TheGioiViecLam
                     string postID = row["IDP"].ToString();
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
                     uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
-
+                    uCWorkInFor.btnDelete.Click += (s, ev) => Delete_Click(postID, s, ev);
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price;
                     uCWorkInFor.txtExperience.Text = experience;
                     uCWorkInFor.txtLocation.Text = location;
                     uCWorkInFor.txtWTime.Text = time;
                     uCWorkInFor.Location = new Point(50, y);
-                    uCWorkInFor.btnSave.FillColor= Color.White;
+                    uCWorkInFor.btnSave.Visible = false;
+                    uCWorkInFor.btnSave.Enabled = false;
                     y += uCWorkInFor.Height + 10;
                     panelmain.Controls.Add(uCWorkInFor);
                 }
@@ -95,20 +91,46 @@ namespace TheGioiViecLam
                 form.Show();
             }
         }
-        private void label1_Click(object sender, EventArgs e)
+        private void Delete_Click(string postID, object sender, EventArgs e)
         {
-            //this.Hide();
-            //FJop_Information form = new FJop_Information();
-          //  form.ShowDialog();
-            //this.Close();
+            try
+            {
+                // Mở kết nối đến cơ sở dữ liệu
+                conn.Open();
+
+                // Tạo truy vấn SQL để xóa dữ liệu trong bảng Saves với IDP bằng postID
+                string sqlDelete = string.Format("DELETE FROM Saves WHERE IDP = '{0}'", postID);
+
+                // Thực thi truy vấn SQL
+                SqlCommand cmd = new SqlCommand(sqlDelete, conn);
+                cmd.ExecuteNonQuery();
+
+                // Đóng kết nối
+                conn.Close();
+
+                // Thông báo cho người dùng rằng dữ liệu đã được xóa thành công
+                MessageBox.Show("Dữ liệu đã được xóa thành công.");
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi nếu có lỗi xảy ra
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo rằng kết nối đã được đóng ngay cả khi có lỗi xảy ra
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            LoadDataWorkInFor();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+
+        private void panelmain_Paint(object sender, PaintEventArgs e)
         {
-            //this.Hide();
-            //FJop_Information form = new FJop_Information();
-           // form.ShowDialog();
-            //this.Close();
+
         }
     }
 }

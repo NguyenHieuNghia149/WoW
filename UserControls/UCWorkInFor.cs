@@ -21,26 +21,12 @@ namespace TheGioiViecLam
         }
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            FPost fPost = new FPost(account);
-            fPost.cbboxJobName.Text = txtJobName.Text;
-            fPost.cbboxWTime.Text = txtWTime.Text;
-            fPost.txtCost.Text = txtCost.Text;
-            //fPost.txtDetail.Text = 
-            //fPost.txtPhoneNum.Text = 
-            //fPost.txtCity.Text = 
-            //fPost.txtDistrict.Text =
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            FPost fPost = new FPost(account);
-            fPost.cbboxJobName.Text = txtJobName.Text;
-            fPost.cbboxWTime.Text = txtWTime.Text;
-            fPost.txtCost.Text = txtCost.Text;
-            //fPost.txtDetail.Text = 
-            //fPost.txtPhoneNum.Text = 
-            //fPost.txtCity.Text = 
-            //fPost.txtDistrict.Text =
+
         }
     }
 }

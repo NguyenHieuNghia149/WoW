@@ -50,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtIDP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -325,11 +326,26 @@
             this.label6.TabIndex = 32;
             this.label6.Text = "Work";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(797, 264);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(180, 45);
+            this.btnDelete.TabIndex = 33;
+            this.btnDelete.Text = "DELETE";
+            // 
             // UCWorkInFor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtIDP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtExperience);
@@ -378,5 +394,6 @@
         public Guna.UI2.WinForms.Guna2TextBox txtIDP;
         private System.Windows.Forms.Label label6;
         public Guna.UI2.WinForms.Guna2Button btnSave;
+        public Guna.UI2.WinForms.Guna2Button btnDelete;
     }
 }

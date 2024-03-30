@@ -43,14 +43,12 @@ namespace TheGioiViecLam
 
         private void BtnSave_Click(string postID, object sender, EventArgs e)
         {
-            
-
-                string sql = string.Format("insert into Saves(IDP,CEmail) Values('{0}', '{1}') ", postID, account);
-                db.Execute(sql);
-                //showuCWorkinFor(postID);
-            
+             string sql = string.Format("INSERT INTO Saves (IDP, CEmail) VALUES ('{0}', '{1}')", postID, account);
+             db.Execute(sql);
+             LoadData();
         }
-        
+
+
         public void FHome_Load(object sender, EventArgs e)
         {
             LoadData();          
@@ -66,7 +64,7 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string query = "SELECT City FROM dbo.Post";
+                string query = "SELECT DISTINCT City FROM dbo.Post"; // Sử dụng DISTINCT để lấy các thành phố duy nhất
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -86,6 +84,7 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
+
         private void LoadDistrictsIntoComboBox()
         {
             try
@@ -127,14 +126,8 @@ namespace TheGioiViecLam
                 string sqlStr = string.Format("SELECT * FROM Post");
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dataSet = new DataSet();
-
-                // Điền dữ liệu từ cơ sở dữ liệu vào DataSet
                 adapter.Fill(dataSet);
-
-                // Xóa tất cả các UC hiện có trong Panel trước khi thêm UC mới
                 PanelBottom.Controls.Clear();
-
-                // Duyệt qua các dòng dữ liệu trong DataSet và tạo UCThue tương ứng
                 int y = 0; // Biến để điều chỉnh vị trí theo trục y của các UC
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
@@ -145,18 +138,33 @@ namespace TheGioiViecLam
                     string location = row["District"].ToString();
                     string postID = row["IDP"].ToString(); // Lấy giá trị IDP
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
+                    if (CheckIDPInSaves(postID))
+                    {
+                        uCWorkInFor.btnSave.FillColor = System.Drawing.Color.Gray;
+                    }
                     uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
-                    uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);
+                    if (uCWorkInFor.btnSave.FillColor == System.Drawing.Color.FromArgb(238, 66, 102))
+                    {
+                        uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);
+                    }
+                    else
+                    {
+                        uCWorkInFor.btnSave.Click += (s, ev) => { }; // Gán một sự kiện trống
+                    }
+
                     uCWorkInFor.txtWTime.Text = Time;
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price;
                     uCWorkInFor.txtExperience.Text = experience.ToString();
                     uCWorkInFor.txtLocation.Text = location;
                     uCWorkInFor.txtIDP.Text = postID;
+                    uCWorkInFor.btnDelete.Enabled = false;
+                    uCWorkInFor.btnDelete.Visible = false;
                     // Đặt vị trí cho UC
                     uCWorkInFor.Location = new Point(50, y);
                     y += uCWorkInFor.Height + 10; // Tăng y để tránh chồng chéo
                     PanelBottom.Controls.Add(uCWorkInFor);
+                    
                 }
             }
             catch (Exception exc)
@@ -166,6 +174,24 @@ namespace TheGioiViecLam
             finally
             {
                 conn.Close();
+            }
+        }
+        private bool CheckIDPInSaves(string postID)
+        {
+            try
+            {
+                string sqlStr = string.Format("SELECT COUNT(*) FROM Saves WHERE IDP = '{0}'", postID);
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                return false;
+            }
+            finally
+            {
             }
         }
         private void cbx_cities_SelectedIndexChanged(object sender, EventArgs e)
@@ -189,20 +215,45 @@ namespace TheGioiViecLam
             {
                 conn.Open();
 
-                // Tạo câu truy vấn SQL dựa trên thông tin được chọn từ comboboxes và các từ ngữ tìm kiếm
-                string query = "SELECT * FROM dbo.Post WHERE City = @City AND District = @District AND (";
-                for (int i = 0; i < keywords.Length; i++)
-                {
-                    if (i > 0)
-                        query += " OR ";
+                // Tạo câu truy vấn SQL ban đầu
+                string query = "SELECT * FROM dbo.Post";
 
-                    query += "JobName LIKE @Keyword" + i;
+                // Nếu City và District được chọn, thêm điều kiện vào câu truy vấn
+                if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
+                {
+                    query += " WHERE City = @City AND District = @District";
                 }
-                query += ")";
+
+                // Nếu có từ khóa tìm kiếm, thêm điều kiện vào câu truy vấn
+                if (keywords.Length > 0)
+                {
+                    if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
+                    {
+                        query += " AND (";
+                    }
+                    else
+                    {
+                        query += " WHERE (";
+                    }
+
+                    for (int i = 0; i < keywords.Length; i++)
+                    {
+                        if (i > 0)
+                            query += " OR ";
+
+                        query += "JobName LIKE @Keyword" + i;
+                    }
+                    query += ")";
+                }
 
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@City", cbx_cities.SelectedItem?.ToString());
-                cmd.Parameters.AddWithValue("@District", cbx_districts.SelectedItem?.ToString());
+
+                // Thêm các tham số vào câu truy vấn
+                if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
+                {
+                    cmd.Parameters.AddWithValue("@City", cbx_cities.SelectedItem?.ToString());
+                    cmd.Parameters.AddWithValue("@District", cbx_districts.SelectedItem?.ToString());
+                }
 
                 for (int i = 0; i < keywords.Length; i++)
                 {
@@ -223,16 +274,25 @@ namespace TheGioiViecLam
                     string location = reader["District"].ToString();
                     string postID = reader["WID"].ToString(); // Lấy giá trị IDP
 
-
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
+                    if (CheckIDPInSaves(postID))
+                    {
+                        uCWorkInFor.btnSave.FillColor = System.Drawing.Color.Gray;
+                    }
                     uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
-                    uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);
-
+                    if (uCWorkInFor.btnSave.FillColor == System.Drawing.Color.FromArgb(238, 66, 102))
+                    {
+                        uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);
+                    }
+                    else
+                    {
+                        uCWorkInFor.btnSave.Click += (s, ev) => { }; // Gán một sự kiện trống
+                    }
+                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price + "$";
                     uCWorkInFor.txtExperience.Text = experience.ToString();
                     uCWorkInFor.txtLocation.Text = location;
-
 
                     // Đặt vị trí cho UC
                     uCWorkInFor.Location = new Point(50, y);
@@ -251,6 +311,7 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
+
 
         private void lbl_Home_Click(object sender, EventArgs e)
         {

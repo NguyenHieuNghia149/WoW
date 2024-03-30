@@ -39,6 +39,7 @@
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(1303, 856);
             this.panelmain.TabIndex = 6;
+            this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
             // 
             // FFavorite
             // 
