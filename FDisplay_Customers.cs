@@ -62,7 +62,7 @@ namespace TheGioiViecLam
 
         private void btn_Orders_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FOrders());
+            OpenChildForm(new FOrders(account));
         }
 
         private void btn_Profile_Click(object sender, EventArgs e)

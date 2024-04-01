@@ -66,6 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\Dao.cs" />
+    <Compile Include="FCalenderCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCalenderCustomer.Designer.cs">
+      <DependentUpon>FCalenderCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDailyJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDailyJob.Designer.cs">
+      <DependentUpon>FDailyJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="FHistory_RequireJob_Customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,12 +120,6 @@
       <DependentUpon>FCandidateSupportCenter.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\DBConnection.cs" />
-    <Compile Include="FConfirm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FConfirm.Designer.cs">
-      <DependentUpon>FConfirm.cs</DependentUpon>
-    </Compile>
     <Compile Include="FDisplay_Customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,12 @@
     <Compile Include="FSeeReview.Designer.cs">
       <DependentUpon>FSeeReview.cs</DependentUpon>
     </Compile>
+    <Compile Include="FSelectTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSelectTime.Designer.cs">
+      <DependentUpon>FSelectTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSignInforWorkers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +246,7 @@
     <Compile Include="FWriteReview.Designer.cs">
       <DependentUpon>FWriteReview.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\Cons.cs" />
     <Compile Include="model\Customer.cs" />
     <Compile Include="model\Job.cs" />
     <Compile Include="model\JobField.cs" />
@@ -243,11 +256,23 @@
     <Compile Include="model\Worker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ucAOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAOrder.Designer.cs">
+      <DependentUpon>ucAOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCBookWorker.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UCBookWorker.Designer.cs">
       <DependentUpon>UCBookWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCalender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCalender.Designer.cs">
+      <DependentUpon>ucCalender.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCHistory_Require_Customer.cs">
       <SubType>UserControl</SubType>
@@ -291,11 +316,14 @@
     <EmbeddedResource Include="FAskToReview.resx">
       <DependentUpon>FAskToReview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCalenderCustomer.resx">
+      <DependentUpon>FCalenderCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCandidateSupportCenter.resx">
       <DependentUpon>FCandidateSupportCenter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FConfirm.resx">
-      <DependentUpon>FConfirm.cs</DependentUpon>
+    <EmbeddedResource Include="FDailyJob.resx">
+      <DependentUpon>FDailyJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDisplay_Customers.resx">
       <DependentUpon>FDisplay_Customers.cs</DependentUpon>
@@ -345,6 +373,9 @@
     <EmbeddedResource Include="FSeeReview.resx">
       <DependentUpon>FSeeReview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FSelectTime.resx">
+      <DependentUpon>FSelectTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSignInforWorkers.resx">
       <DependentUpon>FSignInforWorkers.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,8 +410,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\ucAOrder.resx">
+      <DependentUpon>ucAOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCBookWorker.resx">
       <DependentUpon>UCBookWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCalender.resx">
+      <DependentUpon>ucCalender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCHistory_Require_Customer.resx">
       <DependentUpon>UCHistory_Require_Customer.cs</DependentUpon>

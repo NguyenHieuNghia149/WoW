@@ -1,0 +1,538 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fplan_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fplan_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fplan_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fplan_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fdailyjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdailyjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fdailyjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdailyjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\usercontrols\\ucaorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\ucaorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\usercontrols\\ucaorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\ucaorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fdailyjob.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdailyjob.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fdisplay_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdisplay_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\forders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:forders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\forders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:forders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\usercontrols\\ucorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\ucorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fhistory_requirejob_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhistory_requirejob_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\usercontrols\\ucorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\ucorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fhistory_requirejob_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhistory_requirejob_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\usercontrols\\ucwork_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\ucwork_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fcalendercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fcalendercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fcalendercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fcalendercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\usercontrols\\uccalender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\uccalender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\usercontrols\\uccalender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\uccalender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fselecttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fselecttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\fselecttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fselecttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\model\\cons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:model\\cons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\dao\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:dao\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\wow\\wow\\databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FDailyJob.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDailyJob.cs",
+              "RelativeDocumentMoniker": "FDailyJob.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDailyJob.cs [Design]",
+              "RelativeToolTip": "FDailyJob.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:15:05.204Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FDailyJob.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDailyJob.cs",
+              "RelativeDocumentMoniker": "FDailyJob.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDailyJob.cs",
+              "RelativeToolTip": "FDailyJob.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA2wFwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:19:43.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FDisplay_Customers.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDisplay_Customers.cs",
+              "RelativeDocumentMoniker": "FDisplay_Customers.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDisplay_Customers.cs [Design]",
+              "RelativeToolTip": "FDisplay_Customers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:33:34.663Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FPlan_Worker.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FPlan_Worker.cs",
+              "RelativeDocumentMoniker": "FPlan_Worker.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FPlan_Worker.cs [Design]",
+              "RelativeToolTip": "FPlan_Worker.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:17:18.647Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FPlan_Worker.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FPlan_Worker.cs",
+              "RelativeDocumentMoniker": "FPlan_Worker.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FPlan_Worker.cs",
+              "RelativeToolTip": "FPlan_Worker.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAkwIwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:37:13.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ucAOrder.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\ucAOrder.cs",
+              "RelativeDocumentMoniker": "UserControls\\ucAOrder.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\ucAOrder.cs",
+              "RelativeToolTip": "UserControls\\ucAOrder.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAADMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:22:36.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ucAOrder.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\ucAOrder.cs",
+              "RelativeDocumentMoniker": "UserControls\\ucAOrder.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\ucAOrder.cs [Design]",
+              "RelativeToolTip": "UserControls\\ucAOrder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:14:14.816Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FDailyJob.Designer.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDailyJob.Designer.cs",
+              "RelativeDocumentMoniker": "FDailyJob.Designer.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDailyJob.Designer.cs",
+              "RelativeToolTip": "FDailyJob.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:39:16.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FDisplay_Workers.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDisplay_Workers.cs",
+              "RelativeDocumentMoniker": "FDisplay_Workers.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDisplay_Workers.cs",
+              "RelativeToolTip": "FDisplay_Workers.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAA+wDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:38:14.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FDisplay_Customers.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDisplay_Customers.cs",
+              "RelativeDocumentMoniker": "FDisplay_Customers.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FDisplay_Customers.cs",
+              "RelativeToolTip": "FDisplay_Customers.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAADwv1MAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:32:20.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FOrders.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FOrders.cs",
+              "RelativeDocumentMoniker": "FOrders.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FOrders.cs [Design]",
+              "RelativeToolTip": "FOrders.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:20:09.012Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UCOrders.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\UCOrders.cs",
+              "RelativeDocumentMoniker": "UserControls\\UCOrders.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\UCOrders.cs [Design]",
+              "RelativeToolTip": "UserControls\\UCOrders.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:22:42.458Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FOrders.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FOrders.cs",
+              "RelativeDocumentMoniker": "FOrders.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FOrders.cs",
+              "RelativeToolTip": "FOrders.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAswCMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:30:28.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FHome.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FHome.cs",
+              "RelativeDocumentMoniker": "FHome.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FHome.cs [Design]",
+              "RelativeToolTip": "FHome.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:33:31.656Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FHistory_RequireJob_Customers.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FHistory_RequireJob_Customers.cs",
+              "RelativeDocumentMoniker": "FHistory_RequireJob_Customers.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FHistory_RequireJob_Customers.cs [Design]",
+              "RelativeToolTip": "FHistory_RequireJob_Customers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:33:33.549Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UCOrders.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\UCOrders.cs",
+              "RelativeDocumentMoniker": "UserControls\\UCOrders.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\UCOrders.cs",
+              "RelativeToolTip": "UserControls\\UCOrders.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:31:19.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FHistory_RequireJob_Customers.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FHistory_RequireJob_Customers.cs",
+              "RelativeDocumentMoniker": "FHistory_RequireJob_Customers.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FHistory_RequireJob_Customers.cs",
+              "RelativeToolTip": "FHistory_RequireJob_Customers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:29:12.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UCWork_Detail.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\UCWork_Detail.cs",
+              "RelativeDocumentMoniker": "UserControls\\UCWork_Detail.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\UCWork_Detail.cs",
+              "RelativeToolTip": "UserControls\\UCWork_Detail.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAwwBMAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:28:24.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\model\\Order.cs",
+              "RelativeDocumentMoniker": "model\\Order.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\model\\Order.cs",
+              "RelativeToolTip": "model\\Order.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:12:24.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FCalenderCustomer.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FCalenderCustomer.cs",
+              "RelativeDocumentMoniker": "FCalenderCustomer.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FCalenderCustomer.cs",
+              "RelativeToolTip": "FCalenderCustomer.cs",
+              "ViewState": "AQIAALsAAAAAAAAAAAAkwNIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:19:22.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FCalenderCustomer.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FCalenderCustomer.cs",
+              "RelativeDocumentMoniker": "FCalenderCustomer.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FCalenderCustomer.cs [Design]",
+              "RelativeToolTip": "FCalenderCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:15:55.618Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ucCalender.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\ucCalender.cs",
+              "RelativeDocumentMoniker": "UserControls\\ucCalender.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\ucCalender.cs",
+              "RelativeToolTip": "UserControls\\ucCalender.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:21:39.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FSelectTime.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FSelectTime.cs",
+              "RelativeDocumentMoniker": "FSelectTime.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FSelectTime.cs",
+              "RelativeToolTip": "FSelectTime.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAqwCIAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:20:33.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ucCalender.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\ucCalender.cs",
+              "RelativeDocumentMoniker": "UserControls\\ucCalender.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\UserControls\\ucCalender.cs [Design]",
+              "RelativeToolTip": "UserControls\\ucCalender.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:13:22.992Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FSelectTime.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FSelectTime.cs",
+              "RelativeDocumentMoniker": "FSelectTime.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\FSelectTime.cs [Design]",
+              "RelativeToolTip": "FSelectTime.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:18:27.221Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Cons.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\model\\Cons.cs",
+              "RelativeDocumentMoniker": "model\\Cons.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\model\\Cons.cs",
+              "RelativeToolTip": "model\\Cons.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:11:48.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\DAO\\DBConnection.cs",
+              "RelativeDocumentMoniker": "DAO\\DBConnection.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\DAO\\DBConnection.cs",
+              "RelativeToolTip": "DAO\\DBConnection.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAgwG8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:07:23.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "databaseSQL.sql ",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\databaseSQL.sql",
+              "RelativeDocumentMoniker": "databaseSQL.sql",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\Wow\\WoW\\databaseSQL.sql",
+              "RelativeToolTip": "databaseSQL.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002897|",
+              "WhenOpened": "2024-04-01T13:05:33.556Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

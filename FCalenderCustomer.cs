@@ -12,7 +12,7 @@ using TheGioiViecLam.model;
 
 namespace TheGioiViecLam
 {
-    public partial class FPlan_Worker : Form
+    public partial class FCalenderCustomer : Form
     {
         #region Peoperties
         private List<List<Button>> matrix;
@@ -37,10 +37,12 @@ namespace TheGioiViecLam
         List<Order> jobs = new List<Order>();
         private string postID;
         private string account;
-        public FPlan_Worker(string account)
+
+        public FCalenderCustomer(string postID, string account)
         {
-            this.account = account;
             InitializeComponent();
+            this.postID = postID;
+            this.account = account;
             ucCalender1.timerNotify.Start();
             appTime = 0;
             ucCalender1.btnNexrMonth.Click += btnNexrMonth_Click;
@@ -51,8 +53,10 @@ namespace TheGioiViecLam
             ucCalender1.cboxnotify.CheckedChanged += Cboxnotify_CheckedChanged;
             ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
             LoadMatrix();
-            jobs = GetData();
+            //jobs = GetData();
+
         }
+
         void Setdefaultjob()
         {
             jobs = new List<Order>();
@@ -128,7 +132,6 @@ namespace TheGioiViecLam
                     btn.ForeColor = Color.White;
                 }
 
-
                 if (collum >= 6)
                 {
                     line++;
@@ -154,7 +157,6 @@ namespace TheGioiViecLam
                 }
             }
         }
-
         void SetDefaultDate()
         {
             ucCalender1.dt.Value = DateTime.Now;
@@ -180,6 +182,7 @@ namespace TheGioiViecLam
         {
             SetDefaultDate();
         }
+
         private void NumericNotify_ValueChanged(object sender, EventArgs e)
         {
             Cons.notifyTime = (int)ucCalender1.numericNotify.Value;
@@ -208,60 +211,15 @@ namespace TheGioiViecLam
             }
         }
 
-
-        private List<Order> GetData()
-        {
-            List<Order> jobs = new List<Order>();
-            try
-            {
-                conn.Open();
-                string sql = string.Format("SELECT Customer.Fullname as fullname, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = '{0}' and Customer.CEmail = Orders.CEmail", account);
-                SqlCommand command = new SqlCommand(sql, conn);
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Order job = new Order();
-
-                    // Kiểm tra xem cột có giá trị null không trước khi chuyển đổi kiểu dữ liệu
-                    if (!reader.IsDBNull(reader.GetOrdinal("ODate")))
-                    {
-                        job.Date = reader.GetDateTime(reader.GetOrdinal("ODate"));
-                    }
-                    job.CEmail = reader["CEmail"].ToString();
-                    job.Workername = reader["WorkerName"].ToString();
-                    job.Jobname = reader["jobname"].ToString();
-                    job.FromHours = reader["FromHours"].ToString();
-                    job.FromMinutes = reader["FromMinutes"].ToString();
-                    job.Cost = reader["cost"].ToString();
-                    job.Customername = reader["fullname"].ToString();
-                    job.Phonenumber = reader["phonenumber"].ToString();
-                    job.Address = reader["CAddress"].ToString();
-                    job.Status = reader["OStatus"].ToString();
-                    jobs.Add(job);
-                }
-                reader.Close();
-                return jobs;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-                return null;
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
         private void Btn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty((sender as Button).Text))
                 return;
-            FDailyJob dailyJob = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Button).Text)), postID, account, jobs);
-            dailyJob.ShowDialog();
+            FSelectTime selectTime = new FSelectTime(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Button).Text)), postID, account);
+            selectTime.ShowDialog();
 
         }
+
 
     }
 }

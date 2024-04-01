@@ -47,7 +47,7 @@ namespace TheGioiViecLam
 
         private void btnPlan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FPlan_Worker());
+            OpenChildForm(new FPlan_Worker(account));
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)

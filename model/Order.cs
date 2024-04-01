@@ -6,48 +6,50 @@ using System.Threading.Tasks;
 
 namespace TheGioiViecLam.model
 {
-    internal class Order
+    public class Order
     {
-        private string WorkerName; // lay tu class Worker
-        private string CustomerName;
-        private string FieldName; // lay tu class jobField
-        private string JobName;  // lay tu class Job
-        private string Cost;
-        private string PhoneNumber;
-        private string Detail;
-        private string City;
-        private string District;
-        private DateTime TimeStart;
-        private DateTime TimeEnd;
-        private string Status;
+        private string workername; // lay tu class Worker
+        private string customername;// lay tu class jobField
+        private string jobname;  // lay tu class Job
+        private string cost;
+        private string phonenumber;
+        private DateTime date;
+        private string fromHours;
+        private string fromMinutes;
+        private string status;
+        private string cEmail;
+        private string address;
 
-        public Order(string workerName, string customerName, string fieldName, string jobName, string cost, string phoneNumber, string detail, string city, string district, DateTime timeStart, DateTime timeEnd, string status)
+        public Order()
         {
-            WorkerName = workerName;
-            CustomerName = customerName;
-            FieldName = fieldName;
-            JobName = jobName;
-            Cost = cost;
-            PhoneNumber = phoneNumber;
-            Detail = detail;
-            City = city;
-            District = district;
-            TimeStart = timeStart;
-            TimeEnd = timeEnd;
-            Status = status;
+
+        }
+        public Order(string workername, string customername, string jobname, string cost, string phonenumber, DateTime date, string fromHours, string fromMinutes, string status, string cEmail, string address)
+        {
+            this.workername = workername;
+            this.customername = customername;
+            this.jobname = jobname;
+            this.cost = cost;
+            this.phonenumber = phonenumber;
+            this.date = date;
+            this.fromHours = fromHours;
+            this.fromMinutes = fromMinutes;
+            this.status = status;
+            this.cEmail = cEmail;
+            this.Address = address;
         }
 
-        public string workername { get => WorkerName; set => WorkerName = value; }
-        public string customername { get => CustomerName; set => CustomerName = value; }
-        public string fieldname { get => FieldName; set => FieldName = value; }
-        public string jobname { get => JobName; set => JobName = value; }
-        public string cost { get => Cost; set => Cost = value; }
-        public string phonenumber { get => PhoneNumber; set => PhoneNumber = value; }
-        public string detail { get => Detail; set => Detail = value; }
-        public string city { get => City; set => City = value; }
-        public string district { get => District; set => District = value; }
-        public DateTime timestart { get => TimeStart; set => TimeStart = value; }
-        public DateTime timeend { get => TimeEnd; set => TimeEnd = value; }
-        public string status { get => status; set => status = value; }
+        public string Workername { get => workername; set => workername = value; }
+        public string Customername { get => customername; set => customername = value; }
+
+        public string Jobname { get => jobname; set => jobname = value; }
+        public string Cost { get => cost; set => cost = value; }
+        public string Phonenumber { get => phonenumber; set => phonenumber = value; }
+        public DateTime Date { get => date; set => date = value; }
+        public string FromHours { get => fromHours; set => fromHours = value; }
+        public string FromMinutes { get => fromMinutes; set => fromMinutes = value; }
+        public string Status { get => status; set => status = value; }
+        public string CEmail { get => cEmail; set => cEmail = value; }
+        public string Address { get => address; set => address = value; }
     }
 }

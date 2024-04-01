@@ -1,6 +1,6 @@
 ﻿namespace TheGioiViecLam
 {
-    partial class FPlan_Worker
+    partial class FCalenderCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -33,19 +33,19 @@
             // 
             // ucCalender1
             // 
-            this.ucCalender1.Location = new System.Drawing.Point(25, 7);
+            this.ucCalender1.Location = new System.Drawing.Point(23, 12);
             this.ucCalender1.Name = "ucCalender1";
-            this.ucCalender1.Size = new System.Drawing.Size(1344, 733);
-            this.ucCalender1.TabIndex = 1;
+            this.ucCalender1.Size = new System.Drawing.Size(1344, 722);
+            this.ucCalender1.TabIndex = 0;
             // 
-            // FPlan_Worker
+            // FCalenderCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 747);
             this.Controls.Add(this.ucCalender1);
-            this.Name = "FPlan_Worker";
-            this.Text = "FPlan_Worker";
+            this.Name = "FCalenderCustomer";
+            this.Text = "FCalenderCustomer";
             this.ResumeLayout(false);
 
         }
