@@ -134,6 +134,8 @@ namespace TheGioiViecLam
                     RequireID, account, cbboxJobName.Text, txtDetail.Text, cbboxGender.Text, txtCost.Text);
                 SqlCommand cmd = new SqlCommand(query, conn);
                 db.Execute(query);
+                LoadRequireID(account);
+
             }
             catch (Exception ex)
             {

@@ -46,29 +46,78 @@ namespace TheGioiViecLam
                 for (int i = 0; i < todayjob.Count; i++)
                 {
                     ucAOrder ajob = new ucAOrder(todayjob[i]);
-                    ajob.Denied += ajob_Denied;
-                    ajob.Confirmed += ajob_Confirmed;
-                    ajob.Done += ajob_Done;
+                    ajob.Tag = todayjob[i];
+                    ajob.btndeny.Click += (s, ev) => ajob_Denied(ajob, s, ev);
+                    ajob.btnConfirm.Click += (s, ev) => ajob_Confirmed(postID, s, ev);
+                    ajob.btnDone.Click += (s, ev) => ajob_Done(postID, s, ev);
+                    LoadJobDetails(ajob, todayjob[i]);
 
                     fPanel.Controls.Add(ajob);
                 }
             }
         }
-        private void ajob_Done(object sender, EventArgs e)
+        private void LoadJobDetails(ucAOrder ucA,Order job)
         {
-            throw new NotImplementedException();
+            ucA.txtAddress.Text = job.Address;
+            ucA.txtCustomer.Text = job.Customername;
+            ucA.txtfromHours.Text = job.FromHours;
+            ucA.txtfromMinute.Text = job.FromMinutes;
+            ucA.txtJob.Text = job.Jobname;
+            ucA.txtPhoneNumber.Text = job.Phonenumber;
+            ucA.txtStatus.Text = job.Status;
         }
 
-        private void ajob_Confirmed(object sender, EventArgs e)
+        private void ajob_Done(string postID, object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            MessageBox.Show(postID);
+            try
+            {
+                conn.Open();
+                string query = string.Format("UPDATE Orders SET OStatus = 'Done' WHERE IDP = '{0}'", postID);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                int rowsAffected = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
-        private void ajob_Denied(object sender, EventArgs e)
+
+        private void ajob_Confirmed(string postID, object sender, EventArgs e)
         {
-            ucAOrder uc = sender as ucAOrder;
-            // string sql = string.Format("Update Orders set OStatus = 'DENIED' Where IDP = '{0}' and ODate = '{1}' ");
-            fPanel.Controls.Remove(uc);
+            MessageBox.Show(postID);
+            try
+            {
+                conn.Open();
+                string query = string.Format("UPDATE Orders SET OStatus = 'Confirmed' WHERE IDP = '{0}'", postID);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                int rowsAffected = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
+        private void ajob_Denied(ucAOrder uc, object sender, EventArgs e)
+        {
+            Order deniedJob = uc.Tag as Order;
+            if (deniedJob != null)
+            {
+                // Xóa công việc từ danh sách jobs
+                jobs.Remove(deniedJob);
+                fPanel.Controls.Remove(uc);
+            }
         }
         List<Order> GetjobByDay(DateTime date)
         {
@@ -92,6 +141,11 @@ namespace TheGioiViecLam
         private void mnToday_Click(object sender, EventArgs e)
         {
             dt.Value = DateTime.Now;
+        }
+
+        private void pnJob_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

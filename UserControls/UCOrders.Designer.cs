@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCOrders));
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.ratingStar = new Guna.UI2.WinForms.Guna2RatingStar();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,24 +48,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtWTime = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnBomb = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(66)))), ((int)(((byte)(102)))));
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(66)))), ((int)(((byte)(102)))));
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = global::TheGioiViecLam.Properties.Resources.heart__2_;
-            this.btnSave.Location = new System.Drawing.Point(906, 264);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(57, 45);
-            this.btnSave.TabIndex = 59;
             // 
             // ratingStar
             // 
@@ -334,13 +318,27 @@
             this.guna2PictureBox1.TabIndex = 54;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // btnBomb
+            // 
+            this.btnBomb.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBomb.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBomb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBomb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBomb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBomb.ForeColor = System.Drawing.Color.White;
+            this.btnBomb.Location = new System.Drawing.Point(918, 283);
+            this.btnBomb.Name = "btnBomb";
+            this.btnBomb.Size = new System.Drawing.Size(180, 45);
+            this.btnBomb.TabIndex = 74;
+            this.btnBomb.Text = "BOMB";
+            // 
             // UCOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnBomb);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.ratingStar);
             this.Controls.Add(this.lblReview);
             this.Controls.Add(this.txtIDP);
@@ -368,8 +366,6 @@
         }
 
         #endregion
-
-        public Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2RatingStar ratingStar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -389,5 +385,6 @@
         private System.Windows.Forms.Label label2;
         public Guna.UI2.WinForms.Guna2TextBox txtWTime;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        public Guna.UI2.WinForms.Guna2Button btnBomb;
     }
 }

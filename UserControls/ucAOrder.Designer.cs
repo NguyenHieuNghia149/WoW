@@ -91,6 +91,7 @@
             this.btnConfirm.Size = new System.Drawing.Size(108, 45);
             this.btnConfirm.TabIndex = 13;
             this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // txtStatus
             // 
@@ -127,6 +128,7 @@
             this.btnDone.Size = new System.Drawing.Size(108, 45);
             this.btnDone.TabIndex = 11;
             this.btnDone.Text = "Done";
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // label1
             // 
@@ -264,12 +266,12 @@
             this.txtJob.Size = new System.Drawing.Size(321, 36);
             this.txtJob.TabIndex = 0;
             // 
-            // ucAOder
+            // ucAOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
-            this.Name = "ucAOder";
+            this.Name = "ucAOrder";
             this.Size = new System.Drawing.Size(1297, 159);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -287,9 +289,9 @@
         private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2TextBox txtfromMinute;
         public Guna.UI2.WinForms.Guna2TextBox txtfromHours;
-        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
-        private Guna.UI2.WinForms.Guna2TextBox txtCustomer;
         public Guna.UI2.WinForms.Guna2TextBox txtJob;
+        public Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        public Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
+        public Guna.UI2.WinForms.Guna2TextBox txtCustomer;
     }
 }

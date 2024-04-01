@@ -57,7 +57,7 @@ namespace TheGioiViecLam
                     string minutes = row["FromMinutes"].ToString();
                     // string address = row[""]
                     UCOrders uc = new UCOrders();
-
+                    uc.btnBomb.Click += (s, ev) => btnBomb_Click(uc, ev);
                     uc.txtJobName.Text = jobname;
                     uc.txtCost.Text = cost;
                     uc.txtExperience.Text = experiece;
@@ -65,10 +65,10 @@ namespace TheGioiViecLam
                     uc.txtHours.Text = hours;
                     uc.txtMinutes.Text = minutes;
                     uc.lbl_Status.Text = status;
-                    if (uc.lbl_Status.Text == "Confirm")
+                    if (uc.lbl_Status.Text == "Confirmed")
                     {
 
-                        uc.lbl_Status.ForeColor = Color.FromArgb(144, 210, 109);
+                        uc.lbl_Status.ForeColor = Color.FromArgb(0, 122, 204);
                     }
                     if (uc.lbl_Status.Text == "Unconfirm")
                     {
@@ -80,6 +80,10 @@ namespace TheGioiViecLam
                     {
                         uc.lbl_Status.ForeColor = Color.FromArgb(255, 32, 78);
 
+                    }
+                    if (uc.lbl_Status.Text == "Done")
+                    {
+                        uc.lbl_Status.ForeColor = Color.FromArgb(144, 210, 109);
                     }
                     fPanel.Controls.Add(uc);
                 }
@@ -93,6 +97,35 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
+        public void btnBomb_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (sender is UCOrders uc)
+                {
+                    if (uc.lbl_Status.Text == "Unconfirm                                         ")
+                    {
+                        conn.Open();
+                        string IDP = uc.txtIDP.Text; // Lấy IDP từ UC
+                        string query = string.Format("DELETE FROM Orders WHERE IDP = '{0}'", IDP);
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+                loadDataForUc(); // Load lại form sau khi xóa dữ liệu
+
+            }
+        }
+
 
     }
 }

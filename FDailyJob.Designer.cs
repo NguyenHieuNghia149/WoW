@@ -47,6 +47,7 @@
             this.pnJob.Name = "pnJob";
             this.pnJob.Size = new System.Drawing.Size(1297, 663);
             this.pnJob.TabIndex = 1;
+            this.pnJob.Paint += new System.Windows.Forms.PaintEventHandler(this.pnJob_Paint);
             // 
             // guna2Panel1
             // 

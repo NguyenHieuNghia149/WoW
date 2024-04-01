@@ -14,7 +14,7 @@ namespace TheGioiViecLam.UserControls
     public partial class ucAOrder : UserControl
     {
         private Order job;
-        private event EventHandler denied;
+       /* private event EventHandler denied;
         public event EventHandler Denied
         {
             add { denied += value; }
@@ -31,15 +31,15 @@ namespace TheGioiViecLam.UserControls
         {
             add { done += value; }
             remove { done -= value; }
-        }
+        }*/
         public ucAOrder(Order job)
         {
             InitializeComponent();
             this.job = job;
-            ShowInfor();
-        }
+/*            ShowInfor();
+*/        }
 
-        void ShowInfor()
+/*        void ShowInfor()
         {
             txtAddress.Text = job.Address;
             txtCustomer.Text = job.Customername;
@@ -49,23 +49,37 @@ namespace TheGioiViecLam.UserControls
             txtPhoneNumber.Text = job.Phonenumber;
             txtStatus.Text = job.Status;
         }
-
-        private void btnDone_Click(object sender, EventArgs e)
+*/
+        private void btndeny_Click(object sender, EventArgs e)
         {
-            if (done != null)
-                done(this, new EventArgs());
+
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (confirmed != null)
-                confirmed(this, new EventArgs());
+            txtStatus.Text = "Confirmed";
         }
 
-        private void btndeny_Click(object sender, EventArgs e)
+        private void btnDone_Click(object sender, EventArgs e)
         {
-            if (denied != null)
-                denied(this, new EventArgs());
+            txtStatus.Text = "Done";
         }
+        /*        private void btndeny_Click(object sender, EventArgs e)
+{
+if (denied != null)
+denied(this, new EventArgs());
+}
+
+private void btnConfirm_Click(object sender, EventArgs e)
+{
+if (confirmed != null)
+confirmed(this, new EventArgs());
+}
+
+private void btnDone_Click(object sender, EventArgs e)
+{
+if (done != null)
+done(this, new EventArgs());
+}*/
     }
 }

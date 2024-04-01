@@ -33,7 +33,7 @@
             // 
             // ucCalender1
             // 
-            this.ucCalender1.Location = new System.Drawing.Point(25, 7);
+            this.ucCalender1.Location = new System.Drawing.Point(12, 2);
             this.ucCalender1.Name = "ucCalender1";
             this.ucCalender1.Size = new System.Drawing.Size(1344, 733);
             this.ucCalender1.TabIndex = 1;
