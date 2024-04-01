@@ -43,14 +43,13 @@ namespace TheGioiViecLam
             try
             {
 
-                UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer();
 
                 conn.Open();
                 string query = string.Format("SELECT * FROM Requirement WHERE CEmail = '{0}'", account);
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet dataSet = new DataSet();
                 SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader(); 
 
                 adapter.Fill(dataSet);
 
@@ -66,6 +65,7 @@ namespace TheGioiViecLam
                     string JobName = row["JobName"].ToString();
                     string WGender = row["WGender"].ToString();
                     string Cost = row["Cost"].ToString();
+                    UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer();
 
                     ucHis.Click += (s, ev) => UCHis_Click(RequireID, s, ev);
                     ucHis.Click += (s, ev) => UCHis_btnDelete_Click(RequireID, s, ev);
