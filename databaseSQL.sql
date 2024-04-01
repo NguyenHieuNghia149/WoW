@@ -1,12 +1,6 @@
 ﻿--Them fullname & exp vao post
 --Bo IDJF o Worker
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-DROP TABLE Saves
-=======
-=======
->>>>>>> 0907de2eaffec5c737ae2f9cb1e90beaae1489e0
 --DROP TABLE Saves
 --DROP TABLE Orders
 --DROP TABLE Post
@@ -16,10 +10,15 @@ DROP TABLE Saves
 --DROP TABLE Customer
 --DROP TRIGGER tg_Insert_Post
 --GO
-<<<<<<< HEAD
->>>>>>> 0907de2eaffec5c737ae2f9cb1e90beaae1489e0
-=======
->>>>>>> 0907de2eaffec5c737ae2f9cb1e90beaae1489e0
+
+
+SELECT * FROM Customer
+
+--1--Sua phong chu customer
+--DROP TABLE Orders
+--DROP TABLE Saves
+--DROP TABLE Requirement
+--DROP TABLE Customer
 
 Create table dbo.Customer(	
 	OrderNum INT IDENTITY (1,1),
@@ -32,7 +31,7 @@ Create table dbo.Customer(
 	City NCHAR(20),
 	District NCHAR(20),
 	PhoneNum NCHAR(20) UNIQUE,
-	CAddress text,
+	CAddress Nchar(500),
 	primary key (CEmail)
 )
 
@@ -110,18 +109,18 @@ create table dbo.Saves(
 	foreign key (CEmail) references Customer(CEmail),
 	foreign key (IDP) references Post(IDP)
 )
-
+GO
 ----Nhap vao Customer
 INSERT INTO Customer(CID,CEmail,CPassword,Fullname,Gender,CBirthday,City,District,PhoneNum,CAddress)
-VALUES (N'C00001',N'Nam@gmail.com',N'Nam@gmail.com',N'Võ Hoài Nam',N'Male','1981-07-01',N'Hà Nội',N'Ba Đình',N'01928192839','Hà Nội, Ba Đình')
+VALUES (N'C00001',N'Nam@gmail.com',N'Nam@gmail.com',N'Võ Hoài Nam',N'Male','1981-07-01',N'Hà Nội',N'Ba Đình',N'01928192839',N'Hà Nội, Ba Đình')
 INSERT INTO Customer(CID,CEmail,CPassword,Fullname,Gender,CBirthday,City,District,PhoneNum,CAddress)
-VALUES (N'C00002',N'Phuong@gmail.com',N'Phuong@gmail.com',N'Nguyễn Hoàng Phương',N'Female','1979-10-12',N'Hồ Chí Minh',N'Quận 9',N'08992102938','Hồ Chí Minh, Quận 9')
+VALUES (N'C00002',N'Phuong@gmail.com',N'Phuong@gmail.com',N'Nguyễn Hoàng Phương',N'Female','1979-10-12',N'Hồ Chí Minh',N'Quận 9',N'08992102938',N'Hồ Chí Minh, Quận 9')
 INSERT INTO Customer(CID,CEmail,CPassword,Fullname,Gender,CBirthday,City,District,PhoneNum,CAddress)
-VALUES (N'C00003',N'Ha@gmail.com',N'Ha@gmail.com',N'Lê Thị Hà',N'Female','1999-01-09',N'Quảng Bình',N'Ba Đồn',N'09816238428','Quảng Bình, Ba Đồn')
+VALUES (N'C00003',N'Ha@gmail.com',N'Ha@gmail.com',N'Lê Thị Hà',N'Female','1999-01-09',N'Quảng Bình',N'Ba Đồn',N'09816238428',N'Quảng Bình, Ba Đồn')
 INSERT INTO Customer(CID,CEmail,CPassword,Fullname,Gender,CBirthday,City,District,PhoneNum,CAddress)
-VALUES (N'C00004',N'Hoi@gmail.com',N'Hoi@gmail.com',N'Đinh Thị Hợi',N'Female','1981-11-09',N'Bến Tre',N'Mỏ Cày',N'09212837119','Bến Tre, Mỏ Cày')
+VALUES (N'C00004',N'Hoi@gmail.com',N'Hoi@gmail.com',N'Đinh Thị Hợi',N'Female','1981-11-09',N'Bến Tre',N'Mỏ Cày',N'09212837119',N'Bến Tre, Mỏ Cày')
 INSERT INTO Customer(CID,CEmail,CPassword,Fullname,Gender,CBirthday,City,District,PhoneNum,CAddress)
-VALUES (N'C00005',N'Ngan@gmail.com',N'Ngan@gmail.com',N'Võ Văn Ngân',N'Female','1981-02-28',N'Hà Tĩnh',N'Thạch Hà',N'0873628332','Hà Tĩnh, Thạch Hà')
+VALUES (N'C00005',N'Ngan@gmail.com',N'Ngan@gmail.com',N'Võ Văn Ngân',N'Female','1981-02-28',N'Hà Tĩnh',N'Thạch Hà',N'0873628332',N'Hà Tĩnh, Thạch Hà')
 GO
 
 ----Nhap vao JobField
@@ -260,19 +259,69 @@ INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00002',N'P00003',N'Phuong@gmail.com'
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00003',N'P00004',N'Ha@gmail.com')
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00004',N'P00005',N'Hoi@gmail.com')
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00005',N'P00005',N'Ngan@gmail.com')
-
-
-select * from Post
-select Post.JobName as JobName, Post.Cost as Cost, Post.Experience as Experience,Post.WTime as Time, post.District as District, CEmail from Saves,Post where  Post.IDP = Saves.IDP and Saves.CEmail = 'Nam@gmail.com'
 GO
 
-SELECT * FROM Post
-
-EXEC pd_Update_Post_ N'P00001',N'Anh@gmail.com',N'Painting Walls',N'3-4',N'20',NULL,N'1-2'
-SELECT * FROM Orders
+----------Data cho FRequirement_Jobs----------
+--DROP TABLE Requirement
+CREATE TABLE Requirement(
+	OrderNum INT IDENTITY (1, 1),
+	RequireID INT,
+	CEmail Char(50),
+	CGender Nchar(20),
+	FullName Nchar(20),
+	City Nchar(20),
+	District Nchar(20),
+	PhoneNum Nchar(20),
+	CAddress Nchar(500),
+	JobName Nchar(500),
+	Detail Nchar(500),
+	WGender Nchar(20),
+	Cost Nchar(20),
+	Primary key (RequireID,CEmail),
+	foreign key (CEmail)  references Customer(CEmail),
+)
 GO
 
+--2--Procedure nhap Requirement---
+CREATE PROCEDURE pd_Requirement_Insert(@RequireID INT,@CEmail Char(50),
+	@JobName Nchar(500),@Detail Nchar(500),@WGender Nchar(20),@Cost Nchar(20)) AS
+BEGIN
+	DECLARE @CGender Nchar(20),@FullName Nchar(20),@City Nchar(20),
+		@District Nchar(20),@PhoneNum Nchar(20),@CAddress Nchar(500)
+	SELECT @CGender = Gender, @FullName = FullName, @City = City,
+		@District = District, @PhoneNum = PhoneNum, @CAddress = CAddress
+		FROM Customer
+		WHERE @CEmail = CEmail
+	INSERT INTO Requirement(RequireID,CEmail,CGender,FullName,City,District,PhoneNum,CAddress,JobName,Detail,WGender,Cost)
+	VALUES (@RequireID,@CEmail,@CGender,@FullName,@City,@District,@PhoneNum,@CAddress,@JobName,@Detail,@WGender,@Cost)
+END
+GO
 
-select Post.IDP as IDP, Post.JobName as JobName, Post.Cost as Cost, Post.Experience as Experience,Post.WTime as Time, post.District as District, CEmail from Saves,Post where  Post.IDP = Saves.IDP and Saves.CEmail = 'Nam@gmail.com'
-               Select * from Post where Email = 'Nam@gmail.com'
-			   select * from Post
+EXEC pd_Requirement_Insert 1,'Nam@gmail.com','Painting Walls',
+	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
+EXEC pd_Requirement_Insert 2,'Phuong@gmail.com','Painting Walls',
+	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
+EXEC pd_Requirement_Insert 3,'Ha@gmail.com','Painting Walls',
+	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
+EXEC pd_Requirement_Insert 4,'Hoi@gmail.com','Painting Walls',
+	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
+EXEC pd_Requirement_Insert 5,'Ngan@gmail.com','Painting Walls',
+	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
+GO
+
+--SELECT * FROM Requirement
+--SELECT * FROM Customer
+
+--SELECT MAX(RequireID)+1 FROM Requirement
+--SELECT * FROM Requirement WHERE CEmail = 'Nam@gmail.com'
+
+--DELETE FROM Requirement WHERE CEmail = 'Nam@gmail.com' AND RequireID = 7
+
+CREATE PROCEDURE pd_Requirement_Update (@RequireID INT,@CEmail Char(50),
+	@JobName Nchar(500),@CAddress Nchar(500),@WGender Nchar(20),@Cost Nchar(20)) AS
+BEGIN
+	UPDATE Requirement SET JobName = @JobName , CAddress = @CAddress, WGender = @WGender, Cost = @Cost
+	WHERE @CEmail = CEmail AND @RequireID = RequireID
+END
+GO
+

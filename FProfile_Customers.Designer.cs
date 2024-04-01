@@ -49,8 +49,8 @@
             this.btnChange = new Guna.UI2.WinForms.Guna2Button();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblBirthday = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +83,7 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1091, 636);
+            this.panelMain.Size = new System.Drawing.Size(1303, 856);
             this.panelMain.TabIndex = 5;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
@@ -384,15 +384,6 @@
             this.lblBirthday.TabIndex = 46;
             this.lblBirthday.Text = "Birthday";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(64, 115);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(197, 188);
-            this.guna2PictureBox1.TabIndex = 35;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // guna2ImageButton1
             // 
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -406,11 +397,20 @@
             this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
             this.guna2ImageButton1.TabIndex = 60;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(64, 115);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(197, 188);
+            this.guna2PictureBox1.TabIndex = 35;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // FProfile_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 636);
+            this.ClientSize = new System.Drawing.Size(1303, 856);
             this.Controls.Add(this.panelMain);
             this.Name = "FProfile_Customers";
             this.Text = "FProfile_Customers";

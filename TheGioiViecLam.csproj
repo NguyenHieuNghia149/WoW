@@ -66,6 +66,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\Dao.cs" />
+    <Compile Include="FHistory_RequireJob_Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHistory_RequireJob_Customers.Designer.cs">
+      <DependentUpon>FHistory_RequireJob_Customers.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPerInf_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     <Compile Include="FOrders.Designer.cs">
       <DependentUpon>FOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="FPost_RequireJobs_Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPost_RequireJobs_Customers.Designer.cs">
+      <DependentUpon>FPost_RequireJobs_Customers.cs</DependentUpon>
+    </Compile>
     <Compile Include="FProfile_Customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +173,12 @@
     </Compile>
     <Compile Include="FProfile_Workers.Designer.cs">
       <DependentUpon>FProfile_Workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRequirement_Jobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRequirement_Jobs.Designer.cs">
+      <DependentUpon>FRequirement_Jobs.cs</DependentUpon>
     </Compile>
     <Compile Include="FSeeReview.cs">
       <SubType>Form</SubType>
@@ -231,6 +249,18 @@
     <Compile Include="UserControls\UCBookWorker.Designer.cs">
       <DependentUpon>UCBookWorker.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCHistory_Require_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCHistory_Require_Customer.Designer.cs">
+      <DependentUpon>UCHistory_Require_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCOrders.Designer.cs">
+      <DependentUpon>UCOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucServiceReview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -279,6 +309,9 @@
     <EmbeddedResource Include="FForgetPassword.resx">
       <DependentUpon>FForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FHistory_RequireJob_Customers.resx">
+      <DependentUpon>FHistory_RequireJob_Customers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FHome.resx">
       <DependentUpon>FHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,11 +330,17 @@
     <EmbeddedResource Include="FPost.resx">
       <DependentUpon>FPost.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FPost_RequireJobs_Customers.resx">
+      <DependentUpon>FPost_RequireJobs_Customers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FProfile_Customers.resx">
       <DependentUpon>FProfile_Customers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FProfile_Workers.resx">
       <DependentUpon>FProfile_Workers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRequirement_Jobs.resx">
+      <DependentUpon>FRequirement_Jobs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSeeReview.resx">
       <DependentUpon>FSeeReview.cs</DependentUpon>
@@ -342,6 +381,12 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UCBookWorker.resx">
       <DependentUpon>UCBookWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCHistory_Require_Customer.resx">
+      <DependentUpon>UCHistory_Require_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCOrders.resx">
+      <DependentUpon>UCOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucServiceReview.resx">
       <DependentUpon>ucServiceReview.cs</DependentUpon>

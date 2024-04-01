@@ -52,7 +52,7 @@ namespace TheGioiViecLam
                 }
                 else
                 {
-                    MessageBox.Show("Your email or passworld is incorrect!!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Your email or password is incorrect!!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
            

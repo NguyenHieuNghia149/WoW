@@ -33,6 +33,7 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnFavourite = new Guna.UI2.WinForms.Guna2Button();
             this.panel_left = new System.Windows.Forms.Panel();
+            this.btnRequire = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lbl_username = new System.Windows.Forms.Label();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
@@ -108,6 +109,7 @@
             // panel_left
             // 
             this.panel_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
+            this.panel_left.Controls.Add(this.btnRequire);
             this.panel_left.Controls.Add(this.guna2Separator1);
             this.panel_left.Controls.Add(this.lbl_username);
             this.panel_left.Controls.Add(this.btnProfile);
@@ -122,6 +124,27 @@
             this.panel_left.Name = "panel_left";
             this.panel_left.Size = new System.Drawing.Size(261, 903);
             this.panel_left.TabIndex = 6;
+            // 
+            // btnRequire
+            // 
+            this.btnRequire.BorderRadius = 10;
+            this.btnRequire.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnRequire.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.btnRequire.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.btnRequire.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRequire.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRequire.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRequire.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRequire.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
+            this.btnRequire.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.btnRequire.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.btnRequire.Image = ((System.Drawing.Image)(resources.GetObject("btnRequire.Image")));
+            this.btnRequire.Location = new System.Drawing.Point(10, 614);
+            this.btnRequire.Name = "btnRequire";
+            this.btnRequire.Size = new System.Drawing.Size(234, 76);
+            this.btnRequire.TabIndex = 22;
+            this.btnRequire.Text = " Requirement Jobs";
+            this.btnRequire.Click += new System.EventHandler(this.btnRequire_Click);
             // 
             // guna2Separator1
             // 
@@ -224,7 +247,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(261, 210);
             this.panel1.TabIndex = 1;
-           // 
+            // 
             // pctureavatar
             // 
             this.pctureavatar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
@@ -280,5 +303,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2PictureBox pctureavatar;
         private System.Windows.Forms.Panel panel_Body;
+        private Guna.UI2.WinForms.Guna2Button btnRequire;
     }
 }

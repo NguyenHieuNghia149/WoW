@@ -77,5 +77,10 @@ namespace TheGioiViecLam
             form.Show();
             this.Close();
         }
+
+        private void btnRequire_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FRequirement_Jobs(account));
+        }
     }
 }

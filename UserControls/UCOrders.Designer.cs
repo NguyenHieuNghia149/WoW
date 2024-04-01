@@ -65,7 +65,7 @@
             this.txtIDP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIDP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDP.Location = new System.Drawing.Point(713, 250);
+            this.txtIDP.Location = new System.Drawing.Point(648, 250);
             this.txtIDP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDP.Name = "txtIDP";
             this.txtIDP.PasswordChar = '\0';
@@ -171,7 +171,7 @@
             // 
             this.lblReview.AutoSize = true;
             this.lblReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReview.Location = new System.Drawing.Point(709, 294);
+            this.lblReview.Location = new System.Drawing.Point(644, 293);
             this.lblReview.Name = "lblReview";
             this.lblReview.Size = new System.Drawing.Size(63, 20);
             this.lblReview.TabIndex = 41;
@@ -230,14 +230,14 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = global::TheGioiViecLam.Properties.Resources.heart__2_;
-            this.btnSave.Location = new System.Drawing.Point(940, 250);
+            this.btnSave.Location = new System.Drawing.Point(875, 250);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(57, 45);
             this.btnSave.TabIndex = 39;
             // 
             // ratingStar
             // 
-            this.ratingStar.Location = new System.Drawing.Point(789, 289);
+            this.ratingStar.Location = new System.Drawing.Point(724, 289);
             this.ratingStar.Name = "ratingStar";
             this.ratingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(153)))), ((int)(((byte)(92)))));
             this.ratingStar.Size = new System.Drawing.Size(120, 28);
@@ -332,7 +332,7 @@
             this.lbl_Status.ForeColor = System.Drawing.Color.Brown;
             this.lbl_Status.Location = new System.Drawing.Point(212, 262);
             this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(151, 52);
+            this.lbl_Status.Size = new System.Drawing.Size(151, 51);
             this.lbl_Status.TabIndex = 51;
             this.lbl_Status.Text = "Status";
             // 

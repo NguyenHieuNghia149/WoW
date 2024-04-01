@@ -1,7 +1,152 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Downloads\\pw\\pw\\WinformProject\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\admin\\onedrive\\desktop\\pw\\wow\\fhistory_requirejob_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhistory_requirejob_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fpost_requirejobs_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fpost_requirejobs_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\frequirement_jobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:frequirement_jobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\frequirement_jobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:frequirement_jobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\admin\\onedrive\\desktop\\pw\\wow\\fhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fhistory_requirejob_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhistory_requirejob_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fpost_requirejobs_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fpost_requirejobs_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\admin\\onedrive\\desktop\\pw\\wow\\fsigninforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsigninforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fsignin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsignin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\admin\\onedrive\\desktop\\pw\\wow\\fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\admin\\onedrive\\desktop\\pw\\wow\\fsignupforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsignupforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\admin\\onedrive\\desktop\\pw\\wow\\fworkdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fworkdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\admin\\onedrive\\desktop\\pw\\wow\\fwritereport_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fwritereport_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\usercontrols\\ucworkinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\ucworkinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fpost_requirejobs_customers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fpost_requirejobs_customers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\usercontrols\\uchistory_require_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\uchistory_require_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\usercontrols\\uchistory_require_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\uchistory_require_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fprofile_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fprofile_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fprofile_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fprofile_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fdisplay_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdisplay_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fdisplay_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdisplay_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fprofile_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fprofile_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\usercontrols\\ucorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\ucorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\usercontrols\\ucorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\ucorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\usercontrols\\ucbookworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:usercontrols\\ucbookworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\ffavorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:ffavorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\ffavorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:ffavorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fsignin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsignin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\fasktoreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fasktoreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\admin\\onedrive\\desktop\\pw\\wow\\databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\admin\\onedrive\\desktop\\pw\\wow\\databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:databasesql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +154,252 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FRequirement_Jobs.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FRequirement_Jobs.cs",
+              "RelativeDocumentMoniker": "FRequirement_Jobs.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FRequirement_Jobs.cs [Design]",
+              "RelativeToolTip": "FRequirement_Jobs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:23:54.395Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FDisplay_Customers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FDisplay_Customers.cs",
+              "RelativeDocumentMoniker": "FDisplay_Customers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FDisplay_Customers.cs [Design]",
+              "RelativeToolTip": "FDisplay_Customers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:20:09.156Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FProfile_Customers.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FProfile_Customers.cs",
+              "RelativeDocumentMoniker": "FProfile_Customers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FProfile_Customers.cs",
+              "RelativeToolTip": "FProfile_Customers.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:42:37.38Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FProfile_Customers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FProfile_Customers.cs",
+              "RelativeDocumentMoniker": "FProfile_Customers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FProfile_Customers.cs [Design]",
+              "RelativeToolTip": "FProfile_Customers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:42:10.581Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FRequirement_Jobs.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FRequirement_Jobs.cs",
+              "RelativeDocumentMoniker": "FRequirement_Jobs.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FRequirement_Jobs.cs",
+              "RelativeToolTip": "FRequirement_Jobs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:06:22.355Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FPost_RequireJobs_Customers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FPost_RequireJobs_Customers.cs",
+              "RelativeDocumentMoniker": "FPost_RequireJobs_Customers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FPost_RequireJobs_Customers.cs [Design]",
+              "RelativeToolTip": "FPost_RequireJobs_Customers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:11:59.498Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FHistory_RequireJob_Customers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FHistory_RequireJob_Customers.cs",
+              "RelativeDocumentMoniker": "FHistory_RequireJob_Customers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FHistory_RequireJob_Customers.cs [Design]",
+              "RelativeToolTip": "FHistory_RequireJob_Customers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:13:00.049Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UCHistory_Require_Customer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCHistory_Require_Customer.cs",
+              "RelativeDocumentMoniker": "UserControls\\UCHistory_Require_Customer.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCHistory_Require_Customer.cs [Design]",
+              "RelativeToolTip": "UserControls\\UCHistory_Require_Customer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:30:39.78Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "databaseSQL.sql ",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\databaseSQL.sql",
+              "RelativeDocumentMoniker": "databaseSQL.sql",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\databaseSQL.sql",
+              "RelativeToolTip": "databaseSQL.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-03-31T15:46:22.163Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FPost.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FPost.cs",
+              "RelativeDocumentMoniker": "FPost.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FPost.cs",
+              "RelativeToolTip": "FPost.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAuwD0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:05:48.792Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FHistory_RequireJob_Customers.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FHistory_RequireJob_Customers.cs",
+              "RelativeDocumentMoniker": "FHistory_RequireJob_Customers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FHistory_RequireJob_Customers.cs",
+              "RelativeToolTip": "FHistory_RequireJob_Customers.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAYwEMAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:55:54.468Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UCHistory_Require_Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCHistory_Require_Customer.cs",
+              "RelativeDocumentMoniker": "UserControls\\UCHistory_Require_Customer.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCHistory_Require_Customer.cs",
+              "RelativeToolTip": "UserControls\\UCHistory_Require_Customer.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T08:54:55.853Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FPost_RequireJobs_Customers.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FPost_RequireJobs_Customers.cs",
+              "RelativeDocumentMoniker": "FPost_RequireJobs_Customers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FPost_RequireJobs_Customers.cs",
+              "RelativeToolTip": "FPost_RequireJobs_Customers.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAsAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T07:28:25.523Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FHome.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FHome.cs",
+              "RelativeDocumentMoniker": "FHome.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FHome.cs",
+              "RelativeToolTip": "FHome.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAAAHwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T15:59:14.943Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FHome.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FHome.cs",
+              "RelativeDocumentMoniker": "FHome.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FHome.cs [Design]",
+              "RelativeToolTip": "FHome.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T09:57:40.367Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FSignInforWorkers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignInforWorkers.cs",
+              "RelativeDocumentMoniker": "FSignInforWorkers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignInforWorkers.cs [Design]",
+              "RelativeToolTip": "FSignInforWorkers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T09:46:52.623Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FSignUp.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignUp.cs",
+              "RelativeDocumentMoniker": "FSignUp.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignUp.cs [Design]",
+              "RelativeToolTip": "FSignUp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T09:46:50.353Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FSignUpforWorkers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignUpforWorkers.cs",
+              "RelativeDocumentMoniker": "FSignUpforWorkers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignUpforWorkers.cs [Design]",
+              "RelativeToolTip": "FSignUpforWorkers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T09:46:49.146Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FWorkdetail.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FWorkdetail.cs",
+              "RelativeDocumentMoniker": "FWorkdetail.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FWorkdetail.cs [Design]",
+              "RelativeToolTip": "FWorkdetail.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T09:46:47.5Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -46,6 +435,183 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FSignIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignIn.cs",
+              "RelativeDocumentMoniker": "FSignIn.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignIn.cs [Design]",
+              "RelativeToolTip": "FSignIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T15:49:02.845Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FDisplay_Customers.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FDisplay_Customers.cs",
+              "RelativeDocumentMoniker": "FDisplay_Customers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FDisplay_Customers.cs",
+              "RelativeToolTip": "FDisplay_Customers.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAmwFIAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:06:52.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FWriteReport_Customers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FWriteReport_Customers.cs",
+              "RelativeDocumentMoniker": "FWriteReport_Customers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FWriteReport_Customers.cs [Design]",
+              "RelativeToolTip": "FWriteReport_Customers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T09:46:46.282Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FDisplay_Workers.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FDisplay_Workers.cs",
+              "RelativeDocumentMoniker": "FDisplay_Workers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FDisplay_Workers.cs",
+              "RelativeToolTip": "FDisplay_Workers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAmwDoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:53:48.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FDisplay_Workers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FDisplay_Workers.cs",
+              "RelativeDocumentMoniker": "FDisplay_Workers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FDisplay_Workers.cs [Design]",
+              "RelativeToolTip": "FDisplay_Workers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:53:47.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FProfile_Workers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FProfile_Workers.cs",
+              "RelativeDocumentMoniker": "FProfile_Workers.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FProfile_Workers.cs [Design]",
+              "RelativeToolTip": "FProfile_Workers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:45:53.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FPost_RequireJobs_Customers.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FPost_RequireJobs_Customers.Designer.cs",
+              "RelativeDocumentMoniker": "FPost_RequireJobs_Customers.Designer.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FPost_RequireJobs_Customers.Designer.cs",
+              "RelativeToolTip": "FPost_RequireJobs_Customers.Designer.cs",
+              "ViewState": "AQIAANcAAAAAAAAAAADgv9oAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T07:13:08.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UCWorkInFor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCWorkInFor.cs",
+              "RelativeDocumentMoniker": "UserControls\\UCWorkInFor.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCWorkInFor.cs [Design]",
+              "RelativeToolTip": "UserControls\\UCWorkInFor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:30:49.838Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UCOrders.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCOrders.cs",
+              "RelativeDocumentMoniker": "UserControls\\UCOrders.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCOrders.cs [Design]",
+              "RelativeToolTip": "UserControls\\UCOrders.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:16:09.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UCOrders.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCOrders.cs",
+              "RelativeDocumentMoniker": "UserControls\\UCOrders.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCOrders.cs",
+              "RelativeToolTip": "UserControls\\UCOrders.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:16:04.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UCBookWorker.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCBookWorker.cs",
+              "RelativeDocumentMoniker": "UserControls\\UCBookWorker.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\UserControls\\UCBookWorker.cs [Design]",
+              "RelativeToolTip": "UserControls\\UCBookWorker.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:12:54.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FFavorite.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FFavorite.cs",
+              "RelativeDocumentMoniker": "FFavorite.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FFavorite.cs",
+              "RelativeToolTip": "FFavorite.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:01:32.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FFavorite.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FFavorite.cs",
+              "RelativeDocumentMoniker": "FFavorite.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FFavorite.cs [Design]",
+              "RelativeToolTip": "FFavorite.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T16:01:30.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "FSignIn.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignIn.cs",
+              "RelativeDocumentMoniker": "FSignIn.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FSignIn.cs",
+              "RelativeToolTip": "FSignIn.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAAwFIAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T15:49:20.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "FAskToReview.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FAskToReview.cs",
+              "RelativeDocumentMoniker": "FAskToReview.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\PW\\WoW\\FAskToReview.cs [Design]",
+              "RelativeToolTip": "FAskToReview.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T15:44:36.231Z"
             }
           ]
         },
