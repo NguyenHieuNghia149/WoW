@@ -24,40 +24,5 @@ namespace TheGioiViecLam.UserControls
         {
             InitializeComponent();
         }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int RequireID = Int32.Parse(txtRequireID.Text);
-
-                string query = string.Format("DELETE FROM Requirement WHERE CEmail = '{0}' AND RequireID = '{1}'",account, RequireID);
-                SqlCommand cmd = new SqlCommand(query, conn);
-                db.Execute(query);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thất bại " + ex);
-            }
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //@RequireID,@CEmail,@JobName,@CAddress,@WGender,@Cost
-
-                int RequireID = Int32.Parse(txtRequireID.Text);
-
-                string query = string.Format("EXEC pd_Requirement_Update {0},'{1}','{2}','{3}','{4}','{5}'",
-                    RequireID, account,txtJobName.Text,txtLocation.Text, txtWGender.Text,txtCost.Text);
-                SqlCommand cmd = new SqlCommand(query, conn);
-                db.Execute(query);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thất bại " + ex);
-            }
-        }
     }
 }

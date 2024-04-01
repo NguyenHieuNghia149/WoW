@@ -39,7 +39,6 @@
             this.panel_His.Name = "panel_His";
             this.panel_His.Size = new System.Drawing.Size(1303, 856);
             this.panel_His.TabIndex = 8;
-            this.panel_His.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_His_Paint);
             // 
             // FHistory_RequireJob_Customers
             // 

@@ -24,12 +24,12 @@ namespace TheGioiViecLam
             this.account = account;
             InitializeComponent();
         }
-       /* public FHistory_RequireJob_Customers(string account)
-        {
-            this.account = account;
-            InitializeComponent();
-            Load_UCHistoryRequire_FromDatabase(account);
-        }*/
+        /* public FHistory_RequireJob_Customers(string account)
+         {
+             this.account = account;
+             InitializeComponent();
+             Load_UCHistoryRequire_FromDatabase(account);
+         }*/
 
         private void FHistory_RequireJob_Customers_Load(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace TheGioiViecLam
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet dataSet = new DataSet();
                 SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader(); 
+                SqlDataReader reader = cmd.ExecuteReader();
 
                 adapter.Fill(dataSet);
 
@@ -57,7 +57,7 @@ namespace TheGioiViecLam
 
                 int y = 0;
 
-                foreach(DataRow row in dataSet.Tables[0].Rows)
+                foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
                     //RequireID,CAddress,JobName,WGender,Cost
                     string RequireID = row["RequireID"].ToString();
@@ -65,11 +65,14 @@ namespace TheGioiViecLam
                     string JobName = row["JobName"].ToString();
                     string WGender = row["WGender"].ToString();
                     string Cost = row["Cost"].ToString();
-                    UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer();
 
-                    ucHis.Click += (s, ev) => UCHis_Click(RequireID, s, ev);
-                    ucHis.Click += (s, ev) => UCHis_btnDelete_Click(RequireID, s, ev);
-                    ucHis.Click += (s, ev) => UCHis_btnEdit_Click(RequireID, s, ev);
+                    UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer(); //phải tạo UC trong vòng lặp
+
+                    ucHis.Click += (s, ev) => UCHis_Click(RequireID, s, ev); //show chi tiết công việc
+                    ucHis.btnDelete.Click += (s, ev) => UCHis_btnDelete_Click(RequireID, s, ev); //delete
+
+                    //uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);
+
                     ucHis.txtCost.Text = Cost;
                     ucHis.txtJobName.Text = JobName;
                     ucHis.txtWGender.Text = WGender;
@@ -106,45 +109,26 @@ namespace TheGioiViecLam
                 FWorkdetail form = new FWorkdetail(IDP);
                 form.Show();
             }*/
-            MessageBox.Show("tutu t chua lam=)))");
-;       }
-
-        public void UCHis_btnDelete_Click(string IDP, object sender, EventArgs e)
-        {
-            /*if (sender is UCHistory_Require_Customer ucHis)
-            {
-                string postID = ucHis.txtRequireID.Text;
-                int RequireID = Int32.Parse(ucHis.txtRequireID.Text);
-                // Tạo và hiển thị form FWorkdetail
-                try
-                {
-                    string query = string.Format("DELETE FROM Requirement WHERE CEmail = '{0}' AND RequireID = '{1}'", account, RequireID);
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    db.Execute(query);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Thất bại " + ex);
-                }
-            }*/
             //MessageBox.Show("tutu t chua lam=)))");
+            ;
         }
 
-        public void UCHis_btnEdit_Click(string IDP, object sender, EventArgs e)
+        public void UCHis_btnDelete_Click(string RequireID, object sender, EventArgs e)
         {
-            /*if (sender is UCHistory_Require_Customer ucHis)
+            UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer();
+
+            int requireID = Int32.Parse(RequireID);
+            try
             {
-                string postID = uCWorkInFor.txtIDP.Text;
-                // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(IDP);
-                form.Show();
-            }*/
-            MessageBox.Show("tutu t chua lam=)))");
-        }
-
-        private void panel_His_Paint(object sender, PaintEventArgs e)
-        {
-
+                string query = string.Format("DELETE FROM Requirement WHERE CEmail = '{0}' AND RequireID = {1}", account, RequireID);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                db.Execute(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thất bại " + ex);
+            }
+            FHistory_RequireJob_Customers_Load(sender, e);
         }
     }
 }

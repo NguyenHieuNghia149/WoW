@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCHistory_Require_Customer));
-            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.txtRequireID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtJobName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,23 +46,6 @@
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BorderRadius = 10;
-            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(594, 245);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(0)))), ((int)(((byte)(206)))));
-            this.btnEdit.Size = new System.Drawing.Size(170, 45);
-            this.btnEdit.TabIndex = 52;
-            this.btnEdit.Text = "EDIT";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtRequireID
             // 
@@ -191,9 +173,9 @@
             // lblCost
             // 
             this.lblCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCost.Location = new System.Drawing.Point(720, 129);
+            this.lblCost.Location = new System.Drawing.Point(720, 124);
             this.lblCost.Name = "lblCost";
-            this.lblCost.Size = new System.Drawing.Size(44, 20);
+            this.lblCost.Size = new System.Drawing.Size(74, 25);
             this.lblCost.TabIndex = 36;
             this.lblCost.Text = "Cost";
             // 
@@ -201,7 +183,7 @@
             // 
             this.lblLocation.AutoSize = true;
             this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocation.Location = new System.Drawing.Point(302, 132);
+            this.lblLocation.Location = new System.Drawing.Point(302, 155);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(73, 20);
             this.lblLocation.TabIndex = 35;
@@ -265,7 +247,6 @@
             this.btnDelete.Size = new System.Drawing.Size(170, 45);
             this.btnDelete.TabIndex = 55;
             this.btnDelete.Text = "DELETE";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // UCHistory_Require_Customer
             // 
@@ -275,7 +256,6 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtWGender);
             this.Controls.Add(this.lblGender);
-            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtRequireID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtJobName);
@@ -294,8 +274,6 @@
         }
 
         #endregion
-
-        public Guna.UI2.WinForms.Guna2Button btnEdit;
         public Guna.UI2.WinForms.Guna2TextBox txtRequireID;
         private System.Windows.Forms.Label label2;
         public Guna.UI2.WinForms.Guna2TextBox txtJobName;
