@@ -65,7 +65,7 @@ namespace TheGioiViecLam
             {
                 string postID = uCWorkInFor.txtIDP.Text;
                 // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(IDP);
+                FWorkdetail form = new FWorkdetail(IDP,account);
                 form.Show();
             }
         }

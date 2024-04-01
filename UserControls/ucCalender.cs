@@ -41,5 +41,10 @@ namespace TheGioiViecLam.UserControls
         {
 
         }
+
+        private void btnblock_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

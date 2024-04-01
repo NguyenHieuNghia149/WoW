@@ -87,7 +87,7 @@ namespace TheGioiViecLam
             if (sender is UCWorkInFor uCWorkInFor)
             {
                 // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(postID);
+                FWorkdetail form = new FWorkdetail(postID,account);
                 form.Show();
             }
         }

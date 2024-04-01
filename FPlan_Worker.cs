@@ -50,9 +50,17 @@ namespace TheGioiViecLam
             ucCalender1.timerNotify.Tick += TimerNotify_Tick;
             ucCalender1.cboxnotify.CheckedChanged += Cboxnotify_CheckedChanged;
             ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
+            ucCalender1.btnblock.Click += Btnblock_Click;
             LoadMatrix();
             jobs = GetData();
+            AddNumbertoMatrix(ucCalender1.dt.Value);
         }
+
+        private void Btnblock_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         void Setdefaultjob()
         {
             jobs = new List<Order>();
@@ -128,6 +136,11 @@ namespace TheGioiViecLam
                     btn.ForeColor = Color.White;
                 }
 
+                // Kiểm tra xem ngày có công việc không
+                if (jobs.Any(job => job.Date.Date == useday.Date))
+                {
+                    btn.BackColor = Color.FromArgb(255, 152, 0); // Màu xanh
+                }
 
                 if (collum >= 6)
                 {

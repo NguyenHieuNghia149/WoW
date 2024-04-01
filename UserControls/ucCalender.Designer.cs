@@ -42,14 +42,15 @@
             this.btnNexrMonth = new Guna.UI2.WinForms.Guna2Button();
             this.btnPreviousMonth = new Guna.UI2.WinForms.Guna2Button();
             this.btnMonday = new Guna.UI2.WinForms.Guna2Button();
-            this.dt = new System.Windows.Forms.DateTimePicker();
             this.pnTop = new Guna.UI2.WinForms.Guna2Panel();
             this.numericNotify = new System.Windows.Forms.NumericUpDown();
             this.cboxnotify = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.btnToday = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.timerNotify = new System.Windows.Forms.Timer(this.components);
             this.notify = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btnblock = new Guna.UI2.WinForms.Guna2Button();
+            this.dt = new System.Windows.Forms.DateTimePicker();
+            this.btnToday = new Guna.UI2.WinForms.Guna2Button();
             this.pnMain.SuspendLayout();
             this.pnBottom.SuspendLayout();
             this.pnTop.SuspendLayout();
@@ -216,20 +217,13 @@
             this.btnMonday.TabIndex = 0;
             this.btnMonday.Text = "Monday";
             // 
-            // dt
-            // 
-            this.dt.Location = new System.Drawing.Point(485, 17);
-            this.dt.Name = "dt";
-            this.dt.Size = new System.Drawing.Size(283, 22);
-            this.dt.TabIndex = 2;
-            this.dt.ValueChanged += new System.EventHandler(this.dt_ValueChanged);
-            // 
             // pnTop
             // 
-            this.pnTop.Controls.Add(this.numericNotify);
-            this.pnTop.Controls.Add(this.cboxnotify);
+            this.pnTop.Controls.Add(this.btnblock);
             this.pnTop.Controls.Add(this.dt);
             this.pnTop.Controls.Add(this.btnToday);
+            this.pnTop.Controls.Add(this.numericNotify);
+            this.pnTop.Controls.Add(this.cboxnotify);
             this.pnTop.Location = new System.Drawing.Point(3, 3);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1255, 62);
@@ -252,10 +246,12 @@
             // cboxnotify
             // 
             this.cboxnotify.AutoSize = true;
+            this.cboxnotify.Checked = true;
             this.cboxnotify.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboxnotify.CheckedState.BorderRadius = 0;
             this.cboxnotify.CheckedState.BorderThickness = 0;
             this.cboxnotify.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboxnotify.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cboxnotify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxnotify.Location = new System.Drawing.Point(3, 17);
             this.cboxnotify.Name = "cboxnotify";
@@ -267,21 +263,6 @@
             this.cboxnotify.UncheckedState.BorderThickness = 0;
             this.cboxnotify.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.cboxnotify.CheckedChanged += new System.EventHandler(this.cboxnotify_CheckedChanged);
-            // 
-            // btnToday
-            // 
-            this.btnToday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnToday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnToday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnToday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnToday.ForeColor = System.Drawing.Color.White;
-            this.btnToday.Location = new System.Drawing.Point(789, 3);
-            this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(149, 36);
-            this.btnToday.TabIndex = 1;
-            this.btnToday.Text = "today";
-            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
             // guna2Panel1
             // 
@@ -302,6 +283,50 @@
             this.notify.Icon = ((System.Drawing.Icon)(resources.GetObject("notify.Icon")));
             this.notify.Text = "Notify";
             this.notify.Visible = true;
+            // 
+            // btnblock
+            // 
+            this.btnblock.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(63)))), ((int)(((byte)(120)))));
+            this.btnblock.BorderRadius = 10;
+            this.btnblock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnblock.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnblock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnblock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnblock.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(63)))), ((int)(((byte)(120)))));
+            this.btnblock.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnblock.ForeColor = System.Drawing.Color.White;
+            this.btnblock.Location = new System.Drawing.Point(892, 8);
+            this.btnblock.Name = "btnblock";
+            this.btnblock.Size = new System.Drawing.Size(149, 36);
+            this.btnblock.TabIndex = 8;
+            this.btnblock.Text = "Block";
+            this.btnblock.Click += new System.EventHandler(this.btnblock_Click);
+            // 
+            // dt
+            // 
+            this.dt.Location = new System.Drawing.Point(422, 17);
+            this.dt.Name = "dt";
+            this.dt.Size = new System.Drawing.Size(283, 22);
+            this.dt.TabIndex = 7;
+            this.dt.ValueChanged += new System.EventHandler(this.dt_ValueChanged);
+            // 
+            // btnToday
+            // 
+            this.btnToday.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnToday.BorderRadius = 10;
+            this.btnToday.BorderThickness = 1;
+            this.btnToday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnToday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnToday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnToday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnToday.ForeColor = System.Drawing.Color.White;
+            this.btnToday.Location = new System.Drawing.Point(726, 8);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(149, 36);
+            this.btnToday.TabIndex = 6;
+            this.btnToday.Text = "today";
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
             // ucCalender
             // 
@@ -334,13 +359,14 @@
         public Guna.UI2.WinForms.Guna2Button btnNexrMonth;
         public Guna.UI2.WinForms.Guna2Button btnPreviousMonth;
         private Guna.UI2.WinForms.Guna2Button btnMonday;
-        public System.Windows.Forms.DateTimePicker dt;
         public Guna.UI2.WinForms.Guna2Panel pnTop;
         public System.Windows.Forms.NumericUpDown numericNotify;
         public Guna.UI2.WinForms.Guna2CheckBox cboxnotify;
-        public Guna.UI2.WinForms.Guna2Button btnToday;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public System.Windows.Forms.Timer timerNotify;
         public System.Windows.Forms.NotifyIcon notify;
+        public Guna.UI2.WinForms.Guna2Button btnblock;
+        public System.Windows.Forms.DateTimePicker dt;
+        public Guna.UI2.WinForms.Guna2Button btnToday;
     }
 }

@@ -33,7 +33,7 @@ namespace TheGioiViecLam
             {
 
                 // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(postID);
+                FWorkdetail form = new FWorkdetail(postID, account);
                 form.Show();
 
             }

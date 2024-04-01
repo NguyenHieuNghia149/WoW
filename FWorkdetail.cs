@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System;
+using System.Security.Principal;
 
 namespace TheGioiViecLam
 {
@@ -11,15 +12,23 @@ namespace TheGioiViecLam
         UCWork_Detail ucW; // Khai báo UserControl
 
         private string selectedPostID;
-        public FWorkdetail(string postID)
+        private string account;
+        public FWorkdetail(string postID, string account)
         {
             InitializeComponent();
             selectedPostID = postID;
             ucW = new UCWork_Detail(); // Khởi tạo UserControl
             Controls.Add(ucW); // Thêm UserControl vào form
             ucW.Dock = DockStyle.Fill; // Cho phép UserControl lấp đầy toàn bộ kích thước của form
+            ucW.btnBook.Click += BtnBook_Click;
+            this.account = account;
         }
+        private void BtnBook_Click(object sender, EventArgs e)
+        {
+            FCalenderCustomer form = new FCalenderCustomer(selectedPostID, account);
+            form.ShowDialog();
 
+        }
         private void FWorkdetail_Load(object sender, EventArgs e)
         {
             try

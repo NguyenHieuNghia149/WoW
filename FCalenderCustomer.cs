@@ -53,6 +53,7 @@ namespace TheGioiViecLam
             ucCalender1.cboxnotify.CheckedChanged += Cboxnotify_CheckedChanged;
             ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
             LoadMatrix();
+            ucCalender1.btnblock.Visible = false;
             //jobs = GetData();
 
         }
@@ -131,7 +132,7 @@ namespace TheGioiViecLam
                     btn.BackColor = Color.FromArgb(255, 32, 78);
                     btn.ForeColor = Color.White;
                 }
-
+              
                 if (collum >= 6)
                 {
                     line++;
@@ -139,6 +140,7 @@ namespace TheGioiViecLam
                 useday = useday.AddDays(1);
             }
         }
+
 
         bool isEqualDate(DateTime date1, DateTime date2)
         {
