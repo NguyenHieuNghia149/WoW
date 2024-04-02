@@ -46,13 +46,17 @@ namespace TheGioiViecLam
                 for (int i = 0; i < todayjob.Count; i++)
                 {
                     ucAOrder ajob = new ucAOrder(todayjob[i]);
-                    ajob.Tag = todayjob[i];
-                    ajob.btndeny.Click += (s, ev) => ajob_Denied(ajob, s, ev);
-                    ajob.btnConfirm.Click += (s, ev) => ajob_Confirmed(postID, s, ev);
-                    ajob.btnDone.Click += (s, ev) => ajob_Done(postID, s, ev);
-                    LoadJobDetails(ajob, todayjob[i]);
+                    if (!ajob.IsConfirmed || !ajob.IsUnconfirmed)
+                    {
+                        ajob.Tag = todayjob[i];
+                        ajob.btndeny.Click += (s, ev) => ajob_Denied(ajob, s, ev);
+                        ajob.btnConfirm.Click += (s, ev) => ajob_Confirmed(postID, s, ev);
+                        ajob.btnDone.Click += (s, ev) => ajob_Done(postID, s, ev);
+                        LoadJobDetails(ajob, todayjob[i]);
 
-                    fPanel.Controls.Add(ajob);
+                        fPanel.Controls.Add(ajob);
+                    }
+                   
                 }
             }
         }
@@ -73,8 +77,10 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string query = string.Format("UPDATE Orders SET OStatus = 'Done' WHERE IDP = '{0}'", postID);
+                string query = "UPDATE Orders SET OStatus = 'Done' WHERE IDP = @PostID AND Odate = @TodayDate";
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@PostID", postID);
+                cmd.Parameters.AddWithValue("@TodayDate", date); 
                 int rowsAffected = cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -94,8 +100,10 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string query = string.Format("UPDATE Orders SET OStatus = 'Confirmed' WHERE IDP = '{0}'", postID);
+                string query = "UPDATE Orders SET OStatus = 'Done' WHERE IDP = @PostID AND Odate = @TodayDate";
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@PostID", postID);
+                cmd.Parameters.AddWithValue("@TodayDate", date);
                 int rowsAffected = cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

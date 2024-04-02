@@ -14,30 +14,36 @@ namespace TheGioiViecLam.UserControls
     public partial class ucAOrder : UserControl
     {
         private Order job;
-       /* private event EventHandler denied;
-        public event EventHandler Denied
-        {
-            add { denied += value; }
-            remove { denied -= value; }
-        }
-        private event EventHandler confirmed;
-        public event EventHandler Confirmed
-        {
-            add { confirmed += value; }
-            remove { confirmed -= value; }
-        }
-        private event EventHandler done;
-        public event EventHandler Done
-        {
-            add { done += value; }
-            remove { done -= value; }
-        }*/
+        /* private event EventHandler denied;
+         public event EventHandler Denied
+         {
+             add { denied += value; }
+             remove { denied -= value; }
+         }
+         private event EventHandler confirmed;
+         public event EventHandler Confirmed
+         {
+             add { confirmed += value; }
+             remove { confirmed -= value; }
+         }
+         private event EventHandler done;
+         public event EventHandler Done
+         {
+             add { done += value; }
+             remove { done -= value; }
+         }*/
+        public bool IsConfirmed { get; private set; }
+        public bool IsUnconfirmed { get; private set; }
+
         public ucAOrder(Order job)
         {
             InitializeComponent();
             this.job = job;
-/*            ShowInfor();
-*/        }
+            IsConfirmed = job.Status == "Confirm";
+            IsUnconfirmed = job.Status == "Unconfirm";
+            /*            ShowInfor();
+            */
+        }
 
 /*        void ShowInfor()
         {

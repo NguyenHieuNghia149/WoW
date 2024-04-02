@@ -138,5 +138,15 @@ namespace TheGioiViecLam
             db.Execute(query);
             
         }
+
+        private void lblCity_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_Whole_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

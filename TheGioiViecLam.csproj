@@ -478,6 +478,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+    <None Include="Resources\left-arrow.png" />
+    <None Include="Resources\arrow.png" />
     <None Include="Resources\photo %281%291.png" />
     <None Include="Resources\photo %281%29.png" />
     <None Include="Resources\delete.png" />

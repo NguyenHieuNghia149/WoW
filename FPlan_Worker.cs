@@ -118,6 +118,7 @@ namespace TheGioiViecLam
                 int collum = dayofWeek.IndexOf(useday.DayOfWeek.ToString());
                 Button btn = matrix[line][collum];
                 btn.Text = i.ToString();
+                btn.TextAlign = ContentAlignment.TopLeft;
 
                 // Xóa màu đỏ của ngày trước đó
                 if (!isEqualDate(useday, date))

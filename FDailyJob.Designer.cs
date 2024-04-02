@@ -43,6 +43,7 @@
             // 
             // pnJob
             // 
+            this.pnJob.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnJob.Location = new System.Drawing.Point(3, 67);
             this.pnJob.Name = "pnJob";
             this.pnJob.Size = new System.Drawing.Size(1297, 663);
@@ -70,9 +71,10 @@
             // 
             // dt
             // 
+            this.dt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dt.Location = new System.Drawing.Point(517, 9);
             this.dt.Name = "dt";
-            this.dt.Size = new System.Drawing.Size(355, 22);
+            this.dt.Size = new System.Drawing.Size(355, 26);
             this.dt.TabIndex = 3;
             this.dt.ValueChanged += new System.EventHandler(this.dt_ValueChanged);
             // 
@@ -82,13 +84,15 @@
             this.btnTomorow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTomorow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTomorow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTomorow.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnTomorow.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTomorow.ForeColor = System.Drawing.Color.White;
+            this.btnTomorow.Image = global::TheGioiViecLam.Properties.Resources.right_arrow;
+            this.btnTomorow.ImageSize = new System.Drawing.Size(40, 40);
             this.btnTomorow.Location = new System.Drawing.Point(1095, 9);
             this.btnTomorow.Name = "btnTomorow";
             this.btnTomorow.Size = new System.Drawing.Size(184, 45);
             this.btnTomorow.TabIndex = 2;
-            this.btnTomorow.Text = "tomorrow";
             this.btnTomorow.Click += new System.EventHandler(this.btnTomorow_Click);
             // 
             // btnYesterday
@@ -97,17 +101,20 @@
             this.btnYesterday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnYesterday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnYesterday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnYesterday.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnYesterday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnYesterday.ForeColor = System.Drawing.Color.White;
+            this.btnYesterday.Image = global::TheGioiViecLam.Properties.Resources.left_arrow;
+            this.btnYesterday.ImageSize = new System.Drawing.Size(40, 40);
             this.btnYesterday.Location = new System.Drawing.Point(21, 9);
             this.btnYesterday.Name = "btnYesterday";
             this.btnYesterday.Size = new System.Drawing.Size(211, 45);
             this.btnYesterday.TabIndex = 1;
-            this.btnYesterday.Text = "yesterday";
             this.btnYesterday.Click += new System.EventHandler(this.btnYesterday_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnToday});
@@ -128,6 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1327, 786);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.menuStrip1);

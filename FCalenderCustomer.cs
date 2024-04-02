@@ -187,17 +187,17 @@ namespace TheGioiViecLam
 
         private void NumericNotify_ValueChanged(object sender, EventArgs e)
         {
-            Cons.notifyTime = (int)ucCalender1.numericNotify.Value;
+            //Cons.notifyTime = (int)ucCalender1.numericNotify.Value;
         }
 
         private void Cboxnotify_CheckedChanged(object sender, EventArgs e)
         {
-            ucCalender1.numericNotify.Enabled = ucCalender1.cboxnotify.Checked;
+            //ucCalender1.numericNotify.Enabled = ucCalender1.cboxnotify.Checked;
         }
 
         private void TimerNotify_Tick(object sender, EventArgs e)
         {
-            if (ucCalender1.cboxnotify.Checked) // Kiểm tra xem ô đánh dấu đã được chọn hay không
+            /*if (ucCalender1.cboxnotify.Checked) // Kiểm tra xem ô đánh dấu đã được chọn hay không
             {
                 appTime++;
                 if (appTime >= Cons.notifyTime)
@@ -210,7 +210,7 @@ namespace TheGioiViecLam
                     }
                     appTime = 0;
                 }
-            }
+            }*/
         }
 
         private void Btn_Click(object sender, EventArgs e)

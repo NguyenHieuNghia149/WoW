@@ -212,3 +212,5 @@ C:\Users\FPTSHOP\Documents\Zalo Received Files\backup\backup\obj\Debug\TheGioiVi
 C:\Users\FPTSHOP\Documents\Zalo Received Files\backup\backup\obj\Debug\TheGioiViecLam.pdb
 C:\Users\Admin\Source\Repos\WoW\obj\Debug\TheGioiViecLam.FViewRequire_Worker.resources
 C:\Users\Admin\Source\Repos\WoW\obj\Debug\TheGioiViecLam.UserControls.UCView_Require_Worker.resources
+D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FViewRequire_Worker.resources
+D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.UserControls.UCView_Require_Worker.resources
