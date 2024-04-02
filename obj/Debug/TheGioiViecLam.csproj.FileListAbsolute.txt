@@ -210,3 +210,5 @@ C:\Users\FPTSHOP\Documents\Zalo Received Files\backup\backup\obj\Debug\TheGioiVi
 C:\Users\FPTSHOP\Documents\Zalo Received Files\backup\backup\obj\Debug\TheGioiViecLam.csproj.CopyComplete
 C:\Users\FPTSHOP\Documents\Zalo Received Files\backup\backup\obj\Debug\TheGioiViecLam.exe
 C:\Users\FPTSHOP\Documents\Zalo Received Files\backup\backup\obj\Debug\TheGioiViecLam.pdb
+C:\Users\Admin\Source\Repos\WoW\obj\Debug\TheGioiViecLam.FViewRequire_Worker.resources
+C:\Users\Admin\Source\Repos\WoW\obj\Debug\TheGioiViecLam.UserControls.UCView_Require_Worker.resources

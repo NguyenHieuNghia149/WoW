@@ -222,6 +222,12 @@
     <Compile Include="FSignUpforWorkers.Designer.cs">
       <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FViewRequire_Worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FViewRequire_Worker.Designer.cs">
+      <DependentUpon>FViewRequire_Worker.cs</DependentUpon>
+    </Compile>
     <Compile Include="FWorkdetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,12 @@
     </Compile>
     <Compile Include="UserControls\ucServiceReview.Designer.cs">
       <DependentUpon>ucServiceReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCView_Require_Worker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCView_Require_Worker.Designer.cs">
+      <DependentUpon>UCView_Require_Worker.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCWorkInFor.cs">
       <SubType>UserControl</SubType>
@@ -388,6 +400,9 @@
     <EmbeddedResource Include="FSignUpforWorkers.resx">
       <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FViewRequire_Worker.resx">
+      <DependentUpon>FViewRequire_Worker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FWorkdetail.resx">
       <DependentUpon>FWorkdetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucServiceReview.resx">
       <DependentUpon>ucServiceReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCView_Require_Worker.resx">
+      <DependentUpon>UCView_Require_Worker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCWorkInFor.resx">
       <DependentUpon>UCWorkInFor.cs</DependentUpon>

@@ -56,5 +56,10 @@ namespace TheGioiViecLam
             form.Show();
             this.Close();
         }
+
+        private void btnSearchRequire_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FViewRequire_Worker(account));
+        }
     }
 }
