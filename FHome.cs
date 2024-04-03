@@ -32,7 +32,7 @@ namespace TheGioiViecLam
             if (sender is UCWorkInFor uCWorkInFor)
             {
 
-                // Tạo và hiển thị form FWorkdetail
+              
                 FWorkdetail form = new FWorkdetail(postID, account);
                 form.Show();
 
@@ -138,11 +138,12 @@ namespace TheGioiViecLam
                     string location = row["District"].ToString();
                     string postID = row["IDP"].ToString(); // Lấy giá trị IDP
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
+                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
                     if (CheckIDPInSaves(postID))
                     {
                         uCWorkInFor.btnSave.FillColor = System.Drawing.Color.Gray;
                     }
-                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
+                    
                     if (uCWorkInFor.btnSave.FillColor == System.Drawing.Color.FromArgb(238, 66, 102))
                     {
                         uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);

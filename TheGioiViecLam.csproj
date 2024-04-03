@@ -292,6 +292,12 @@
     <Compile Include="UserControls\UCOrders.Designer.cs">
       <DependentUpon>UCOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCreview.Designer.cs">
+      <DependentUpon>UCreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucServiceReview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -439,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCOrders.resx">
       <DependentUpon>UCOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCreview.resx">
+      <DependentUpon>UCreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucServiceReview.resx">
       <DependentUpon>ucServiceReview.cs</DependentUpon>

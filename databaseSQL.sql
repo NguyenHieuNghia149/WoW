@@ -152,7 +152,7 @@ VALUES (N'W00005',N'Viet@gmail.com',N'Lê Văn Việt',N'Viet@gmail.com',N'Male'
 GO
 
 ------------------------POST-------------------------
-DROP TABLE Post
+--DROP TABLE Post
 
 create table dbo.Post(
 	OrderNum INT IDENTITY (1,1),
@@ -325,3 +325,13 @@ BEGIN
 END
 GO
 
+Create table Review(
+	IDP Nchar(20),
+	WID Nchar(20),
+	Rating float,
+	Review Nchar(200),
+	Primary key(IDP,WID),
+	foreign key (IDP) references Post(IDP),
+	foreign key (WID) references Worker(WID),
+)
+go

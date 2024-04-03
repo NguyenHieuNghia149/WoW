@@ -20,8 +20,8 @@ namespace TheGioiViecLam
         private void btn_Yes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FWriteReview form = new FWriteReview();
-            form.ShowDialog();
+            //FWriteReview form = new FWriteReview();
+            //form.ShowDialog();
             this.Close();
         }
 
