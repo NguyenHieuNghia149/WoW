@@ -228,6 +228,12 @@
     <Compile Include="FViewRequire_Worker.Designer.cs">
       <DependentUpon>FViewRequire_Worker.cs</DependentUpon>
     </Compile>
+    <Compile Include="FWaitConfirmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FWaitConfirmOrder.Designer.cs">
+      <DependentUpon>FWaitConfirmOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="FWorkdetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -409,6 +415,9 @@
     <EmbeddedResource Include="FViewRequire_Worker.resx">
       <DependentUpon>FViewRequire_Worker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FWaitConfirmOrder.resx">
+      <DependentUpon>FWaitConfirmOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FWorkdetail.resx">
       <DependentUpon>FWorkdetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -487,6 +496,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\shopping-list.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\requirement1.png" />
+    <None Include="Resources\menu-burger1.png" />
+    <None Include="Resources\home1.png" />
+    <None Include="Resources\headphone1.png" />
+    <None Include="Resources\wishlist1.png" />
+    <None Include="Resources\shopping-bag1.png" />
+    <None Include="Resources\requirement.png" />
+    <None Include="Resources\shopping-bag.png" />
+    <None Include="Resources\wishlist.png" />
+    <None Include="Resources\headphone.png" />
+    <None Include="Resources\headset %281%29.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\menu-burger.png" />
     <None Include="Resources\right-arrow.png" />
     <None Include="Resources\left-arrow.png" />
     <None Include="Resources\arrow.png" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace TheGioiViecLam.model
         private string District;
         private string PhoneNumber;
         private string Address;
+        private Image Image;
 
         public Customer()
         {
@@ -31,7 +33,7 @@ namespace TheGioiViecLam.model
             Password = password;
          
         }
-        public Customer(string cID, string email, string password, string fullname, string gender, string birthday, string city, string district, string phoneNumber, string address)
+        public Customer(string cID, string email, string password, string fullname, string gender, string birthday, string city, string district, string phoneNumber, string address,Image image)
         {
             CID = cID;
             Email = email;
@@ -43,6 +45,7 @@ namespace TheGioiViecLam.model
             District = district;
             PhoneNumber = phoneNumber;
             Address = address;
+            Image = image;
         }
        
         public string Cid { get => CID; set => CID = value; }
@@ -55,6 +58,7 @@ namespace TheGioiViecLam.model
         public string district { get => District; set => District = value; }
         public string phoneNumber { get => PhoneNumber; set => PhoneNumber = value; }
         public string address { get => Address; set => Address = value; }
+        public Image image { get => Image; set => image = value; }
     }
 
 }

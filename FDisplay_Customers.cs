@@ -18,9 +18,8 @@ namespace TheGioiViecLam
         {
             InitializeComponent();
             OpenChildForm(new FHome(account));
-            btnHome.Checked = true;
             this.account = account;
-            lbl_username.Text = account;
+            
         }
         private void btn_SignOut_Click(object sender, EventArgs e)
         {
@@ -82,5 +81,7 @@ namespace TheGioiViecLam
         {
             OpenChildForm(new FRequirement_Jobs(account));
         }
+
+       
     }
 }

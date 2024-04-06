@@ -18,6 +18,7 @@ namespace TheGioiViecLam
             Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new FSignInforWorkers());
+            //Application.Run(new FProfile_Customers("Nam@gmail.com"));
 
         }
     }

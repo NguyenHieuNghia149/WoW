@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDisplay_Workers));
             this.panel_left = new System.Windows.Forms.Panel();
+            this.btnSearchRequire = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnPlan = new Guna.UI2.WinForms.Guna2Button();
@@ -39,7 +40,6 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel_Body = new Guna.UI2.WinForms.Guna2Panel();
             this.panel_BBody = new System.Windows.Forms.Panel();
-            this.btnSearchRequire = new Guna.UI2.WinForms.Guna2Button();
             this.panel_left.SuspendLayout();
             this.panelheader.SuspendLayout();
             this.panel_Body.SuspendLayout();
@@ -60,6 +60,25 @@
             this.panel_left.Size = new System.Drawing.Size(160, 903);
             this.panel_left.TabIndex = 4;
             // 
+            // btnSearchRequire
+            // 
+            this.btnSearchRequire.BorderRadius = 10;
+            this.btnSearchRequire.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSearchRequire.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchRequire.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchRequire.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearchRequire.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearchRequire.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(88)))));
+            this.btnSearchRequire.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSearchRequire.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.btnSearchRequire.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchRequire.Image")));
+            this.btnSearchRequire.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnSearchRequire.Location = new System.Drawing.Point(13, 421);
+            this.btnSearchRequire.Name = "btnSearchRequire";
+            this.btnSearchRequire.Size = new System.Drawing.Size(134, 76);
+            this.btnSearchRequire.TabIndex = 21;
+            this.btnSearchRequire.Click += new System.EventHandler(this.btnSearchRequire_Click);
+            // 
             // btnSignOut
             // 
             this.btnSignOut.BorderRadius = 10;
@@ -73,7 +92,7 @@
             this.btnSignOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
             this.btnSignOut.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSignOut.Location = new System.Drawing.Point(13, 519);
+            this.btnSignOut.Location = new System.Drawing.Point(12, 517);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(134, 76);
             this.btnSignOut.TabIndex = 20;
@@ -189,25 +208,6 @@
             this.panel_BBody.Name = "panel_BBody";
             this.panel_BBody.Size = new System.Drawing.Size(1422, 903);
             this.panel_BBody.TabIndex = 0;
-            // 
-            // btnSearchRequire
-            // 
-            this.btnSearchRequire.BorderRadius = 10;
-            this.btnSearchRequire.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnSearchRequire.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchRequire.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchRequire.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearchRequire.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearchRequire.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(88)))));
-            this.btnSearchRequire.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSearchRequire.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.btnSearchRequire.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchRequire.Image")));
-            this.btnSearchRequire.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSearchRequire.Location = new System.Drawing.Point(13, 421);
-            this.btnSearchRequire.Name = "btnSearchRequire";
-            this.btnSearchRequire.Size = new System.Drawing.Size(134, 76);
-            this.btnSearchRequire.TabIndex = 21;
-            this.btnSearchRequire.Click += new System.EventHandler(this.btnSearchRequire_Click);
             // 
             // FDisplay_Workers
             // 

@@ -64,9 +64,9 @@
             // PanelBottom
             // 
             this.PanelBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.PanelBottom.Location = new System.Drawing.Point(56, 198);
+            this.PanelBottom.Location = new System.Drawing.Point(12, 198);
             this.PanelBottom.Name = "PanelBottom";
-            this.PanelBottom.Size = new System.Drawing.Size(1190, 660);
+            this.PanelBottom.Size = new System.Drawing.Size(1288, 660);
             this.PanelBottom.TabIndex = 2;
             // 
             // PanelCenter

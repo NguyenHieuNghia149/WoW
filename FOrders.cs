@@ -41,7 +41,7 @@ namespace TheGioiViecLam
                 conn.Open();
                 string sql = string.Format("SELECT Customer.Fullname as fullname,Post.WID as WID, Customer.PhoneNum as phonenumber," +
                     " Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time," +
-                    " Orders.IDP as IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CID as CID FROM Post,Orders," +
+                    " Orders.IDP as IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as stomer.CIDWorkerName,Cu as CID FROM Post,Orders," +
                     " Customer WHERE Post.IDP = Orders.IDP and Orders.CEmail = '{0}' and Customer.CEmail = Orders.CEmail", account);
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
                 DataSet dataSet = new DataSet();
@@ -76,7 +76,7 @@ namespace TheGioiViecLam
 
                         uc.lbl_Status.ForeColor = Color.FromArgb(0, 122, 204);
                     }
-                    if (uc.lbl_Status.Text == "Unconfirm                                         ")
+                    if (uc.lbl_Status.Text == "Unconfirm")
                     {
                         uc.lbl_Status.ForeColor = Color.FromArgb(255, 201, 74);
                         uc.btnBomb.Click += (s, ev) => btnBomb_Click(WID,uc, ev);
@@ -87,7 +87,7 @@ namespace TheGioiViecLam
                         uc.lbl_Status.ForeColor = Color.FromArgb(255, 32, 78);
 
                     }
-                    if (uc.lbl_Status.Text == "Done                                              ")
+                    if (uc.lbl_Status.Text == "Done")
                     {
                         if (CheckReview(IDP, WID))
                         {
@@ -121,7 +121,7 @@ namespace TheGioiViecLam
         {
             try
             {
-                string sqlStr = string.Format("SELECT COUNT(*) FROM Review WHERE IDP = '{0}' and WID ='{1}'", IDP,WID);
+                string sqlStr = string.Format("SELECT COUNT(*) FROM Review WHERE IDP = '{0}' and WID ='{1}'", IDP, WID);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 int count = (int)cmd.ExecuteScalar();
                 return count > 0;
@@ -165,6 +165,47 @@ namespace TheGioiViecLam
         {
             FWriteReview fWriteReview = new FWriteReview(CID,IDP,WID);
             fWriteReview.Show();
+        }
+        private Form currentFormChild;
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            currentFormChild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel_Body.Controls.Add(childForm);
+            panel_Body.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btncompleted_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelled_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void v_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnComfirmed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Separator1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

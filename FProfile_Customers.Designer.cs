@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panelMain = new System.Windows.Forms.Panel();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.imagebtnPostImage = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txtGender = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblGender = new System.Windows.Forms.Label();
             this.txtDistrict = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblDistrict = new System.Windows.Forms.Label();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFullname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,19 +52,19 @@
             this.lblCity = new System.Windows.Forms.Label();
             this.lblBirthday = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.panelMain.Controls.Add(this.guna2ImageButton1);
+            this.panelMain.Controls.Add(this.imagebtnPostImage);
             this.panelMain.Controls.Add(this.txtGender);
             this.panelMain.Controls.Add(this.lblGender);
             this.panelMain.Controls.Add(this.txtDistrict);
             this.panelMain.Controls.Add(this.lblDistrict);
             this.panelMain.Controls.Add(this.txtID);
-            this.panelMain.Controls.Add(this.guna2PictureBox1);
+            this.panelMain.Controls.Add(this.pictureBox);
             this.panelMain.Controls.Add(this.txtPhoneNumber);
             this.panelMain.Controls.Add(this.txtFullname);
             this.panelMain.Controls.Add(this.txtEmail);
@@ -85,20 +85,20 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1303, 856);
             this.panelMain.TabIndex = 5;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
-            // guna2ImageButton1
+            // imagebtnPostImage
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::TheGioiViecLam.Properties.Resources.photo__1_1;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(133, 316);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
-            this.guna2ImageButton1.TabIndex = 60;
+            this.imagebtnPostImage.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imagebtnPostImage.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imagebtnPostImage.Image = global::TheGioiViecLam.Properties.Resources.photo__1_1;
+            this.imagebtnPostImage.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imagebtnPostImage.ImageRotate = 0F;
+            this.imagebtnPostImage.Location = new System.Drawing.Point(185, 437);
+            this.imagebtnPostImage.Name = "imagebtnPostImage";
+            this.imagebtnPostImage.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imagebtnPostImage.Size = new System.Drawing.Size(64, 54);
+            this.imagebtnPostImage.TabIndex = 60;
+            this.imagebtnPostImage.Click += new System.EventHandler(this.imagebtnPostImage_Click);
             // 
             // txtGender
             // 
@@ -112,7 +112,7 @@
             this.txtGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGender.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGender.Location = new System.Drawing.Point(716, 265);
+            this.txtGender.Location = new System.Drawing.Point(877, 267);
             this.txtGender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGender.Name = "txtGender";
             this.txtGender.PasswordChar = '\0';
@@ -125,7 +125,7 @@
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(712, 240);
+            this.lblGender.Location = new System.Drawing.Point(873, 242);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(63, 21);
             this.lblGender.TabIndex = 59;
@@ -143,7 +143,7 @@
             this.txtDistrict.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDistrict.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDistrict.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDistrict.Location = new System.Drawing.Point(716, 332);
+            this.txtDistrict.Location = new System.Drawing.Point(877, 334);
             this.txtDistrict.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDistrict.Name = "txtDistrict";
             this.txtDistrict.PasswordChar = '\0';
@@ -156,7 +156,7 @@
             // 
             this.lblDistrict.AutoSize = true;
             this.lblDistrict.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistrict.Location = new System.Drawing.Point(712, 307);
+            this.lblDistrict.Location = new System.Drawing.Point(873, 309);
             this.lblDistrict.Name = "lblDistrict";
             this.lblDistrict.Size = new System.Drawing.Size(64, 21);
             this.lblDistrict.TabIndex = 57;
@@ -174,7 +174,7 @@
             this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.Location = new System.Drawing.Point(716, 184);
+            this.txtID.Location = new System.Drawing.Point(877, 186);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
             this.txtID.PasswordChar = '\0';
@@ -183,15 +183,15 @@
             this.txtID.Size = new System.Drawing.Size(314, 38);
             this.txtID.TabIndex = 55;
             // 
-            // guna2PictureBox1
+            // pictureBox
             // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(64, 115);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(197, 188);
-            this.guna2PictureBox1.TabIndex = 35;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            this.pictureBox.ImageRotate = 0F;
+            this.pictureBox.Location = new System.Drawing.Point(64, 115);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(319, 303);
+            this.pictureBox.TabIndex = 35;
+            this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // txtPhoneNumber
             // 
@@ -205,7 +205,7 @@
             this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(716, 110);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(877, 112);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
@@ -226,7 +226,7 @@
             this.txtFullname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFullname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFullname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFullname.Location = new System.Drawing.Point(331, 110);
+            this.txtFullname.Location = new System.Drawing.Point(492, 112);
             this.txtFullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.PasswordChar = '\0';
@@ -247,7 +247,7 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(331, 184);
+            this.txtEmail.Location = new System.Drawing.Point(492, 186);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -271,7 +271,7 @@
             // 
             this.lblFullname.AutoSize = true;
             this.lblFullname.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullname.Location = new System.Drawing.Point(327, 85);
+            this.lblFullname.Location = new System.Drawing.Point(488, 87);
             this.lblFullname.Name = "lblFullname";
             this.lblFullname.Size = new System.Drawing.Size(77, 21);
             this.lblFullname.TabIndex = 38;
@@ -289,7 +289,7 @@
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(331, 435);
+            this.txtAddress.Location = new System.Drawing.Point(492, 437);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
@@ -302,7 +302,7 @@
             // 
             this.lblPhonenumber.AutoSize = true;
             this.lblPhonenumber.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhonenumber.Location = new System.Drawing.Point(712, 85);
+            this.lblPhonenumber.Location = new System.Drawing.Point(873, 87);
             this.lblPhonenumber.Name = "lblPhonenumber";
             this.lblPhonenumber.Size = new System.Drawing.Size(127, 21);
             this.lblPhonenumber.TabIndex = 39;
@@ -312,7 +312,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(342, 410);
+            this.label1.Location = new System.Drawing.Point(503, 412);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 21);
             this.label1.TabIndex = 51;
@@ -322,7 +322,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(327, 159);
+            this.lblEmail.Location = new System.Drawing.Point(488, 161);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(51, 21);
             this.lblEmail.TabIndex = 40;
@@ -341,7 +341,7 @@
             this.cbCity.ItemHeight = 30;
             this.cbCity.Items.AddRange(new object[] {
             "Hồ Chí Minh"});
-            this.cbCity.Location = new System.Drawing.Point(331, 334);
+            this.cbCity.Location = new System.Drawing.Point(492, 336);
             this.cbCity.Name = "cbCity";
             this.cbCity.Size = new System.Drawing.Size(314, 36);
             this.cbCity.TabIndex = 49;
@@ -350,7 +350,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(712, 159);
+            this.lblID.Location = new System.Drawing.Point(873, 161);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(28, 21);
             this.lblID.TabIndex = 41;
@@ -365,7 +365,7 @@
             this.dtBirtthday.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBirtthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.dtBirtthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtBirtthday.Location = new System.Drawing.Point(331, 265);
+            this.dtBirtthday.Location = new System.Drawing.Point(492, 267);
             this.dtBirtthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtBirtthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtBirtthday.Name = "dtBirtthday";
@@ -381,7 +381,7 @@
             this.btnChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnChange.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange.ForeColor = System.Drawing.Color.White;
-            this.btnChange.Location = new System.Drawing.Point(868, 548);
+            this.btnChange.Location = new System.Drawing.Point(1029, 550);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(180, 45);
             this.btnChange.TabIndex = 42;
@@ -391,7 +391,7 @@
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(336, 311);
+            this.lblCity.Location = new System.Drawing.Point(497, 313);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(38, 21);
             this.lblCity.TabIndex = 47;
@@ -401,7 +401,7 @@
             // 
             this.lblBirthday.AutoSize = true;
             this.lblBirthday.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthday.Location = new System.Drawing.Point(327, 241);
+            this.lblBirthday.Location = new System.Drawing.Point(488, 243);
             this.lblBirthday.Name = "lblBirthday";
             this.lblBirthday.Size = new System.Drawing.Size(71, 21);
             this.lblBirthday.TabIndex = 46;
@@ -417,7 +417,7 @@
             this.Text = "FProfile_Customers";
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,11 +441,11 @@
         private System.Windows.Forms.Label lblFullname;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtFullname;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBox;
         private Guna.UI2.WinForms.Guna2TextBox txtGender;
         private System.Windows.Forms.Label lblGender;
         private Guna.UI2.WinForms.Guna2TextBox txtDistrict;
         private System.Windows.Forms.Label lblDistrict;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton imagebtnPostImage;
     }
 }
