@@ -27,84 +27,99 @@ namespace TheGioiViecLam
             fPanel.Width = panel_Body.Width;
             fPanel.Height = panel_Body.Height;
             panel_Body.Controls.Add(fPanel);
-            loadDataForUc();
+            LoadOrders("Unconfirm");
         }
 
+        private UCOrders CreateUCOrderFromDataRow(DataRow row)
+        {
+            UCOrders uc = new UCOrders();
+            uc.txtJobName.Text = row["jobname"].ToString();
+            uc.txtCost.Text = row["cost"].ToString();
+            uc.txtExperience.Text = row["experience"].ToString();
+            uc.txtIDP.Text = row["IDP"].ToString();
+            uc.txtHours.Text = row["FromHours"].ToString();
+            uc.txtMinutes.Text = row["FromMinutes"].ToString();
+            uc.lbl_Status.Text = row["OStatus"].ToString();
 
+            switch (uc.lbl_Status.Text)
+            {
+                case "Confirmed":
+                    uc.lbl_Status.ForeColor = Color.FromArgb(0, 122, 204);
+                    break;
+                case "Unconfirm                                                                                           ":
+                    uc.lbl_Status.ForeColor = Color.FromArgb(255, 201, 74);
+                    string WID = row["WID"].ToString();
+                    uc.btnBomb.Click += (s, ev) => btnBomb_Click(WID, uc, ev);
+                    break;
+                case "Deny":
+                    uc.lbl_Status.ForeColor = Color.FromArgb(255, 32, 78);
+                    break;
+                case "Done                                                                                                ":
+                    if (CheckReview(row["IDP"].ToString(), row["WID"].ToString()))
+                    {
+                        uc.btnBomb.FillColor = Color.Gray;
+                    }
+                    uc.lbl_Status.ForeColor = Color.FromArgb(144, 210, 109);
+                    uc.btnBomb.Text = "Evaluate";
+                    if (uc.btnBomb.FillColor == Color.FromArgb(94, 148, 255))
+                    {
+                        uc.btnBomb.Click += (s, ev) => btnEvaluate_Click(row["CID"].ToString(), row["IDP"].ToString(), row["WID"].ToString(), uc, ev);
+                    }
+                    else
+                    {
+                        uc.btnBomb.Click += (s, ev) => { }; // Gán một sự kiện trống
+                    }
+                    break;
+                default:
+                    // Xử lý trạng thái khác nếu cần
+                    break;
+            }
 
-        void loadDataForUc()
+            return uc;
+        }
+
+        private void btnInOrder_Click(object sender, EventArgs e)
+        {
+            LoadOrders("Unconfirm");
+        }
+
+        private void btnComfirmed_Click(object sender, EventArgs e)
+        {
+            LoadOrders("Confirmed");
+        }
+
+        private void btncompleted_Click(object sender, EventArgs e)
+        {
+            LoadOrders("Done");
+        }
+
+        private void btnDeny_Click(object sender, EventArgs e)
+        {
+            LoadOrders("Deny");
+        }
+
+        private void LoadOrders(string status)
         {
             fPanel.AutoScroll = true;
 
             try
             {
+                fPanel.Controls.Clear();
+
                 conn.Open();
-                string sql = string.Format("SELECT Customer.Fullname as fullname,Post.WID as WID, Customer.PhoneNum as phonenumber," +
+                string sql = string.Format("SELECT Customer.Fullname as fullname, Post.WID as WID, Customer.PhoneNum as phonenumber," +
                     " Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time," +
-                    " Orders.IDP as IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as stomer.CIDWorkerName,Cu as CID FROM Post,Orders," +
-                    " Customer WHERE Post.IDP = Orders.IDP and Orders.CEmail = '{0}' and Customer.CEmail = Orders.CEmail", account);
+                    " Orders.IDP as IDP, OStatus, ODate, FromHours, FromMinutes, Customer.Fullname as CIDWorkerName, Customer.CID FROM Post " +
+                    " INNER JOIN Orders ON Post.IDP = Orders.IDP " +
+                    " INNER JOIN Customer ON Customer.CEmail = Orders.CEmail " +
+                    " WHERE Orders.CEmail = '{0}' AND Orders.OStatus ='{1}'", account, status);
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
                 DataSet dataSet = new DataSet();
 
                 adapter.Fill(dataSet);
-
-                fPanel.Controls.Clear();
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
-                    string jobname = row["jobname"].ToString(); ;
-                    string cost = row["cost"].ToString();
-                    string experiece = row["experience"].ToString();
-                    string time = row["time"].ToString();
-                    string status = row["OStatus"].ToString();
-                    string IDP = row["IDP"].ToString();
-                    string hours = row["FromHours"].ToString();
-                    string minutes = row["FromMinutes"].ToString();
-                    string WID = row["WID"].ToString() ;
-                    string CID = row["CID"].ToString();
-                    // string address = row[""]
-                    UCOrders uc = new UCOrders();
-                    uc.txtJobName.Text = jobname;
-                    uc.txtCost.Text = cost;
-                    uc.txtExperience.Text = experiece;
-                    uc.txtIDP.Text = IDP;
-                    uc.txtHours.Text = hours;
-                    uc.txtMinutes.Text = minutes;
-                    uc.lbl_Status.Text = status;
-                    
-                    if (uc.lbl_Status.Text == "Confirmed")
-                    {
-
-                        uc.lbl_Status.ForeColor = Color.FromArgb(0, 122, 204);
-                    }
-                    if (uc.lbl_Status.Text == "Unconfirm")
-                    {
-                        uc.lbl_Status.ForeColor = Color.FromArgb(255, 201, 74);
-                        uc.btnBomb.Click += (s, ev) => btnBomb_Click(WID,uc, ev);
-
-                    }
-                    if (uc.lbl_Status.Text == "Deny")
-                    {
-                        uc.lbl_Status.ForeColor = Color.FromArgb(255, 32, 78);
-
-                    }
-                    if (uc.lbl_Status.Text == "Done")
-                    {
-                        if (CheckReview(IDP, WID))
-                        {
-                            uc.btnBomb.FillColor = System.Drawing.Color.Gray;
-                        }
-                        uc.lbl_Status.ForeColor = Color.FromArgb(144, 210, 109);
-                        uc.btnBomb.Text = "Evaluate";
-                        if (uc.btnBomb.FillColor == System.Drawing.Color.FromArgb(94, 148, 255))
-                        {
-                            uc.btnBomb.Click += (s, ev) => btnEvaluate_Click(CID, IDP, WID, uc, ev);
-                        }
-                        else
-                        {
-                            uc.btnBomb.Click += (s, ev) => { }; // Gán một sự kiện trống
-                        }
-
-                    }
+                    UCOrders uc = CreateUCOrderFromDataRow(row);
                     fPanel.Controls.Add(uc);
                 }
             }
@@ -117,7 +132,9 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
-        private bool CheckReview(string IDP,string WID)
+
+
+        private bool CheckReview(string IDP, string WID)
         {
             try
             {
@@ -131,22 +148,19 @@ namespace TheGioiViecLam
                 MessageBox.Show(exc.Message);
                 return false;
             }
-            finally
-            {
-            }
         }
-        public void btnBomb_Click(string WID,object sender, EventArgs e)
+
+        public void btnBomb_Click(string WID, object sender, EventArgs e)
         {
             try
             {
                 if (sender is UCOrders uc)
                 {
-
-                        conn.Open();
-                        string IDP = uc.txtIDP.Text; // Lấy IDP từ UC
-                        string query = string.Format("DELETE FROM Orders WHERE IDP = '{0}'", IDP);
-                        SqlCommand cmd = new SqlCommand(query, conn);
-                        int rowsAffected = cmd.ExecuteNonQuery();
+                    conn.Open();
+                    string IDP = uc.txtIDP.Text;
+                    string query = string.Format("DELETE FROM Orders WHERE IDP = '{0}'", IDP);
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    int rowsAffected = cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -156,17 +170,18 @@ namespace TheGioiViecLam
             finally
             {
                 conn.Close();
-
-                loadDataForUc(); // Load lại form sau khi xóa dữ liệu
-
+                LoadOrders("Unconfirm");
             }
         }
-        public void btnEvaluate_Click(string CID, string IDP,string WID,object sender, EventArgs e)
+
+        public void btnEvaluate_Click(string CID, string IDP, string WID, object sender, EventArgs e)
         {
-            FWriteReview fWriteReview = new FWriteReview(CID,IDP,WID);
+            FWriteReview fWriteReview = new FWriteReview(CID, IDP, WID);
             fWriteReview.Show();
         }
+
         private Form currentFormChild;
+
         private void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
@@ -183,29 +198,6 @@ namespace TheGioiViecLam
             childForm.Show();
         }
 
-        private void btncompleted_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelled_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void v_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnComfirmed_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Separator1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -8,11 +8,12 @@
 --DROP TABLE JobField
 --DROP TABLE Worker
 --DROP TABLE Customer
+--DROP TABLE Review
 --DROP TRIGGER tg_Insert_Post
 --GO
 
 
-SELECT * FROM Customer
+--SELECT * FROM Customer
 
 --1--Sua phong chu customer
 --DROP TABLE Orders
@@ -93,14 +94,17 @@ create table dbo.Orders(
 	OrderNum INT IDENTITY (1,1),
 	CEmail char(50),
 	IDP Nchar(20),
-	Timestart datetime,
-	TimeEnd datetime,
+	ODate datetime,
+	FromHours int,
+	FromMinutes int,
+	OStatus Nchar(100),
 	primary key (CEmail,IDP),
 	foreign key (CEmail) references Customer(CEmail),
 	foreign key (IDP) references Post(IDP)
 )
 
 go
+
 create table dbo.Saves(
  	OrderNum INT IDENTITY (1,1),
 	CID Nchar(20),
@@ -137,7 +141,7 @@ INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00004',N'JF00002',N'Fixing Cars')
 INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00005',N'JF00002',N'Washing Cars')
 GO
 
-SELECT * FROM Worker
+--SELECT * FROM Worker
 
 ----Nhap vao Worker
 INSERT INTO Worker(WID,WPassword,FullName,WEmail,Gender,Birthday,City,District,PhoneNum,WAddress)
@@ -237,7 +241,7 @@ EXEC pd_Insert_Post_ N'P00004',N'Hoa@gmail.com',N'Resembling Cars',N'3-4',N'35',
 EXEC pd_Insert_Post_ N'P00005',N'Viet@gmail.com',N'Resembling Cars',N'3-4',N'35',NULL,N'1-2'
 EXEC pd_Insert_Post_ N'P00006',N'Viet@gmail.com',N'Painting Walls',N'3-4',N'35',NULL,N'1-2'
 
-DELETE FROM Post WHERE IDP = N'P00006'
+--DELETE FROM Post WHERE IDP = N'P00006'
 
 ------------------------------------------------------------------------------------------------
 
@@ -253,7 +257,6 @@ VALUES(N'Hoi@gmail.com',N'P00002','2024-03-13','2024-03-15')
 INSERT INTO Orders(CEmail,IDP,Timestart,TimeEnd)
 VALUES(N'Ngan@gmail.com',N'P00002','2024-03-20','2024-03-22')
 GO
-
 ----Nhap vao Saves
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00001',N'P00003','Nam@gmail.com')
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00002',N'P00003',N'Phuong@gmail.com')

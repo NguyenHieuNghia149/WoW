@@ -16,7 +16,7 @@ namespace TheGioiViecLam
     public partial class FDailyJob : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        private string postID;
+        private string OrderNum;
         private string account;
         private List<Order> jobs;
         private DateTime date;
@@ -24,64 +24,104 @@ namespace TheGioiViecLam
         public List<Order> Jobs { get => jobs; set => jobs = value; }
 
         FlowLayoutPanel fPanel = new FlowLayoutPanel();
-        public FDailyJob(DateTime date, string postID, string account, List<Order> jobs)
+        public FDailyJob(DateTime date, string account, List<Order> jobs,string OrderNum)
         {
             InitializeComponent();
             this.date = date;
             this.account = account;
-            this.postID = postID;
             this.jobs = jobs;
+            this.OrderNum = OrderNum;
             fPanel.Width = pnJob.Width;
-            //pnJob.Controls.Clear();
             fPanel.Height = pnJob.Height;
             pnJob.Controls.Add(fPanel);
             dt.Value = date;
+            ShowJobByDate(date);
         }
-        void ShowJobBydate(DateTime date)
+
+        void ShowJobByDate(DateTime date)
         {
             fPanel.Controls.Clear();
             if (jobs != null)
             {
-                List<Order> todayjob = GetjobByDay(date);
-                for (int i = 0; i < todayjob.Count; i++)
+                List<Order> todayJobs = GetJobsByDay(date);
+                foreach (Order job in todayJobs)
                 {
-                    ucAOrder ajob = new ucAOrder(todayjob[i]);
-                    if (!ajob.IsConfirmed || !ajob.IsUnconfirmed)
-                    {
-                        ajob.Tag = todayjob[i];
-                        ajob.btndeny.Click += (s, ev) => ajob_Denied(ajob, s, ev);
-                        ajob.btnConfirm.Click += (s, ev) => ajob_Confirmed(postID, s, ev);
-                        ajob.btnDone.Click += (s, ev) => ajob_Done(postID, s, ev);
-                        LoadJobDetails(ajob, todayjob[i]);
-
-                        fPanel.Controls.Add(ajob);
-                    }
-                   
+                    ucAOrder ucJob = new ucAOrder(job);
+                    ucJob.Tag = job;
+                    ucJob.btndeny.Click += (s, ev) => ajob_Denied( s, ev,OrderNum);
+                    ucJob.btnConfirm.Click += (s, ev) => ajob_Confirmed(s, ev, OrderNum);
+                    ucJob.btnDone.Click += (s, ev) => ajob_Done(s, ev, OrderNum);
+                    LoadJobDetails(ucJob, job);
+                    fPanel.Controls.Add(ucJob);
                 }
             }
         }
-        private void LoadJobDetails(ucAOrder ucA,Order job)
+        private List<Order> GetData()
         {
-            ucA.txtAddress.Text = job.Address;
-            ucA.txtCustomer.Text = job.Customername;
-            ucA.txtfromHours.Text = job.FromHours;
-            ucA.txtfromMinute.Text = job.FromMinutes;
-            ucA.txtJob.Text = job.Jobname;
-            ucA.txtPhoneNumber.Text = job.Phonenumber;
-            ucA.txtStatus.Text = job.Status;
-        }
-
-        private void ajob_Done(string postID, object sender, EventArgs e)
-        {
-            MessageBox.Show(postID);
+            List<Order> jobs = new List<Order>();
             try
             {
                 conn.Open();
-                string query = "UPDATE Orders SET OStatus = 'Done' WHERE IDP = @PostID AND Odate = @TodayDate";
+                string sql = string.Format("SELECT Customer.Fullname as fullname, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = '{0}' and Customer.CEmail = Orders.CEmail", account);
+                SqlCommand command = new SqlCommand(sql, conn);
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Order job = new Order();
+
+                    // Kiểm tra xem cột có giá trị null không trước khi chuyển đổi kiểu dữ liệu
+                    if (!reader.IsDBNull(reader.GetOrdinal("ODate")))
+                    {
+                        job.Date = reader.GetDateTime(reader.GetOrdinal("ODate"));
+                    }
+                    job.CEmail = reader["CEmail"].ToString();
+                    job.Workername = reader["WorkerName"].ToString();
+                    job.Jobname = reader["jobname"].ToString();
+                    job.FromHours = reader["FromHours"].ToString();
+                    job.FromMinutes = reader["FromMinutes"].ToString();
+                    job.Cost = reader["cost"].ToString();
+                    job.Customername = reader["fullname"].ToString();
+                    job.Phonenumber = reader["phonenumber"].ToString();
+                    job.Address = reader["CAddress"].ToString();
+                    job.Status = reader["OStatus"].ToString();
+                    jobs.Add(job);
+                }
+                reader.Close();
+                return jobs;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+
+            }
+        }
+        private void LoadJobDetails(ucAOrder ucJob, Order job)
+        {
+            ucJob.txtAddress.Text = job.Address;
+            ucJob.txtCustomer.Text = job.Customername;
+            ucJob.txtfromHours.Text = job.FromHours;
+            ucJob.txtfromMinute.Text = job.FromMinutes;
+            ucJob.txtJob.Text = job.Jobname;
+            ucJob.txtPhoneNumber.Text = job.Phonenumber;
+            ucJob.txtStatus.Text = job.Status;
+        }
+
+        private void ajob_Done( object sender, EventArgs e,string OrderNum)
+        {
+            try
+            {
+                conn.Open();
+                string query = "UPDATE Orders SET OStatus = 'Done' WHERE OrderNum = @OrderNum";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@PostID", postID);
-                cmd.Parameters.AddWithValue("@TodayDate", date); 
+                cmd.Parameters.AddWithValue("@OrderNum", OrderNum);
                 int rowsAffected = cmd.ExecuteNonQuery();
+                jobs = GetData();
+                ShowJobByDate(date);
             }
             catch (Exception ex)
             {
@@ -94,17 +134,17 @@ namespace TheGioiViecLam
         }
 
 
-        private void ajob_Confirmed(string postID, object sender, EventArgs e)
+        private void ajob_Confirmed( object sender, EventArgs e, string OrderNum)
         {
-            MessageBox.Show(postID);
             try
             {
                 conn.Open();
-                string query = "UPDATE Orders SET OStatus = 'Done' WHERE IDP = @PostID AND Odate = @TodayDate";
+                string query = "UPDATE Orders SET OStatus = 'Confirmed' WHERE OrderNum = @OrderNum ";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@PostID", postID);
-                cmd.Parameters.AddWithValue("@TodayDate", date);
+                cmd.Parameters.AddWithValue("@OrderNum", OrderNum);
                 int rowsAffected = cmd.ExecuteNonQuery();
+                jobs = GetData();
+                ShowJobByDate(date);
             }
             catch (Exception ex)
             {
@@ -116,24 +156,36 @@ namespace TheGioiViecLam
             }
         }
 
-
-        private void ajob_Denied(ucAOrder uc, object sender, EventArgs e)
+        private void ajob_Denied( object sender, EventArgs e, string OrderNum)
         {
-            Order deniedJob = uc.Tag as Order;
-            if (deniedJob != null)
+            try
             {
-                // Xóa công việc từ danh sách jobs
-                jobs.Remove(deniedJob);
-                fPanel.Controls.Remove(uc);
+                conn.Open();
+                string query = "UPDATE Orders SET OStatus = 'Deny' WHERE OrderNum = @OrderNum ";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@OrderNum", OrderNum);
+                int rowsAffected = cmd.ExecuteNonQuery();
+                jobs = GetData();
+                ShowJobByDate(date);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
         }
-        List<Order> GetjobByDay(DateTime date)
+
+        private List<Order> GetJobsByDay(DateTime date)
         {
-            return jobs.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month && p.Date.Day == date.Day).ToList();
+            return jobs.Where(p => p.Date.Date == date.Date).ToList();
         }
+
         private void dt_ValueChanged(object sender, EventArgs e)
         {
-            ShowJobBydate((sender as DateTimePicker).Value);
+            ShowJobByDate((sender as DateTimePicker).Value);
         }
 
         private void btnYesterday_Click(object sender, EventArgs e)
@@ -153,7 +205,6 @@ namespace TheGioiViecLam
 
         private void pnJob_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

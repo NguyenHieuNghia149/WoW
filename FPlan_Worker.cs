@@ -35,8 +35,9 @@ namespace TheGioiViecLam
 
         // calendercs calendercs = new calendercs();
         List<Order> jobs = new List<Order>();
-        private string postID;
+
         private string account;
+        private string OrderNum;
         public FPlan_Worker(string account)
         {
             this.account = account;
@@ -59,11 +60,6 @@ namespace TheGioiViecLam
         private void Btnblock_Click(object sender, EventArgs e)
         {
             
-        }
-
-        void Setdefaultjob()
-        {
-            jobs = new List<Order>();
         }
 
         void LoadMatrix()
@@ -229,7 +225,11 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sql = string.Format("SELECT Customer.Fullname as fullname, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = '{0}' and Customer.CEmail = Orders.CEmail", account);
+                string sql = string.Format("SELECT Customer.Fullname as fullname, Customer.CEmail as CEmail" +
+                    ", Customer.PhoneNum as phonenumber,Post.IDP as IDpost,Orders.OrderNum as OrderNum, Post.JobName as jobname" +
+                    ", Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP" +
+                    ", OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post" +
+                    ",Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = '{0}' and Customer.CEmail = Orders.CEmail", account);
                 SqlCommand command = new SqlCommand(sql, conn);
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -253,7 +253,7 @@ namespace TheGioiViecLam
                     job.Address = reader["CAddress"].ToString();
                     job.Status = reader["OStatus"].ToString();
                     jobs.Add(job);
-                    postID = reader["IDP"].ToString();
+                    OrderNum = reader["OrderNum"].ToString();
                 }
                 reader.Close();
                 return jobs;
@@ -272,7 +272,7 @@ namespace TheGioiViecLam
         {
             if (string.IsNullOrEmpty((sender as Button).Text))
                 return;
-            FDailyJob dailyJob = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Button).Text)), postID, account, jobs);
+            FDailyJob dailyJob = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Button).Text)), account, jobs,OrderNum);
             dailyJob.ShowDialog();
 
         }
