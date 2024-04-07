@@ -28,6 +28,7 @@ namespace TheGioiViecLam
             fPanel.Height = panel_Body.Height;
             panel_Body.Controls.Add(fPanel);
             LoadOrders("Unconfirm");
+            btnInOrder.Checked = true;
         }
 
         private UCOrders CreateUCOrderFromDataRow(DataRow row)

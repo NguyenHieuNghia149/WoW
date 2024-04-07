@@ -135,6 +135,7 @@
             this.Controls.Add(this.numericHours);
             this.Controls.Add(this.label1);
             this.Name = "FSelectTime";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FSelectTime";
             ((System.ComponentModel.ISupportInitialize)(this.NumericMinutes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericHours)).EndInit();

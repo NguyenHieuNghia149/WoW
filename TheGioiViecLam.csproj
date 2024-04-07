@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\Dao.cs" />
+    <Compile Include="DAO\ImageDao.cs" />
     <Compile Include="FCalenderCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,17 +275,17 @@
     <Compile Include="UserControls\ucAOrder.Designer.cs">
       <DependentUpon>ucAOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCBookWorker.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UCBookWorker.Designer.cs">
-      <DependentUpon>UCBookWorker.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ucCalender.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ucCalender.Designer.cs">
       <DependentUpon>ucCalender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDayofCalender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDayofCalender.Designer.cs">
+      <DependentUpon>ucDayofCalender.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCHistory_Require_Customer.cs">
       <SubType>UserControl</SubType>
@@ -442,9 +443,6 @@
     </Compile>
     <EmbeddedResource Include="UserControls\ucAOrder.resx">
       <DependentUpon>ucAOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCBookWorker.resx">
-      <DependentUpon>UCBookWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucCalender.resx">
       <DependentUpon>ucCalender.cs</DependentUpon>

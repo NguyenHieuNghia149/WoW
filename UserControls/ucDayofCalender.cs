@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TheGioiViecLam
+namespace TheGioiViecLam.UserControls
 {
-    public partial class UCBookWorker : UserControl
+    public partial class ucDayofCalender : UserControl
     {
-        public UCBookWorker()
+        public ucDayofCalender()
         {
             InitializeComponent();
         }
