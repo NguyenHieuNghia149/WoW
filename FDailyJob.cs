@@ -85,7 +85,12 @@ namespace TheGioiViecLam
                     job.Phonenumber = reader["phonenumber"].ToString();
                     job.Address = reader["CAddress"].ToString();
                     job.Status = reader["OStatus"].ToString();
-                    jobs.Add(job);
+
+                    // Kiểm tra xem trạng thái là "Unconfirm" hay không
+                    if (job.Status == "Unconfirm                                                                                           ")
+                    {
+                        jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
+                    }
                 }
                 reader.Close();
                 return jobs;
@@ -97,9 +102,10 @@ namespace TheGioiViecLam
             }
             finally
             {
-
+                conn.Close(); // Đảm bảo đóng kết nối sau khi sử dụng xong
             }
         }
+
         private void LoadJobDetails(ucAOrder ucJob, Order job)
         {
             ucJob.txtAddress.Text = job.Address;
