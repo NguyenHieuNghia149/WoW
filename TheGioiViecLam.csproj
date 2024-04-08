@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.0.9\lib\net48\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
@@ -90,6 +93,12 @@
     </Compile>
     <Compile Include="FHomeCustomer.Designer.cs">
       <DependentUpon>FHomeCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHomeWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHomeWorker.Designer.cs">
+      <DependentUpon>FHomeWorker.cs</DependentUpon>
     </Compile>
     <Compile Include="FPerInf_Worker.cs">
       <SubType>Form</SubType>
@@ -380,6 +389,9 @@
     <EmbeddedResource Include="FHomeCustomer.resx">
       <DependentUpon>FHomeCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FHomeWorker.resx">
+      <DependentUpon>FHomeWorker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSearch.resx">
       <DependentUpon>FSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -512,6 +524,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\performance.png" />
+    <None Include="Resources\schedule.png" />
+    <None Include="Resources\clock.png" />
     <None Include="Resources\accounting.png" />
     <None Include="Resources\folder.png" />
     <None Include="Resources\mechanic.png" />

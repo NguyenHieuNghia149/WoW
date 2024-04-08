@@ -16,7 +16,9 @@ namespace TheGioiViecLam
         public FDisplay_Workers(string account)
         {
             InitializeComponent();
-            OpenChildForm(new FProfile_Workers(account));
+            OpenChildForm(new FHomeWorker(account));
+            btnhome.Checked = true;
+          //  OpenChildForm(new FProfile_Workers(account));
             this.account = account;
         }
         private Form currentFormChild;
@@ -60,6 +62,11 @@ namespace TheGioiViecLam
         private void btnSearchRequire_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FViewRequire_Worker(account));
+        }
+
+        private void btnhome_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FHomeWorker(account));
         }
     }
 }
