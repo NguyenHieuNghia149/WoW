@@ -55,10 +55,14 @@ namespace TheGioiViecLam
             ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
             ucCalender1.btnblock.Click += Btnblock_Click;
             LoadMatrix();
-            jobs = GetData();
+            RefreshJobs();
             AddNumbertoMatrix(ucCalender1.dt.Value);
         }
-
+        private void RefreshJobs()
+        {
+            jobs = GetData(); // Cập nhật danh sách jobs từ cơ sở dữ liệu
+                              // Thực hiện các thao tác khác cần thiết sau khi cập nhật danh sách jobs
+        }
         private void Btnblock_Click(object sender, EventArgs e)
         {
             
