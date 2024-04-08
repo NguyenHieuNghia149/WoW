@@ -18,7 +18,6 @@ D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FDisplay_Worker
 D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FFavorite.resources
 D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FForgetPassword.resources
 D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FHistory_RequireJob_Customers.resources
-D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FHome.resources
 D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FIncome.resources
 D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FOrders.resources
 D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FPerInf_Worker.resources
@@ -55,3 +54,6 @@ D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.csproj.CoreComp
 D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiV.09D9575C.Up2Date
 D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.exe
 D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.pdb
+D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.UserControls.ucHistoryOrderCustomer.resources
+D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FSearch.resources
+D:\Year2Semeter2\WINFORMPROJECT\Wow\WoW\obj\Debug\TheGioiViecLam.FHomeCustomer.resources

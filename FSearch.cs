@@ -13,14 +13,14 @@ using TheGioiViecLam.model;
 
 namespace TheGioiViecLam
 {
-    public partial class FHome : Form
+    public partial class FSearch : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DBConnection db = new DBConnection();
         UCWorkInFor uc_workinfor = new UCWorkInFor();
         public string postID;
         public string account;
-        public FHome(string account)
+        public FSearch(string account)
         {
             InitializeComponent();
             this.account = account;

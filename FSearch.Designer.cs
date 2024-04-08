@@ -1,6 +1,6 @@
 ﻿namespace TheGioiViecLam
 {
-    partial class FHome
+    partial class FSearch
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1303, 856);
+            this.panel1.Size = new System.Drawing.Size(1403, 856);
             this.panel1.TabIndex = 6;
             // 
             // PanelBottom
@@ -75,7 +75,7 @@
             this.PanelCenter.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelCenter.Location = new System.Drawing.Point(0, 126);
             this.PanelCenter.Name = "PanelCenter";
-            this.PanelCenter.Size = new System.Drawing.Size(1303, 66);
+            this.PanelCenter.Size = new System.Drawing.Size(1403, 66);
             this.PanelCenter.TabIndex = 1;
             // 
             // comboBox1
@@ -102,7 +102,7 @@
             this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTop.Location = new System.Drawing.Point(0, 0);
             this.PanelTop.Name = "PanelTop";
-            this.PanelTop.Size = new System.Drawing.Size(1303, 126);
+            this.PanelTop.Size = new System.Drawing.Size(1403, 126);
             this.PanelTop.TabIndex = 0;
             // 
             // lbl_Home
@@ -176,13 +176,13 @@
             // 
             this.workerTableAdapter.ClearBeforeFill = true;
             // 
-            // FHome
+            // FSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1303, 856);
+            this.ClientSize = new System.Drawing.Size(1403, 856);
             this.Controls.Add(this.panel1);
-            this.Name = "FHome";
+            this.Name = "FSearch";
             this.Text = "FHome";
             this.Load += new System.EventHandler(this.FHome_Load);
             this.panel1.ResumeLayout(false);

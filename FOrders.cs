@@ -31,44 +31,57 @@ namespace TheGioiViecLam
             btnInOrder.Checked = true;
         }
 
-        private UCOrders CreateUCOrderFromDataRow(DataRow row)
+        private ucHistoryOrderCustomer CreateUCOrderFromDataRow(DataRow row)
         {
-            UCOrders uc = new UCOrders();
-            uc.txtJobName.Text = row["jobname"].ToString();
-            uc.txtCost.Text = row["cost"].ToString();
-            uc.txtExperience.Text = row["experience"].ToString();
-            uc.txtIDP.Text = row["IDP"].ToString();
-            uc.txtHours.Text = row["FromHours"].ToString();
-            uc.txtMinutes.Text = row["FromMinutes"].ToString();
-            uc.lbl_Status.Text = row["OStatus"].ToString();
+            ucHistoryOrderCustomer uc = new ucHistoryOrderCustomer();
+            //UCOrders uc = new UCOrders();
+            uc.lbljobname.Text = row["jobname"].ToString();
+            uc.lblCost.Text = row["cost"].ToString();
+            uc.lblstatus.Text = row["OStatus"].ToString();
+            uc.lblHours.Text = row["FromHours"].ToString();
+            uc.lblMinutes.Text = row["FromHours"].ToString();
+            //   uc.txtJobName.Text = row["jobname"].ToString();
+            // uc.txtCost.Text = row["cost"].ToString();
+            //     uc.txtExperience.Text = row["experience"].ToString();
+            //  uc.txtIDP.Text = row["IDP"].ToString();
+            //   uc.txtHours.Text = row["FromHours"].ToString();
+            //  uc.txtMinutes.Text = row["FromMinutes"].ToString();
+            //   uc.lbl_Status.Text = row["OStatus"].ToString();
 
-            switch (uc.lbl_Status.Text)
+            switch (uc.lblstatus.Text)
             {
                 case "Confirmed":
-                    uc.lbl_Status.ForeColor = Color.FromArgb(0, 122, 204);
+                    uc.lblstatus.ForeColor = Color.FromArgb(0, 122, 204);
                     break;
                 case "Unconfirm                                                                                           ":
-                    uc.lbl_Status.ForeColor = Color.FromArgb(255, 201, 74);
+                    uc.lblstatus.ForeColor = Color.FromArgb(255, 201, 74);
                     string WID = row["WID"].ToString();
-                    uc.btnBomb.Click += (s, ev) => btnBomb_Click(WID, uc, ev);
+                    uc.btnReview.Visible = false;
+                    uc.btnAgain.Visible = false;
+                    uc.btnbomb.Click += (s, ev) => btnBomb_Click(WID, uc, ev);
+
                     break;
                 case "Deny":
-                    uc.lbl_Status.ForeColor = Color.FromArgb(255, 32, 78);
+                    uc.lblstatus.ForeColor = Color.FromArgb(255, 32, 78);
                     break;
                 case "Done                                                                                                ":
                     if (CheckReview(row["IDP"].ToString(), row["WID"].ToString()))
                     {
-                        uc.btnBomb.FillColor = Color.Gray;
+                        uc.btnbomb.Visible = false;
+                        uc.btnbomb.Enabled = false;
+                        //uc.btnbomb.FillColor = Color.Gray;
                     }
-                    uc.lbl_Status.ForeColor = Color.FromArgb(144, 210, 109);
-                    uc.btnBomb.Text = "Evaluate";
-                    if (uc.btnBomb.FillColor == Color.FromArgb(94, 148, 255))
+                   // uc.lblstatus.ForeColor = Color.FromArgb(144, 210, 109);
+                    //uc.btnbomb.Text = "Evaluate";
+                    if (uc.btnbomb.FillColor == Color.FromArgb(231, 41, 41))
                     {
-                        uc.btnBomb.Click += (s, ev) => btnEvaluate_Click(row["CID"].ToString(), row["IDP"].ToString(), row["WID"].ToString(), uc, ev);
+                        uc.btnbomb.Visible = false;
+                        uc.btnbomb.Enabled = false;
+                        uc.btnReview.Click += (s, ev) => btnEvaluate_Click(row["CID"].ToString(), row["IDP"].ToString(), row["WID"].ToString(), uc, ev);
                     }
                     else
                     {
-                        uc.btnBomb.Click += (s, ev) => { }; // Gán một sự kiện trống
+                        uc.btnbomb.Click += (s, ev) => { }; // Gán một sự kiện trống
                     }
                     break;
                 default:
@@ -120,7 +133,8 @@ namespace TheGioiViecLam
                 adapter.Fill(dataSet);
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
-                    UCOrders uc = CreateUCOrderFromDataRow(row);
+                    ucHistoryOrderCustomer uc = CreateUCOrderFromDataRow(row);
+                  //  UCOrders uc = CreateUCOrderFromDataRow(row);
                     fPanel.Controls.Add(uc);
                 }
             }

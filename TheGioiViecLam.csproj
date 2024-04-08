@@ -85,6 +85,12 @@
     <Compile Include="FHistory_RequireJob_Customers.Designer.cs">
       <DependentUpon>FHistory_RequireJob_Customers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FHomeCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHomeCustomer.Designer.cs">
+      <DependentUpon>FHomeCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPerInf_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,11 +151,11 @@
     <Compile Include="FForgetPassword.Designer.cs">
       <DependentUpon>FForgetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="FHome.cs">
+    <Compile Include="FSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FHome.Designer.cs">
-      <DependentUpon>FHome.cs</DependentUpon>
+    <Compile Include="FSearch.Designer.cs">
+      <DependentUpon>FSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="FIncome.cs">
       <SubType>Form</SubType>
@@ -287,6 +293,12 @@
     <Compile Include="UserControls\ucDayofCalender.Designer.cs">
       <DependentUpon>ucDayofCalender.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucHistoryOrderCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHistoryOrderCustomer.Designer.cs">
+      <DependentUpon>ucHistoryOrderCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCHistory_Require_Customer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -365,8 +377,11 @@
     <EmbeddedResource Include="FHistory_RequireJob_Customers.resx">
       <DependentUpon>FHistory_RequireJob_Customers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FHome.resx">
-      <DependentUpon>FHome.cs</DependentUpon>
+    <EmbeddedResource Include="FHomeCustomer.resx">
+      <DependentUpon>FHomeCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSearch.resx">
+      <DependentUpon>FSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FIncome.resx">
       <DependentUpon>FIncome.cs</DependentUpon>
@@ -447,6 +462,9 @@
     <EmbeddedResource Include="UserControls\ucCalender.resx">
       <DependentUpon>ucCalender.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHistoryOrderCustomer.resx">
+      <DependentUpon>ucHistoryOrderCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCHistory_Require_Customer.resx">
       <DependentUpon>UCHistory_Require_Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -494,6 +512,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\accounting.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\mechanic.png" />
+    <None Include="Resources\digital-services.png" />
+    <None Include="Resources\delivery-truck.png" />
+    <None Include="Resources\pipe.png" />
+    <None Include="Resources\undraw_winter_activities_vv0v.png" />
+    <None Include="Resources\undraw_Maintenance_re_59vn.png" />
+    <None Include="Resources\undraw_Clean_up_re_504g.png" />
+    <None Include="Resources\undraw_electricity_k2ft.png" />
+    <None Include="Resources\undraw_automobile_repair_ywci.png" />
+    <None Include="Resources\notify.png" />
     <None Include="Resources\logout.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\shopping-list.png" />

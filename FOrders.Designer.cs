@@ -54,7 +54,7 @@
             this.guna2Separator1.FillThickness = 3;
             this.guna2Separator1.Location = new System.Drawing.Point(3, 3);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1298, 12);
+            this.guna2Separator1.Size = new System.Drawing.Size(1564, 12);
             this.guna2Separator1.TabIndex = 0;
             // 
             // panelTop
