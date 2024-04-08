@@ -52,7 +52,7 @@ namespace TheGioiViecLam
                     string id = reader["CID"].ToString();
                    // byte[] b = PathtoByteArray(reader["Cimage"].ToString());
                    // pictureBox.Image = byteArrayToImage(b);
-                    byte[] b = reader["Cimage"] as byte[];
+                    byte[] b = reader["img"] as byte[];
                     if(b != null) {
                         MemoryStream ms = new MemoryStream(b);
                         pictureBox.Image = Image.FromStream(ms);
@@ -101,7 +101,7 @@ namespace TheGioiViecLam
         {
             byte[] b = imageToByteArray(pictureBox.Image);
             conn.Open();
-            string query = string.Format("Update Customer set Cimage = @image where CEmail = @account");
+            string query = string.Format("Update Customer set img = @image where CEmail = @account");
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@image", b);
             cmd.Parameters.AddWithValue("@account", account);

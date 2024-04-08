@@ -14,12 +14,16 @@ namespace TheGioiViecLam
     public partial class FDisplay_Customers : Form
     {
         public string account;
+        
         public FDisplay_Customers(string account)
         {
             InitializeComponent();
-            OpenChildForm(new FHome(account));
+            OpenChildForm(new FHomeCustomer(account));
+            //OpenChildForm(new FSearch(account));
             this.account = account;
-            
+            btnhome.Checked = true;
+            FHomeCustomer f = new FHomeCustomer(account);
+            f.btnPost.Click += BtnPost_Click;
         }
         private void btn_SignOut_Click(object sender, EventArgs e)
         {
@@ -46,7 +50,8 @@ namespace TheGioiViecLam
         }
         private void btn_Home_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FHome(account));
+            OpenChildForm(new FHomeCustomer(account));
+           //OpenChildForm(new FSearch(account));
         }
 
         private void btn_Contact_Click(object sender, EventArgs e)
@@ -82,6 +87,18 @@ namespace TheGioiViecLam
             OpenChildForm(new FRequirement_Jobs(account));
         }
 
-       
+        private void AddForm()
+        {
+            FHomeCustomer f = new FHomeCustomer(account);
+            f.btnPost.Click += BtnPost_Click;
+           
+        }
+
+        private void BtnPost_Click(object sender, EventArgs e)
+        {
+            panel_Body.Controls.Clear();
+            panel_Body.Controls.Add(new FSearch(account));
+
+        }
     }
 }

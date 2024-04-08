@@ -54,7 +54,7 @@
             this.guna2Separator1.FillThickness = 3;
             this.guna2Separator1.Location = new System.Drawing.Point(3, 3);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1298, 12);
+            this.guna2Separator1.Size = new System.Drawing.Size(1564, 12);
             this.guna2Separator1.TabIndex = 0;
             // 
             // panelTop
@@ -73,6 +73,7 @@
             this.btnDeny.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(115)))));
             this.btnDeny.BorderRadius = 10;
             this.btnDeny.BorderThickness = 1;
+            this.btnDeny.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnDeny.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.btnDeny.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDeny.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -93,6 +94,7 @@
             this.btnComfirmed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(115)))));
             this.btnComfirmed.BorderRadius = 10;
             this.btnComfirmed.BorderThickness = 1;
+            this.btnComfirmed.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnComfirmed.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.btnComfirmed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnComfirmed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -113,6 +115,7 @@
             this.btncompleted.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(115)))));
             this.btncompleted.BorderRadius = 10;
             this.btncompleted.BorderThickness = 1;
+            this.btncompleted.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btncompleted.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.btncompleted.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btncompleted.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -133,7 +136,7 @@
             this.btnInOrder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(115)))));
             this.btnInOrder.BorderRadius = 10;
             this.btnInOrder.BorderThickness = 1;
-            this.btnInOrder.Checked = true;
+            this.btnInOrder.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnInOrder.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.btnInOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnInOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

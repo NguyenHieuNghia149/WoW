@@ -33,18 +33,20 @@
             // 
             // ucCalender1
             // 
+            this.ucCalender1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ucCalender1.Location = new System.Drawing.Point(23, 12);
             this.ucCalender1.Name = "ucCalender1";
-            this.ucCalender1.Size = new System.Drawing.Size(1344, 722);
+            this.ucCalender1.Size = new System.Drawing.Size(1344, 804);
             this.ucCalender1.TabIndex = 0;
             // 
             // FCalenderCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1394, 747);
+            this.ClientSize = new System.Drawing.Size(1394, 853);
             this.Controls.Add(this.ucCalender1);
             this.Name = "FCalenderCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FCalenderCustomer";
             this.ResumeLayout(false);
 

@@ -41,24 +41,7 @@ namespace TheGioiViecLam
 
         }
 
-        private void ThucThi(SqlCommand cmd, object sender, EventArgs e)
-        {
-            try
-            {
-                conn.Open();
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thanh cong");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("That bai" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            FPost_Load(sender, e);
-        }
+    
         public void UCWorkInFor_Click(string IDP, object sender, EventArgs e)
         {
             if (sender is UCWorkInFor uCWorkInFor)

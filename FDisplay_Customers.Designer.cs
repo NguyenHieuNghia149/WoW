@@ -30,6 +30,9 @@
         {
             this.panel_Body = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnhome = new Guna.UI2.WinForms.Guna2Button();
             this.btnprofile = new Guna.UI2.WinForms.Guna2Button();
             this.btncontact = new Guna.UI2.WinForms.Guna2Button();
@@ -37,26 +40,27 @@
             this.btnorders = new Guna.UI2.WinForms.Guna2Button();
             this.btnRequire = new Guna.UI2.WinForms.Guna2Button();
             this.btnexit = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.panel_Body.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Body
             // 
             this.panel_Body.BackColor = System.Drawing.Color.White;
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Body.Location = new System.Drawing.Point(175, 0);
+            this.panel_Body.Controls.Add(this.guna2CustomGradientPanel1);
+            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Body.Location = new System.Drawing.Point(0, 0);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(1407, 903);
+            this.panel_Body.Size = new System.Drawing.Size(1582, 867);
             this.panel_Body.TabIndex = 7;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.flowLayoutPanel1.Controls.Add(this.btnhome);
             this.flowLayoutPanel1.Controls.Add(this.btnprofile);
             this.flowLayoutPanel1.Controls.Add(this.btncontact);
@@ -66,150 +70,19 @@
             this.flowLayoutPanel1.Controls.Add(this.btnexit);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 150);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(109, 891);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(109, 659);
             this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // btnhome
-            // 
-            this.btnhome.Checked = true;
-            this.btnhome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnhome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnhome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnhome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnhome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
-            this.btnhome.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnhome.ForeColor = System.Drawing.Color.White;
-            this.btnhome.Image = global::TheGioiViecLam.Properties.Resources.home;
-            this.btnhome.ImageSize = new System.Drawing.Size(52, 42);
-            this.btnhome.Location = new System.Drawing.Point(3, 3);
-            this.btnhome.Name = "btnhome";
-            this.btnhome.Size = new System.Drawing.Size(103, 92);
-            this.btnhome.TabIndex = 5;
-            this.btnhome.Click += new System.EventHandler(this.btn_Home_Click);
-            // 
-            // btnprofile
-            // 
-            this.btnprofile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnprofile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnprofile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnprofile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnprofile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
-            this.btnprofile.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnprofile.ForeColor = System.Drawing.Color.White;
-            this.btnprofile.Image = global::TheGioiViecLam.Properties.Resources.user;
-            this.btnprofile.ImageSize = new System.Drawing.Size(52, 42);
-            this.btnprofile.Location = new System.Drawing.Point(3, 101);
-            this.btnprofile.Name = "btnprofile";
-            this.btnprofile.Size = new System.Drawing.Size(103, 92);
-            this.btnprofile.TabIndex = 10;
-            this.btnprofile.Click += new System.EventHandler(this.btn_Profile_Click);
-            // 
-            // btncontact
-            // 
-            this.btncontact.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btncontact.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btncontact.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btncontact.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btncontact.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
-            this.btncontact.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btncontact.ForeColor = System.Drawing.Color.White;
-            this.btncontact.Image = global::TheGioiViecLam.Properties.Resources.headphone;
-            this.btncontact.ImageSize = new System.Drawing.Size(52, 42);
-            this.btncontact.Location = new System.Drawing.Point(3, 199);
-            this.btncontact.Name = "btncontact";
-            this.btncontact.Size = new System.Drawing.Size(103, 92);
-            this.btncontact.TabIndex = 6;
-            this.btncontact.Click += new System.EventHandler(this.btn_Contact_Click);
-            // 
-            // btnfavourite
-            // 
-            this.btnfavourite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnfavourite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnfavourite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnfavourite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnfavourite.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
-            this.btnfavourite.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnfavourite.ForeColor = System.Drawing.Color.White;
-            this.btnfavourite.Image = global::TheGioiViecLam.Properties.Resources.wishlist;
-            this.btnfavourite.ImageSize = new System.Drawing.Size(52, 42);
-            this.btnfavourite.Location = new System.Drawing.Point(3, 297);
-            this.btnfavourite.Name = "btnfavourite";
-            this.btnfavourite.Size = new System.Drawing.Size(103, 92);
-            this.btnfavourite.TabIndex = 7;
-            this.btnfavourite.Click += new System.EventHandler(this.btn_Favorite_Click);
-            // 
-            // btnorders
-            // 
-            this.btnorders.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnorders.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnorders.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnorders.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnorders.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
-            this.btnorders.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnorders.ForeColor = System.Drawing.Color.White;
-            this.btnorders.Image = global::TheGioiViecLam.Properties.Resources.shopping_list;
-            this.btnorders.ImageSize = new System.Drawing.Size(52, 42);
-            this.btnorders.Location = new System.Drawing.Point(3, 395);
-            this.btnorders.Name = "btnorders";
-            this.btnorders.Size = new System.Drawing.Size(103, 92);
-            this.btnorders.TabIndex = 8;
-            this.btnorders.Click += new System.EventHandler(this.btn_Orders_Click);
-            // 
-            // btnRequire
-            // 
-            this.btnRequire.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRequire.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRequire.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRequire.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRequire.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
-            this.btnRequire.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRequire.ForeColor = System.Drawing.Color.White;
-            this.btnRequire.Image = global::TheGioiViecLam.Properties.Resources.document;
-            this.btnRequire.ImageSize = new System.Drawing.Size(52, 42);
-            this.btnRequire.Location = new System.Drawing.Point(3, 493);
-            this.btnRequire.Name = "btnRequire";
-            this.btnRequire.Size = new System.Drawing.Size(103, 92);
-            this.btnRequire.TabIndex = 9;
-            this.btnRequire.Click += new System.EventHandler(this.btnRequire_Click);
-            // 
-            // btnexit
-            // 
-            this.btnexit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnexit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnexit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnexit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnexit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
-            this.btnexit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnexit.ForeColor = System.Drawing.Color.White;
-            this.btnexit.Image = global::TheGioiViecLam.Properties.Resources.logout;
-            this.btnexit.ImageSize = new System.Drawing.Size(52, 42);
-            this.btnexit.Location = new System.Drawing.Point(3, 591);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(103, 92);
-            this.btnexit.TabIndex = 11;
-            this.btnexit.Click += new System.EventHandler(this.btn_SignOut_Click);
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.guna2Separator1);
-            this.guna2Panel1.Location = new System.Drawing.Point(2, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(6, 23);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(109, 915);
+            this.guna2Panel1.Size = new System.Drawing.Size(111, 811);
             this.guna2Panel1.TabIndex = 3;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::TheGioiViecLam.Properties.Resources.menu_burger;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(30, 45);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(52, 42);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2Separator1
             // 
@@ -219,26 +92,177 @@
             this.guna2Separator1.Size = new System.Drawing.Size(105, 13);
             this.guna2Separator1.TabIndex = 2;
             // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BorderRadius = 28;
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel1);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(120, 867);
+            this.guna2CustomGradientPanel1.TabIndex = 4;
+            // 
+            // btnhome
+            // 
+            this.btnhome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnhome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnhome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnhome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnhome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnhome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnhome.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnhome.ForeColor = System.Drawing.Color.White;
+            this.btnhome.Image = global::TheGioiViecLam.Properties.Resources.home;
+            this.btnhome.ImageSize = new System.Drawing.Size(32, 22);
+            this.btnhome.Location = new System.Drawing.Point(3, 3);
+            this.btnhome.Name = "btnhome";
+            this.btnhome.Size = new System.Drawing.Size(103, 92);
+            this.btnhome.TabIndex = 5;
+            this.btnhome.Click += new System.EventHandler(this.btn_Home_Click);
+            // 
+            // btnprofile
+            // 
+            this.btnprofile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnprofile.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnprofile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnprofile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnprofile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnprofile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnprofile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnprofile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnprofile.ForeColor = System.Drawing.Color.White;
+            this.btnprofile.Image = global::TheGioiViecLam.Properties.Resources.user;
+            this.btnprofile.ImageSize = new System.Drawing.Size(37, 27);
+            this.btnprofile.Location = new System.Drawing.Point(3, 101);
+            this.btnprofile.Name = "btnprofile";
+            this.btnprofile.Size = new System.Drawing.Size(103, 92);
+            this.btnprofile.TabIndex = 10;
+            this.btnprofile.Click += new System.EventHandler(this.btn_Profile_Click);
+            // 
+            // btncontact
+            // 
+            this.btncontact.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btncontact.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btncontact.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btncontact.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btncontact.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btncontact.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btncontact.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btncontact.ForeColor = System.Drawing.Color.White;
+            this.btncontact.Image = global::TheGioiViecLam.Properties.Resources.headphone;
+            this.btncontact.ImageSize = new System.Drawing.Size(37, 27);
+            this.btncontact.Location = new System.Drawing.Point(3, 199);
+            this.btncontact.Name = "btncontact";
+            this.btncontact.Size = new System.Drawing.Size(103, 92);
+            this.btncontact.TabIndex = 6;
+            this.btncontact.Click += new System.EventHandler(this.btn_Contact_Click);
+            // 
+            // btnfavourite
+            // 
+            this.btnfavourite.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnfavourite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnfavourite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnfavourite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnfavourite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnfavourite.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnfavourite.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnfavourite.ForeColor = System.Drawing.Color.White;
+            this.btnfavourite.Image = global::TheGioiViecLam.Properties.Resources.wishlist;
+            this.btnfavourite.ImageSize = new System.Drawing.Size(37, 27);
+            this.btnfavourite.Location = new System.Drawing.Point(3, 297);
+            this.btnfavourite.Name = "btnfavourite";
+            this.btnfavourite.Size = new System.Drawing.Size(103, 92);
+            this.btnfavourite.TabIndex = 7;
+            this.btnfavourite.Click += new System.EventHandler(this.btn_Favorite_Click);
+            // 
+            // btnorders
+            // 
+            this.btnorders.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnorders.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnorders.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnorders.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnorders.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnorders.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnorders.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnorders.ForeColor = System.Drawing.Color.White;
+            this.btnorders.Image = global::TheGioiViecLam.Properties.Resources.shopping_list;
+            this.btnorders.ImageSize = new System.Drawing.Size(37, 27);
+            this.btnorders.Location = new System.Drawing.Point(3, 395);
+            this.btnorders.Name = "btnorders";
+            this.btnorders.Size = new System.Drawing.Size(103, 92);
+            this.btnorders.TabIndex = 8;
+            this.btnorders.Click += new System.EventHandler(this.btn_Orders_Click);
+            // 
+            // btnRequire
+            // 
+            this.btnRequire.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnRequire.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRequire.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRequire.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRequire.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRequire.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnRequire.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRequire.ForeColor = System.Drawing.Color.White;
+            this.btnRequire.Image = global::TheGioiViecLam.Properties.Resources.document;
+            this.btnRequire.ImageSize = new System.Drawing.Size(37, 27);
+            this.btnRequire.Location = new System.Drawing.Point(3, 493);
+            this.btnRequire.Name = "btnRequire";
+            this.btnRequire.Size = new System.Drawing.Size(103, 92);
+            this.btnRequire.TabIndex = 9;
+            this.btnRequire.Click += new System.EventHandler(this.btnRequire_Click);
+            // 
+            // btnexit
+            // 
+            this.btnexit.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnexit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnexit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnexit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnexit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnexit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnexit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnexit.ForeColor = System.Drawing.Color.White;
+            this.btnexit.Image = global::TheGioiViecLam.Properties.Resources.logout;
+            this.btnexit.ImageSize = new System.Drawing.Size(37, 27);
+            this.btnexit.Location = new System.Drawing.Point(3, 591);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(103, 56);
+            this.btnexit.TabIndex = 11;
+            this.btnexit.Click += new System.EventHandler(this.btn_SignOut_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::TheGioiViecLam.Properties.Resources.menu_burger;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(32, 45);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(52, 42);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // FDisplay_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1582, 903);
-            this.Controls.Add(this.guna2Panel1);
+            this.ClientSize = new System.Drawing.Size(1582, 867);
             this.Controls.Add(this.panel_Body);
             this.Name = "FDisplay_Customers";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FDisplay_Customers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.panel_Body.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel_Body;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Button btnhome;
         private Guna.UI2.WinForms.Guna2Button btnprofile;
@@ -250,5 +274,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        public System.Windows.Forms.Panel panel_Body;
     }
 }

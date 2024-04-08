@@ -9,15 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheGioiViecLam.model;
+using TheGioiViecLam.UserControls;
 
 namespace TheGioiViecLam
 {
     public partial class FPlan_Worker : Form
     {
         #region Peoperties
-        private List<List<Button>> matrix;
+        Control control = new ucDayofCalender();
+        private List<List<ucDayofCalender>> matrix;
 
-        public List<List<Button>> Matrix
+        public List<List<ucDayofCalender>> Matrix
         {
             get { return matrix; }
             set { matrix = value; }
@@ -68,23 +70,18 @@ namespace TheGioiViecLam
 
         void LoadMatrix()
         {
-            matrix = new List<List<Button>>();
-            Button oldbtn = new Button() { Width = 0, Height = 0, Location = new Point(-Cons.margin, 0) };
+            matrix = new List<List<ucDayofCalender>>();
             for (int i = 0; i < Cons.DayofColum; i++)
             {
-                matrix.Add(new List<Button>());
+
+                matrix.Add(new List<ucDayofCalender>());
                 for (int j = 0; j < Cons.DayofWeek; j++)
                 {
-
-                    Button btn = new Button() { Width = Cons.datebuttonWidth, Height = Cons.datebuttonHeight };
-                    btn.Location = new Point(oldbtn.Location.X + oldbtn.Width + Cons.margin, oldbtn.Location.Y);
-                    btn.Click += Btn_Click;
-                    ucCalender1.pnMatrix.Controls.Add(btn);
-                    matrix[i].Add(btn);
-                    oldbtn = btn;
+                    ucDayofCalender newControl = new ucDayofCalender();
+                    newControl.Location = new Point(j * (newControl.Width + Cons.margin), i * (newControl.Height + Cons.margin));
+                    ucCalender1.pnMatrix.Controls.Add(newControl);
+                    matrix[i].Add(newControl);
                 }
-                oldbtn = new Button() { Width = 0, Height = 0, Location = new Point(-Cons.margin, oldbtn.Location.Y + Cons.datebuttonHeight) };
-
             }
             SetDefaultDate();
         }
@@ -116,31 +113,31 @@ namespace TheGioiViecLam
             for (int i = 1; i <= DayofMonth(date); i++)
             {
                 int collum = dayofWeek.IndexOf(useday.DayOfWeek.ToString());
-                Button btn = matrix[line][collum];
-                btn.Text = i.ToString();
-                btn.TextAlign = ContentAlignment.TopLeft;
+                ucDayofCalender control = matrix[line][collum];
+                control.btnday.Text = i.ToString();
+                control.btnday.Click += Btn_Click;
+                control.lblbuoisang.Visible = false;
+                control.lblbuoichieu.Visible = false;
 
                 // Xóa màu đỏ của ngày trước đó
                 if (!isEqualDate(useday, date))
                 {
-                    btn.BackColor = Color.White;
-                    btn.ForeColor = Color.Black; // Đảm bảo màu chữ trở lại màu đen
+                    control.btnday.FillColor = Color.White;
+                    control.btnday.ForeColor = Color.Black; // Đảm bảo màu chữ trở lại màu đen
                 }
-
+                if (useday.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    // control.btnday.FillColor = Color.Yellow; // Đổi màu cho ngày Chủ nhật
+                    control.btnday.ForeColor = Color.FromArgb(220, 107, 25); // Đổi màu chữ để dễ đọc
+                }
                 if (isEqualDate(useday, DateTime.Now))
                 {
-                    btn.BackColor = Color.FromArgb(106, 212, 221);
+                    control.btnday.FillColor = Color.FromArgb(106, 212, 221);
                 }
                 if (isEqualDate(useday, date))
                 {
-                    btn.BackColor = Color.FromArgb(255, 32, 78);
-                    btn.ForeColor = Color.White;
-                }
-
-                // Kiểm tra xem ngày có công việc không
-                if (jobs.Any(job => job.Date.Date == useday.Date))
-                {
-                    btn.BackColor = Color.FromArgb(255, 152, 0); // Màu xanh
+                    control.btnday.FillColor = Color.FromArgb(255, 32, 78);
+                    control.btnday.ForeColor = Color.White;
                 }
 
                 if (collum >= 6)
@@ -162,9 +159,9 @@ namespace TheGioiViecLam
             {
                 for (int j = 0; j < matrix[i].Count; j++)
                 {
-                    Button btn = matrix[i][j];
-                    btn.Text = "";
-                    btn.BackColor = Color.White;
+                    Control control = matrix[i][j];
+                    (control as ucDayofCalender).btnday.Text = "";
+                    (control as ucDayofCalender).btnday.FillColor = Color.White;
                 }
             }
         }
@@ -254,7 +251,7 @@ namespace TheGioiViecLam
                     job.Status = reader["OStatus"].ToString();
                     OrderNum = reader["OrderNum"].ToString();
                     // Kiểm tra xem trạng thái là "Unconfirm" hay không
-                    if (job.Status == "Unconfirm                                                                                           ")
+                    if (job.Status == "Unconfirm" || job.Status == "Confirmed")
                     {
                         jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
                     }
@@ -275,9 +272,9 @@ namespace TheGioiViecLam
 
         private void Btn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty((sender as Button).Text))
+            if (string.IsNullOrEmpty((sender as Control).Text))
                 return;
-            FDailyJob dailyJob = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Button).Text)), account, jobs,OrderNum);
+            FDailyJob dailyJob = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)), account, jobs,OrderNum);
             dailyJob.ShowDialog();
 
         }

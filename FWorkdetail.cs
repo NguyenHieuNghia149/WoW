@@ -3,6 +3,8 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System;
 using System.Security.Principal;
+using System.IO;
+using System.Drawing;
 
 namespace TheGioiViecLam
 {
@@ -51,6 +53,12 @@ namespace TheGioiViecLam
                     ucW.txtCity.Text = reader["City"].ToString() ;
                     ucW.txtAddress.Text = reader["District"].ToString();
                     ucW.txtPhone.Text = reader["PhoneNum"].ToString();
+                    byte[] b = reader["img"] as byte[];
+                    if (b != null)
+                    {
+                        MemoryStream ms = new MemoryStream(b);
+                        ucW.ptbox.Image = Image.FromStream(ms);
+                    }
 
                     // Gán dữ liệu cho các TextBox khác tại đây
                 }

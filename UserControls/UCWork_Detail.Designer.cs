@@ -58,13 +58,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2PictureBox11 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ptbox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ucServiceReview1 = new TheGioiViecLam.ucServiceReview();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
@@ -482,16 +483,16 @@
             this.guna2PictureBox11.TabIndex = 65;
             this.guna2PictureBox11.TabStop = false;
             // 
-            // guna2PictureBox1
+            // ptbox
             // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 21);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(387, 289);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 32;
-            this.guna2PictureBox1.TabStop = false;
+            this.ptbox.Image = ((System.Drawing.Image)(resources.GetObject("ptbox.Image")));
+            this.ptbox.ImageRotate = 0F;
+            this.ptbox.Location = new System.Drawing.Point(22, 21);
+            this.ptbox.Name = "ptbox";
+            this.ptbox.Size = new System.Drawing.Size(387, 289);
+            this.ptbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbox.TabIndex = 32;
+            this.ptbox.TabStop = false;
             // 
             // guna2PictureBox6
             // 
@@ -537,11 +538,20 @@
             this.guna2PictureBox2.TabIndex = 6;
             this.guna2PictureBox2.TabStop = false;
             // 
+            // ucServiceReview1
+            // 
+            this.ucServiceReview1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.ucServiceReview1.Location = new System.Drawing.Point(0, 664);
+            this.ucServiceReview1.Name = "ucServiceReview1";
+            this.ucServiceReview1.Size = new System.Drawing.Size(1503, 300);
+            this.ucServiceReview1.TabIndex = 82;
+            // 
             // UCWork_Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.Controls.Add(this.ucServiceReview1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -567,14 +577,14 @@
             this.Controls.Add(this.lblCity);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.ptbox);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBook);
             this.Name = "UCWork_Detail";
-            this.Size = new System.Drawing.Size(1330, 629);
+            this.Size = new System.Drawing.Size(1373, 1000);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
@@ -586,7 +596,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button btnSave;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblCity;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblWork;
@@ -619,5 +628,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         public Guna.UI2.WinForms.Guna2Button btnBook;
+        private ucServiceReview ucServiceReview1;
+        public Guna.UI2.WinForms.Guna2PictureBox ptbox;
     }
 }
