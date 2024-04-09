@@ -44,14 +44,22 @@ namespace TheGioiViecLam
             if (jobs != null)
             {
                 List<Order> todayJobs = GetJobsByDay(date);
+/*                for(int i = 0; i < todayJobs.Count;i++)
+                {
+                    ucAOrder ucJob = new ucAOrder(todayJobs[i]);
+                     ucJob.Tag = todayJobs[i];
+                    ucJob.btndeny.Click += (s, ev) => ajob_Denied(s, ev, OrderNum);
+                    ucJob.btnConfirm.Click += (s, ev) => ajob_Confirmed(s, ev, OrderNum);
+                    ucJob.btnDone.Click += (s, ev) => ajob_Done(s, ev, OrderNum);
+                    fPanel.Controls.Add(ucJob);
+                }*/
                 foreach (Order job in todayJobs)
                 {
                     ucAOrder ucJob = new ucAOrder(job);
                     ucJob.Tag = job;
-                    ucJob.btndeny.Click += (s, ev) => ajob_Denied( s, ev,OrderNum);
+                    ucJob.btndeny.Click += (s, ev) => ajob_Denied(s, ev, OrderNum);
                     ucJob.btnConfirm.Click += (s, ev) => ajob_Confirmed(s, ev, OrderNum);
                     ucJob.btnDone.Click += (s, ev) => ajob_Done(s, ev, OrderNum);
-                    LoadJobDetails(ucJob, job);
                     fPanel.Controls.Add(ucJob);
                 }
             }
@@ -87,7 +95,7 @@ namespace TheGioiViecLam
                     job.Status = reader["OStatus"].ToString();
 
                     // Kiểm tra xem trạng thái là "Unconfirm" hay không
-                    if (job.Status == "Unconfirm            " && job.Status == "Confirmed")
+                    if (job.Status == "Unconfirm                                                                                           " && job.Status == "Confirmed                                                                                           ")
                     {
                         jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
                     }
@@ -126,6 +134,7 @@ namespace TheGioiViecLam
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@OrderNum", OrderNum);
                 int rowsAffected = cmd.ExecuteNonQuery();
+                conn.Close();
                 jobs = GetData();
                 ShowJobByDate(date);
             }
@@ -135,7 +144,6 @@ namespace TheGioiViecLam
             }
             finally
             {
-                conn.Close();
             }
         }
 
@@ -149,6 +157,8 @@ namespace TheGioiViecLam
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@OrderNum", OrderNum);
                 int rowsAffected = cmd.ExecuteNonQuery();
+                conn.Close();
+
                 jobs = GetData();
                 ShowJobByDate(date);
             }
@@ -158,7 +168,6 @@ namespace TheGioiViecLam
             }
             finally
             {
-                conn.Close();
             }
         }
 
@@ -171,6 +180,8 @@ namespace TheGioiViecLam
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@OrderNum", OrderNum);
                 int rowsAffected = cmd.ExecuteNonQuery();
+                conn.Close();
+
                 jobs = GetData();
                 ShowJobByDate(date);
             }
@@ -180,13 +191,12 @@ namespace TheGioiViecLam
             }
             finally
             {
-                conn.Close();
             }
         }
 
         private List<Order> GetJobsByDay(DateTime date)
         {
-            return jobs.Where(p => p.Date.Date == date.Date).ToList();
+            return jobs.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month && p.Date.Day == date.Day).ToList();
         }
 
         private void dt_ValueChanged(object sender, EventArgs e)

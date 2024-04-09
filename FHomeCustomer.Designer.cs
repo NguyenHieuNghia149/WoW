@@ -578,6 +578,8 @@
             // 
             // guna2CustomGradientPanel4
             // 
+            this.guna2CustomGradientPanel4.BorderRadius = 20;
+            this.guna2CustomGradientPanel4.BorderThickness = 1;
             this.guna2CustomGradientPanel4.Controls.Add(this.label9);
             this.guna2CustomGradientPanel4.Controls.Add(this.label8);
             this.guna2CustomGradientPanel4.Controls.Add(this.label7);

@@ -1,9 +1,11 @@
 C:\Users\LEGION\source\repos\WoW\bin\Debug\TheGioiViecLam.exe.config
 C:\Users\LEGION\source\repos\WoW\bin\Debug\TheGioiViecLam.exe
 C:\Users\LEGION\source\repos\WoW\bin\Debug\TheGioiViecLam.pdb
+C:\Users\LEGION\source\repos\WoW\bin\Debug\Guna.Charts.WinForms.dll
 C:\Users\LEGION\source\repos\WoW\bin\Debug\Guna.UI2.dll
 C:\Users\LEGION\source\repos\WoW\bin\Debug\LiveCharts.WinForms.dll
 C:\Users\LEGION\source\repos\WoW\bin\Debug\System.Data.SqlClient.dll
+C:\Users\LEGION\source\repos\WoW\bin\Debug\Guna.Charts.WinForms.xml
 C:\Users\LEGION\source\repos\WoW\bin\Debug\LiveCharts.WinForms.pdb
 C:\Users\LEGION\source\repos\WoW\bin\Debug\LiveCharts.WinForms.xml
 C:\Users\LEGION\source\repos\WoW\bin\Debug\System.Data.SqlClient.xml
@@ -19,6 +21,7 @@ C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FFavorite.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FForgetPassword.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FHistory_RequireJob_Customers.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FHomeCustomer.resources
+C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FHomeWorker.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FSearch.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FIncome.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FOrders.resources
@@ -57,6 +60,3 @@ C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.csproj.CoreCompileInpu
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiV.09D9575C.Up2Date
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.exe
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.pdb
-C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FHomeWorker.resources
-C:\Users\LEGION\source\repos\WoW\bin\Debug\Guna.Charts.WinForms.dll
-C:\Users\LEGION\source\repos\WoW\bin\Debug\Guna.Charts.WinForms.xml

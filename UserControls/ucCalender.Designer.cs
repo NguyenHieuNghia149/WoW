@@ -333,7 +333,7 @@
             // timerNotify
             // 
             this.timerNotify.Enabled = true;
-            this.timerNotify.Interval = 6000;
+            this.timerNotify.Interval = 60000;
             // 
             // notify
             // 

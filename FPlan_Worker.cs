@@ -55,7 +55,8 @@ namespace TheGioiViecLam
             ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
             ucCalender1.btnblock.Click += Btnblock_Click;
             LoadMatrix();
-            RefreshJobs();
+           // RefreshJobs();
+           jobs = GetData();    
             AddNumbertoMatrix(ucCalender1.dt.Value);
         }
         private void RefreshJobs()
@@ -127,7 +128,6 @@ namespace TheGioiViecLam
                 }
                 if (useday.DayOfWeek == DayOfWeek.Sunday)
                 {
-                    // control.btnday.FillColor = Color.Yellow; // Đổi màu cho ngày Chủ nhật
                     control.btnday.ForeColor = Color.FromArgb(220, 107, 25); // Đổi màu chữ để dễ đọc
                 }
                 if (isEqualDate(useday, DateTime.Now))
@@ -139,6 +139,24 @@ namespace TheGioiViecLam
                     control.btnday.FillColor = Color.FromArgb(255, 32, 78);
                     control.btnday.ForeColor = Color.White;
                 }
+                int jobCountForMorning = CountJobForDay(useday, 11, 59);
+                int jobCountForAfter = CountJobForAfter(useday, 18, 59);
+                if(GetJobCountForDate(useday)>0)
+                {
+                    control.btnday.FillColor = Color.Red;
+                }
+                if (jobCountForMorning > 0)
+                {
+                    control.lblbuoisang.Visible = true;
+                    control.lblbuoisang.Text = "7:00 - 11:00: " + jobCountForMorning.ToString();
+                    control.btnday.FillColor = Color.FromArgb(227, 254, 247);
+                }
+                if(jobCountForAfter > 0)
+                {
+                    control.lblbuoichieu.Visible = true;    
+                    control.lblbuoichieu.Text = "12:00 - 18:00: " + jobCountForMorning.ToString();
+                    control.btnday.FillColor = Color.FromArgb(227, 254, 247);
+                }
 
                 if (collum >= 6)
                 {
@@ -146,6 +164,26 @@ namespace TheGioiViecLam
                 }
                 useday = useday.AddDays(1);
             }
+        }
+       
+        int CountJobForDay(DateTime date, int starshours,int starsminutes)
+        {
+            return jobs.Count(job => 
+                job.Date.Date == date.Date &&
+                int.Parse(job.FromHours) <= starshours && 
+                int.Parse(job.FromMinutes) <= starsminutes);
+        }
+        int CountJobForAfter(DateTime date, int starshours, int starsminutes)
+        {
+            return jobs.Count(job =>
+                job.Date.Date == date.Date &&
+                int.Parse(job.FromHours) <= starshours &&
+                int.Parse(job.FromHours) >= 13 && 
+                int.Parse(job.FromMinutes) <= starsminutes);
+        }
+        int GetJobCountForDate(DateTime date)
+        {
+            return jobs.Count(job => job.Date.Date == date.Date);
         }
 
         bool isEqualDate(DateTime date1, DateTime date2)
@@ -251,7 +289,7 @@ namespace TheGioiViecLam
                     job.Status = reader["OStatus"].ToString();
                     OrderNum = reader["OrderNum"].ToString();
                     // Kiểm tra xem trạng thái là "Unconfirm" hay không
-                    if (job.Status == "Unconfirm" || job.Status == "Confirmed")
+                    if (job.Status == "Unconfirm                                                                                           ")
                     {
                         jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
                     }
@@ -276,7 +314,6 @@ namespace TheGioiViecLam
                 return;
             FDailyJob dailyJob = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)), account, jobs,OrderNum);
             dailyJob.ShowDialog();
-
         }
 
     }

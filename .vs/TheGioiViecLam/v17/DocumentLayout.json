@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\LEGION\\source\\repos\\WoW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\legion\\source\\repos\\wow\\fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|c:\\users\\legion\\source\\repos\\wow\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|C:\\Users\\LEGION\\source\\repos\\WoW\\fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fdisplay_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -67,18 +71,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\WoW\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T03:20:55.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FDisplay_Customers.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FDisplay_Customers.cs",
               "RelativeDocumentMoniker": "FDisplay_Customers.cs",
               "ToolTip": "C:\\Users\\LEGION\\source\\repos\\WoW\\FDisplay_Customers.cs [Design]",
               "RelativeToolTip": "FDisplay_Customers.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T02:40:08.518Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-09T02:40:08.518Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FSignIn.cs",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FSignIn.cs",
               "RelativeDocumentMoniker": "FSignIn.cs",
@@ -90,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FDisplay_Customers.cs",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FDisplay_Customers.cs",
               "RelativeDocumentMoniker": "FDisplay_Customers.cs",
@@ -102,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "FSearch.cs",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FSearch.cs",
               "RelativeDocumentMoniker": "FSearch.cs",
@@ -114,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FHomeCustomer.cs",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FHomeCustomer.cs",
               "RelativeDocumentMoniker": "FHomeCustomer.cs",
@@ -126,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "FHomeWorker.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FHomeWorker.cs",
               "RelativeDocumentMoniker": "FHomeWorker.cs",
@@ -137,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FHomeCustomer.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FHomeCustomer.cs",
               "RelativeDocumentMoniker": "FHomeCustomer.cs",
@@ -148,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "FSearch.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FSearch.cs",
               "RelativeDocumentMoniker": "FSearch.cs",
@@ -159,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FCalenderCustomer.cs",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FCalenderCustomer.cs",
               "RelativeDocumentMoniker": "FCalenderCustomer.cs",
@@ -171,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "FCalenderCustomer.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FCalenderCustomer.cs",
               "RelativeDocumentMoniker": "FCalenderCustomer.cs",
@@ -182,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "photo (1).png",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\Resources\\photo (1).png",
               "RelativeDocumentMoniker": "Resources\\photo (1).png",
@@ -193,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FDailyJob.cs",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FDailyJob.cs",
               "RelativeDocumentMoniker": "FDailyJob.cs",
@@ -205,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "FPlan_Worker.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\WoW\\FPlan_Worker.cs",
               "RelativeDocumentMoniker": "FPlan_Worker.cs",
