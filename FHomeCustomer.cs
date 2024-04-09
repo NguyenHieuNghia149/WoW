@@ -15,37 +15,17 @@ namespace TheGioiViecLam
     public partial class FHomeCustomer : Form
     {
         private string account;
-      
-        public FHomeCustomer(string account)
+        private FDisplay_Customers FDisplay_Customers;
+        public FHomeCustomer(string account, FDisplay_Customers fDisplay_Customers)
         {
             this.account = account;
-         //   FDisplay_Customers f = new FDisplay_Customers(account);
             InitializeComponent();
             paneljob.AutoScroll = true;
+            this.FDisplay_Customers = fDisplay_Customers;
         }
-       
-        private void AddForm(Form form)
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            FDisplay_Customers f = new FDisplay_Customers(account);
-            f.panel_Body.Controls.Clear();
-            form.Dock = DockStyle.Fill;
-            form.BringToFront();
-            f.panel_Body.Container.Add(form);
-        }
-   
-        private void btn_Click(object sender, EventArgs e)
-        {
-            /*FDisplay_Customers f = new FDisplay_Customers(account);
-          
-            FSearch form = new FSearch(account);
-
-            AddForm( form);*/
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
+            FDisplay_Customers.ReplaceFHome_CustomerWithFSearch();
         }
     }
 }

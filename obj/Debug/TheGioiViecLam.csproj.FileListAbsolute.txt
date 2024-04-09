@@ -58,3 +58,5 @@ C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiV.09D9575C.Up2Date
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.exe
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.pdb
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FHomeWorker.resources
+C:\Users\LEGION\source\repos\WoW\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\LEGION\source\repos\WoW\bin\Debug\Guna.Charts.WinForms.xml
