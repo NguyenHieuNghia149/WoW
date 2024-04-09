@@ -18,11 +18,11 @@ namespace TheGioiViecLam
         public FDisplay_Customers(string account)
         {
             InitializeComponent();
-            OpenChildForm(new FHomeCustomer(account));
+            OpenChildForm(new FHomeCustomer(account,this));
             //OpenChildForm(new FSearch(account));
             this.account = account;
             btnhome.Checked = true;
-            FHomeCustomer f = new FHomeCustomer(account);
+            FHomeCustomer f = new FHomeCustomer(account,this);
             f.btnPost.Click += BtnPost_Click;
         }
         private void btn_SignOut_Click(object sender, EventArgs e)
@@ -40,9 +40,10 @@ namespace TheGioiViecLam
                 currentFormChild.Close();
             }
             currentFormChild = childForm;
+
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
+            childForm.Dock = DockStyle.Right;
             panel_Body.Controls.Add(childForm);
             panel_Body.Tag = childForm;
             childForm.BringToFront();
@@ -50,8 +51,22 @@ namespace TheGioiViecLam
         }
         private void btn_Home_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FHomeCustomer(account));
-           //OpenChildForm(new FSearch(account));
+            OpenChildForm(new FHomeCustomer(account, this));
+        }
+        public void ReplaceFHome_CustomerWithFSearch()
+        {
+            // Tạo một instance của form FSearch
+            FSearch fSearch = new FSearch(account);
+
+            // Đặt kích thước và vị trí của form FSearch trùng với form FHomeCustomer
+            fSearch.Size = currentFormChild.Size;
+            fSearch.Location = currentFormChild.Location;
+            currentFormChild.Close();
+            // Hiển thị form FSearch
+            OpenChildForm(fSearch);
+            panel_Body.Controls.Add(currentFormChild);
+
+            // Thay thế form FHomeCustomer bằng form FSearch trong panel của FDisplay_Customers
         }
 
         private void btn_Contact_Click(object sender, EventArgs e)
@@ -89,7 +104,7 @@ namespace TheGioiViecLam
 
         private void AddForm()
         {
-            FHomeCustomer f = new FHomeCustomer(account);
+            FHomeCustomer f = new FHomeCustomer(account, this);
             f.btnPost.Click += BtnPost_Click;
            
         }

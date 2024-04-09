@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.panel_Body = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnhome = new Guna.UI2.WinForms.Guna2Button();
             this.btnprofile = new Guna.UI2.WinForms.Guna2Button();
             this.btncontact = new Guna.UI2.WinForms.Guna2Button();
@@ -41,10 +40,11 @@
             this.btnRequire = new Guna.UI2.WinForms.Guna2Button();
             this.btnexit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel_Body.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +52,35 @@
             // 
             this.panel_Body.BackColor = System.Drawing.Color.White;
             this.panel_Body.Controls.Add(this.guna2CustomGradientPanel1);
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel_Body.Location = new System.Drawing.Point(0, 0);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(1582, 867);
+            this.panel_Body.Size = new System.Drawing.Size(1582, 884);
             this.panel_Body.TabIndex = 7;
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BorderRadius = 28;
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel1);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(43, 3);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(120, 867);
+            this.guna2CustomGradientPanel1.TabIndex = 4;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Controls.Add(this.guna2Separator1);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 27);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(114, 793);
+            this.guna2Panel1.TabIndex = 3;
             // 
             // flowLayoutPanel1
             // 
@@ -72,39 +96,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(109, 659);
             this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Controls.Add(this.guna2Separator1);
-            this.guna2Panel1.Location = new System.Drawing.Point(6, 23);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(111, 811);
-            this.guna2Panel1.TabIndex = 3;
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.FillThickness = 3;
-            this.guna2Separator1.Location = new System.Drawing.Point(1, 131);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(105, 13);
-            this.guna2Separator1.TabIndex = 2;
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.BorderRadius = 28;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel1);
-            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(120, 867);
-            this.guna2CustomGradientPanel1.TabIndex = 4;
             // 
             // btnhome
             // 
@@ -244,19 +235,27 @@
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillThickness = 3;
+            this.guna2Separator1.Location = new System.Drawing.Point(1, 131);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(105, 13);
+            this.guna2Separator1.TabIndex = 2;
+            // 
             // FDisplay_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1582, 867);
+            this.ClientSize = new System.Drawing.Size(1582, 884);
             this.Controls.Add(this.panel_Body);
             this.Name = "FDisplay_Customers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.panel_Body.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -196,7 +196,6 @@
             this.btnPost.Size = new System.Drawing.Size(180, 45);
             this.btnPost.TabIndex = 2;
             this.btnPost.Text = "Post now";
-            this.btnPost.Click += new System.EventHandler(this.btn_Click);
             // 
             // paneljob
             // 
@@ -550,6 +549,7 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // guna2CustomGradientPanel3
             // 
@@ -899,7 +899,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1057, 718);
+            this.ClientSize = new System.Drawing.Size(1057, 688);
             this.Controls.Add(this.guna2CustomGradientPanel6);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel3);
@@ -991,7 +991,6 @@
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
         private System.Windows.Forms.Label label18;
@@ -1026,5 +1025,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel10;
         private System.Windows.Forms.Label label25;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox10;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }
