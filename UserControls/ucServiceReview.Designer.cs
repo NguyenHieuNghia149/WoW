@@ -245,7 +245,7 @@
             this.Controls.Add(this.lblReview);
             this.Controls.Add(this.panelMain);
             this.Name = "ucServiceReview";
-            this.Size = new System.Drawing.Size(1435, 300);
+            this.Size = new System.Drawing.Size(1435, 280);
             this.Load += new System.EventHandler(this.ucServiceReview_Load);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
