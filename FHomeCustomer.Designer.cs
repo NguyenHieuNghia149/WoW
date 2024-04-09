@@ -376,7 +376,7 @@
             // 
             // guna2PictureBox8
             // 
-            this.guna2PictureBox8.Enabled = false;
+
             this.guna2PictureBox8.Image = global::TheGioiViecLam.Properties.Resources.pipe;
             this.guna2PictureBox8.ImageRotate = 0F;
             this.guna2PictureBox8.Location = new System.Drawing.Point(40, 31);
@@ -410,7 +410,7 @@
             // 
             // guna2PictureBox3
             // 
-            this.guna2PictureBox3.Enabled = false;
+
             this.guna2PictureBox3.Image = global::TheGioiViecLam.Properties.Resources.undraw_Clean_up_re_504g;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(3, 3);
@@ -444,7 +444,7 @@
             // 
             // guna2PictureBox6
             // 
-            this.guna2PictureBox6.Enabled = false;
+
             this.guna2PictureBox6.Image = global::TheGioiViecLam.Properties.Resources.undraw_winter_activities_vv0v;
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(3, 3);
@@ -468,7 +468,7 @@
             // 
             // guna2PictureBox4
             // 
-            this.guna2PictureBox4.Enabled = false;
+
             this.guna2PictureBox4.Image = global::TheGioiViecLam.Properties.Resources.mechanic;
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(40, 21);
@@ -512,7 +512,7 @@
             // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.Enabled = false;
+
             this.guna2PictureBox2.Image = global::TheGioiViecLam.Properties.Resources.undraw_electricity_k2ft;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(3, 4);
@@ -547,7 +547,6 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Enabled = false;
             this.guna2PictureBox1.Image = global::TheGioiViecLam.Properties.Resources.undraw_automobile_repair_ywci;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(3, 4);
@@ -765,12 +764,15 @@
             // 
             // guna2CustomGradientPanel5
             // 
+            this.guna2CustomGradientPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
             this.guna2CustomGradientPanel5.BorderRadius = 20;
             this.guna2CustomGradientPanel5.BorderThickness = 1;
             this.guna2CustomGradientPanel5.Controls.Add(this.label22);
             this.guna2CustomGradientPanel5.Controls.Add(this.label21);
             this.guna2CustomGradientPanel5.Controls.Add(this.label20);
             this.guna2CustomGradientPanel5.Controls.Add(this.label19);
+            this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(254)))), ((int)(((byte)(247)))));
+            this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(254)))), ((int)(((byte)(247)))));
             this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(14, 28);
             this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
             this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(355, 67);
