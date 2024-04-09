@@ -289,7 +289,7 @@ namespace TheGioiViecLam
                     job.Status = reader["OStatus"].ToString();
                     OrderNum = reader["OrderNum"].ToString();
                     // Kiểm tra xem trạng thái là "Unconfirm" hay không
-                    if (job.Status == "Unconfirm                                                                                           ")
+                    if (job.Status == "Unconfirm      " || job.Status =="Confirmed      ")
                     {
                         jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
                     }

@@ -38,7 +38,7 @@ namespace TheGioiViecLam.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=worldofwork;Integrated Securit" +
-            "y=True")]
+            "y=True;MultipleActiveResultSets=true")]
         public string connStr {
             get {
                 return ((string)(this["connStr"]));
