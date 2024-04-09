@@ -17,9 +17,10 @@ namespace TheGioiViecLam
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Application.Run(new FDisplay_Workers("Anh@gmail.com"));
-            // Application.Run(new FSignInforWorkers());
-            Application.Run(new FDisplay_Customers("Nam@gmail.com"));
+            Application.Run(new FDisplay_Workers("Anh@gmail.com"));
+           // Application.Run(new FSignInforWorkers());
+           // Application.Run(new FSearch("Hoi@gmail.com"));
+           // Application.Run(new FDisplay_Customers("Nam@gmail.com"));
             //Application.Run(new FProfile_Customers("Nam@gmail.com"));
 
         }

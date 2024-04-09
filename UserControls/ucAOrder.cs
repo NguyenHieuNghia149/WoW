@@ -41,11 +41,11 @@ namespace TheGioiViecLam.UserControls
             this.job = job;
             IsConfirmed = job.Status == "Confirm";
             IsUnconfirmed = job.Status == "Unconfirm";
-            /*            ShowInfor();
-            */
+            ShowInfor();
+
         }
 
-/*        void ShowInfor()
+        void ShowInfor()
         {
             txtAddress.Text = job.Address;
             txtCustomer.Text = job.Customername;
@@ -55,7 +55,7 @@ namespace TheGioiViecLam.UserControls
             txtPhoneNumber.Text = job.Phonenumber;
             txtStatus.Text = job.Status;
         }
-*/
+
         private void btndeny_Click(object sender, EventArgs e)
         {
 
