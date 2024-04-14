@@ -19,25 +19,23 @@ namespace TheGioiViecLam
 
         private string IDP;
         private string WID;
-        private string CID;
-        public FWriteReview(string CID,string IDP, string WID)
+        public FWriteReview(string IDP, string WID)
         {
             InitializeComponent();
             this.IDP = IDP;
             this.WID = WID;
-            this.CID = CID; 
-            btnSend.Click += (s,ev) => btnSend_Click (CID,IDP, WID,s,ev);
+            btnSend.Click += (s,ev) => btnSend_Click (IDP, WID,s,ev);
         }
 
-        private void btnSend_Click(string CID, string IDP, string WID, object sender, EventArgs e)
+        private void btnSend_Click(string IDP, string WID, object sender, EventArgs e)
         {
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("INSERT INTO Review(Review , Rating ,IDP,WID,CID ) VALUES ('{0}', '{1}','{2}','{3}','{4}')", txtdetail.Text, guna2RatingStar1.Value,IDP,WID,CID);
+                string sqlStr = string.Format("INSERT INTO Review(Review, Rating, IDP, WID) VALUES ('{0}', '{1}', '{2}', '{3}')", txtdetail.Text, guna2RatingStar1.Value, IDP, WID);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("them thanh cong");
+                    MessageBox.Show("Thêm thành công");
             }
             catch (Exception exc)
             {
@@ -48,6 +46,7 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
+
 
         private void FWriteReview_Load(object sender, EventArgs e)
         {

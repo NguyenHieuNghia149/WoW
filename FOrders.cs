@@ -27,63 +27,48 @@ namespace TheGioiViecLam
             fPanel.Width = panel_Body.Width;
             fPanel.Height = panel_Body.Height;
             panel_Body.Controls.Add(fPanel);
-            LoadOrders("Unconfirm");
+            LoadOrders("Unconfirm                                                                                           ");
             btnInOrder.Checked = true;
         }
 
         private ucHistoryOrderCustomer CreateUCOrderFromDataRow(DataRow row)
         {
-            ucHistoryOrderCustomer uc = new ucHistoryOrderCustomer();
-            //UCOrders uc = new UCOrders();
+            ucHistoryOrderCustomer uc = new ucHistoryOrderCustomer();;
             uc.lbljobname.Text = row["jobname"].ToString();
             uc.lblCost.Text = row["cost"].ToString();
             uc.lblstatus.Text = row["OStatus"].ToString();
             uc.lblHours.Text = row["FromHours"].ToString();
             uc.lblMinutes.Text = row["FromHours"].ToString();
-            //   uc.txtJobName.Text = row["jobname"].ToString();
-            // uc.txtCost.Text = row["cost"].ToString();
-            //     uc.txtExperience.Text = row["experience"].ToString();
-            //  uc.txtIDP.Text = row["IDP"].ToString();
-            //   uc.txtHours.Text = row["FromHours"].ToString();
-            //  uc.txtMinutes.Text = row["FromMinutes"].ToString();
-            //   uc.lbl_Status.Text = row["OStatus"].ToString();
-
+            string WID = row["WID"].ToString();
+            string IDP = row["IDP"].ToString();
             switch (uc.lblstatus.Text)
             {
-                case "Confirmed":
+                case "Confirmed                                                                                           ":
                     uc.lblstatus.ForeColor = Color.FromArgb(0, 122, 204);
+                    uc.btnReview.Visible = false;
+                    uc.btnReview.Enabled = false;
+                    uc.btnAgain.Visible = false;
+                    uc.btnAgain.Enabled = false;
+                    uc.btnbomb.Click += (s, ev) => btnbomb_Click(IDP, uc, ev);
                     break;
                 case "Unconfirm                                                                                           ":
                     uc.lblstatus.ForeColor = Color.FromArgb(255, 201, 74);
-                    string WID = row["WID"].ToString();
                     uc.btnReview.Visible = false;
+                    uc.btnReview.Enabled= false;
                     uc.btnAgain.Visible = false;
-                    uc.btnbomb.Click += (s, ev) => btnBomb_Click(WID, uc, ev);
+                    uc.btnAgain.Enabled= false;
+                    uc.btnbomb.Click += (s, ev) => btnbomb_Click(IDP, uc, ev);
 
                     break;
-                case "Deny":
+                case "Deny                                                                                                ":
                     uc.lblstatus.ForeColor = Color.FromArgb(255, 32, 78);
+                    uc.btnbomb.Enabled = false;
+                    uc.btnbomb.Visible = false;
+                    //uc.btnAgain.Click += (s, ev) => btnagain_Click();
+                    uc.btnReview.Click += (s, ev) => btnreview_Click(IDP,WID,uc,ev);
                     break;
                 case "Done                                                                                                ":
-                    if (CheckReview(row["IDP"].ToString(), row["WID"].ToString()))
-                    {
-                        uc.btnbomb.Visible = false;
-                        uc.btnbomb.Enabled = false;
-                        //uc.btnbomb.FillColor = Color.Gray;
-                    }
-                   // uc.lblstatus.ForeColor = Color.FromArgb(144, 210, 109);
-                    //uc.btnbomb.Text = "Evaluate";
-                    if (uc.btnbomb.FillColor == Color.FromArgb(231, 41, 41))
-                    {
-                        uc.btnbomb.Visible = false;
-                        uc.btnbomb.Enabled = false;
-                        uc.btnReview.Click += (s, ev) => btnEvaluate_Click(row["CID"].ToString(), row["IDP"].ToString(), row["WID"].ToString(), uc, ev);
-                    }
-                    else
-                    {
-                        uc.btnbomb.Click += (s, ev) => { }; // Gán một sự kiện trống
-                    }
-                    break;
+                    
                 default:
                     // Xử lý trạng thái khác nếu cần
                     break;
@@ -94,22 +79,22 @@ namespace TheGioiViecLam
 
         private void btnInOrder_Click(object sender, EventArgs e)
         {
-            LoadOrders("Unconfirm");
+            LoadOrders("Unconfirm                                                                                           ");
         }
 
         private void btnComfirmed_Click(object sender, EventArgs e)
         {
-            LoadOrders("Confirmed");
+            LoadOrders("Confirmed                                                                                           ");
         }
 
         private void btncompleted_Click(object sender, EventArgs e)
         {
-            LoadOrders("Done");
+            LoadOrders("Done                                                                                                ");
         }
 
         private void btnDeny_Click(object sender, EventArgs e)
         {
-            LoadOrders("Deny");
+            LoadOrders("Deny                                                                                                ");
         }
 
         private void LoadOrders(string status)
@@ -134,7 +119,7 @@ namespace TheGioiViecLam
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
                     ucHistoryOrderCustomer uc = CreateUCOrderFromDataRow(row);
-                  //  UCOrders uc = CreateUCOrderFromDataRow(row);
+
                     fPanel.Controls.Add(uc);
                 }
             }
@@ -165,18 +150,15 @@ namespace TheGioiViecLam
             }
         }
 
-        public void btnBomb_Click(string WID, object sender, EventArgs e)
+        public void btnbomb_Click(string IDP, ucHistoryOrderCustomer uc, EventArgs e)
         {
             try
             {
-                if (sender is UCOrders uc)
-                {
-                    conn.Open();
-                    string IDP = uc.txtIDP.Text;
-                    string query = string.Format("DELETE FROM Orders WHERE IDP = '{0}'", IDP);
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                }
+                conn.Open();
+                MessageBox.Show(IDP, account);
+                string query = string.Format("DELETE FROM Orders WHERE IDP = '{0}' AND CEmail = '{1}'", IDP, account);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                int rowsAffected = cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -185,13 +167,13 @@ namespace TheGioiViecLam
             finally
             {
                 conn.Close();
-                LoadOrders("Unconfirm");
             }
         }
 
-        public void btnEvaluate_Click(string CID, string IDP, string WID, object sender, EventArgs e)
+
+        public void btnreview_Click(string IDP, string WID, object sender, EventArgs e)
         {
-            FWriteReview fWriteReview = new FWriteReview(CID, IDP, WID);
+            FWriteReview fWriteReview = new FWriteReview(IDP, WID);
             fWriteReview.Show();
         }
 

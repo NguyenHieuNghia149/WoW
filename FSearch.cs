@@ -31,8 +31,6 @@ namespace TheGioiViecLam
             
             if (sender is UCWorkInFor uCWorkInFor)
             {
-
-              
                 FWorkdetail form = new FWorkdetail(postID, account);
                 form.Show();
 
@@ -181,7 +179,7 @@ namespace TheGioiViecLam
         {
             try
             {
-                string sqlStr = string.Format("SELECT COUNT(*) FROM Saves WHERE IDP = '{0}'", postID);
+                string sqlStr = string.Format("SELECT COUNT(*) FROM Saves WHERE IDP = '{0}'and CEmail= '{1}'", postID,account);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 int count = (int)cmd.ExecuteScalar();
                 return count > 0;

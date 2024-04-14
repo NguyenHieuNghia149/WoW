@@ -38,7 +38,9 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sql = string.Format("select Post.IDP as IDP, Post.JobName as JobName, Post.Cost as Cost, Post.Experience as Experience,Post.WTime as Time, post.District as District, CEmail from Saves,Post where  Post.IDP = Saves.IDP and Saves.CEmail = 'Nam@gmail.com'", account);
+                string sql = string.Format("select Post.IDP as IDP, Post.JobName as JobName, Post.Cost as Cost," +
+                    " Post.Experience as Experience,Post.WTime as Time, post.District as District," +
+                    " CEmail from Saves,Post where  Post.IDP = Saves.IDP and Saves.CEmail = 'Nam@gmail.com'", account);
                // string sql = string.Format("Select * from Post where Email = 'Nam@gmail.com' ");
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
                 DataSet dataSet = new DataSet();
