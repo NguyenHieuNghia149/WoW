@@ -34,7 +34,6 @@
             this.PanelCenter = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.PanelTop = new System.Windows.Forms.Panel();
-            this.lbl_Home = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.cbx_districts = new System.Windows.Forms.ComboBox();
@@ -57,25 +56,28 @@
             this.panel1.Controls.Add(this.PanelTop);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1403, 856);
+            this.panel1.Size = new System.Drawing.Size(1039, 641);
             this.panel1.TabIndex = 6;
             // 
             // PanelBottom
             // 
             this.PanelBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.PanelBottom.Location = new System.Drawing.Point(12, 198);
+            this.PanelBottom.Location = new System.Drawing.Point(77, 172);
+            this.PanelBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelBottom.Name = "PanelBottom";
-            this.PanelBottom.Size = new System.Drawing.Size(1288, 660);
+            this.PanelBottom.Size = new System.Drawing.Size(929, 439);
             this.PanelBottom.TabIndex = 2;
             // 
             // PanelCenter
             // 
             this.PanelCenter.Controls.Add(this.comboBox1);
             this.PanelCenter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelCenter.Location = new System.Drawing.Point(0, 126);
+            this.PanelCenter.Location = new System.Drawing.Point(0, 97);
+            this.PanelCenter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelCenter.Name = "PanelCenter";
-            this.PanelCenter.Size = new System.Drawing.Size(1403, 66);
+            this.PanelCenter.Size = new System.Drawing.Size(1039, 67);
             this.PanelCenter.TabIndex = 1;
             // 
             // comboBox1
@@ -86,47 +88,37 @@
             "Rate",
             "Experience",
             "Job Field"});
-            this.comboBox1.Location = new System.Drawing.Point(56, 23);
+            this.comboBox1.Location = new System.Drawing.Point(77, 8);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(209, 24);
+            this.comboBox1.Size = new System.Drawing.Size(286, 32);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Sort by";
             // 
             // PanelTop
             // 
-            this.PanelTop.Controls.Add(this.lbl_Home);
             this.PanelTop.Controls.Add(this.btn_Search);
             this.PanelTop.Controls.Add(this.txt_Search);
             this.PanelTop.Controls.Add(this.cbx_districts);
             this.PanelTop.Controls.Add(this.cbx_cities);
             this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTop.Location = new System.Drawing.Point(0, 0);
+            this.PanelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelTop.Name = "PanelTop";
-            this.PanelTop.Size = new System.Drawing.Size(1403, 126);
+            this.PanelTop.Size = new System.Drawing.Size(1039, 97);
             this.PanelTop.TabIndex = 0;
-            // 
-            // lbl_Home
-            // 
-            this.lbl_Home.AutoSize = true;
-            this.lbl_Home.Font = new System.Drawing.Font("Tahoma", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(88)))));
-            this.lbl_Home.Location = new System.Drawing.Point(12, 9);
-            this.lbl_Home.Name = "lbl_Home";
-            this.lbl_Home.Size = new System.Drawing.Size(145, 51);
-            this.lbl_Home.TabIndex = 53;
-            this.lbl_Home.Text = "Home";
-            this.lbl_Home.Click += new System.EventHandler(this.lbl_Home_Click);
             // 
             // btn_Search
             // 
             this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_Search.FlatAppearance.BorderSize = 0;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Search.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(959, 64);
+            this.btn_Search.Location = new System.Drawing.Point(814, 33);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(127, 39);
+            this.btn_Search.Size = new System.Drawing.Size(105, 37);
             this.btn_Search.TabIndex = 3;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
@@ -134,19 +126,21 @@
             // 
             // txt_Search
             // 
-            this.txt_Search.Location = new System.Drawing.Point(390, 67);
+            this.txt_Search.Location = new System.Drawing.Point(462, 33);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Search.Multiline = true;
             this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(563, 36);
+            this.txt_Search.Size = new System.Drawing.Size(321, 32);
             this.txt_Search.TabIndex = 2;
             // 
             // cbx_districts
             // 
             this.cbx_districts.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_districts.FormattingEnabled = true;
-            this.cbx_districts.Location = new System.Drawing.Point(211, 77);
+            this.cbx_districts.Location = new System.Drawing.Point(267, 33);
+            this.cbx_districts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbx_districts.Name = "cbx_districts";
-            this.cbx_districts.Size = new System.Drawing.Size(121, 26);
+            this.cbx_districts.Size = new System.Drawing.Size(165, 26);
             this.cbx_districts.TabIndex = 1;
             this.cbx_districts.Text = "Districts";
             this.cbx_districts.SelectedIndexChanged += new System.EventHandler(this.cbx_districts_SelectedIndexChanged);
@@ -155,9 +149,10 @@
             // 
             this.cbx_cities.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_cities.FormattingEnabled = true;
-            this.cbx_cities.Location = new System.Drawing.Point(44, 77);
+            this.cbx_cities.Location = new System.Drawing.Point(37, 33);
+            this.cbx_cities.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbx_cities.Name = "cbx_cities";
-            this.cbx_cities.Size = new System.Drawing.Size(145, 26);
+            this.cbx_cities.Size = new System.Drawing.Size(198, 26);
             this.cbx_cities.TabIndex = 0;
             this.cbx_cities.Text = "City";
             this.cbx_cities.SelectedIndexChanged += new System.EventHandler(this.cbx_cities_SelectedIndexChanged);
@@ -178,10 +173,12 @@
             // 
             // FSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1403, 856);
+            this.ClientSize = new System.Drawing.Size(1039, 641);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FSearch";
             this.Text = "FHome";
             this.Load += new System.EventHandler(this.FHome_Load);
@@ -209,6 +206,5 @@
         private System.Windows.Forms.BindingSource workerBindingSource;
         private WorldOfWorkDataSetTableAdapters.WorkerTableAdapter workerTableAdapter;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label lbl_Home;
     }
 }

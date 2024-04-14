@@ -43,18 +43,20 @@
             // 
             this.panel_Body.BackColor = System.Drawing.Color.White;
             this.panel_Body.Controls.Add(this.guna2Separator1);
-            this.panel_Body.Location = new System.Drawing.Point(1, 75);
+            this.panel_Body.Location = new System.Drawing.Point(1, 56);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(1301, 828);
+            this.panel_Body.Size = new System.Drawing.Size(1025, 584);
             this.panel_Body.TabIndex = 3;
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(93)))), ((int)(((byte)(156)))));
             this.guna2Separator1.FillThickness = 3;
-            this.guna2Separator1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Separator1.Location = new System.Drawing.Point(4, 4);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1564, 12);
+            this.guna2Separator1.Size = new System.Drawing.Size(2150, 18);
             this.guna2Separator1.TabIndex = 0;
             // 
             // panelTop
@@ -63,9 +65,10 @@
             this.panelTop.Controls.Add(this.btnComfirmed);
             this.panelTop.Controls.Add(this.btncompleted);
             this.panelTop.Controls.Add(this.btnInOrder);
-            this.panelTop.Location = new System.Drawing.Point(1, 2);
+            this.panelTop.Location = new System.Drawing.Point(1, 3);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1298, 67);
+            this.panelTop.Size = new System.Drawing.Size(1025, 58);
             this.panelTop.TabIndex = 4;
             // 
             // btnDeny
@@ -80,11 +83,12 @@
             this.btnDeny.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDeny.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDeny.FillColor = System.Drawing.Color.White;
-            this.btnDeny.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeny.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeny.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
-            this.btnDeny.Location = new System.Drawing.Point(567, 6);
+            this.btnDeny.Location = new System.Drawing.Point(492, 9);
+            this.btnDeny.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDeny.Name = "btnDeny";
-            this.btnDeny.Size = new System.Drawing.Size(180, 58);
+            this.btnDeny.Size = new System.Drawing.Size(149, 37);
             this.btnDeny.TabIndex = 3;
             this.btnDeny.Text = "Cancelled";
             this.btnDeny.Click += new System.EventHandler(this.btnDeny_Click);
@@ -101,11 +105,12 @@
             this.btnComfirmed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnComfirmed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnComfirmed.FillColor = System.Drawing.Color.White;
-            this.btnComfirmed.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.btnComfirmed.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComfirmed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
-            this.btnComfirmed.Location = new System.Drawing.Point(195, 6);
+            this.btnComfirmed.Location = new System.Drawing.Point(169, 9);
+            this.btnComfirmed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnComfirmed.Name = "btnComfirmed";
-            this.btnComfirmed.Size = new System.Drawing.Size(180, 58);
+            this.btnComfirmed.Size = new System.Drawing.Size(149, 37);
             this.btnComfirmed.TabIndex = 2;
             this.btnComfirmed.Text = "Confirmed";
             this.btnComfirmed.Click += new System.EventHandler(this.btnComfirmed_Click);
@@ -122,11 +127,12 @@
             this.btncompleted.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btncompleted.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btncompleted.FillColor = System.Drawing.Color.White;
-            this.btncompleted.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncompleted.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncompleted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
-            this.btncompleted.Location = new System.Drawing.Point(381, 6);
+            this.btncompleted.Location = new System.Drawing.Point(326, 10);
+            this.btncompleted.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btncompleted.Name = "btncompleted";
-            this.btncompleted.Size = new System.Drawing.Size(180, 58);
+            this.btncompleted.Size = new System.Drawing.Size(149, 37);
             this.btncompleted.TabIndex = 1;
             this.btncompleted.Text = "Completed";
             this.btncompleted.Click += new System.EventHandler(this.btncompleted_Click);
@@ -143,23 +149,26 @@
             this.btnInOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnInOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnInOrder.FillColor = System.Drawing.Color.White;
-            this.btnInOrder.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInOrder.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
-            this.btnInOrder.Location = new System.Drawing.Point(9, 3);
+            this.btnInOrder.Location = new System.Drawing.Point(12, 4);
+            this.btnInOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInOrder.Name = "btnInOrder";
-            this.btnInOrder.Size = new System.Drawing.Size(180, 61);
+            this.btnInOrder.Size = new System.Drawing.Size(149, 41);
             this.btnInOrder.TabIndex = 0;
             this.btnInOrder.Text = "In Order";
             this.btnInOrder.Click += new System.EventHandler(this.btnInOrder_Click);
             // 
             // FOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1303, 856);
+            this.ClientSize = new System.Drawing.Size(1039, 641);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panel_Body);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FOrders";
             this.Text = "FOrders";
             this.panel_Body.ResumeLayout(false);

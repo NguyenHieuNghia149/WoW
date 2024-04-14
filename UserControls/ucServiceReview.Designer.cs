@@ -76,7 +76,7 @@
             this.btnHavePicture.ForeColor = System.Drawing.Color.Black;
             this.btnHavePicture.Location = new System.Drawing.Point(246, 87);
             this.btnHavePicture.Name = "btnHavePicture";
-            this.btnHavePicture.Size = new System.Drawing.Size(256, 45);
+            this.btnHavePicture.Size = new System.Drawing.Size(147, 45);
             this.btnHavePicture.TabIndex = 9;
             this.btnHavePicture.Text = "Have Pictures";
             // 
@@ -93,9 +93,9 @@
             this.btn1Star.FillColor = System.Drawing.Color.White;
             this.btn1Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1Star.ForeColor = System.Drawing.Color.Black;
-            this.btn1Star.Location = new System.Drawing.Point(1017, 28);
+            this.btn1Star.Location = new System.Drawing.Point(744, 28);
             this.btn1Star.Name = "btn1Star";
-            this.btn1Star.Size = new System.Drawing.Size(136, 45);
+            this.btn1Star.Size = new System.Drawing.Size(83, 45);
             this.btn1Star.TabIndex = 8;
             this.btn1Star.Text = "1 Star";
             // 
@@ -112,9 +112,9 @@
             this.btn2Star.FillColor = System.Drawing.Color.White;
             this.btn2Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2Star.ForeColor = System.Drawing.Color.Black;
-            this.btn2Star.Location = new System.Drawing.Point(861, 28);
+            this.btn2Star.Location = new System.Drawing.Point(643, 28);
             this.btn2Star.Name = "btn2Star";
-            this.btn2Star.Size = new System.Drawing.Size(136, 45);
+            this.btn2Star.Size = new System.Drawing.Size(83, 45);
             this.btn2Star.TabIndex = 7;
             this.btn2Star.Text = "2 Star";
             // 
@@ -131,9 +131,9 @@
             this.btn3Star.FillColor = System.Drawing.Color.White;
             this.btn3Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3Star.ForeColor = System.Drawing.Color.Black;
-            this.btn3Star.Location = new System.Drawing.Point(705, 28);
+            this.btn3Star.Location = new System.Drawing.Point(542, 28);
             this.btn3Star.Name = "btn3Star";
-            this.btn3Star.Size = new System.Drawing.Size(136, 45);
+            this.btn3Star.Size = new System.Drawing.Size(83, 45);
             this.btn3Star.TabIndex = 6;
             this.btn3Star.Text = "3 Star";
             // 
@@ -150,9 +150,9 @@
             this.btn4Star.FillColor = System.Drawing.Color.White;
             this.btn4Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4Star.ForeColor = System.Drawing.Color.Black;
-            this.btn4Star.Location = new System.Drawing.Point(550, 28);
+            this.btn4Star.Location = new System.Drawing.Point(436, 28);
             this.btn4Star.Name = "btn4Star";
-            this.btn4Star.Size = new System.Drawing.Size(136, 45);
+            this.btn4Star.Size = new System.Drawing.Size(83, 45);
             this.btn4Star.TabIndex = 5;
             this.btn4Star.Text = "4 Star";
             // 
@@ -169,9 +169,9 @@
             this.btn5Star.FillColor = System.Drawing.Color.White;
             this.btn5Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5Star.ForeColor = System.Drawing.Color.Black;
-            this.btn5Star.Location = new System.Drawing.Point(394, 28);
+            this.btn5Star.Location = new System.Drawing.Point(337, 27);
             this.btn5Star.Name = "btn5Star";
-            this.btn5Star.Size = new System.Drawing.Size(136, 45);
+            this.btn5Star.Size = new System.Drawing.Size(83, 45);
             this.btn5Star.TabIndex = 4;
             this.btn5Star.Text = "5 Star";
             // 
@@ -191,7 +191,7 @@
             this.btnAll.ForeColor = System.Drawing.Color.Black;
             this.btnAll.Location = new System.Drawing.Point(237, 28);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(136, 45);
+            this.btnAll.Size = new System.Drawing.Size(83, 45);
             this.btnAll.TabIndex = 3;
             this.btnAll.Text = "ALL";
             // 
@@ -231,10 +231,10 @@
             // lblReview
             // 
             this.lblReview.AutoSize = true;
-            this.lblReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReview.Location = new System.Drawing.Point(33, 20);
             this.lblReview.Name = "lblReview";
-            this.lblReview.Size = new System.Drawing.Size(329, 48);
+            this.lblReview.Size = new System.Drawing.Size(223, 32);
             this.lblReview.TabIndex = 1;
             this.lblReview.Text = "Service Reviews";
             // 
@@ -245,7 +245,7 @@
             this.Controls.Add(this.lblReview);
             this.Controls.Add(this.panelMain);
             this.Name = "ucServiceReview";
-            this.Size = new System.Drawing.Size(1435, 280);
+            this.Size = new System.Drawing.Size(1201, 288);
             this.Load += new System.EventHandler(this.ucServiceReview_Load);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();

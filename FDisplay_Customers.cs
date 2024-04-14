@@ -43,7 +43,7 @@ namespace TheGioiViecLam
 
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Right;
+            childForm.Dock = DockStyle.Fill;
             panel_Body.Controls.Add(childForm);
             panel_Body.Tag = childForm;
             childForm.BringToFront();

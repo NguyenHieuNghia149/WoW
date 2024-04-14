@@ -29,7 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblMinutes = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.btnbomb = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReview = new Guna.UI2.WinForms.Guna2Button();
             this.btnAgain = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCost = new System.Windows.Forms.Label();
@@ -37,21 +44,14 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblHours = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblviewmore = new System.Windows.Forms.Label();
             this.lbljobname = new System.Windows.Forms.Label();
             this.picturebox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.jobField = new System.Windows.Forms.Label();
             this.lblstatus = new System.Windows.Forms.Label();
-            this.btnReview = new Guna.UI2.WinForms.Guna2Button();
-            this.btnbomb = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblMinutes = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,6 +82,46 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // guna2Separator3
+            // 
+            this.guna2Separator3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Separator3.FillThickness = 2;
+            this.guna2Separator3.Location = new System.Drawing.Point(-32, 208);
+            this.guna2Separator3.Name = "guna2Separator3";
+            this.guna2Separator3.Size = new System.Drawing.Size(987, 10);
+            this.guna2Separator3.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label5.Location = new System.Drawing.Point(314, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 21);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "-";
+            // 
+            // lblMinutes
+            // 
+            this.lblMinutes.AutoSize = true;
+            this.lblMinutes.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.lblMinutes.Location = new System.Drawing.Point(336, 97);
+            this.lblMinutes.Name = "lblMinutes";
+            this.lblMinutes.Size = new System.Drawing.Size(95, 21);
+            this.lblMinutes.TabIndex = 11;
+            this.lblMinutes.Text = "time: 1h30 ";
+            this.lblMinutes.Click += new System.EventHandler(this.lblMinutes_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.Location = new System.Drawing.Point(220, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 21);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "time: ";
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.guna2Separator4);
@@ -90,9 +130,52 @@
             this.panel4.Controls.Add(this.btnAgain);
             this.panel4.Location = new System.Drawing.Point(3, 216);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1024, 60);
+            this.panel4.Size = new System.Drawing.Size(952, 60);
             this.panel4.TabIndex = 9;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // guna2Separator4
+            // 
+            this.guna2Separator4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
+            this.guna2Separator4.FillThickness = 2;
+            this.guna2Separator4.Location = new System.Drawing.Point(7, 56);
+            this.guna2Separator4.Name = "guna2Separator4";
+            this.guna2Separator4.Size = new System.Drawing.Size(1014, 10);
+            this.guna2Separator4.TabIndex = 16;
+            // 
+            // btnbomb
+            // 
+            this.btnbomb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(115)))));
+            this.btnbomb.BorderRadius = 5;
+            this.btnbomb.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnbomb.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnbomb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnbomb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnbomb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btnbomb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbomb.ForeColor = System.Drawing.Color.White;
+            this.btnbomb.Location = new System.Drawing.Point(10, 8);
+            this.btnbomb.Name = "btnbomb";
+            this.btnbomb.Size = new System.Drawing.Size(180, 45);
+            this.btnbomb.TabIndex = 2;
+            this.btnbomb.Text = "Bomb";
+            // 
+            // btnReview
+            // 
+            this.btnReview.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(115)))));
+            this.btnReview.BorderRadius = 5;
+            this.btnReview.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReview.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReview.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReview.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.btnReview.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReview.ForeColor = System.Drawing.Color.White;
+            this.btnReview.Location = new System.Drawing.Point(762, 8);
+            this.btnReview.Name = "btnReview";
+            this.btnReview.Size = new System.Drawing.Size(180, 45);
+            this.btnReview.TabIndex = 1;
+            this.btnReview.Text = "Review now";
             // 
             // btnAgain
             // 
@@ -182,6 +265,15 @@
             this.panel3.Size = new System.Drawing.Size(1024, 43);
             this.panel3.TabIndex = 3;
             // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Separator2.FillThickness = 2;
+            this.guna2Separator2.Location = new System.Drawing.Point(-15, 3);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(967, 10);
+            this.guna2Separator2.TabIndex = 14;
+            // 
             // lblviewmore
             // 
             this.lblviewmore.AutoSize = true;
@@ -224,6 +316,15 @@
             this.panel2.Size = new System.Drawing.Size(945, 50);
             this.panel2.TabIndex = 0;
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(-32, 42);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(987, 10);
+            this.guna2Separator1.TabIndex = 13;
+            // 
             // jobField
             // 
             this.jobField.AutoSize = true;
@@ -245,112 +346,11 @@
             this.lblstatus.TabIndex = 0;
             this.lblstatus.Text = "Completed";
             // 
-            // btnReview
-            // 
-            this.btnReview.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(115)))));
-            this.btnReview.BorderRadius = 5;
-            this.btnReview.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReview.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReview.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReview.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.btnReview.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReview.ForeColor = System.Drawing.Color.White;
-            this.btnReview.Location = new System.Drawing.Point(762, 8);
-            this.btnReview.Name = "btnReview";
-            this.btnReview.Size = new System.Drawing.Size(180, 45);
-            this.btnReview.TabIndex = 1;
-            this.btnReview.Text = "Review now";
-            // 
-            // btnbomb
-            // 
-            this.btnbomb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(115)))));
-            this.btnbomb.BorderRadius = 5;
-            this.btnbomb.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnbomb.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnbomb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnbomb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnbomb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.btnbomb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbomb.ForeColor = System.Drawing.Color.White;
-            this.btnbomb.Location = new System.Drawing.Point(10, 8);
-            this.btnbomb.Name = "btnbomb";
-            this.btnbomb.Size = new System.Drawing.Size(180, 45);
-            this.btnbomb.TabIndex = 2;
-            this.btnbomb.Text = "Bomb";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label3.Location = new System.Drawing.Point(220, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 21);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "time: ";
-            // 
-            // lblMinutes
-            // 
-            this.lblMinutes.AutoSize = true;
-            this.lblMinutes.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblMinutes.Location = new System.Drawing.Point(336, 97);
-            this.lblMinutes.Name = "lblMinutes";
-            this.lblMinutes.Size = new System.Drawing.Size(95, 21);
-            this.lblMinutes.TabIndex = 11;
-            this.lblMinutes.Text = "time: 1h30 ";
-            this.lblMinutes.Click += new System.EventHandler(this.lblMinutes_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label5.Location = new System.Drawing.Point(314, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 21);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "-";
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
-            this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(-32, 42);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(987, 10);
-            this.guna2Separator1.TabIndex = 13;
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
-            this.guna2Separator2.FillThickness = 2;
-            this.guna2Separator2.Location = new System.Drawing.Point(-15, 3);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(967, 10);
-            this.guna2Separator2.TabIndex = 14;
-            // 
-            // guna2Separator3
-            // 
-            this.guna2Separator3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
-            this.guna2Separator3.FillThickness = 2;
-            this.guna2Separator3.Location = new System.Drawing.Point(-32, 208);
-            this.guna2Separator3.Name = "guna2Separator3";
-            this.guna2Separator3.Size = new System.Drawing.Size(987, 10);
-            this.guna2Separator3.TabIndex = 15;
-            // 
-            // guna2Separator4
-            // 
-            this.guna2Separator4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
-            this.guna2Separator4.FillThickness = 2;
-            this.guna2Separator4.Location = new System.Drawing.Point(7, 56);
-            this.guna2Separator4.Name = "guna2Separator4";
-            this.guna2Separator4.Size = new System.Drawing.Size(1014, 10);
-            this.guna2Separator4.TabIndex = 16;
-            // 
             // ucHistoryOrderCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(254)))), ((int)(((byte)(247)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);

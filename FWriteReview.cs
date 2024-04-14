@@ -34,7 +34,7 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("INSERT INTO Review(Review , Rating ,IDP,WID,CID ) VALUES ('{0}', '{1}','{2}','{3}','{4}')", guna2TextBox2.Text, guna2RatingStar1.Value,IDP,WID,CID);
+                string sqlStr = string.Format("INSERT INTO Review(Review , Rating ,IDP,WID,CID ) VALUES ('{0}', '{1}','{2}','{3}','{4}')", txtdetail.Text, guna2RatingStar1.Value,IDP,WID,CID);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                     MessageBox.Show("them thanh cong");

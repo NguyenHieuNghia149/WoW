@@ -29,43 +29,50 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtReview = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblaccount = new System.Windows.Forms.Label();
+            this.RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.guna2Panel1.Controls.Add(this.guna2TextBox2);
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.pictureBox);
+            this.guna2Panel1.Controls.Add(this.RatingStar);
+            this.guna2Panel1.Controls.Add(this.lblaccount);
+            this.guna2Panel1.Controls.Add(this.txtReview);
             this.guna2Panel1.Controls.Add(this.guna2RatingStar1);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 3);
+            this.guna2Panel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1330, 224);
+            this.guna2Panel1.Size = new System.Drawing.Size(900, 296);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2TextBox2
+            // txtReview
             // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(22, 96);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(1286, 106);
-            this.guna2TextBox2.TabIndex = 10;
+            this.txtReview.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.txtReview.BorderRadius = 20;
+            this.txtReview.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtReview.DefaultText = "";
+            this.txtReview.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtReview.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtReview.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtReview.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtReview.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtReview.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReview.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtReview.Location = new System.Drawing.Point(6, 73);
+            this.txtReview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtReview.Name = "txtReview";
+            this.txtReview.PasswordChar = '\0';
+            this.txtReview.PlaceholderText = "";
+            this.txtReview.SelectedText = "";
+            this.txtReview.Size = new System.Drawing.Size(894, 118);
+            this.txtReview.TabIndex = 10;
             // 
             // guna2RatingStar1
             // 
@@ -74,24 +81,41 @@
             this.guna2RatingStar1.Size = new System.Drawing.Size(200, 34);
             this.guna2RatingStar1.TabIndex = 8;
             // 
-            // guna2PictureBox1
+            // lblaccount
             // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 19);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(350, 60);
-            this.guna2PictureBox1.TabIndex = 7;
-            this.guna2PictureBox1.TabStop = false;
+            this.lblaccount.AutoSize = true;
+            this.lblaccount.Location = new System.Drawing.Point(22, 11);
+            this.lblaccount.Name = "lblaccount";
+            this.lblaccount.Size = new System.Drawing.Size(181, 24);
+            this.lblaccount.TabIndex = 11;
+            this.lblaccount.Text = "Nguyen Hieu Nghia";
+            // 
+            // RatingStar
+            // 
+            this.RatingStar.Location = new System.Drawing.Point(26, 38);
+            this.RatingStar.Name = "RatingStar";
+            this.RatingStar.Size = new System.Drawing.Size(120, 28);
+            this.RatingStar.TabIndex = 12;
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(26, 210);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(125, 83);
+            this.pictureBox.TabIndex = 13;
+            this.pictureBox.TabStop = false;
             // 
             // UCreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UCreview";
-            this.Size = new System.Drawing.Size(1334, 227);
+            this.Size = new System.Drawing.Size(908, 302);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,8 +123,10 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtReview;
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private Guna.UI2.WinForms.Guna2RatingStar RatingStar;
+        private System.Windows.Forms.Label lblaccount;
     }
 }
