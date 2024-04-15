@@ -77,25 +77,31 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT * FROM Review");   
+                string sqlStr = @"SELECT Review.Rating, Review.Review, Review.Img, Customer.Fullname
+                  FROM Review
+                  INNER JOIN Customer ON Review.CEmail = Customer.CEmail";
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dataSet = new DataSet();
                 adapter.Fill(dataSet);
-                int y = 0; // Biến để điều chỉnh vị trí theo trục y của các UC
+                int y = 690; // Biến để điều chỉnh vị trí theo trục y của các UC
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
-                    string Rating = row["Rating"].ToString();
+                    int Rating = Convert.ToInt32(row["Rating"]);
                     string Review = row["Review"].ToString();
                     string Img = row["Img"].ToString();
+                    string name = row["Fullname"].ToString();
                     UCreview uCreview = new UCreview();
                     uCreview.txtReview.Text = Review;
-                    uCreview.RatingStar.Text = Rating;
+                    uCreview.RatingStar.Value = Rating;
+                    uCreview.lblaccount.Text = name;
                     // Đặt vị trí cho UC
-                    uCreview.Location = new Point(50, y);
-                    y += uCreview.Height + 10; // Tăng y để tránh chồng chéo
-                    panelReview.Controls.Add(uCreview);
-
+                    uCreview.Location = new Point(0, y);
+                    y += uCreview.Height + 7; // Tăng y để tránh chồng chéo
+                    panel1.Controls.Add(uCreview);
+                    uCreview.BringToFront();
                 }
+
+
             }
             catch (Exception exc)
             {

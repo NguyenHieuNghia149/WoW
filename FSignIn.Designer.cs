@@ -183,14 +183,14 @@
             // 
             // lblsignin
             // 
-            this.lblsignin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.lblsignin.BackColor = System.Drawing.Color.White;
             this.lblsignin.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsignin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.lblsignin.Location = new System.Drawing.Point(417, 79);
             this.lblsignin.Name = "lblsignin";
             this.lblsignin.Size = new System.Drawing.Size(413, 63);
             this.lblsignin.TabIndex = 29;
-            this.lblsignin.Text = " Customers Sign in";
+            this.lblsignin.Text = "SIGN IN";
             this.lblsignin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -258,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(889, 583);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2CircleButton2);

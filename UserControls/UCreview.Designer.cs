@@ -63,6 +63,7 @@
             // 
             this.RatingStar.Location = new System.Drawing.Point(26, 38);
             this.RatingStar.Name = "RatingStar";
+            this.RatingStar.ReadOnly = true;
             this.RatingStar.Size = new System.Drawing.Size(120, 28);
             this.RatingStar.TabIndex = 12;
             // 
@@ -116,9 +117,9 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label lblaccount;
         public Guna.UI2.WinForms.Guna2TextBox txtReview;
         public System.Windows.Forms.PictureBox pictureBox;
         public Guna.UI2.WinForms.Guna2RatingStar RatingStar;
+        public System.Windows.Forms.Label lblaccount;
     }
 }

@@ -543,7 +543,7 @@
             this.ucServiceReview1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.ucServiceReview1.Location = new System.Drawing.Point(3, 580);
             this.ucServiceReview1.Name = "ucServiceReview1";
-            this.ucServiceReview1.Size = new System.Drawing.Size(1370, 216);
+            this.ucServiceReview1.Size = new System.Drawing.Size(1370, 258);
             this.ucServiceReview1.TabIndex = 82;
             // 
             // UCWork_Detail
@@ -582,7 +582,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBook);
             this.Name = "UCWork_Detail";
-            this.Size = new System.Drawing.Size(1373, 808);
+            this.Size = new System.Drawing.Size(1407, 857);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();

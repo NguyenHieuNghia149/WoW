@@ -18,5 +18,10 @@ namespace TheGioiViecLam
             this.account = account;
             InitializeComponent();
         }
+
+        private void FHomeWorker_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
