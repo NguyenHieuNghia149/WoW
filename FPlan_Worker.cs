@@ -44,6 +44,23 @@ namespace TheGioiViecLam
         {
             this.account = account;
             InitializeComponent();
+           /* ucCalender1.timerNotify.Start();
+            appTime = 0;
+            ucCalender1.btnNexrMonth.Click += btnNexrMonth_Click;
+            ucCalender1.btnPreviousMonth.Click += btnPreviousMonth_Click;
+            ucCalender1.btnToday.Click += btnToday_Click;
+            ucCalender1.dt.ValueChanged += dt_ValueChanged;
+            ucCalender1.timerNotify.Tick += TimerNotify_Tick;
+            ucCalender1.cboxnotify.CheckedChanged += Cboxnotify_CheckedChanged;
+            ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
+            ucCalender1.btnblock.Click += Btnblock_Click;
+            LoadMatrix();
+           */ RefreshJobs();
+           // jobs = GetData();    
+           // AddNumbertoMatrix(ucCalender1.dt.Value);
+        }
+        private void RefreshJobs()
+        {
             ucCalender1.timerNotify.Start();
             appTime = 0;
             ucCalender1.btnNexrMonth.Click += btnNexrMonth_Click;
@@ -55,13 +72,11 @@ namespace TheGioiViecLam
             ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
             ucCalender1.btnblock.Click += Btnblock_Click;
             LoadMatrix();
-           // RefreshJobs();
-           jobs = GetData();    
+          //  RefreshJobs();
+            // jobs = GetData();    
             AddNumbertoMatrix(ucCalender1.dt.Value);
-        }
-        private void RefreshJobs()
-        {
-            jobs = GetData(); // Cập nhật danh sách jobs từ cơ sở dữ liệu
+            jobs = GetData(); // Cập nhật danh sách jobs từ
+          // Cập nhật danh sách jobs từ cơ sở dữ liệu
                               // Thực hiện các thao tác khác cần thiết sau khi cập nhật danh sách jobs
         }
         private void Btnblock_Click(object sender, EventArgs e)
@@ -126,22 +141,22 @@ namespace TheGioiViecLam
                     control.btnday.FillColor = Color.White;
                     control.btnday.ForeColor = Color.Black; // Đảm bảo màu chữ trở lại màu đen
                 }
-                if (useday.DayOfWeek == DayOfWeek.Sunday)
+                if (useday.DayOfWeek == DayOfWeek.Sunday) 
                 {
                     control.btnday.ForeColor = Color.FromArgb(220, 107, 25); // Đổi màu chữ để dễ đọc
                 }
-                if (isEqualDate(useday, DateTime.Now))
+                if (isEqualDate(useday, DateTime.Now)) 
                 {
                     control.btnday.FillColor = Color.FromArgb(106, 212, 221);
                 }
-                if (isEqualDate(useday, date))
+                if (isEqualDate(useday, date)) // ngay danh dau
                 {
                     control.btnday.FillColor = Color.FromArgb(255, 32, 78);
                     control.btnday.ForeColor = Color.White;
                 }
                 int jobCountForMorning = CountJobForDay(useday, 11, 59);
                 int jobCountForAfter = CountJobForAfter(useday, 18, 59);
-                if(GetJobCountForDate(useday)>0)
+                if(GetJobCountForDate(useday)>0) // ngay co viec
                 {
                     control.btnday.FillColor = Color.Red;
                 }
@@ -166,20 +181,20 @@ namespace TheGioiViecLam
             }
         }
        
-        int CountJobForDay(DateTime date, int starshours,int starsminutes)
+        int CountJobForDay(DateTime date, int startshours,int startsminutes)
         {
             return jobs.Count(job => 
                 job.Date.Date == date.Date &&
-                int.Parse(job.FromHours) <= starshours && 
-                int.Parse(job.FromMinutes) <= starsminutes);
+                int.Parse(job.FromHours) <= startshours && 
+                int.Parse(job.FromMinutes) <= startsminutes);
         }
-        int CountJobForAfter(DateTime date, int starshours, int starsminutes)
+        int CountJobForAfter(DateTime date, int startshours, int startsminutes)
         {
             return jobs.Count(job =>
                 job.Date.Date == date.Date &&
-                int.Parse(job.FromHours) <= starshours &&
+                int.Parse(job.FromHours) <= startshours &&
                 int.Parse(job.FromHours) >= 13 && 
-                int.Parse(job.FromMinutes) <= starsminutes);
+                int.Parse(job.FromMinutes) <= startsminutes);
         }
         int GetJobCountForDate(DateTime date)
         {
@@ -222,7 +237,6 @@ namespace TheGioiViecLam
         private void btnNexrMonth_Click(object sender, EventArgs e)
         {
             ucCalender1.dt.Value = ucCalender1.dt.Value.AddMonths(1);
-
         }
 
         private void btnToday_Click(object sender, EventArgs e)
@@ -257,7 +271,6 @@ namespace TheGioiViecLam
             }
         }
 
-
         private List<Order> GetData()
         {
             List<Order> jobs = new List<Order>();
@@ -267,7 +280,6 @@ namespace TheGioiViecLam
                 string sql = string.Format("SELECT Customer.Fullname as fullname,Orders.OrderNum as OrderNum, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = '{0}' and Customer.CEmail = Orders.CEmail", account);
                 SqlCommand command = new SqlCommand(sql, conn);
                 SqlDataReader reader = command.ExecuteReader();
-
                 while (reader.Read())
                 {
                     Order job = new Order();
@@ -288,11 +300,13 @@ namespace TheGioiViecLam
                     job.Address = reader["CAddress"].ToString();
                     job.Status = reader["OStatus"].ToString();
                     OrderNum = reader["OrderNum"].ToString();
+                    jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
+
                     // Kiểm tra xem trạng thái là "Unconfirm" hay không
-                    if (job.Status == "Unconfirm      " || job.Status =="Confirmed      ")
-                    {
-                        jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
-                    }
+                    /* if (job.Status == "Unconfirm                                                                                           " && job.Status == "Confirmed                                                                                           ")
+                     {
+                         jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
+                     }*/
                 }
                 reader.Close();
                 return jobs;

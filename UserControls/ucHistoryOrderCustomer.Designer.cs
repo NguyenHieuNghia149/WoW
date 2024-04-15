@@ -159,6 +159,7 @@
             this.btnbomb.Size = new System.Drawing.Size(180, 45);
             this.btnbomb.TabIndex = 2;
             this.btnbomb.Text = "Bomb";
+            this.btnbomb.Click += new System.EventHandler(this.btnbomb_Click);
             // 
             // btnReview
             // 
@@ -376,7 +377,6 @@
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label lblstatus;
         public System.Windows.Forms.Label jobField;
@@ -394,5 +394,6 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        public System.Windows.Forms.Panel panel4;
     }
 }

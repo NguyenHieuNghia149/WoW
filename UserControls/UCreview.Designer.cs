@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.lblaccount = new System.Windows.Forms.Label();
             this.txtReview = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.lblaccount = new System.Windows.Forms.Label();
-            this.RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,30 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(900, 296);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(26, 210);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(125, 83);
+            this.pictureBox.TabIndex = 13;
+            this.pictureBox.TabStop = false;
+            // 
+            // RatingStar
+            // 
+            this.RatingStar.Location = new System.Drawing.Point(26, 38);
+            this.RatingStar.Name = "RatingStar";
+            this.RatingStar.Size = new System.Drawing.Size(120, 28);
+            this.RatingStar.TabIndex = 12;
+            // 
+            // lblaccount
+            // 
+            this.lblaccount.AutoSize = true;
+            this.lblaccount.Location = new System.Drawing.Point(22, 11);
+            this.lblaccount.Name = "lblaccount";
+            this.lblaccount.Size = new System.Drawing.Size(181, 24);
+            this.lblaccount.TabIndex = 11;
+            this.lblaccount.Text = "Nguyen Hieu Nghia";
             // 
             // txtReview
             // 
@@ -81,30 +105,6 @@
             this.guna2RatingStar1.Size = new System.Drawing.Size(200, 34);
             this.guna2RatingStar1.TabIndex = 8;
             // 
-            // lblaccount
-            // 
-            this.lblaccount.AutoSize = true;
-            this.lblaccount.Location = new System.Drawing.Point(22, 11);
-            this.lblaccount.Name = "lblaccount";
-            this.lblaccount.Size = new System.Drawing.Size(181, 24);
-            this.lblaccount.TabIndex = 11;
-            this.lblaccount.Text = "Nguyen Hieu Nghia";
-            // 
-            // RatingStar
-            // 
-            this.RatingStar.Location = new System.Drawing.Point(26, 38);
-            this.RatingStar.Name = "RatingStar";
-            this.RatingStar.Size = new System.Drawing.Size(120, 28);
-            this.RatingStar.TabIndex = 12;
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.Location = new System.Drawing.Point(26, 210);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(125, 83);
-            this.pictureBox.TabIndex = 13;
-            this.pictureBox.TabStop = false;
-            // 
             // UCreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -112,7 +112,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UCreview";
-            this.Size = new System.Drawing.Size(908, 302);
+            this.Size = new System.Drawing.Size(908, 308);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

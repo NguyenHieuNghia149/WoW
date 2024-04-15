@@ -31,6 +31,11 @@ namespace TheGioiViecLam.UserControls
         {
 
         }
+
+        private void btnbomb_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

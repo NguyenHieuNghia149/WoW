@@ -98,11 +98,9 @@ create table dbo.Orders(
 	FromHours int,
 	FromMinutes int,
 	OStatus Nchar(100),
-	primary key (CEmail,IDP),
 	foreign key (CEmail) references Customer(CEmail),
 	foreign key (IDP) references Post(IDP)
 )
-
 go
 
 create table dbo.Saves(
@@ -245,18 +243,9 @@ EXEC pd_Insert_Post_ N'P00006',N'Viet@gmail.com',N'Painting Walls',N'3-4',N'35',
 
 ------------------------------------------------------------------------------------------------
 
+go
 ----Nhap vao Orders
-INSERT INTO Orders(CEmail,IDP,Timestart,TimeEnd)
-VALUES(N'Nam@gmail.com',N'P00001','2024-01-10','2024-01-12')
-INSERT INTO Orders(CEmail,IDP,Timestart,TimeEnd)
-VALUES(N'Phuong@gmail.com',N'P00001','2024-02-15','2024-02-17')
-INSERT INTO Orders(CEmail,IDP,Timestart,TimeEnd)
-VALUES(N'Ha@gmail.com',N'P00002','2024-02-20','2024-01-21')
-INSERT INTO Orders(CEmail,IDP,Timestart,TimeEnd)
-VALUES(N'Hoi@gmail.com',N'P00002','2024-03-13','2024-03-15')
-INSERT INTO Orders(CEmail,IDP,Timestart,TimeEnd)
-VALUES(N'Ngan@gmail.com',N'P00002','2024-03-20','2024-03-22')
-GO
+
 ----Nhap vao Saves
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00001',N'P00003','Nam@gmail.com')
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00002',N'P00003',N'Phuong@gmail.com')
@@ -339,3 +328,4 @@ Create table Review(
 	foreign key (WID) references Worker(WID),
 )
 go
+                SELECT Customer.Fullname as fullname,Orders.OrderNum as OrderNum, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = 'Anh@gmail.com' and Customer.CEmail = Orders.CEmail
