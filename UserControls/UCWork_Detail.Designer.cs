@@ -82,7 +82,7 @@
             this.btnBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.btnBook.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.btnBook.ForeColor = System.Drawing.Color.White;
-            this.btnBook.Location = new System.Drawing.Point(1083, 544);
+            this.btnBook.Location = new System.Drawing.Point(1126, 512);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(180, 62);
             this.btnBook.TabIndex = 29;
@@ -99,7 +99,7 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(66)))), ((int)(((byte)(102)))));
             this.btnSave.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(864, 544);
+            this.btnSave.Location = new System.Drawing.Point(911, 512);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(180, 62);
             this.btnSave.TabIndex = 30;
@@ -541,9 +541,9 @@
             // ucServiceReview1
             // 
             this.ucServiceReview1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.ucServiceReview1.Location = new System.Drawing.Point(0, 664);
+            this.ucServiceReview1.Location = new System.Drawing.Point(3, 580);
             this.ucServiceReview1.Name = "ucServiceReview1";
-            this.ucServiceReview1.Size = new System.Drawing.Size(1503, 300);
+            this.ucServiceReview1.Size = new System.Drawing.Size(1370, 216);
             this.ucServiceReview1.TabIndex = 82;
             // 
             // UCWork_Detail
@@ -582,7 +582,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBook);
             this.Name = "UCWork_Detail";
-            this.Size = new System.Drawing.Size(1373, 1000);
+            this.Size = new System.Drawing.Size(1373, 808);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
