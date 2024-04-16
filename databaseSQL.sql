@@ -127,16 +127,27 @@ VALUES (N'C00005',N'Ngan@gmail.com',N'Ngan@gmail.com',N'Võ Văn Ngân',N'Female
 GO
 
 ----Nhap vao JobField
-INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00001',N'Housing')
-INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00002',N'Vehicle')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00001',N'Repair and maintenance')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00002',N'Electricians')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00003',N'Cleaning service')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00004',N'Mechanics')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00005',N'Carpentry')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00006',N'Plumbing')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00007',N'Transport')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00008',N'Digital and Technology')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00008',N'Family and Care')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00008',N'Financial and accounting')
+
+
+
 GO
 
 ----Nhap vao Job
-INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00001',N'JF00001',N'Painting Walls')
+INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00001',N'JF00003',N'Painting Walls')
 INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00002',N'JF00001',N'Fixing Furnitures')
-INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00003',N'JF00002',N'Resembling Cars')
-INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00004',N'JF00002',N'Fixing Cars')
-INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00005',N'JF00002',N'Washing Cars')
+INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00003',N'JF00001',N'Resembling Cars')
+INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00004',N'JF00001',N'Fixing Cars')
+INSERT INTO Job(IDJ,IDJF,JobName) VALUES (N'J00005',N'JF00001',N'Washing Cars')
 GO
 
 --SELECT * FROM Worker

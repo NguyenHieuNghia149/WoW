@@ -134,7 +134,8 @@ namespace TheGioiViecLam
                 control.btnday.Click += Btn_Click;
                 control.lblbuoisang.Visible = false;
                 control.lblbuoichieu.Visible = false;
-
+                int jobCountForMorning = CountJobForDay(useday, 11, 59);
+                int jobCountForAfter = CountJobForAfter(useday, 18, 59);
                 // Xóa màu đỏ của ngày trước đó
                 if (!isEqualDate(useday, date))
                 {
@@ -149,26 +150,21 @@ namespace TheGioiViecLam
                 {
                     control.btnday.FillColor = Color.FromArgb(106, 212, 221);
                 }
-                if (isEqualDate(useday, date)) // ngay danh dau
+                if (isEqualDate(useday, date)) // ngay danh daus
                 {
                     control.btnday.FillColor = Color.FromArgb(255, 32, 78);
                     control.btnday.ForeColor = Color.White;
                 }
-                int jobCountForMorning = CountJobForDay(useday, 11, 59);
-                int jobCountForAfter = CountJobForAfter(useday, 18, 59);
-                if(GetJobCountForDate(useday)>0) // ngay co viec
-                {
-                    control.btnday.FillColor = Color.Red;
-                }
+
                 if (jobCountForMorning > 0)
                 {
                     control.lblbuoisang.Visible = true;
                     control.lblbuoisang.Text = "7:00 - 11:00: " + jobCountForMorning.ToString();
                     control.btnday.FillColor = Color.FromArgb(227, 254, 247);
                 }
-                if(jobCountForAfter > 0)
+                if (jobCountForAfter > 0)
                 {
-                    control.lblbuoichieu.Visible = true;    
+                    control.lblbuoichieu.Visible = true;
                     control.lblbuoichieu.Text = "12:00 - 18:00: " + jobCountForMorning.ToString();
                     control.btnday.FillColor = Color.FromArgb(227, 254, 247);
                 }
@@ -193,7 +189,7 @@ namespace TheGioiViecLam
             return jobs.Count(job =>
                 job.Date.Date == date.Date &&
                 int.Parse(job.FromHours) <= startshours &&
-                int.Parse(job.FromHours) >= 13 && 
+                int.Parse(job.FromHours) >= 12 && 
                 int.Parse(job.FromMinutes) <= startsminutes);
         }
         int GetJobCountForDate(DateTime date)
@@ -300,13 +296,13 @@ namespace TheGioiViecLam
                     job.Address = reader["CAddress"].ToString();
                     job.Status = reader["OStatus"].ToString();
                     OrderNum = reader["OrderNum"].ToString();
-                    jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
+                    jobs.Add(job);
 
                     // Kiểm tra xem trạng thái là "Unconfirm" hay không
-                    /* if (job.Status == "Unconfirm                                                                                           " && job.Status == "Confirmed                                                                                           ")
-                     {
-                         jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
-                     }*/
+                    if (job.Status == "Unconfirm                                                                                           " && job.Status == "Confirmed                                                                                           ")
+                    {
+                        jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
+                    }
                 }
                 reader.Close();
                 return jobs;
@@ -326,7 +322,7 @@ namespace TheGioiViecLam
         {
             if (string.IsNullOrEmpty((sender as Control).Text))
                 return;
-            FDailyJob dailyJob = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)), account, jobs,OrderNum);
+            FDailyJob dailyJob = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)), account, jobs, OrderNum);
             dailyJob.ShowDialog();
         }
 

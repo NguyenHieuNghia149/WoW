@@ -81,9 +81,9 @@
             this.lblJobName.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobName.Location = new System.Drawing.Point(278, 76);
             this.lblJobName.Name = "lblJobName";
-            this.lblJobName.Size = new System.Drawing.Size(47, 28);
+            this.lblJobName.Size = new System.Drawing.Size(94, 28);
             this.lblJobName.TabIndex = 17;
-            this.lblJobName.Text = "Job";
+            this.lblJobName.Text = "JobField";
             // 
             // lblTime
             // 
@@ -306,7 +306,7 @@
             // 
             this.cbboxJobName.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbboxJobName.FormattingEnabled = true;
-            this.cbboxJobName.Location = new System.Drawing.Point(421, 68);
+            this.cbboxJobName.Location = new System.Drawing.Point(421, 73);
             this.cbboxJobName.Name = "cbboxJobName";
             this.cbboxJobName.Size = new System.Drawing.Size(253, 36);
             this.cbboxJobName.TabIndex = 37;
