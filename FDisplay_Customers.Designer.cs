@@ -36,10 +36,9 @@
             this.btncontact = new Guna.UI2.WinForms.Guna2Button();
             this.btnfavourite = new Guna.UI2.WinForms.Guna2Button();
             this.btnorders = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRequire = new Guna.UI2.WinForms.Guna2Button();
             this.btnexit = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -50,7 +49,7 @@
             this.panel_Body.BackColor = System.Drawing.Color.White;
             this.panel_Body.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_Body.Location = new System.Drawing.Point(102, 2);
-            this.panel_Body.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(4);
             this.panel_Body.Name = "panel_Body";
             this.panel_Body.Size = new System.Drawing.Size(1298, 648);
             this.panel_Body.TabIndex = 7;
@@ -66,7 +65,7 @@
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(13, 28);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(81, 618);
             this.guna2CustomGradientPanel1.TabIndex = 4;
@@ -79,10 +78,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btncontact);
             this.flowLayoutPanel1.Controls.Add(this.btnfavourite);
             this.flowLayoutPanel1.Controls.Add(this.btnorders);
-            this.flowLayoutPanel1.Controls.Add(this.btnRequire);
             this.flowLayoutPanel1.Controls.Add(this.btnexit);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 107);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(62, 455);
             this.flowLayoutPanel1.TabIndex = 4;
@@ -100,7 +98,7 @@
             this.btnhome.Image = global::TheGioiViecLam.Properties.Resources.home;
             this.btnhome.ImageSize = new System.Drawing.Size(32, 22);
             this.btnhome.Location = new System.Drawing.Point(4, 4);
-            this.btnhome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnhome.Margin = new System.Windows.Forms.Padding(4);
             this.btnhome.Name = "btnhome";
             this.btnhome.Size = new System.Drawing.Size(43, 52);
             this.btnhome.TabIndex = 5;
@@ -120,7 +118,7 @@
             this.btnprofile.Image = global::TheGioiViecLam.Properties.Resources.user;
             this.btnprofile.ImageSize = new System.Drawing.Size(37, 27);
             this.btnprofile.Location = new System.Drawing.Point(4, 64);
-            this.btnprofile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnprofile.Margin = new System.Windows.Forms.Padding(4);
             this.btnprofile.Name = "btnprofile";
             this.btnprofile.Size = new System.Drawing.Size(43, 52);
             this.btnprofile.TabIndex = 10;
@@ -139,7 +137,7 @@
             this.btncontact.Image = global::TheGioiViecLam.Properties.Resources.headphone;
             this.btncontact.ImageSize = new System.Drawing.Size(37, 27);
             this.btncontact.Location = new System.Drawing.Point(4, 124);
-            this.btncontact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncontact.Margin = new System.Windows.Forms.Padding(4);
             this.btncontact.Name = "btncontact";
             this.btncontact.Size = new System.Drawing.Size(43, 52);
             this.btncontact.TabIndex = 6;
@@ -158,7 +156,7 @@
             this.btnfavourite.Image = global::TheGioiViecLam.Properties.Resources.wishlist;
             this.btnfavourite.ImageSize = new System.Drawing.Size(37, 27);
             this.btnfavourite.Location = new System.Drawing.Point(4, 184);
-            this.btnfavourite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnfavourite.Margin = new System.Windows.Forms.Padding(4);
             this.btnfavourite.Name = "btnfavourite";
             this.btnfavourite.Size = new System.Drawing.Size(43, 52);
             this.btnfavourite.TabIndex = 7;
@@ -177,30 +175,11 @@
             this.btnorders.Image = global::TheGioiViecLam.Properties.Resources.shopping_list;
             this.btnorders.ImageSize = new System.Drawing.Size(37, 27);
             this.btnorders.Location = new System.Drawing.Point(4, 244);
-            this.btnorders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnorders.Margin = new System.Windows.Forms.Padding(4);
             this.btnorders.Name = "btnorders";
             this.btnorders.Size = new System.Drawing.Size(43, 52);
             this.btnorders.TabIndex = 8;
             this.btnorders.Click += new System.EventHandler(this.btn_Orders_Click);
-            // 
-            // btnRequire
-            // 
-            this.btnRequire.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnRequire.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRequire.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRequire.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRequire.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRequire.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.btnRequire.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRequire.ForeColor = System.Drawing.Color.White;
-            this.btnRequire.Image = global::TheGioiViecLam.Properties.Resources.document;
-            this.btnRequire.ImageSize = new System.Drawing.Size(37, 27);
-            this.btnRequire.Location = new System.Drawing.Point(4, 304);
-            this.btnRequire.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnRequire.Name = "btnRequire";
-            this.btnRequire.Size = new System.Drawing.Size(43, 52);
-            this.btnRequire.TabIndex = 9;
-            this.btnRequire.Click += new System.EventHandler(this.btnRequire_Click);
             // 
             // btnexit
             // 
@@ -214,12 +193,22 @@
             this.btnexit.ForeColor = System.Drawing.Color.White;
             this.btnexit.Image = global::TheGioiViecLam.Properties.Resources.logout;
             this.btnexit.ImageSize = new System.Drawing.Size(37, 27);
-            this.btnexit.Location = new System.Drawing.Point(4, 364);
-            this.btnexit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnexit.Location = new System.Drawing.Point(4, 304);
+            this.btnexit.Margin = new System.Windows.Forms.Padding(4);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(43, 52);
             this.btnexit.TabIndex = 11;
             this.btnexit.Click += new System.EventHandler(this.btn_SignOut_Click);
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator1.FillThickness = 3;
+            this.guna2Separator1.Location = new System.Drawing.Point(11, 79);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(47, 20);
+            this.guna2Separator1.TabIndex = 2;
             // 
             // guna2PictureBox1
             // 
@@ -227,33 +216,23 @@
             this.guna2PictureBox1.Image = global::TheGioiViecLam.Properties.Resources.menu_burger;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(15, 19);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(43, 52);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Separator1.FillThickness = 3;
-            this.guna2Separator1.Location = new System.Drawing.Point(11, 79);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(47, 20);
-            this.guna2Separator1.TabIndex = 2;
-            // 
             // FDisplay_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1224, 659);
+            this.ClientSize = new System.Drawing.Size(1419, 659);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.panel_Body);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FDisplay_Customers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.guna2CustomGradientPanel1.ResumeLayout(false);
@@ -270,7 +249,6 @@
         private Guna.UI2.WinForms.Guna2Button btncontact;
         private Guna.UI2.WinForms.Guna2Button btnfavourite;
         private Guna.UI2.WinForms.Guna2Button btnorders;
-        private Guna.UI2.WinForms.Guna2Button btnRequire;
         private Guna.UI2.WinForms.Guna2Button btnexit;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;

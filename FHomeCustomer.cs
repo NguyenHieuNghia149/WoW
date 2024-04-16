@@ -23,9 +23,20 @@ namespace TheGioiViecLam
             paneljob.AutoScroll = true;
             this.FDisplay_Customers = fDisplay_Customers;
         }
+
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             FDisplay_Customers.ReplaceFHome_CustomerWithFSearch();
+        }
+
+        private void btnMyPost_Click(object sender, EventArgs e)
+        {
+            FDisplay_Customers.OpenChildForm(new FHistory_RequireJob_Customers(account));
+        }
+
+        private void btnPost_Click(object sender, EventArgs e)
+        {
+            FDisplay_Customers.OpenChildForm(new FPost_RequireJobs_Customers(account));
         }
     }
 }

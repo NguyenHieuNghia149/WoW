@@ -32,8 +32,8 @@ namespace TheGioiViecLam
             form.ShowDialog();
             this.Close();
         }
-        private Form currentFormChild;
-        private void OpenChildForm(Form childForm)
+        public Form currentFormChild;
+        public void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
             {
@@ -49,7 +49,7 @@ namespace TheGioiViecLam
             childForm.BringToFront();
             childForm.Show();
         }
-        private void btn_Home_Click(object sender, EventArgs e)
+        public void btn_Home_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FHomeCustomer(account, this));
         }

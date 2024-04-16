@@ -254,8 +254,24 @@ INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00004',N'P00005',N'Hoi@gmail.com')
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00005',N'P00005',N'Ngan@gmail.com')
 GO
 
+Create table Review(
+	IDP Nchar(20),
+	WID Nchar(20),
+	Rating float,
+	Review Nchar(200),
+	Primary key(IDP,WID),
+	foreign key (IDP) references Post(IDP),
+	foreign key (WID) references Worker(WID),
+)
+go
+
+SELECT Customer.Fullname as fullname,Orders.OrderNum as OrderNum, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = 'Anh@gmail.com' and Customer.CEmail = Orders.CEmail
+
 ----------Data cho FRequirement_Jobs----------
---DROP TABLE Requirement
+--B1: 
+DROP TABLE Requirement
+GO
+--B2 :
 CREATE TABLE Requirement(
 	OrderNum INT IDENTITY (1, 1),
 	RequireID INT,
@@ -268,16 +284,17 @@ CREATE TABLE Requirement(
 	CAddress Nchar(500),
 	JobName Nchar(500),
 	Detail Nchar(500),
-	WGender Nchar(20),
-	Cost Nchar(20),
 	Primary key (RequireID,CEmail),
 	foreign key (CEmail)  references Customer(CEmail),
 )
 GO
 
---2--Procedure nhap Requirement---
-CREATE PROCEDURE pd_Requirement_Insert(@RequireID INT,@CEmail Char(50),
-	@JobName Nchar(500),@Detail Nchar(500),@WGender Nchar(20),@Cost Nchar(20)) AS
+--Procedure nhap Requirement---
+--B3:
+DROP PROCEDURE pd_Requirement_Insert
+GO
+--B4 :
+CREATE PROCEDURE pd_Requirement_Insert(@RequireID INT,@CEmail Char(50),@JobName Nchar(500),@Detail Nchar(500)) AS
 BEGIN
 	DECLARE @CGender Nchar(20),@FullName Nchar(20),@City Nchar(20),
 		@District Nchar(20),@PhoneNum Nchar(20),@CAddress Nchar(500)
@@ -285,47 +302,14 @@ BEGIN
 		@District = District, @PhoneNum = PhoneNum, @CAddress = CAddress
 		FROM Customer
 		WHERE @CEmail = CEmail
-	INSERT INTO Requirement(RequireID,CEmail,CGender,FullName,City,District,PhoneNum,CAddress,JobName,Detail,WGender,Cost)
-	VALUES (@RequireID,@CEmail,@CGender,@FullName,@City,@District,@PhoneNum,@CAddress,@JobName,@Detail,@WGender,@Cost)
+	INSERT INTO Requirement(RequireID,CEmail,CGender,FullName,City,District,PhoneNum,CAddress,JobName,Detail)
+	VALUES (@RequireID,@CEmail,@CGender,@FullName,@City,@District,@PhoneNum,@CAddress,@JobName,@Detail)
 END
 GO
 
-EXEC pd_Requirement_Insert 1,'Nam@gmail.com','Painting Walls',
-	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
-EXEC pd_Requirement_Insert 2,'Phuong@gmail.com','Painting Walls',
-	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
-EXEC pd_Requirement_Insert 3,'Ha@gmail.com','Painting Walls',
-	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
-EXEC pd_Requirement_Insert 4,'Hoi@gmail.com','Painting Walls',
-	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
-EXEC pd_Requirement_Insert 5,'Ngan@gmail.com','Painting Walls',
-	'If you can create a beautiful picture for my house, Ill tip you 50% more','Everyone','45'
+--B5 : 
+EXEC pd_Requirement_Insert 1,'Nam@gmail.com','Fixing cars',
+	'My car has a flat tire and scratches on the outside paint. I need a mechanic who can replace all 4 wheels because I think they are quite old, and replace the entire outside paint. My house has a garden and a hose, I need you to do it right at my house because I cant move my car anywhere.'
+EXEC pd_Requirement_Insert 2,'Nam@gmail.com','Painting Walls',
+	'The paint on the outside of our house is quite old and peeling quite a bit, so I needed a painter who could repaint the entire exterior with a white base coat and a coat of cream paint.'
 GO
-
---SELECT * FROM Requirement
---SELECT * FROM Customer
-
---SELECT MAX(RequireID)+1 FROM Requirement
---SELECT * FROM Requirement WHERE CEmail = 'Nam@gmail.com'
-
---DELETE FROM Requirement WHERE CEmail = 'Nam@gmail.com' AND RequireID = 7
-
-CREATE PROCEDURE pd_Requirement_Update (@RequireID INT,@CEmail Char(50),
-	@JobName Nchar(500),@CAddress Nchar(500),@WGender Nchar(20),@Cost Nchar(20)) AS
-BEGIN
-	UPDATE Requirement SET JobName = @JobName , CAddress = @CAddress, WGender = @WGender, Cost = @Cost
-	WHERE @CEmail = CEmail AND @RequireID = RequireID
-END
-GO
-
-Create table Review(
-	IDP Nchar(20),
-	WID Nchar(20),
-	Rating float,
-	Review Nchar(200),
-	Primary key(IDP,WID),
-	foreign key (IDP) references Post(IDP),
-	foreign key (WID) references Worker(WID),
-)
-go
-                SELECT Customer.Fullname as fullname,Orders.OrderNum as OrderNum, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = 'Anh@gmail.com' and Customer.CEmail = Orders.CEmail

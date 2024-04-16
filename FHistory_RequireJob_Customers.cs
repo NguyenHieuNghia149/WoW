@@ -42,8 +42,6 @@ namespace TheGioiViecLam
 
             try
             {
-
-
                 conn.Open();
                 string query = string.Format("SELECT * FROM Requirement WHERE CEmail = '{0}'", account);
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
@@ -55,36 +53,39 @@ namespace TheGioiViecLam
 
                 panel_His.Controls.Clear();
 
-                int y = 0;
+                int y = 0, x = 25, count = 1;
 
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
-                    //RequireID,CAddress,JobName,WGender,Cost
                     string RequireID = row["RequireID"].ToString();
-                    string CAddress = row["CAddress"].ToString();
+                    string Detail = row["Detail"].ToString();
                     string JobName = row["JobName"].ToString();
-                    string WGender = row["WGender"].ToString();
-                    string Cost = row["Cost"].ToString();
+                    string CAddress = row["CAddress"].ToString();
 
                     UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer(); //phải tạo UC trong vòng lặp
 
-                    ucHis.Click += (s, ev) => UCHis_Click(RequireID, s, ev); //show chi tiết công việc
                     ucHis.btnDelete.Click += (s, ev) => UCHis_btnDelete_Click(RequireID, s, ev); //delete
+                    ucHis.btnViewDetail.Click += (s, ev) => UCHis_btnViewDetail_Click(RequireID, s, ev); //view detail
+                    ucHis.txtRequireID.Visible = false;
 
-                    //uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);
-
-                    ucHis.txtCost.Text = Cost;
-                    ucHis.txtJobName.Text = JobName;
-                    ucHis.txtWGender.Text = WGender;
                     ucHis.txtRequireID.Text = "0000" + RequireID;
-                    ucHis.txtLocation.Text = CAddress;
+                    ucHis.txtDetail.Text = Detail;
+                    ucHis.lblJobName.Text = JobName;
+                    ucHis.txtCAddress.Text = CAddress;
 
-                    // Thêm UC vào panel
 
-                    ucHis.Location = new Point(50, y);
-                    y += ucHis.Height + 5;
+                    // Thêm UC vào panel                 
+                    ucHis.Location = new Point(x, y);
+                    x += ucHis.Width + 5;
+
+                    if (count % 2 == 0)
+                    {
+                        y += ucHis.Height + 5;
+                        x = 25;
+                    }
 
                     panel_His.Controls.Add(ucHis);
+                    count++;
                 }
 
 
@@ -100,24 +101,8 @@ namespace TheGioiViecLam
             }
         }
 
-        public void UCHis_Click(string IDP, object sender, EventArgs e)
-        {
-            /*if (sender is UCHistory_Require_Customer ucHis)
-            {
-                string postID = uCWorkInFor.txtIDP.Text;
-                // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(IDP);
-                form.Show();
-            }*/
-            //MessageBox.Show("tutu t chua lam=)))");
-            ;
-        }
-
         public void UCHis_btnDelete_Click(string RequireID, object sender, EventArgs e)
         {
-            UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer();
-
-            int requireID = Int32.Parse(RequireID);
             try
             {
                 string query = string.Format("DELETE FROM Requirement WHERE CEmail = '{0}' AND RequireID = {1}", account, RequireID);
@@ -129,6 +114,13 @@ namespace TheGioiViecLam
                 MessageBox.Show("Thất bại " + ex);
             }
             FHistory_RequireJob_Customers_Load(sender, e);
+        }
+        public void UCHis_btnViewDetail_Click(string RequireID, object sender, EventArgs e)
+        {
+
+            UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer();
+            FRequire_Detail form = new FRequire_Detail(RequireID);
+            form.ShowDialog();
         }
     }
 }

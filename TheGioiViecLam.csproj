@@ -160,6 +160,12 @@
     <Compile Include="FForgetPassword.Designer.cs">
       <DependentUpon>FForgetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRequire_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRequire_Detail.Designer.cs">
+      <DependentUpon>FRequire_Detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FHomeWorker.resx">
       <DependentUpon>FHomeWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRequire_Detail.resx">
+      <DependentUpon>FRequire_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSearch.resx">
       <DependentUpon>FSearch.cs</DependentUpon>
