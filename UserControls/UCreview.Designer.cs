@@ -33,7 +33,6 @@
             this.RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
             this.lblaccount = new System.Windows.Forms.Label();
             this.txtReview = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -45,18 +44,18 @@
             this.guna2Panel1.Controls.Add(this.RatingStar);
             this.guna2Panel1.Controls.Add(this.lblaccount);
             this.guna2Panel1.Controls.Add(this.txtReview);
-            this.guna2Panel1.Controls.Add(this.guna2RatingStar1);
             this.guna2Panel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(900, 296);
+            this.guna2Panel1.Size = new System.Drawing.Size(1367, 286);
             this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(26, 210);
+            this.pictureBox.Location = new System.Drawing.Point(26, 198);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(125, 83);
+            this.pictureBox.Size = new System.Drawing.Size(131, 83);
             this.pictureBox.TabIndex = 13;
             this.pictureBox.TabStop = false;
             // 
@@ -64,6 +63,7 @@
             // 
             this.RatingStar.Location = new System.Drawing.Point(26, 38);
             this.RatingStar.Name = "RatingStar";
+            this.RatingStar.ReadOnly = true;
             this.RatingStar.Size = new System.Drawing.Size(120, 28);
             this.RatingStar.TabIndex = 12;
             // 
@@ -95,15 +95,9 @@
             this.txtReview.PasswordChar = '\0';
             this.txtReview.PlaceholderText = "";
             this.txtReview.SelectedText = "";
-            this.txtReview.Size = new System.Drawing.Size(894, 118);
+            this.txtReview.Size = new System.Drawing.Size(1358, 118);
             this.txtReview.TabIndex = 10;
-            // 
-            // guna2RatingStar1
-            // 
-            this.guna2RatingStar1.Location = new System.Drawing.Point(1099, 45);
-            this.guna2RatingStar1.Name = "guna2RatingStar1";
-            this.guna2RatingStar1.Size = new System.Drawing.Size(200, 34);
-            this.guna2RatingStar1.TabIndex = 8;
+            this.txtReview.TextChanged += new System.EventHandler(this.txtReview_TextChanged);
             // 
             // UCreview
             // 
@@ -112,7 +106,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UCreview";
-            this.Size = new System.Drawing.Size(908, 308);
+            this.Size = new System.Drawing.Size(1373, 292);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
@@ -123,10 +117,9 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtReview;
-        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
-        private System.Windows.Forms.PictureBox pictureBox;
-        private Guna.UI2.WinForms.Guna2RatingStar RatingStar;
-        private System.Windows.Forms.Label lblaccount;
+        public Guna.UI2.WinForms.Guna2TextBox txtReview;
+        public System.Windows.Forms.PictureBox pictureBox;
+        public Guna.UI2.WinForms.Guna2RatingStar RatingStar;
+        public System.Windows.Forms.Label lblaccount;
     }
 }

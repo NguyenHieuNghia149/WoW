@@ -16,23 +16,24 @@ namespace TheGioiViecLam
     public partial class FWriteReview : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-
+        private string account;
         private string IDP;
         private string WID;
-        public FWriteReview(string IDP, string WID)
+        public FWriteReview(string account ,string IDP, string WID)
         {
             InitializeComponent();
             this.IDP = IDP;
             this.WID = WID;
-            btnSend.Click += (s,ev) => btnSend_Click (IDP, WID,s,ev);
+            this.account = account;
+            btnSend.Click += (s,ev) => btnSend_Click (account, IDP, WID,s,ev);
         }
 
-        private void btnSend_Click(string IDP, string WID, object sender, EventArgs e)
+        private void btnSend_Click(string account, string IDP, string WID, object sender, EventArgs e)
         {
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("INSERT INTO Review(Review, Rating, IDP, WID) VALUES ('{0}', '{1}', '{2}', '{3}')", txtdetail.Text, guna2RatingStar1.Value, IDP, WID);
+                string sqlStr = string.Format("INSERT INTO Review(Review, Rating, IDP, WID, CEmail) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", txtdetail.Text, guna2RatingStar1.Value, IDP, WID,account);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                     MessageBox.Show("Thêm thành công");
@@ -77,11 +78,6 @@ namespace TheGioiViecLam
             {
                 conn.Close();
             }
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

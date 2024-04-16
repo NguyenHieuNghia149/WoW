@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using TheGioiViecLam.UserControls;
 
 namespace TheGioiViecLam
 {
@@ -16,37 +17,115 @@ namespace TheGioiViecLam
     {
        
         public string account;
+        DBConnection db = new DBConnection();
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        FlowLayoutPanel fpanel = new FlowLayoutPanel();
         public FRequirement_Jobs(string account)
         {
             InitializeComponent();
-            OpenChildForm(new FPost_RequireJobs_Customers(account));
             this.account = account;
         }
-        private Form currentFormChild;
-        private void OpenChildForm(Form childForm)
+        private void Load_UCHistoryRequire_FromDatabase(string account)
         {
-            if (currentFormChild != null)
+            panel_Body.AutoScroll = true; // Tạo thanh cuộn
+
+            try
             {
-                currentFormChild.Close();
+                conn.Open();
+                string query = string.Format("SELECT * FROM Requirement WHERE CEmail = '{0}'", account);
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataSet dataSet = new DataSet();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                adapter.Fill(dataSet);
+
+                panel_Body.Controls.Clear();
+
+                int y = 0, x = 25, count = 1;
+
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                {
+                    string RequireID = row["RequireID"].ToString();
+                    string Detail = row["Detail"].ToString();
+                    string JobName = row["JobName"].ToString();
+                    string CAddress = row["CAddress"].ToString();
+
+                    UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer(); //phải tạo UC trong vòng lặp
+
+                    ucHis.btnDelete.Click += (s, ev) => UCHis_btnDelete_Click(RequireID, s, ev); //delete
+                    ucHis.btnViewDetail.Click += (s, ev) => UCHis_btnViewDetail_Click(RequireID, s, ev); //view detail
+                    ucHis.txtRequireID.Visible = false;
+
+                    ucHis.txtRequireID.Text = "0000" + RequireID;
+                    ucHis.txtDetail.Text = Detail;
+                    ucHis.lblJobName.Text = JobName;
+                    ucHis.txtCAddress.Text = CAddress;
+
+
+                    // Thêm UC vào panel                 
+                    ucHis.Location = new Point(x, y);
+                    x += ucHis.Width + 5;
+
+                    if (count % 2 == 0)
+                    {
+                        y += ucHis.Height + 5;
+                        x = 25;
+                    }
+
+                    panel_Body.Controls.Add(ucHis);
+                    count++;
+                }
+
+
+                reader.Close();
             }
-            currentFormChild = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panel_Body.Controls.Add(childForm);
-            panel_Body.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
-        private void btnUpload_Click(object sender, EventArgs e)
+        public void UCHis_btnDelete_Click(string RequireID, object sender, EventArgs e)
         {
-            OpenChildForm(new FPost_RequireJobs_Customers(account));
+            try
+            {
+                string query = string.Format("DELETE FROM Requirement WHERE CEmail = '{0}' AND RequireID = {1}", account, RequireID);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                db.Execute(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thất bại " + ex);
+            }
+            FRequirement_Jobs_Load(sender, e);
+        }
+        public void UCHis_btnViewDetail_Click(string RequireID, object sender, EventArgs e)
+        {
+
+            UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer();
+            FRequire_Detail form = new FRequire_Detail(RequireID);
+            form.ShowDialog();
         }
 
-        private void btnHistory_Click(object sender, EventArgs e)
+        private void FRequirement_Jobs_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new FHistory_RequireJob_Customers(account));
+            Load_UCHistoryRequire_FromDatabase(account);
+
+        }
+
+        private void btnPost_Click(object sender, EventArgs e)
+        {
+            FPost_RequireJobs_Customers form = new FPost_RequireJobs_Customers(account);
+            form.ShowDialog();
         }
     }
+
+
+
 }
+

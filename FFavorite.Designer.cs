@@ -33,10 +33,10 @@
             // 
             // panelmain
             // 
-            this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.panelmain.BackColor = System.Drawing.Color.White;
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmain.Location = new System.Drawing.Point(0, 0);
-            this.panelmain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelmain.Margin = new System.Windows.Forms.Padding(4);
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(1067, 716);
             this.panelmain.TabIndex = 6;
@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 716);
             this.Controls.Add(this.panelmain);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FFavorite";
             this.Text = "FFavorite";
             this.ResumeLayout(false);

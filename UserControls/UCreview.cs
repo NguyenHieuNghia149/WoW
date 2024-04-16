@@ -16,5 +16,15 @@ namespace TheGioiViecLam.UserControls
         {
             InitializeComponent();
         }
+
+        private void txtReview_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

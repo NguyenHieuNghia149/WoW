@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Location = new System.Drawing.Point(2, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1458, 1055);
+            this.panel1.TabIndex = 0;
             // 
             // FWorkdetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 766);
+            this.ClientSize = new System.Drawing.Size(1462, 1055);
+            this.Controls.Add(this.panel1);
             this.Name = "FWorkdetail";
             this.Text = "FWorkdetail";
             this.Load += new System.EventHandler(this.FWorkdetail_Load);
@@ -43,5 +53,6 @@
         }
 
         #endregion
+        private Guna.UI2.WinForms.Guna2Panel panel1;
     }
 }

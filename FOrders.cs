@@ -65,7 +65,7 @@ namespace TheGioiViecLam
                     uc.btnbomb.Enabled = false;
                     uc.btnbomb.Visible = false;
                     //uc.btnAgain.Click += (s, ev) => btnagain_Click();
-                    uc.btnReview.Click += (s, ev) => btnreview_Click(IDP,WID,uc,ev);
+                    uc.btnReview.Click += (s, ev) => btnreview_Click(account, IDP,WID,uc,ev);
                     break;
                 case "Done                                                                                                ":
                     
@@ -171,9 +171,9 @@ namespace TheGioiViecLam
         }
 
 
-        public void btnreview_Click(string IDP, string WID, object sender, EventArgs e)
+        public void btnreview_Click(string account, string IDP, string WID, object sender, EventArgs e)
         {
-            FWriteReview fWriteReview = new FWriteReview(IDP, WID);
+            FWriteReview fWriteReview = new FWriteReview(account ,IDP, WID);
             fWriteReview.Show();
         }
 
