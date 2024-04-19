@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheGioiViecLam.model;
 using TheGioiViecLam.UserControls;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace TheGioiViecLam
 {
@@ -40,7 +41,7 @@ namespace TheGioiViecLam
         List<Order> jobs = new List<Order>();
         private string postID;
         private string account;
-
+        private DateTime currentDate;
         public FCalenderCustomer(string postID, string account)
         {
             InitializeComponent();
@@ -104,6 +105,7 @@ namespace TheGioiViecLam
         void AddNumbertoMatrix(DateTime date)
         {
             ClearMatrix();
+            DateTime today = DateTime.Today; // Lưu trữ ngày hiện tại
             DateTime useday = new DateTime(date.Year, date.Month, 1);
             int line = 0;
             for (int i = 1; i <= DayofMonth(date); i++)
@@ -114,7 +116,7 @@ namespace TheGioiViecLam
                 control.btnday.Click += Btn_Click;
                 control.lblbuoisang.Visible = false;
                 control.lblbuoichieu.Visible = false;
-                
+
                 // Xóa màu đỏ của ngày trước đó
                 if (!isEqualDate(useday, date))
                 {
@@ -130,12 +132,13 @@ namespace TheGioiViecLam
                 {
                     control.btnday.FillColor = Color.FromArgb(106, 212, 221);
                 }
+           
                 if (isEqualDate(useday, date))
                 {
                     control.btnday.FillColor = Color.FromArgb(255, 32, 78);
                     control.btnday.ForeColor = Color.White;
                 }
-              
+
                 if (collum >= 6)
                 {
                     line++;
@@ -143,6 +146,7 @@ namespace TheGioiViecLam
                 useday = useday.AddDays(1);
             }
         }
+
 
 
         bool isEqualDate(DateTime date1, DateTime date2)

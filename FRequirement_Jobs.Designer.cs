@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRequirement_Jobs));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Body = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnHistory = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnUpload = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnPost = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -44,77 +41,64 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.panel_Body);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1303, 856);
+            this.panel1.Size = new System.Drawing.Size(1039, 640);
             this.panel1.TabIndex = 1;
             // 
             // panel_Body
             // 
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Body.Location = new System.Drawing.Point(0, 114);
+            this.panel_Body.BackColor = System.Drawing.Color.White;
+            this.panel_Body.Location = new System.Drawing.Point(0, 67);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(4);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(1303, 742);
+            this.panel_Body.Size = new System.Drawing.Size(1039, 573);
             this.panel_Body.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.guna2Separator2);
-            this.panel2.Controls.Add(this.btnHistory);
-            this.panel2.Controls.Add(this.btnUpload);
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnPost);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1303, 114);
+            this.panel2.Size = new System.Drawing.Size(1039, 67);
             this.panel2.TabIndex = 0;
             // 
-            // guna2Separator2
+            // btnPost
             // 
-            this.guna2Separator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
-            this.guna2Separator2.Location = new System.Drawing.Point(-19, 102);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(1396, 16);
-            this.guna2Separator2.TabIndex = 15;
-            // 
-            // btnHistory
-            // 
-            this.btnHistory.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnHistory.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
-            this.btnHistory.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnHistory.ImageRotate = 0F;
-            this.btnHistory.ImageSize = new System.Drawing.Size(70, 70);
-            this.btnHistory.Location = new System.Drawing.Point(210, 3);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnHistory.Size = new System.Drawing.Size(113, 116);
-            this.btnHistory.TabIndex = 8;
-            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnUpload.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnUpload.Image = ((System.Drawing.Image)(resources.GetObject("btnUpload.Image")));
-            this.btnUpload.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnUpload.ImageRotate = 0F;
-            this.btnUpload.ImageSize = new System.Drawing.Size(70, 70);
-            this.btnUpload.Location = new System.Drawing.Point(85, -2);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnUpload.Size = new System.Drawing.Size(99, 116);
-            this.btnUpload.TabIndex = 7;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            this.btnPost.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnPost.BorderRadius = 18;
+            this.btnPost.BorderThickness = 2;
+            this.btnPost.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPost.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnPost.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.btnPost.Location = new System.Drawing.Point(837, 15);
+            this.btnPost.Name = "btnPost";
+            this.btnPost.Size = new System.Drawing.Size(180, 45);
+            this.btnPost.TabIndex = 46;
+            this.btnPost.Text = "Post now";
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // FRequirement_Jobs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1303, 856);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1039, 641);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRequirement_Jobs";
             this.Text = "FRequirement_Jobs";
+            this.Load += new System.EventHandler(this.FRequirement_Jobs_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -122,12 +106,9 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2ImageButton btnHistory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel_Body;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Guna.UI2.WinForms.Guna2ImageButton btnUpload;
+        public Guna.UI2.WinForms.Guna2Button btnPost;
     }
 }

@@ -82,12 +82,6 @@
     <Compile Include="FDailyJob.Designer.cs">
       <DependentUpon>FDailyJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="FHistory_RequireJob_Customers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FHistory_RequireJob_Customers.Designer.cs">
-      <DependentUpon>FHistory_RequireJob_Customers.cs</DependentUpon>
-    </Compile>
     <Compile Include="FHomeCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +153,12 @@
     </Compile>
     <Compile Include="FForgetPassword.Designer.cs">
       <DependentUpon>FForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRequire_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRequire_Detail.Designer.cs">
+      <DependentUpon>FRequire_Detail.cs</DependentUpon>
     </Compile>
     <Compile Include="FSearch.cs">
       <SubType>Form</SubType>
@@ -383,14 +383,14 @@
     <EmbeddedResource Include="FForgetPassword.resx">
       <DependentUpon>FForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FHistory_RequireJob_Customers.resx">
-      <DependentUpon>FHistory_RequireJob_Customers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FHomeCustomer.resx">
       <DependentUpon>FHomeCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FHomeWorker.resx">
       <DependentUpon>FHomeWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRequire_Detail.resx">
+      <DependentUpon>FRequire_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSearch.resx">
       <DependentUpon>FSearch.cs</DependentUpon>
@@ -524,6 +524,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\script %281%29.png" />
     <None Include="Resources\bar-chart %281%29.png" />
     <None Include="Resources\bar-chart.png" />
     <None Include="Resources\performance.png" />

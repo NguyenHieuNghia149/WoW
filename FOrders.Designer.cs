@@ -44,7 +44,7 @@
             this.panel_Body.BackColor = System.Drawing.Color.White;
             this.panel_Body.Controls.Add(this.guna2Separator1);
             this.panel_Body.Location = new System.Drawing.Point(1, 56);
-            this.panel_Body.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(4);
             this.panel_Body.Name = "panel_Body";
             this.panel_Body.Size = new System.Drawing.Size(1025, 584);
             this.panel_Body.TabIndex = 3;
@@ -54,7 +54,7 @@
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(93)))), ((int)(((byte)(156)))));
             this.guna2Separator1.FillThickness = 3;
             this.guna2Separator1.Location = new System.Drawing.Point(4, 4);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(2150, 18);
             this.guna2Separator1.TabIndex = 0;
@@ -66,14 +66,14 @@
             this.panelTop.Controls.Add(this.btncompleted);
             this.panelTop.Controls.Add(this.btnInOrder);
             this.panelTop.Location = new System.Drawing.Point(1, 3);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1025, 58);
             this.panelTop.TabIndex = 4;
             // 
             // btnDeny
             // 
-            this.btnDeny.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(115)))));
+            this.btnDeny.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.btnDeny.BorderRadius = 10;
             this.btnDeny.BorderThickness = 1;
             this.btnDeny.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -86,7 +86,7 @@
             this.btnDeny.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeny.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
             this.btnDeny.Location = new System.Drawing.Point(492, 9);
-            this.btnDeny.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeny.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeny.Name = "btnDeny";
             this.btnDeny.Size = new System.Drawing.Size(149, 37);
             this.btnDeny.TabIndex = 3;
@@ -95,7 +95,7 @@
             // 
             // btnComfirmed
             // 
-            this.btnComfirmed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(115)))));
+            this.btnComfirmed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.btnComfirmed.BorderRadius = 10;
             this.btnComfirmed.BorderThickness = 1;
             this.btnComfirmed.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -108,7 +108,7 @@
             this.btnComfirmed.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComfirmed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
             this.btnComfirmed.Location = new System.Drawing.Point(169, 9);
-            this.btnComfirmed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnComfirmed.Margin = new System.Windows.Forms.Padding(4);
             this.btnComfirmed.Name = "btnComfirmed";
             this.btnComfirmed.Size = new System.Drawing.Size(149, 37);
             this.btnComfirmed.TabIndex = 2;
@@ -117,7 +117,7 @@
             // 
             // btncompleted
             // 
-            this.btncompleted.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(115)))));
+            this.btncompleted.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.btncompleted.BorderRadius = 10;
             this.btncompleted.BorderThickness = 1;
             this.btncompleted.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -130,7 +130,7 @@
             this.btncompleted.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncompleted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
             this.btncompleted.Location = new System.Drawing.Point(326, 10);
-            this.btncompleted.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncompleted.Margin = new System.Windows.Forms.Padding(4);
             this.btncompleted.Name = "btncompleted";
             this.btncompleted.Size = new System.Drawing.Size(149, 37);
             this.btncompleted.TabIndex = 1;
@@ -139,7 +139,7 @@
             // 
             // btnInOrder
             // 
-            this.btnInOrder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(58)))), ((int)(((byte)(115)))));
+            this.btnInOrder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.btnInOrder.BorderRadius = 10;
             this.btnInOrder.BorderThickness = 1;
             this.btnInOrder.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -151,10 +151,10 @@
             this.btnInOrder.FillColor = System.Drawing.Color.White;
             this.btnInOrder.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
-            this.btnInOrder.Location = new System.Drawing.Point(12, 4);
-            this.btnInOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInOrder.Location = new System.Drawing.Point(12, 9);
+            this.btnInOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btnInOrder.Name = "btnInOrder";
-            this.btnInOrder.Size = new System.Drawing.Size(149, 41);
+            this.btnInOrder.Size = new System.Drawing.Size(149, 36);
             this.btnInOrder.TabIndex = 0;
             this.btnInOrder.Text = "In Order";
             this.btnInOrder.Click += new System.EventHandler(this.btnInOrder_Click);
@@ -168,7 +168,7 @@
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panel_Body);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FOrders";
             this.Text = "FOrders";
             this.panel_Body.ResumeLayout(false);

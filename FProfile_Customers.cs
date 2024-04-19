@@ -27,6 +27,7 @@ namespace TheGioiViecLam
             InitializeComponent();
             LoadInformation(account);
             this.account = account;
+            MessageBox.Show(account);
         }
 
 
@@ -50,17 +51,12 @@ namespace TheGioiViecLam
                     string phonenumer = reader["PhoneNum"].ToString();
                     string address = reader["CAddress"].ToString();
                     string id = reader["CID"].ToString();
-                   // byte[] b = PathtoByteArray(reader["Cimage"].ToString());
-                   // pictureBox.Image = byteArrayToImage(b);
+                
                     byte[] b = reader["img"] as byte[];
                     if(b != null) {
                         MemoryStream ms = new MemoryStream(b);
                         pictureBox.Image = Image.FromStream(ms);
                     }
-                    
-                   /* byte[] b = PathtoByteArray(reader["Cimage"].ToString());
-
-                    pictureBox.Image = byteArrayToImage(b);*/
 
                     txtEmail.Text = email;
                     txtFullname.Text = fullname;
@@ -70,7 +66,7 @@ namespace TheGioiViecLam
                     txtPhoneNumber.Text = phonenumer;
                     txtDistrict.Text = District;
                     cbCity.Text = city;
-                    dtBirtthday.Text = birthday;
+                    dtBirthday.Text = birthday;
                 }
                 reader.Close();
 
@@ -131,9 +127,6 @@ namespace TheGioiViecLam
             return Image.FromStream(m);
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

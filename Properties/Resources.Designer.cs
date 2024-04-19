@@ -443,6 +443,16 @@ namespace TheGioiViecLam.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap script__1_ {
+            get {
+                object obj = ResourceManager.GetObject("script (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shopping_bag {
             get {
                 object obj = ResourceManager.GetObject("shopping-bag", resourceCulture);
