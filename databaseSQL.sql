@@ -329,3 +329,17 @@ Create table Review(
 )
 go
                 SELECT Customer.Fullname as fullname,Orders.OrderNum as OrderNum, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = 'Anh@gmail.com' and Customer.CEmail = Orders.CEmail
+
+-- tạo bảng review
+go
+CREATE TABLE [dbo].[Review] (
+    [IDP]    NCHAR (20)      NOT NULL,
+    [WID]    NCHAR (20)      NOT NULL,
+    [Rating] FLOAT (53)      NULL,
+    [Review] NVARCHAR (200)  NULL,
+    [Img]    VARBINARY (MAX) NULL,
+    [CEmail] CHAR (50)       NOT NULL,
+    CONSTRAINT [PK_Review] PRIMARY KEY CLUSTERED ([CEmail] ASC),
+    FOREIGN KEY ([IDP]) REFERENCES [dbo].[Post] ([IDP]),
+    FOREIGN KEY ([WID]) REFERENCES [dbo].[Worker] ([WID])
+);

@@ -83,7 +83,7 @@ namespace TheGioiViecLam
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dataSet = new DataSet();
                 adapter.Fill(dataSet);
-                int y = 690; // Biến để điều chỉnh vị trí theo trục y của các UC
+                int y = 605; // Biến để điều chỉnh vị trí theo trục y của các UC
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
                     int Rating = Convert.ToInt32(row["Rating"]);
@@ -95,13 +95,11 @@ namespace TheGioiViecLam
                     uCreview.RatingStar.Value = Rating;
                     uCreview.lblaccount.Text = name;
                     // Đặt vị trí cho UC
-                    uCreview.Location = new Point(0, y);
+                    uCreview.Location = new Point(18, y);
                     y += uCreview.Height + 7; // Tăng y để tránh chồng chéo
                     panel1.Controls.Add(uCreview);
                     uCreview.BringToFront();
                 }
-
-
             }
             catch (Exception exc)
             {

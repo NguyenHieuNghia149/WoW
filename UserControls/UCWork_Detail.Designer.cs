@@ -63,13 +63,25 @@
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ucServiceReview1 = new TheGioiViecLam.ucServiceReview();
+            this.lblReview = new System.Windows.Forms.Label();
+            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnHavePicture = new Guna.UI2.WinForms.Guna2Button();
+            this.btn1Star = new Guna.UI2.WinForms.Guna2Button();
+            this.btn2Star = new Guna.UI2.WinForms.Guna2Button();
+            this.btn3Star = new Guna.UI2.WinForms.Guna2Button();
+            this.btn4Star = new Guna.UI2.WinForms.Guna2Button();
+            this.btn5Star = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAll = new Guna.UI2.WinForms.Guna2Button();
+            this.ratingStar = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblNumberReview = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBook
@@ -176,7 +188,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(24, 370);
+            this.label11.Location = new System.Drawing.Point(18, 363);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 21);
             this.label11.TabIndex = 60;
@@ -538,20 +550,207 @@
             this.guna2PictureBox2.TabIndex = 6;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // ucServiceReview1
+            // lblReview
             // 
-            this.ucServiceReview1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.ucServiceReview1.Location = new System.Drawing.Point(3, 580);
-            this.ucServiceReview1.Name = "ucServiceReview1";
-            this.ucServiceReview1.Size = new System.Drawing.Size(1370, 258);
-            this.ucServiceReview1.TabIndex = 82;
+            this.lblReview.AutoSize = true;
+            this.lblReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReview.Location = new System.Drawing.Point(16, 542);
+            this.lblReview.Name = "lblReview";
+            this.lblReview.Size = new System.Drawing.Size(223, 32);
+            this.lblReview.TabIndex = 83;
+            this.lblReview.Text = "Service Reviews";
+            // 
+            // panelMain
+            // 
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(251)))), ((int)(((byte)(246)))));
+            this.panelMain.Controls.Add(this.btnHavePicture);
+            this.panelMain.Controls.Add(this.btn1Star);
+            this.panelMain.Controls.Add(this.btn2Star);
+            this.panelMain.Controls.Add(this.btn3Star);
+            this.panelMain.Controls.Add(this.btn4Star);
+            this.panelMain.Controls.Add(this.btn5Star);
+            this.panelMain.Controls.Add(this.btnAll);
+            this.panelMain.Controls.Add(this.ratingStar);
+            this.panelMain.Controls.Add(this.label5);
+            this.panelMain.Controls.Add(this.lblNumberReview);
+            this.panelMain.Location = new System.Drawing.Point(22, 580);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1284, 155);
+            this.panelMain.TabIndex = 82;
+            // 
+            // btnHavePicture
+            // 
+            this.btnHavePicture.BorderRadius = 10;
+            this.btnHavePicture.BorderThickness = 1;
+            this.btnHavePicture.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.btnHavePicture.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnHavePicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHavePicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHavePicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHavePicture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHavePicture.FillColor = System.Drawing.Color.White;
+            this.btnHavePicture.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHavePicture.ForeColor = System.Drawing.Color.Black;
+            this.btnHavePicture.Location = new System.Drawing.Point(246, 87);
+            this.btnHavePicture.Name = "btnHavePicture";
+            this.btnHavePicture.Size = new System.Drawing.Size(147, 45);
+            this.btnHavePicture.TabIndex = 9;
+            this.btnHavePicture.Text = "Have Pictures";
+            // 
+            // btn1Star
+            // 
+            this.btn1Star.BorderRadius = 10;
+            this.btn1Star.BorderThickness = 1;
+            this.btn1Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.btn1Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn1Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn1Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn1Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn1Star.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn1Star.FillColor = System.Drawing.Color.White;
+            this.btn1Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1Star.ForeColor = System.Drawing.Color.Black;
+            this.btn1Star.Location = new System.Drawing.Point(744, 28);
+            this.btn1Star.Name = "btn1Star";
+            this.btn1Star.Size = new System.Drawing.Size(83, 45);
+            this.btn1Star.TabIndex = 8;
+            this.btn1Star.Text = "1 Star";
+            // 
+            // btn2Star
+            // 
+            this.btn2Star.BorderRadius = 10;
+            this.btn2Star.BorderThickness = 1;
+            this.btn2Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.btn2Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn2Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn2Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn2Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn2Star.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn2Star.FillColor = System.Drawing.Color.White;
+            this.btn2Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2Star.ForeColor = System.Drawing.Color.Black;
+            this.btn2Star.Location = new System.Drawing.Point(643, 28);
+            this.btn2Star.Name = "btn2Star";
+            this.btn2Star.Size = new System.Drawing.Size(83, 45);
+            this.btn2Star.TabIndex = 7;
+            this.btn2Star.Text = "2 Star";
+            // 
+            // btn3Star
+            // 
+            this.btn3Star.BorderRadius = 10;
+            this.btn3Star.BorderThickness = 1;
+            this.btn3Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.btn3Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn3Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn3Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn3Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn3Star.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn3Star.FillColor = System.Drawing.Color.White;
+            this.btn3Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3Star.ForeColor = System.Drawing.Color.Black;
+            this.btn3Star.Location = new System.Drawing.Point(542, 28);
+            this.btn3Star.Name = "btn3Star";
+            this.btn3Star.Size = new System.Drawing.Size(83, 45);
+            this.btn3Star.TabIndex = 6;
+            this.btn3Star.Text = "3 Star";
+            // 
+            // btn4Star
+            // 
+            this.btn4Star.BorderRadius = 10;
+            this.btn4Star.BorderThickness = 1;
+            this.btn4Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.btn4Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn4Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn4Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn4Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn4Star.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn4Star.FillColor = System.Drawing.Color.White;
+            this.btn4Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4Star.ForeColor = System.Drawing.Color.Black;
+            this.btn4Star.Location = new System.Drawing.Point(436, 28);
+            this.btn4Star.Name = "btn4Star";
+            this.btn4Star.Size = new System.Drawing.Size(83, 45);
+            this.btn4Star.TabIndex = 5;
+            this.btn4Star.Text = "4 Star";
+            // 
+            // btn5Star
+            // 
+            this.btn5Star.BorderRadius = 10;
+            this.btn5Star.BorderThickness = 1;
+            this.btn5Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.btn5Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn5Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn5Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn5Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn5Star.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn5Star.FillColor = System.Drawing.Color.White;
+            this.btn5Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5Star.ForeColor = System.Drawing.Color.Black;
+            this.btn5Star.Location = new System.Drawing.Point(337, 27);
+            this.btn5Star.Name = "btn5Star";
+            this.btn5Star.Size = new System.Drawing.Size(83, 45);
+            this.btn5Star.TabIndex = 4;
+            this.btn5Star.Text = "5 Star";
+            // 
+            // btnAll
+            // 
+            this.btnAll.BorderRadius = 10;
+            this.btnAll.BorderThickness = 1;
+            this.btnAll.Checked = true;
+            this.btnAll.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.btnAll.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAll.FillColor = System.Drawing.Color.White;
+            this.btnAll.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAll.ForeColor = System.Drawing.Color.Black;
+            this.btnAll.Location = new System.Drawing.Point(237, 28);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(83, 45);
+            this.btnAll.TabIndex = 3;
+            this.btnAll.Text = "ALL";
+            // 
+            // ratingStar
+            // 
+            this.ratingStar.BorderColor = System.Drawing.Color.Black;
+            this.ratingStar.BorderThickness = 1;
+            this.ratingStar.Location = new System.Drawing.Point(57, 87);
+            this.ratingStar.Name = "ratingStar";
+            this.ratingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.ratingStar.Size = new System.Drawing.Size(145, 28);
+            this.ratingStar.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Coral;
+            this.label5.Location = new System.Drawing.Point(111, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 29);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "out of 5";
+            // 
+            // lblNumberReview
+            // 
+            this.lblNumberReview.AutoSize = true;
+            this.lblNumberReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.lblNumberReview.Location = new System.Drawing.Point(51, 34);
+            this.lblNumberReview.Name = "lblNumberReview";
+            this.lblNumberReview.Size = new System.Drawing.Size(62, 38);
+            this.lblNumberReview.TabIndex = 0;
+            this.lblNumberReview.Text = "4.6";
             // 
             // UCWork_Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.ucServiceReview1);
+            this.Controls.Add(this.lblReview);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -582,13 +781,15 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBook);
             this.Name = "UCWork_Detail";
-            this.Size = new System.Drawing.Size(1407, 857);
+            this.Size = new System.Drawing.Size(1337, 848);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -628,7 +829,18 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         public Guna.UI2.WinForms.Guna2Button btnBook;
-        private ucServiceReview ucServiceReview1;
         public Guna.UI2.WinForms.Guna2PictureBox ptbox;
+        private System.Windows.Forms.Label lblReview;
+        private Guna.UI2.WinForms.Guna2Panel panelMain;
+        private Guna.UI2.WinForms.Guna2Button btnHavePicture;
+        private Guna.UI2.WinForms.Guna2Button btn1Star;
+        private Guna.UI2.WinForms.Guna2Button btn2Star;
+        private Guna.UI2.WinForms.Guna2Button btn3Star;
+        private Guna.UI2.WinForms.Guna2Button btn4Star;
+        private Guna.UI2.WinForms.Guna2Button btn5Star;
+        private Guna.UI2.WinForms.Guna2Button btnAll;
+        private Guna.UI2.WinForms.Guna2RatingStar ratingStar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblNumberReview;
     }
 }
