@@ -107,6 +107,12 @@
     <Compile Include="FHomeWorker.Designer.cs">
       <DependentUpon>FHomeWorker.cs</DependentUpon>
     </Compile>
+    <Compile Include="FJobCalenderCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FJobCalenderCustomer.Designer.cs">
+      <DependentUpon>FJobCalenderCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPlan_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,12 @@
     <Compile Include="FSignUpforWorkers.Designer.cs">
       <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FViewRequire_Detail_Worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FViewRequire_Detail_Worker.Designer.cs">
+      <DependentUpon>FViewRequire_Detail_Worker.cs</DependentUpon>
+    </Compile>
     <Compile Include="FViewRequire_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,12 +351,6 @@
     <Compile Include="UserControls\ucServiceReview.Designer.cs">
       <DependentUpon>ucServiceReview.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCView_Require_Worker.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UCView_Require_Worker.Designer.cs">
-      <DependentUpon>UCView_Require_Worker.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UCWorkInFor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     <EmbeddedResource Include="FHomeWorker.resx">
       <DependentUpon>FHomeWorker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FJobCalenderCustomer.resx">
+      <DependentUpon>FJobCalenderCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRequire_Detail.resx">
       <DependentUpon>FRequire_Detail.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSignUpforWorkers.resx">
       <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FViewRequire_Detail_Worker.resx">
+      <DependentUpon>FViewRequire_Detail_Worker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FViewRequire_Worker.resx">
       <DependentUpon>FViewRequire_Worker.cs</DependentUpon>
@@ -502,9 +514,6 @@
     <EmbeddedResource Include="UserControls\ucServiceReview.resx">
       <DependentUpon>ucServiceReview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCView_Require_Worker.resx">
-      <DependentUpon>UCView_Require_Worker.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCWorkInFor.resx">
       <DependentUpon>UCWorkInFor.cs</DependentUpon>
     </EmbeddedResource>
@@ -537,6 +546,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\calendar.png" />
     <None Include="Resources\cursor.png" />
     <None Include="Resources\filter.png" />
     <None Include="Resources\search %282%29.png" />

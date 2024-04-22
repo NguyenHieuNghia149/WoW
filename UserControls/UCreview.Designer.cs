@@ -47,7 +47,7 @@
             this.guna2Panel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1367, 286);
+            this.guna2Panel1.Size = new System.Drawing.Size(1275, 286);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -95,7 +95,7 @@
             this.txtReview.PasswordChar = '\0';
             this.txtReview.PlaceholderText = "";
             this.txtReview.SelectedText = "";
-            this.txtReview.Size = new System.Drawing.Size(1358, 118);
+            this.txtReview.Size = new System.Drawing.Size(1262, 118);
             this.txtReview.TabIndex = 10;
             this.txtReview.TextChanged += new System.EventHandler(this.txtReview_TextChanged);
             // 
@@ -106,7 +106,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UCreview";
-            this.Size = new System.Drawing.Size(1373, 292);
+            this.Size = new System.Drawing.Size(1281, 292);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

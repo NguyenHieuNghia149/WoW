@@ -31,14 +31,15 @@
             this.panel_Body = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnprofile = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnhome = new Guna.UI2.WinForms.Guna2Button();
+            this.btnprofile = new Guna.UI2.WinForms.Guna2Button();
             this.btncontact = new Guna.UI2.WinForms.Guna2Button();
             this.btnfavourite = new Guna.UI2.WinForms.Guna2Button();
             this.btnorders = new Guna.UI2.WinForms.Guna2Button();
             this.btnPost = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCalender = new Guna.UI2.WinForms.Guna2Button();
             this.btnexit = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -80,12 +81,42 @@
             this.flowLayoutPanel1.Controls.Add(this.btnfavourite);
             this.flowLayoutPanel1.Controls.Add(this.btnorders);
             this.flowLayoutPanel1.Controls.Add(this.btnPost);
+            this.flowLayoutPanel1.Controls.Add(this.btnCalender);
             this.flowLayoutPanel1.Controls.Add(this.btnexit);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 107);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 107);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(62, 455);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(73, 484);
             this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator1.FillThickness = 3;
+            this.guna2Separator1.Location = new System.Drawing.Point(11, 79);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(60, 20);
+            this.guna2Separator1.TabIndex = 2;
+            // 
+            // btnhome
+            // 
+            this.btnhome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnhome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnhome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnhome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnhome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnhome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnhome.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnhome.ForeColor = System.Drawing.Color.White;
+            this.btnhome.Image = global::TheGioiViecLam.Properties.Resources.home;
+            this.btnhome.ImageSize = new System.Drawing.Size(32, 22);
+            this.btnhome.Location = new System.Drawing.Point(4, 4);
+            this.btnhome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnhome.Name = "btnhome";
+            this.btnhome.Size = new System.Drawing.Size(63, 52);
+            this.btnhome.TabIndex = 5;
+            this.btnhome.Click += new System.EventHandler(this.btn_Home_Click);
             // 
             // btnprofile
             // 
@@ -103,28 +134,9 @@
             this.btnprofile.Location = new System.Drawing.Point(4, 64);
             this.btnprofile.Margin = new System.Windows.Forms.Padding(4);
             this.btnprofile.Name = "btnprofile";
-            this.btnprofile.Size = new System.Drawing.Size(43, 52);
+            this.btnprofile.Size = new System.Drawing.Size(63, 52);
             this.btnprofile.TabIndex = 10;
             this.btnprofile.Click += new System.EventHandler(this.btn_Profile_Click);
-            // 
-            // btnhome
-            // 
-            this.btnhome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnhome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnhome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnhome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnhome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnhome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.btnhome.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnhome.ForeColor = System.Drawing.Color.White;
-            this.btnhome.Image = global::TheGioiViecLam.Properties.Resources.home;
-            this.btnhome.ImageSize = new System.Drawing.Size(32, 22);
-            this.btnhome.Location = new System.Drawing.Point(4, 4);
-            this.btnhome.Margin = new System.Windows.Forms.Padding(4);
-            this.btnhome.Name = "btnhome";
-            this.btnhome.Size = new System.Drawing.Size(43, 52);
-            this.btnhome.TabIndex = 5;
-            this.btnhome.Click += new System.EventHandler(this.btn_Home_Click);
             // 
             // btncontact
             // 
@@ -141,7 +153,7 @@
             this.btncontact.Location = new System.Drawing.Point(4, 124);
             this.btncontact.Margin = new System.Windows.Forms.Padding(4);
             this.btncontact.Name = "btncontact";
-            this.btncontact.Size = new System.Drawing.Size(43, 52);
+            this.btncontact.Size = new System.Drawing.Size(63, 52);
             this.btncontact.TabIndex = 6;
             this.btncontact.Click += new System.EventHandler(this.btn_Contact_Click);
             // 
@@ -160,7 +172,7 @@
             this.btnfavourite.Location = new System.Drawing.Point(4, 184);
             this.btnfavourite.Margin = new System.Windows.Forms.Padding(4);
             this.btnfavourite.Name = "btnfavourite";
-            this.btnfavourite.Size = new System.Drawing.Size(43, 52);
+            this.btnfavourite.Size = new System.Drawing.Size(63, 52);
             this.btnfavourite.TabIndex = 7;
             this.btnfavourite.Click += new System.EventHandler(this.btn_Favorite_Click);
             // 
@@ -179,7 +191,7 @@
             this.btnorders.Location = new System.Drawing.Point(4, 244);
             this.btnorders.Margin = new System.Windows.Forms.Padding(4);
             this.btnorders.Name = "btnorders";
-            this.btnorders.Size = new System.Drawing.Size(43, 52);
+            this.btnorders.Size = new System.Drawing.Size(63, 52);
             this.btnorders.TabIndex = 8;
             this.btnorders.Click += new System.EventHandler(this.btn_Orders_Click);
             // 
@@ -198,9 +210,28 @@
             this.btnPost.Location = new System.Drawing.Point(4, 304);
             this.btnPost.Margin = new System.Windows.Forms.Padding(4);
             this.btnPost.Name = "btnPost";
-            this.btnPost.Size = new System.Drawing.Size(43, 52);
+            this.btnPost.Size = new System.Drawing.Size(63, 52);
             this.btnPost.TabIndex = 12;
             this.btnPost.Click += new System.EventHandler(this.BtnPost_Click);
+            // 
+            // btnCalender
+            // 
+            this.btnCalender.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCalender.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCalender.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCalender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCalender.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCalender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnCalender.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCalender.ForeColor = System.Drawing.Color.White;
+            this.btnCalender.Image = global::TheGioiViecLam.Properties.Resources.calendar;
+            this.btnCalender.ImageSize = new System.Drawing.Size(37, 27);
+            this.btnCalender.Location = new System.Drawing.Point(4, 364);
+            this.btnCalender.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCalender.Name = "btnCalender";
+            this.btnCalender.Size = new System.Drawing.Size(63, 52);
+            this.btnCalender.TabIndex = 13;
+            this.btnCalender.Click += new System.EventHandler(this.btnCalender_Click);
             // 
             // btnexit
             // 
@@ -214,22 +245,12 @@
             this.btnexit.ForeColor = System.Drawing.Color.White;
             this.btnexit.Image = global::TheGioiViecLam.Properties.Resources.logout;
             this.btnexit.ImageSize = new System.Drawing.Size(37, 27);
-            this.btnexit.Location = new System.Drawing.Point(4, 364);
+            this.btnexit.Location = new System.Drawing.Point(4, 424);
             this.btnexit.Margin = new System.Windows.Forms.Padding(4);
             this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(43, 52);
+            this.btnexit.Size = new System.Drawing.Size(60, 52);
             this.btnexit.TabIndex = 11;
             this.btnexit.Click += new System.EventHandler(this.btn_SignOut_Click);
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Separator1.FillThickness = 3;
-            this.guna2Separator1.Location = new System.Drawing.Point(11, 79);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(60, 20);
-            this.guna2Separator1.TabIndex = 2;
             // 
             // guna2PictureBox1
             // 
@@ -277,5 +298,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         public System.Windows.Forms.Panel panel_Body;
         private Guna.UI2.WinForms.Guna2Button btnPost;
+        private Guna.UI2.WinForms.Guna2Button btnCalender;
     }
 }

@@ -26,11 +26,11 @@ namespace TheGioiViecLam.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=WorldofWork;Integrated Securit" +
-            "y=True;Encrypt=True;MultipleActiveResultSets=true")]
-        public string City {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=worldofwork;Integrated Securit" +
+            "y=True;MultipleActiveResultSets=True")]
+        public string connStr {
             get {
-                return ((string)(this["City"]));
+                return ((string)(this["connStr"]));
             }
         }
         
@@ -38,10 +38,10 @@ namespace TheGioiViecLam.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=worldofwork;Integrated Securit" +
-            "y=True;MultipleActiveResultSets=true")]
-        public string connStr {
+            "y=True;MultipleActiveResultSets=True")]
+        public string City {
             get {
-                return ((string)(this["connStr"]));
+                return ((string)(this["City"]));
             }
         }
     }

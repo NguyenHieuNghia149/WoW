@@ -106,8 +106,6 @@ namespace TheGioiViecLam
         }
         public void UCHis_btnViewDetail_Click(string RequireID, object sender, EventArgs e)
         {
-
-            UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer();
             FRequire_Detail form = new FRequire_Detail(RequireID);
             form.ShowDialog();
         }
@@ -121,6 +119,7 @@ namespace TheGioiViecLam
         private void btnPost_Click(object sender, EventArgs e)
         {
             FPost_RequireJobs_Customers form = new FPost_RequireJobs_Customers(account);
+            //this.Hide();
             form.ShowDialog();
         }
     }

@@ -1,27 +1,4 @@
-﻿--Them fullname & exp vao post
---Bo IDJF o Worker
-
---DROP TABLE Saves
---DROP TABLE Orders
---DROP TABLE Post
---DROP TABLE Job
---DROP TABLE JobField
---DROP TABLE Worker
---DROP TABLE Customer
---DROP TABLE Review
---DROP TRIGGER tg_Insert_Post
---GO
-
-
---SELECT * FROM Customer
-
---1--Sua phong chu customer
---DROP TABLE Orders
---DROP TABLE Saves
---DROP TABLE Requirement
---DROP TABLE Customer
-
-Create table dbo.Customer(	
+﻿Create table dbo.Customer(	
 	OrderNum INT IDENTITY (1,1),
 	CID Nchar(20),
 	CEmail char(50),
@@ -415,6 +392,7 @@ EXEC pd_Requirement_Insert 1,'Nam@gmail.com','Fixing cars',
 EXEC pd_Requirement_Insert 2,'Nam@gmail.com','Painting Walls',
 	'The paint on the outside of our house is quite old and peeling quite a bit, so I needed a painter who could repaint the entire exterior with a white base coat and a coat of cream paint.'
 GO
+
 
 CREATE TABLE [dbo].[Review] (
     [IDP]    NCHAR (20)      NOT NULL,

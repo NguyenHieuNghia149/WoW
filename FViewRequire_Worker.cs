@@ -5,29 +5,29 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TheGioiViecLam.UserControls;
 using System.Data.SqlClient;
+using TheGioiViecLam.UserControls;
 
 namespace TheGioiViecLam
 {
     public partial class FViewRequire_Worker : Form
     {
-        DBConnection db = new DBConnection();
         public string account;
+        DBConnection db = new DBConnection();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        FlowLayoutPanel fpanel = new FlowLayoutPanel();
 
         public FViewRequire_Worker(string account)
         {
             this.account = account;
             InitializeComponent();
-            LoadUCRequire_FromDatabase(account);
+            
         }
 
-        private void LoadUCRequire_FromDatabase(string account)
+        private void LoadUCRequire_FromDatabase()
         {
             panel_View.AutoScroll = true; // Tạo thanh cuộn
 
@@ -44,36 +44,40 @@ namespace TheGioiViecLam
 
                 panel_View.Controls.Clear();
 
-                int y = 0;
+                int y = 0, x = 25, count = 1;
 
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
-                    //RequireID,CAddress,JobName,WGender,Cost
                     string RequireID = row["RequireID"].ToString();
-                    string CAddress = row["CAddress"].ToString();
+                    string Detail = row["Detail"].ToString();
                     string JobName = row["JobName"].ToString();
-                    string WGender = row["WGender"].ToString();
-                    string Cost = row["Cost"].ToString();
+                    string CAddress = row["CAddress"].ToString();
 
-                    UCView_Require_Worker ucView = new UCView_Require_Worker(); //phải tạo UC trong vòng lặp
+                    UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer(); //phải tạo UC trong vòng lặp
 
-                    //.Click += (s, ev) => UCView_Click(RequireID, s, ev); //show chi tiết công việc
-                    //ucHis.btnDelete.Click += (s, ev) => UCHis_btnDelete_Click(RequireID, s, ev); //delete
+                    ucHis.btnViewDetail.Click += (s, ev) => UCHis_btnViewDetail_Click(RequireID, s, ev); //view detail
+                    ucHis.txtRequireID.Visible = false;
 
-                    //uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);
+                    ucHis.txtRequireID.Text = "0000" + RequireID;
+                    ucHis.txtDetail.Text = Detail;
+                    ucHis.lblJobName.Text = JobName;
+                    ucHis.txtCAddress.Text = CAddress;
 
-                    ucView.txtCost.Text = Cost;
-                    ucView.txtJobName.Text = JobName;
-                    ucView.txtWGender.Text = WGender;
-                    ucView.txtRequireID.Text = "0000" + RequireID;
-                    ucView.txtLocation.Text = CAddress;
 
-                    // Thêm UC vào panel
+                    // Thêm UC vào panel                 
+                    ucHis.Location = new Point(x, y);
+                    x += ucHis.Width + 5;
 
-                    ucView.Location = new Point(50, y);
-                    y += ucView.Height + 5;
+                    if (count % 2 == 0)
+                    {
+                        y += ucHis.Height + 5;
+                        x = 25;
+                    }
 
-                    panel_View.Controls.Add(ucView);
+                    panel_View.Controls.Add(ucHis);
+                    ucHis.btnDelete.Enabled = false;
+                    ucHis.btnDelete.Visible = false; //ẩn đi button Delete
+                    count++;
                 }
 
 
@@ -91,7 +95,13 @@ namespace TheGioiViecLam
 
         private void FViewRequire_Worker_Load(object sender, EventArgs e)
         {
-            LoadUCRequire_FromDatabase(account);
+            LoadUCRequire_FromDatabase();
+        }
+
+        private void UCHis_btnViewDetail_Click(string RequireID, object sender, EventArgs e)
+        {
+            FViewRequire_Detail_Worker form = new FViewRequire_Detail_Worker(RequireID);
+            form.ShowDialog();
         }
     }
 }

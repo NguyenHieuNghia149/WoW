@@ -1,6 +1,6 @@
 ﻿namespace TheGioiViecLam
 {
-    partial class FRequire_Detail
+    partial class FViewRequire_Detail_Worker
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtDetail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCity = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblJobName = new System.Windows.Forms.Label();
@@ -45,6 +46,8 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.panel_His = new System.Windows.Forms.Panel();
             this.lblCity = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel_His.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -332,6 +335,7 @@
             this.panel_His.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.panel_His.BackColor = System.Drawing.Color.White;
             this.panel_His.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_His.Controls.Add(this.guna2Button1);
             this.panel_His.Controls.Add(this.txtDetail);
             this.panel_His.Controls.Add(this.txtCity);
             this.panel_His.Controls.Add(this.lblJobName);
@@ -352,8 +356,8 @@
             this.panel_His.ForeColor = System.Drawing.Color.Navy;
             this.panel_His.Location = new System.Drawing.Point(0, 0);
             this.panel_His.Name = "panel_His";
-            this.panel_His.Size = new System.Drawing.Size(1136, 504);
-            this.panel_His.TabIndex = 10;
+            this.panel_His.Size = new System.Drawing.Size(1118, 574);
+            this.panel_His.TabIndex = 11;
             // 
             // lblCity
             // 
@@ -366,15 +370,37 @@
             this.lblCity.TabIndex = 67;
             this.lblCity.Text = "City";
             // 
-            // FRequire_Detail
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(918, 481);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(178, 45);
+            this.guna2Button1.TabIndex = 82;
+            this.guna2Button1.Text = "Book";
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // FViewRequire_Detail_Worker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 504);
+            this.ClientSize = new System.Drawing.Size(1118, 574);
             this.Controls.Add(this.panel_His);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRequire_Detail";
-            this.Text = "FRequire_Detail";
+            this.Name = "FViewRequire_Detail_Worker";
+            this.Text = "FViewRequire_Detail_Worker";
             this.panel_His.ResumeLayout(false);
             this.panel_His.PerformLayout();
             this.ResumeLayout(false);
@@ -399,6 +425,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Panel panel_His;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label lblCity;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

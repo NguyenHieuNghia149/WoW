@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Collections;
 using TheGioiViecLam.model;
-using Guna.UI2.Designer;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Data.SqlTypes;
 
 namespace TheGioiViecLam
 {
@@ -29,36 +28,10 @@ namespace TheGioiViecLam
         {
             this.account = account;
             InitializeComponent();
-            LoadJobNameIntoComboBox(account);
             LoadRequireID();
+            LoadAddressAndPhonenum(account);
         }
 
-        private void LoadJobNameIntoComboBox(string account)
-        {
-            try
-            {
-                conn.Open();
-                string query = string.Format("SELECT JobName FROM Job");
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    string District = reader["JobName"].ToString();
-                    //cbbJobName.Items.Add(District);
-                }
-
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
         private void LoadRequireID()
         {
             try
@@ -80,12 +53,43 @@ namespace TheGioiViecLam
             {
                 MessageBox.Show("Thất bại " + ex);
             }
+            finally
+            {
+                conn.Close();
+            }
             txtRequireID.Visible = false; //ẩn đi ID
         }
-
-        private void btnUpload1_Click(object sender, EventArgs e)
+        private void LoadAddressAndPhonenum(string account)
         {
-          /*  if (cbboxJobName.Text == "" || txtDetail.Text == "")
+            try
+            {
+                conn.Open();
+                string query = "SELECT * FROM Customer WHERE CEmail = '" + account + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string PhoneNum = reader["PhoneNum"].ToString();
+                    string Address = reader["CAddress"].ToString();
+                    txtNumberPhone.Text = PhoneNum;
+                    txtAddress.Text = Address;  
+                }
+                reader.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thất bại " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        private void lblPost_Click(object sender, EventArgs e)
+        {
+            if (txtJobName.Text == "" || txtDetail.Text == "")
             {
                 MessageBox.Show("You haven't fill enough information");
             }
@@ -95,7 +99,7 @@ namespace TheGioiViecLam
                 {
                     int RequireID = int.Parse(txtRequireID.Text);
                     string query = string.Format("EXEC pd_Requirement_Insert '{0}','{1}','{2}','{3}'",
-                    RequireID, account, cbboxJobName.Text, txtDetail.Text);
+                    RequireID, account, txtJobName.Text, txtDetail.Text);
                     SqlCommand cmd = new SqlCommand(query, conn);
                     db.Execute(query);
                 }
@@ -103,14 +107,18 @@ namespace TheGioiViecLam
                 {
                     MessageBox.Show("Thất bại " + ex);
                 }
-
-            }*/
+                finally
+                {
+                    conn.Close();
+                }
+            }
         }
 
-        private void btnReload_Click(object sender, EventArgs e)
+        private void lblCancel_Click(object sender, EventArgs e)
         {
-            txtDetail.Text = "";
-           // cbboxJobName.Text = "";
+            this.Hide();
+            //FDisplay_Customers form = new FDisplay_Customers(account);
+            //form.ShowDialog();
         }
     }
 }

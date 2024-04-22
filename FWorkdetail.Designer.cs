@@ -34,16 +34,17 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(2, -1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1458, 1055);
+            this.panel1.Size = new System.Drawing.Size(1336, 1055);
             this.panel1.TabIndex = 0;
             // 
             // FWorkdetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1462, 1055);
+            this.ClientSize = new System.Drawing.Size(1336, 1055);
             this.Controls.Add(this.panel1);
             this.Name = "FWorkdetail";
             this.Text = "FWorkdetail";

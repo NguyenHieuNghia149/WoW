@@ -121,6 +121,9 @@ namespace TheGioiViecLam
 
         }
 
-       
+        private void btnCalender_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FJobCalenderCustomer(account)  );
+        }
     }
 }
