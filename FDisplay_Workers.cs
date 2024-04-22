@@ -68,5 +68,7 @@ namespace TheGioiViecLam
         {
             OpenChildForm(new FHomeWorker(account));
         }
+
+     
     }
 }

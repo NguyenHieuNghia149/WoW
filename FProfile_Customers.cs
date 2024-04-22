@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using System.Windows.Resources;
 using System.Windows.Shapes;
+using TheGioiViecLam.DAO;
 using TheGioiViecLam.model;
 
 namespace TheGioiViecLam
@@ -22,6 +23,7 @@ namespace TheGioiViecLam
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public string account;
+        ImageDao imageDao = new ImageDao();
         public FProfile_Customers(string account)
         {
             InitializeComponent();
@@ -95,7 +97,7 @@ namespace TheGioiViecLam
 
         private void imagebtnPostImage_Click(object sender, EventArgs e)
         {
-            byte[] b = imageToByteArray(pictureBox.Image);
+            byte[] b = imageDao.imageToByteArray(pictureBox.Image);
             conn.Open();
             string query = string.Format("Update Customer set img = @image where CEmail = @account");
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -105,28 +107,7 @@ namespace TheGioiViecLam
             conn.Close();
         }
         //Chuyen  anh sang byte
-        byte[] imageToByteArray(Image img)
-        {
-            MemoryStream m = new MemoryStream();
-            img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
-            return m.ToArray();
-        }
-        //Chuyen file anh asng byte[]
-        byte[] PathtoByteArray(string path)
-        {
-            MemoryStream m = new MemoryStream();
-            Image img = Image.FromFile(path);
-            img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
-            return m.ToArray();
-        }
 
-
-        Image byteArrayToImage(byte[] b)
-        {
-            MemoryStream m = new MemoryStream(b);
-            return Image.FromStream(m);
-        }
-
-        
+    
     }
 }

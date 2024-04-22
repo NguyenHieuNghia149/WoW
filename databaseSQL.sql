@@ -231,7 +231,98 @@ BEGIN
 	SELECT @WID = WID FROM Worker WHERE WEmail = @Email
 	
 	UPDATE Post SET Email = @Email,JobName = @JobName,WTime = @WTime,
-		Cost = @Cost,Detail = @Detail,Experience = @Experience, WID = @WID WHERE IDP = @IDP
+	CREATE TABLE TaiXe (
+    MaTaiXe INT,
+    HoTen NVARCHAR(100) NOT NULL,
+    NgaySinh DATE,
+    GioiTinh NVARCHAR(10) ,
+    DiaChi NVARCHAR(255) ,
+    SoDienThoai NVARCHAR(20) NOT NULL,
+    TrangThai NVARCHAR(50) ,
+    CONSTRAINT PK_TaiXe PRIMARY KEY (MaTaiXe)
+);
+go
+-- Tạo bảng xe
+CREATE TABLE Xe (
+    MaXe INT,
+    BienSoXe NVARCHAR(20) NOT NULL,
+    LoaiXe NVARCHAR(50) NOT NULL,
+    TrangThai NVARCHAR(50) NOT NULL,
+    DoTai FLOAT NOT NULL, 
+    KhongGianHamChua FLOAT NOT NULL,
+    SoGhe INT NOT NULL,
+    CONSTRAINT PK_Xe PRIMARY KEY (MaXe)
+);
+go
+
+-- Tạo bảng lộ trình
+CREATE TABLE LoTrinh (
+    MaLoTrinh INT,
+    TenLoTrinh NVARCHAR(100) NOT NULL,
+    DiemXuatPhat NVARCHAR(255) NOT NULL,
+    DiemKetThuc NVARCHAR(255) NOT NULL,
+    Mota NVARCHAR(MAX),
+    TrangThai NVARCHAR(50) NOT NULL,
+    CONSTRAINT PK_LoTrinh PRIMARY KEY (MaLoTrinh)
+);
+go
+-- Tạo bảng chuyến đi
+CREATE TABLE ChuyenDi (
+    MaChuyenDi INT,
+    MaLoTrinh INT,
+    ThoiDiemXuatPhat DATETIME NOT NULL,
+    ThoiDiemKetThuc DATETIME NOT NULL,
+    SoGheTrong INT NOT NULL,
+    TrangThai NVARCHAR(30),
+    CONSTRAINT PK_ChuyenDi PRIMARY KEY (MaChuyenDi),
+    CONSTRAINT FK_ChuyenDi_LoTrinh FOREIGN KEY (MaLoTrinh) REFERENCES LoTrinh(MaLoTrinh)
+);
+go
+-- Tạo bảng khách hàng
+CREATE TABLE KhachHang (
+    MaKhachHang INT,
+    HoTen NVARCHAR(100) NOT NULL,
+    SoDienThoai NVARCHAR(20) NOT NULL,
+    DiaChi NVARCHAR(255),
+    CONSTRAINT PK_KhachHang PRIMARY KEY (MaKhachHang)
+);
+go
+-- Tạo bảng hàng hoá gửi
+CREATE TABLE HangHoaGui (
+    MaHangHoa INT,
+    MaKhachHang INT,
+    TenHangHoa NVARCHAR(100) NOT NULL,
+    LoaiHang NVARCHAR(100) NOT NULL,
+    KichThuoc FLOAT NOT NULL,
+    KhoiLuong FLOAT NOT NULL,
+    TrangThai NVARCHAR(50) NOT NULL,
+    MaChuyenDi INT,
+    CONSTRAINT PK_HangHoaGui PRIMARY KEY (MaHangHoa),
+    CONSTRAINT FK_HangHoaGui_KhachHang FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang),
+	CONSTRAINT FK_HangHoaGui_ChuyenDi FOREIGN KEY (MaChuyenDi) REFERENCES ChuyenDi(MaChuyenDi)
+);
+go
+-- Tạo bảng tham gia
+CREATE TABLE ThamGia (
+    MaKhachHang INT,
+    MaChuyenDi INT,
+    ChiPhi FLOAT NOT NULL,
+	SoGheMua INT,
+    CONSTRAINT PK_ThamGia PRIMARY KEY (MaKhachHang, MaChuyenDi),
+    CONSTRAINT FK_ThamGia_KhachHang FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang),
+    CONSTRAINT FK_ThamGia_ChuyenDi FOREIGN KEY (MaChuyenDi) REFERENCES ChuyenDi(MaChuyenDi)
+);
+go
+-- Tạo bảng khởi hành
+CREATE TABLE KhoiHanh (
+    MaTaiXe INT,
+    MaChuyenDi INT,
+    MaXe INT,
+    CONSTRAINT PK_KhoiHanh PRIMARY KEY (MaTaiXe, MaChuyenDi, MaXe),
+    CONSTRAINT FK_KhoiHanh_TaiXe FOREIGN KEY (MaTaiXe) REFERENCES TaiXe(MaTaiXe),
+    CONSTRAINT FK_KhoiHanh_ChuyenDi FOREIGN KEY (MaChuyenDi) REFERENCES ChuyenDi(MaChuyenDi),
+    CONSTRAINT FK_KhoiHanh_Xe FOREIGN KEY (MaXe) REFERENCES Xe(MaXe)
+);	Cost = @Cost,Detail = @Detail,Experience = @Experience, WID = @WID WHERE IDP = @IDP
 END
 GO
 

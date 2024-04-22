@@ -30,132 +30,119 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.paneFilter = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.PanelBottom = new System.Windows.Forms.Panel();
-            this.PanelCenter = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.PanelTop = new System.Windows.Forms.Panel();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.txt_Search = new System.Windows.Forms.TextBox();
-            this.cbx_districts = new System.Windows.Forms.ComboBox();
-            this.cbx_cities = new System.Windows.Forms.ComboBox();
+            this.btnFilter = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_Search = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.worldOfWorkDataSet = new TheGioiViecLam.WorldOfWorkDataSet();
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workerTableAdapter = new TheGioiViecLam.WorldOfWorkDataSetTableAdapters.WorkerTableAdapter();
+            this.cbx_cities = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbx_districts = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
-            this.PanelCenter.SuspendLayout();
-            this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.worldOfWorkDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cbx_districts);
+            this.panel1.Controls.Add(this.cbx_cities);
+            this.panel1.Controls.Add(this.paneFilter);
             this.panel1.Controls.Add(this.PanelBottom);
-            this.panel1.Controls.Add(this.PanelCenter);
-            this.panel1.Controls.Add(this.PanelTop);
+            this.panel1.Controls.Add(this.btnFilter);
+            this.panel1.Controls.Add(this.btn_Search);
+            this.panel1.Controls.Add(this.txt_Search);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 641);
             this.panel1.TabIndex = 6;
             // 
+            // paneFilter
+            // 
+            this.paneFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.paneFilter.BorderRadius = 15;
+            this.paneFilter.BorderThickness = 2;
+            this.paneFilter.Location = new System.Drawing.Point(604, 120);
+            this.paneFilter.Name = "paneFilter";
+            this.paneFilter.Size = new System.Drawing.Size(266, 347);
+            this.paneFilter.TabIndex = 5;
+            // 
             // PanelBottom
             // 
             this.PanelBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.PanelBottom.Location = new System.Drawing.Point(77, 172);
-            this.PanelBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelBottom.Location = new System.Drawing.Point(4, 121);
+            this.PanelBottom.Margin = new System.Windows.Forms.Padding(4);
             this.PanelBottom.Name = "PanelBottom";
-            this.PanelBottom.Size = new System.Drawing.Size(929, 439);
+            this.PanelBottom.Size = new System.Drawing.Size(1035, 516);
             this.PanelBottom.TabIndex = 2;
             // 
-            // PanelCenter
+            // btnFilter
             // 
-            this.PanelCenter.Controls.Add(this.comboBox1);
-            this.PanelCenter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelCenter.Location = new System.Drawing.Point(0, 97);
-            this.PanelCenter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.PanelCenter.Name = "PanelCenter";
-            this.PanelCenter.Size = new System.Drawing.Size(1039, 67);
-            this.PanelCenter.TabIndex = 1;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cost",
-            "Rate",
-            "Experience",
-            "Job Field"});
-            this.comboBox1.Location = new System.Drawing.Point(77, 8);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(286, 32);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "Sort by";
-            // 
-            // PanelTop
-            // 
-            this.PanelTop.Controls.Add(this.btn_Search);
-            this.PanelTop.Controls.Add(this.txt_Search);
-            this.PanelTop.Controls.Add(this.cbx_districts);
-            this.PanelTop.Controls.Add(this.cbx_cities);
-            this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTop.Location = new System.Drawing.Point(0, 0);
-            this.PanelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.PanelTop.Name = "PanelTop";
-            this.PanelTop.Size = new System.Drawing.Size(1039, 97);
-            this.PanelTop.TabIndex = 0;
+            this.btnFilter.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnFilter.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFilter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFilter.FillColor = System.Drawing.Color.Transparent;
+            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFilter.ForeColor = System.Drawing.Color.White;
+            this.btnFilter.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnFilter.Image = global::TheGioiViecLam.Properties.Resources.filter;
+            this.btnFilter.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnFilter.Location = new System.Drawing.Point(849, 85);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnFilter.Size = new System.Drawing.Size(43, 29);
+            this.btnFilter.TabIndex = 10;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // btn_Search
             // 
-            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_Search.FlatAppearance.BorderSize = 0;
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Search.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Search.FillColor = System.Drawing.Color.Transparent;
+            this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(814, 33);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Search.Image = global::TheGioiViecLam.Properties.Resources.search__2_;
+            this.btn_Search.Location = new System.Drawing.Point(705, 67);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(105, 37);
-            this.btn_Search.TabIndex = 3;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_Search.Size = new System.Drawing.Size(37, 29);
+            this.btn_Search.TabIndex = 9;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // txt_Search
             // 
-            this.txt_Search.Location = new System.Drawing.Point(462, 33);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_Search.Multiline = true;
+            this.txt_Search.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.txt_Search.BorderRadius = 18;
+            this.txt_Search.BorderThickness = 2;
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.DefaultText = "";
+            this.txt_Search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txt_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Search.Location = new System.Drawing.Point(346, 60);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(321, 32);
-            this.txt_Search.TabIndex = 2;
-            // 
-            // cbx_districts
-            // 
-            this.cbx_districts.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_districts.FormattingEnabled = true;
-            this.cbx_districts.Location = new System.Drawing.Point(267, 33);
-            this.cbx_districts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbx_districts.Name = "cbx_districts";
-            this.cbx_districts.Size = new System.Drawing.Size(165, 26);
-            this.cbx_districts.TabIndex = 1;
-            this.cbx_districts.Text = "Districts";
-            this.cbx_districts.SelectedIndexChanged += new System.EventHandler(this.cbx_districts_SelectedIndexChanged);
-            // 
-            // cbx_cities
-            // 
-            this.cbx_cities.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_cities.FormattingEnabled = true;
-            this.cbx_cities.Location = new System.Drawing.Point(37, 33);
-            this.cbx_cities.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbx_cities.Name = "cbx_cities";
-            this.cbx_cities.Size = new System.Drawing.Size(198, 26);
-            this.cbx_cities.TabIndex = 0;
-            this.cbx_cities.Text = "City";
-            this.cbx_cities.SelectedIndexChanged += new System.EventHandler(this.cbx_cities_SelectedIndexChanged);
+            this.txt_Search.PasswordChar = '\0';
+            this.txt_Search.PlaceholderText = "Search";
+            this.txt_Search.SelectedText = "";
+            this.txt_Search.Size = new System.Drawing.Size(412, 44);
+            this.txt_Search.TabIndex = 8;
             // 
             // worldOfWorkDataSet
             // 
@@ -171,6 +158,45 @@
             // 
             this.workerTableAdapter.ClearBeforeFill = true;
             // 
+            // cbx_cities
+            // 
+            this.cbx_cities.BackColor = System.Drawing.Color.Transparent;
+            this.cbx_cities.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.cbx_cities.BorderRadius = 10;
+            this.cbx_cities.BorderThickness = 2;
+            this.cbx_cities.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbx_cities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_cities.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbx_cities.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbx_cities.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_cities.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbx_cities.ItemHeight = 30;
+            this.cbx_cities.Location = new System.Drawing.Point(12, 60);
+            this.cbx_cities.Name = "cbx_cities";
+            this.cbx_cities.Size = new System.Drawing.Size(182, 36);
+            this.cbx_cities.TabIndex = 11;
+            this.cbx_cities.SelectedIndexChanged += new System.EventHandler(this.cbx_cities_SelectedIndexChanged);
+
+            // 
+            // cbx_districts
+            // 
+            this.cbx_districts.BackColor = System.Drawing.Color.Transparent;
+            this.cbx_districts.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.cbx_districts.BorderRadius = 10;
+            this.cbx_districts.BorderThickness = 2;
+            this.cbx_districts.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbx_districts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_districts.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbx_districts.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbx_districts.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_districts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbx_districts.ItemHeight = 30;
+            this.cbx_districts.Location = new System.Drawing.Point(200, 60);
+            this.cbx_districts.Name = "cbx_districts";
+            this.cbx_districts.Size = new System.Drawing.Size(140, 36);
+            this.cbx_districts.TabIndex = 12;
+            this.cbx_districts.SelectedIndexChanged += new System.EventHandler(this.cbx_districts_SelectedIndexChanged);
+            // 
             // FSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -178,14 +204,12 @@
             this.ClientSize = new System.Drawing.Size(1039, 641);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FSearch";
             this.Text = "FHome";
             this.Load += new System.EventHandler(this.FHome_Load);
             this.panel1.ResumeLayout(false);
-            this.PanelCenter.ResumeLayout(false);
-            this.PanelTop.ResumeLayout(false);
-            this.PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.worldOfWorkDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -196,15 +220,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel PanelBottom;
-        private System.Windows.Forms.Panel PanelCenter;
-        private System.Windows.Forms.Panel PanelTop;
-        private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.TextBox txt_Search;
-        private System.Windows.Forms.ComboBox cbx_districts;
-        private System.Windows.Forms.ComboBox cbx_cities;
         private WorldOfWorkDataSet worldOfWorkDataSet;
         private System.Windows.Forms.BindingSource workerBindingSource;
         private WorldOfWorkDataSetTableAdapters.WorkerTableAdapter workerTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel paneFilter;
+        private Guna.UI2.WinForms.Guna2CircleButton btnFilter;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_Search;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Search;
+        private Guna.UI2.WinForms.Guna2ComboBox cbx_districts;
+        private Guna.UI2.WinForms.Guna2ComboBox cbx_cities;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TheGioiViecLam
 {
-    partial class FCalenderCustomer
+    partial class FCalenderWorker
     {
         /// <summary>
         /// Required designer variable.
@@ -33,24 +33,26 @@
             // 
             // ucCalender1
             // 
-            this.ucCalender1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ucCalender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ucCalender1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucCalender1.Location = new System.Drawing.Point(23, 12);
+            this.ucCalender1.Location = new System.Drawing.Point(-1, 3);
             this.ucCalender1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ucCalender1.Name = "ucCalender1";
-            this.ucCalender1.Size = new System.Drawing.Size(1106, 804);
+            this.ucCalender1.Size = new System.Drawing.Size(1105, 613);
             this.ucCalender1.TabIndex = 0;
             // 
-            // FCalenderCustomer
+            // FCalenderWorker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 853);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1105, 613);
             this.Controls.Add(this.ucCalender1);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FCalenderCustomer";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FCalenderCustomer";
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Name = "FCalenderWorker";
+            this.Text = "FCalenderWorker";
             this.ResumeLayout(false);
 
         }
