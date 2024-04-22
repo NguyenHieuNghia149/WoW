@@ -52,7 +52,6 @@ C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.UserControls.UCHistory
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.UserControls.UCOrders.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.UserControls.UCreview.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.ucServiceReview.resources
-C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.UserControls.UCView_Require_Worker.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.UCWorkInFor.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.UCWork_Detail.resources
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.csproj.GenerateResource.cache
@@ -60,3 +59,4 @@ C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.csproj.CoreCompileInpu
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiV.09D9575C.Up2Date
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.exe
 C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.pdb
+C:\Users\LEGION\source\repos\WoW\obj\Debug\TheGioiViecLam.FViewRequire_Detail_Worker.resources

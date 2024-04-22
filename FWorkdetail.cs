@@ -7,14 +7,12 @@ using System.IO;
 using System.Drawing;
 using System.Data;
 using TheGioiViecLam.UserControls;
-
 namespace TheGioiViecLam
 {
     public partial class FWorkdetail : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         UCWork_Detail ucW; // Khai báo UserControl
-
         private string selectedPostID;
         private string account;
         public FWorkdetail(string postID, string account)
@@ -31,7 +29,6 @@ namespace TheGioiViecLam
         {
             FCalenderCustomer form = new FCalenderCustomer(selectedPostID, account);
             form.ShowDialog();
-
         }
         private void FWorkdetail_Load(object sender, EventArgs e)
         {
@@ -42,7 +39,6 @@ namespace TheGioiViecLam
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@PostID", selectedPostID);
                 SqlDataReader reader = cmd.ExecuteReader();
-
                 if (reader.Read())
                 {
                     ucW.txtWork.Text = reader["JobName"].ToString();
@@ -61,10 +57,8 @@ namespace TheGioiViecLam
                         MemoryStream ms = new MemoryStream(b);
                         ucW.ptbox.Image = Image.FromStream(ms);
                     }
-
                     // Gán dữ liệu cho các TextBox khác tại đây
                 }
-
             }
             catch (Exception ex)
             {
@@ -77,13 +71,38 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
+                string sqlStr = @"SELECT AVG(Rating) AS rating FROM Review WHERE IDP = @IDP";
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                cmd.Parameters.AddWithValue("@IDP", selectedPostID);
+                object averageRating = cmd.ExecuteScalar();
+                if (averageRating != DBNull.Value)
+                {
+                    ucW.lblNumberReview.Text = averageRating.ToString();
+                }
+                else
+                {
+                    ucW.lblNumberReview.Text = "N/A";
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try
+            {
+                conn.Open();
                 string sqlStr = @"SELECT Review.Rating, Review.Review, Review.Img, Customer.Fullname
                   FROM Review
                   INNER JOIN Customer ON Review.CEmail = Customer.CEmail";
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dataSet = new DataSet();
                 adapter.Fill(dataSet);
-                int y = 605; // Biến để điều chỉnh vị trí theo trục y của các UC
+                int y = 690; // Biến để điều chỉnh vị trí theo trục y của các UC
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
                     int Rating = Convert.ToInt32(row["Rating"]);
@@ -94,8 +113,7 @@ namespace TheGioiViecLam
                     uCreview.txtReview.Text = Review;
                     uCreview.RatingStar.Value = Rating;
                     uCreview.lblaccount.Text = name;
-                    // Đặt vị trí cho UC
-                    uCreview.Location = new Point(18, y);
+                    uCreview.Location = new Point(0, y);
                     y += uCreview.Height + 7; // Tăng y để tránh chồng chéo
                     panel1.Controls.Add(uCreview);
                     uCreview.BringToFront();

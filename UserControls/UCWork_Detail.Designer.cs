@@ -841,6 +841,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAll;
         private Guna.UI2.WinForms.Guna2RatingStar ratingStar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblNumberReview;
+        public System.Windows.Forms.Label lblNumberReview;
     }
 }
