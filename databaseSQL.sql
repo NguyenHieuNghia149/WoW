@@ -1,27 +1,4 @@
-﻿--Them fullname & exp vao post
---Bo IDJF o Worker
-
---DROP TABLE Saves
---DROP TABLE Orders
---DROP TABLE Post
---DROP TABLE Job
---DROP TABLE JobField
---DROP TABLE Worker
---DROP TABLE Customer
---DROP TABLE Review
---DROP TRIGGER tg_Insert_Post
---GO
-
-
---SELECT * FROM Customer
-
---1--Sua phong chu customer
---DROP TABLE Orders
---DROP TABLE Saves
---DROP TABLE Requirement
---DROP TABLE Customer
-
-Create table dbo.Customer(	
+﻿Create table dbo.Customer(	
 	OrderNum INT IDENTITY (1,1),
 	CID Nchar(20),
 	CEmail char(50),
