@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 
 namespace TheGioiViecLam.DAO
 {
-    internal class ImageDao
+    public class ImageDao
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
 

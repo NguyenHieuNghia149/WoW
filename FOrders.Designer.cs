@@ -35,25 +35,23 @@
             this.btnComfirmed = new Guna.UI2.WinForms.Guna2Button();
             this.btncompleted = new Guna.UI2.WinForms.Guna2Button();
             this.btnInOrder = new Guna.UI2.WinForms.Guna2Button();
-            this.panel_Body.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Body
             // 
             this.panel_Body.BackColor = System.Drawing.Color.White;
-            this.panel_Body.Controls.Add(this.guna2Separator1);
-            this.panel_Body.Location = new System.Drawing.Point(1, 56);
+            this.panel_Body.Location = new System.Drawing.Point(1, 84);
             this.panel_Body.Margin = new System.Windows.Forms.Padding(4);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(1025, 584);
+            this.panel_Body.Size = new System.Drawing.Size(1025, 556);
             this.panel_Body.TabIndex = 3;
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(93)))), ((int)(((byte)(156)))));
             this.guna2Separator1.FillThickness = 3;
-            this.guna2Separator1.Location = new System.Drawing.Point(4, 4);
+            this.guna2Separator1.Location = new System.Drawing.Point(1, 58);
             this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(2150, 18);
@@ -165,13 +163,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1039, 641);
+            this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panel_Body);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FOrders";
             this.Text = "FOrders";
-            this.panel_Body.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
 

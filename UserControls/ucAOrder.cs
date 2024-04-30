@@ -39,8 +39,6 @@ namespace TheGioiViecLam.UserControls
         {
             InitializeComponent();
             this.job = job;
-            IsConfirmed = job.Status == "Confirm";
-            IsUnconfirmed = job.Status == "Unconfirm";
             ShowInfor();
 
         }
@@ -63,29 +61,11 @@ namespace TheGioiViecLam.UserControls
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            txtStatus.Text = "Confirmed";
         }
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            txtStatus.Text = "Done";
         }
-        /*        private void btndeny_Click(object sender, EventArgs e)
-{
-if (denied != null)
-denied(this, new EventArgs());
-}
-
-private void btnConfirm_Click(object sender, EventArgs e)
-{
-if (confirmed != null)
-confirmed(this, new EventArgs());
-}
-
-private void btnDone_Click(object sender, EventArgs e)
-{
-if (done != null)
-done(this, new EventArgs());
-}*/
+     
     }
 }

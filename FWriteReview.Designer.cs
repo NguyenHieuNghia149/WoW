@@ -120,10 +120,11 @@
             this.txtdetail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtdetail.Name = "txtdetail";
             this.txtdetail.PasswordChar = '\0';
-            this.txtdetail.PlaceholderText = "";
+            this.txtdetail.PlaceholderText = "Review";
             this.txtdetail.SelectedText = "";
             this.txtdetail.Size = new System.Drawing.Size(647, 240);
             this.txtdetail.TabIndex = 4;
+            this.txtdetail.TextOffset = new System.Drawing.Point(0, -100);
             // 
             // label1
             // 
@@ -141,6 +142,7 @@
             this.guna2RatingStar1.Location = new System.Drawing.Point(232, 81);
             this.guna2RatingStar1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2RatingStar1.Name = "guna2RatingStar1";
+            this.guna2RatingStar1.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(148)))), ((int)(((byte)(85)))));
             this.guna2RatingStar1.Size = new System.Drawing.Size(329, 57);
             this.guna2RatingStar1.TabIndex = 2;
             // 
@@ -177,7 +179,7 @@
             this.tbtJobName.PasswordChar = '\0';
             this.tbtJobName.PlaceholderText = "";
             this.tbtJobName.SelectedText = "";
-            this.tbtJobName.Size = new System.Drawing.Size(371, 55);
+            this.tbtJobName.Size = new System.Drawing.Size(469, 55);
             this.tbtJobName.TabIndex = 0;
             // 
             // FWriteReview

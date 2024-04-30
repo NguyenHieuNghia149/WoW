@@ -70,11 +70,24 @@
   <ItemGroup>
     <Compile Include="DAO\Dao.cs" />
     <Compile Include="DAO\ImageDao.cs" />
+    <Compile Include="DAO\JobDao.cs" />
     <Compile Include="FCalenderCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FCalenderCustomer.Designer.cs">
       <DependentUpon>FCalenderCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCalenderWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCalenderWorker.Designer.cs">
+      <DependentUpon>FCalenderWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCompletedJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompletedJob.Designer.cs">
+      <DependentUpon>FCompletedJob.cs</DependentUpon>
     </Compile>
     <Compile Include="FDailyJob.cs">
       <SubType>Form</SubType>
@@ -94,11 +107,11 @@
     <Compile Include="FHomeWorker.Designer.cs">
       <DependentUpon>FHomeWorker.cs</DependentUpon>
     </Compile>
-    <Compile Include="FPerInf_Worker.cs">
+    <Compile Include="FJobCalenderCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FPerInf_Worker.Designer.cs">
-      <DependentUpon>FPerInf_Worker.cs</DependentUpon>
+    <Compile Include="FJobCalenderCustomer.Designer.cs">
+      <DependentUpon>FJobCalenderCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="FPlan_Worker.cs">
       <SubType>Form</SubType>
@@ -365,8 +378,14 @@
     <EmbeddedResource Include="FCalenderCustomer.resx">
       <DependentUpon>FCalenderCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCalenderWorker.resx">
+      <DependentUpon>FCalenderWorker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCandidateSupportCenter.resx">
       <DependentUpon>FCandidateSupportCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCompletedJob.resx">
+      <DependentUpon>FCompletedJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDailyJob.resx">
       <DependentUpon>FDailyJob.cs</DependentUpon>
@@ -389,6 +408,9 @@
     <EmbeddedResource Include="FHomeWorker.resx">
       <DependentUpon>FHomeWorker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FJobCalenderCustomer.resx">
+      <DependentUpon>FJobCalenderCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRequire_Detail.resx">
       <DependentUpon>FRequire_Detail.cs</DependentUpon>
     </EmbeddedResource>
@@ -400,9 +422,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FOrders.resx">
       <DependentUpon>FOrders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FPerInf_Worker.resx">
-      <DependentUpon>FPerInf_Worker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FPlan_Worker.resx">
       <DependentUpon>FPlan_Worker.cs</DependentUpon>
@@ -477,6 +496,9 @@
     <EmbeddedResource Include="UserControls\ucCalender.resx">
       <DependentUpon>ucCalender.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDayofCalender.resx">
+      <DependentUpon>ucDayofCalender.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucHistoryOrderCustomer.resx">
       <DependentUpon>ucHistoryOrderCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -524,6 +546,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\cursor.png" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\search %282%29.png" />
+    <None Include="Resources\bar-chart1.png" />
+    <None Include="Resources\bar-chart %281%291.png" />
+    <None Include="Resources\script.png" />
+    <None Include="Resources\script %281%291.png" />
     <None Include="Resources\script %281%29.png" />
     <None Include="Resources\bar-chart %281%29.png" />
     <None Include="Resources\bar-chart.png" />

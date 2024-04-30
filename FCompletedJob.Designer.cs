@@ -1,6 +1,6 @@
 ﻿namespace TheGioiViecLam
 {
-    partial class FCalenderCustomer
+    partial class FCompletedJob
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucCalender1 = new TheGioiViecLam.UserControls.ucCalender();
             this.SuspendLayout();
             // 
-            // ucCalender1
+            // FCompletedJob
             // 
-            this.ucCalender1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ucCalender1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucCalender1.Location = new System.Drawing.Point(23, 12);
-            this.ucCalender1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucCalender1.Name = "ucCalender1";
-            this.ucCalender1.Size = new System.Drawing.Size(1106, 804);
-            this.ucCalender1.TabIndex = 0;
-            // 
-            // FCalenderCustomer
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 853);
-            this.Controls.Add(this.ucCalender1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1000, 675);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FCalenderCustomer";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FCalenderCustomer";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "FCompletedJob";
+            this.Text = "FCompletedJob";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private UserControls.ucCalender ucCalender1;
     }
 }

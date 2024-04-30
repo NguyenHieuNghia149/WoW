@@ -43,16 +43,7 @@ namespace TheGioiViecLam
             fPanel.Controls.Clear();
             if (jobs != null)
             {
-                List<Order> todayJobs = GetJobsByDay(date);
-/*                for(int i = 0; i < todayJobs.Count;i++)
-                {
-                    ucAOrder ucJob = new ucAOrder(todayJobs[i]);
-                     ucJob.Tag = todayJobs[i];
-                    ucJob.btndeny.Click += (s, ev) => ajob_Denied(s, ev, OrderNum);
-                    ucJob.btnConfirm.Click += (s, ev) => ajob_Confirmed(s, ev, OrderNum);
-                    ucJob.btnDone.Click += (s, ev) => ajob_Done(s, ev, OrderNum);
-                    fPanel.Controls.Add(ucJob);
-                }*/
+                List<Order> todayJobs = GetJobsByDay(date);              
                 foreach (Order job in todayJobs)
                 {
                     ucAOrder ucJob = new ucAOrder(job);

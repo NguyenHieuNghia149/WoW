@@ -26,6 +26,7 @@ namespace TheGioiViecLam
             InitializeComponent();
             this.account = account;
             this.field = field;
+            paneFilter.Visible = false;
         }
 
         private void ucWorkInFor_Click(string wid,string postID, object sender, EventArgs e)
@@ -327,5 +328,23 @@ namespace TheGioiViecLam
         {
             LoadData();
         }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            if (paneFilter.Visible == false)
+            {
+                paneFilter.Visible = true;
+                
+            }
+            else
+            {
+                paneFilter.Visible = false;
+                
+
+            }
+
+        }
+
+       
     }
 }

@@ -57,24 +57,21 @@ namespace TheGioiViecLam
                     uc.btnReview.Enabled= false;
                     uc.btnAgain.Visible = false;
                     uc.btnAgain.Enabled= false;
-                    uc.btnbomb.Click += (s, ev) => btnbomb_Click(IDP, uc, ev);
+                   // uc.btnbomb.Click += (s, ev) => btnbomb_Click(IDP, uc, ev);
 
                     break;
                 case "Deny                                                                                                ":
                     uc.lblstatus.ForeColor = Color.FromArgb(255, 32, 78);
                     uc.btnbomb.Enabled = false;
-                    uc.btnbomb.Visible = false;
                     //uc.btnAgain.Click += (s, ev) => btnagain_Click();
-                    uc.btnReview.Click += (s, ev) => btnreview_Click(account, IDP,WID,uc,ev);
+                   // uc.btnReview.Click += (s, ev) => btnreview_Click(account, IDP,WID,uc,ev);
                     break;
                 case "Done                                                                                                ":
                     uc.lblstatus.ForeColor = Color.FromArgb(255, 32, 78);
                     uc.btnbomb.Enabled = false;
-                    uc.btnbomb.Visible = false;
                     //uc.btnAgain.Click += (s, ev) => btnagain_Click();
-                    uc.btnReview.Click += (s, ev) => btnreview_Click(account, IDP, WID, uc, ev);
+                    uc.btnReview.Click += (s, ev) => btnreview_Click(account, IDP,WID,uc,ev);
                     break;
-
                 default:
                     // Xử lý trạng thái khác nếu cần
                     break;

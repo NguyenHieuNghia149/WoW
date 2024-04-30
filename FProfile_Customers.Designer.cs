@@ -65,6 +65,7 @@
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Size = new System.Drawing.Size(51, 38);
             this.guna2ImageButton1.TabIndex = 82;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.imagebtnPostImage_Click);
             // 
             // txtGender
             // 
@@ -164,6 +165,7 @@
             this.pictureBox.Size = new System.Drawing.Size(244, 263);
             this.pictureBox.TabIndex = 61;
             this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // txtPhoneNumber
             // 
