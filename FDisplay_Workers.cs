@@ -18,7 +18,6 @@ namespace TheGioiViecLam
             InitializeComponent();
             OpenChildForm(new FHomeWorker(account));
             btnhome.Checked = true;
-          //  OpenChildForm(new FProfile_Workers(account));
             this.account = account;
         }
         private Form currentFormChild;

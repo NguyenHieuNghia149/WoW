@@ -15,7 +15,8 @@ namespace TheGioiViecLam
         UCWork_Detail ucW; // Khai báo UserControl
         private string selectedPostID;
         private string account;
-        public FWorkdetail(string postID, string account)
+        private string wid;
+        public FWorkdetail(string wid,string postID, string account)
         {
             InitializeComponent();
             selectedPostID = postID;
@@ -24,6 +25,7 @@ namespace TheGioiViecLam
             ucW.Dock = DockStyle.Fill; // Cho phép UserControl lấp đầy toàn bộ kích thước của form
             ucW.btnBook.Click += BtnBook_Click;
             this.account = account;
+            this.wid = wid;
         }
         private void BtnBook_Click(object sender, EventArgs e)
         {
@@ -51,12 +53,12 @@ namespace TheGioiViecLam
                     ucW.txtCity.Text = reader["City"].ToString();
                     ucW.txtAddress.Text = reader["District"].ToString();
                     ucW.txtPhone.Text = reader["PhoneNum"].ToString();
-                    byte[] b = reader["img"] as byte[];
+/*                    byte[] b = reader["img"] as byte[];
                     if (b != null)
                     {
                         MemoryStream ms = new MemoryStream(b);
                         ucW.ptbox.Image = Image.FromStream(ms);
-                    }
+                    }*/
                     // Gán dữ liệu cho các TextBox khác tại đây
                 }
             }
@@ -71,13 +73,14 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sqlStr = @"SELECT AVG(Rating) AS rating FROM Review WHERE IDP = @IDP";
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                cmd.Parameters.AddWithValue("@IDP", selectedPostID);
-                object averageRating = cmd.ExecuteScalar();
+                string sqlStr1 = "SELECT Round(AVG(Rating),0) AS rating FROM Review WHERE IDP = @IDP";
+                SqlCommand cmd1 = new SqlCommand(sqlStr1, conn);
+                cmd1.Parameters.AddWithValue("@IDP", selectedPostID);
+                object averageRating = cmd1.ExecuteScalar();
                 if (averageRating != DBNull.Value)
                 {
                     ucW.lblNumberReview.Text = averageRating.ToString();
+                    ucW.ratingStar.Value = Convert.ToInt32(averageRating);
                 }
                 else
                 {
@@ -96,10 +99,15 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sqlStr = @"SELECT Review.Rating, Review.Review, Review.Img, Customer.Fullname
+                string sqlStr2 = @"SELECT Review.Rating, Review.Review, Review.Img, Customer.Fullname
                   FROM Review
-                  INNER JOIN Customer ON Review.CEmail = Customer.CEmail";
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                  INNER JOIN Customer ON Review.CEmail = Customer.CEmail
+                  WHERE Review.CEmail = @CEmail AND Review.IDP = @IDP AND Review.WID = @WID";
+                SqlCommand cmd2 = new SqlCommand(sqlStr2, conn);
+                cmd2.Parameters.AddWithValue("@CEmail", account);
+                cmd2.Parameters.AddWithValue("@IDP", selectedPostID);
+                cmd2.Parameters.AddWithValue("@WID", wid);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd2); // Đổi từ sqlStr thành cmd2
                 DataSet dataSet = new DataSet();
                 adapter.Fill(dataSet);
                 int y = 690; // Biến để điều chỉnh vị trí theo trục y của các UC
@@ -127,6 +135,7 @@ namespace TheGioiViecLam
             {
                 conn.Close();
             }
+
         }
     }
 }

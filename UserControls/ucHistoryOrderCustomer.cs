@@ -16,26 +16,6 @@ namespace TheGioiViecLam.UserControls
         {
             InitializeComponent();
         }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblMinutes_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnbomb_Click(object sender, EventArgs e)
-        {
-
-        }
     }
     
 }

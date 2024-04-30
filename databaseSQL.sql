@@ -314,3 +314,30 @@ CREATE TABLE [dbo].[Review] (
     FOREIGN KEY ([IDP]) REFERENCES [dbo].[Post] ([IDP]),
     FOREIGN KEY ([WID]) REFERENCES [dbo].[Worker] ([WID])
 );
+--thêm view
+go
+CREATE VIEW PostsWithAverageRating AS
+SELECT 
+    p.IDP, 
+    p.WTime, 
+    p.JobName, 
+    p.Cost, 
+    p.Experience, 
+    p.District, 
+    p.WID, 
+    p.Email,
+    p.PhoneNum,
+    p.IDJ,
+    j.IDJF, -- Thêm trường IDJF từ bảng JobField thông qua bảng Job
+    p.City,
+    ROUND(ISNULL(AVG(r.Rating), 0), 0) AS Rating 
+FROM 
+    Post p 
+LEFT JOIN 
+    Review r ON p.IDP = r.IDP 
+LEFT JOIN
+    Job j ON p.IDJ = j.IDJ -- Liên kết bảng Job để lấy IDJF
+LEFT JOIN
+    JobField jf ON j.IDJF = jf.IDJF -- Liên kết bảng JobField để lấy IDJF
+GROUP BY 
+    p.IDP, p.WTime, p.JobName, p.Cost, p.Experience, p.District, p.WID, p.City, p.Email, p.PhoneNum, p.IDJ, j.IDJF; -- Thêm j.IDJF vào danh sách GROUP BY

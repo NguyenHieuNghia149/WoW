@@ -38,10 +38,9 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sql = string.Format("select Post.IDP as IDP, Post.JobName as JobName, Post.Cost as Cost," +
-                    " Post.Experience as Experience,Post.WTime as Time, post.District as District," +
-                    " CEmail from Saves,Post where  Post.IDP = Saves.IDP and Saves.CEmail = 'Nam@gmail.com'", account);
-               // string sql = string.Format("Select * from Post where Email = 'Nam@gmail.com' ");
+                string sql = string.Format("select PostsWithAverageRating.Rating as Rating ,PostsWithAverageRating.IDP as IDP,PostsWithAverageRating.WID as WID, PostsWithAverageRating.JobName as JobName, PostsWithAverageRating.Cost as Cost," +
+                    " PostsWithAverageRating.Experience as Experience,PostsWithAverageRating.WTime as Time, PostsWithAverageRating.District as District," +
+                    " CEmail from Saves,PostsWithAverageRating where  PostsWithAverageRating.IDP = Saves.IDP and Saves.CEmail = '{0}'", account);
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
                 DataSet dataSet = new DataSet();
 
@@ -58,14 +57,17 @@ namespace TheGioiViecLam
                     string location = row["District"].ToString();
                     string time = row["Time"].ToString();
                     string postID = row["IDP"].ToString();
+                    string wid = row["WID"].ToString() ;
+                    int Rating = Convert.ToInt32(row["Rating"]);
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
-                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
+                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(wid,postID, s, ev);
                     uCWorkInFor.btnDelete.Click += (s, ev) => Delete_Click(postID, s, ev);
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price;
                     uCWorkInFor.txtExperience.Text = experience;
                     uCWorkInFor.txtLocation.Text = location;
                     uCWorkInFor.txtWTime.Text = time;
+                    uCWorkInFor.ratingStar.Value = Rating;
                     uCWorkInFor.Location = new Point(50, y);
                     uCWorkInFor.btnSave.Visible = false;
                     uCWorkInFor.btnSave.Enabled = false;
@@ -83,13 +85,13 @@ namespace TheGioiViecLam
             }
         }
 
-        private void ucWorkInFor_Click(string postID, object sender, EventArgs e)
+        private void ucWorkInFor_Click(string wid,string postID, object sender, EventArgs e)
         {
 
             if (sender is UCWorkInFor uCWorkInFor)
             {
                 // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(postID,account);
+                FWorkdetail form = new FWorkdetail(wid,postID,account);
                 form.Show();
             }
         }

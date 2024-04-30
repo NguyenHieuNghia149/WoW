@@ -42,13 +42,13 @@ namespace TheGioiViecLam
         }
 
     
-        public void UCWorkInFor_Click(string IDP, object sender, EventArgs e)
+        public void UCWorkInFor_Click(string WID,string IDP, object sender, EventArgs e)
         {
             if (sender is UCWorkInFor uCWorkInFor)
             {
                 string postID = uCWorkInFor.txtIDP.Text;
                 // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(IDP,account);
+                FWorkdetail form = new FWorkdetail(WID,IDP,account);
                 form.Show();
             }
         }
@@ -191,9 +191,9 @@ namespace TheGioiViecLam
                     string District = reader["District"].ToString();
                     string Experience = reader["Experience"].ToString();
                     string IDP = reader["IDP"].ToString();
-
+                    string WID = reader["WID"].ToString();
                     UCWorkInFor ucWorkInFor = new UCWorkInFor();
-                    ucWorkInFor.Click += (s, ev) => UCWorkInFor_Click(IDP, s, ev);
+                    ucWorkInFor.Click += (s, ev) => UCWorkInFor_Click(WID,IDP, s, ev);
 
                     ucWorkInFor.txtJobName.Text = JobName;
                     ucWorkInFor.txtWTime.Text = WTime;

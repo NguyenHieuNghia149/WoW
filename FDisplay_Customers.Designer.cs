@@ -256,7 +256,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FDisplay_Customers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Load += new System.EventHandler(this.FDisplay_Customers_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

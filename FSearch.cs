@@ -20,22 +20,22 @@ namespace TheGioiViecLam
         UCWorkInFor uc_workinfor = new UCWorkInFor();
         public string postID;
         public string account;
-        public FSearch(string account)
+        public string field;
+        public FSearch(string account,string field)
         {
             InitializeComponent();
             this.account = account;
+            this.field = field;
         }
 
-        private void ucWorkInFor_Click(string postID, object sender, EventArgs e)
+        private void ucWorkInFor_Click(string wid,string postID, object sender, EventArgs e)
         {
             
             if (sender is UCWorkInFor uCWorkInFor)
             {
-                FWorkdetail form = new FWorkdetail(postID, account);
+                FWorkdetail form = new FWorkdetail(wid,postID, account);
                 form.Show();
-
-            }
-            
+            }         
         }
 
 
@@ -45,8 +45,6 @@ namespace TheGioiViecLam
              db.Execute(sql);
              LoadData();
         }
-
-
         public void FHome_Load(object sender, EventArgs e)
         {
             LoadData();          
@@ -116,12 +114,12 @@ namespace TheGioiViecLam
         }
         private void LoadUCThueFromDatabase()
         {
-            PanelBottom.AutoScroll = true; // Tạo thanh cuộn cho panel4
+            PanelBottom.AutoScroll = true; // Kích hoạt thanh cuộn cho PanelBottom
 
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT * FROM Post");
+                string sqlStr = string.Format("SELECT * FROM PostsWithAverageRating WHERE IDJF = '{0}'", field) ;
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dataSet = new DataSet();
                 adapter.Fill(dataSet);
@@ -135,22 +133,28 @@ namespace TheGioiViecLam
                     string experience = row["Experience"].ToString();
                     string location = row["District"].ToString();
                     string postID = row["IDP"].ToString(); // Lấy giá trị IDP
+                    string WID = row["WID"].ToString();
+                    float Rating = Convert.ToInt32(row["Rating"]);
+
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
-                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
+                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
+
                     if (CheckIDPInSaves(postID))
                     {
                         uCWorkInFor.btnSave.FillColor = System.Drawing.Color.Gray;
                     }
-                    
+
                     if (uCWorkInFor.btnSave.FillColor == System.Drawing.Color.FromArgb(238, 66, 102))
                     {
                         uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);
                     }
                     else
                     {
-                        uCWorkInFor.btnSave.Click += (s, ev) => { }; // Gán một sự kiện trống
+                        // Gán một sự kiện trống
+                        uCWorkInFor.btnSave.Click += (s, ev) => { };
                     }
 
+                    // Gán giá trị cho các thành phần của UserControl
                     uCWorkInFor.txtWTime.Text = Time;
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price;
@@ -159,11 +163,12 @@ namespace TheGioiViecLam
                     uCWorkInFor.txtIDP.Text = postID;
                     uCWorkInFor.btnDelete.Enabled = false;
                     uCWorkInFor.btnDelete.Visible = false;
-                    // Đặt vị trí cho UC
+                    uCWorkInFor.ratingStar.Value = Rating;
+
+                    // Đặt vị trí cho UserControl
                     uCWorkInFor.Location = new Point(50, y);
                     y += uCWorkInFor.Height + 10; // Tăng y để tránh chồng chéo
                     PanelBottom.Controls.Add(uCWorkInFor);
-                    
                 }
             }
             catch (Exception exc)
@@ -175,6 +180,7 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
+
         private bool CheckIDPInSaves(string postID)
         {
             try
@@ -195,6 +201,7 @@ namespace TheGioiViecLam
         }
         private void cbx_cities_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cbx_districts.Items.Clear();
             string selectedCity = cbx_cities.SelectedItem.ToString();
             LoadDistrictsIntoComboBox();
         }
@@ -215,7 +222,7 @@ namespace TheGioiViecLam
                 conn.Open();
 
                 // Tạo câu truy vấn SQL ban đầu
-                string query = "SELECT * FROM dbo.Post";
+                string query = "SELECT * FROM PostsWithAverageRating";
 
                 // Nếu City và District được chọn, thêm điều kiện vào câu truy vấn
                 if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
@@ -271,14 +278,17 @@ namespace TheGioiViecLam
                     string price = reader["Cost"].ToString();
                     string experience = reader["Experience"].ToString();
                     string location = reader["District"].ToString();
-                    string postID = reader["WID"].ToString(); // Lấy giá trị IDP
+                    string postID = reader["IDP"].ToString(); // Lấy giá trị IDP
+                    string WID = reader["WID"].ToString();
+                    float Rating = Convert.ToInt32(reader["Rating"]);
+
 
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
                     if (CheckIDPInSaves(postID))
                     {
                         uCWorkInFor.btnSave.FillColor = System.Drawing.Color.Gray;
                     }
-                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
+                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
                     if (uCWorkInFor.btnSave.FillColor == System.Drawing.Color.FromArgb(238, 66, 102))
                     {
                         uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);
@@ -287,11 +297,14 @@ namespace TheGioiViecLam
                     {
                         uCWorkInFor.btnSave.Click += (s, ev) => { }; // Gán một sự kiện trống
                     }
-                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(postID, s, ev);
+                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price + "$";
                     uCWorkInFor.txtExperience.Text = experience.ToString();
                     uCWorkInFor.txtLocation.Text = location;
+                    uCWorkInFor.btnDelete.Enabled = false;
+                    uCWorkInFor.btnDelete.Visible = false;
+                    uCWorkInFor.ratingStar.Value = Rating;
 
                     // Đặt vị trí cho UC
                     uCWorkInFor.Location = new Point(50, y);
@@ -310,8 +323,6 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
-
-
         private void lbl_Home_Click(object sender, EventArgs e)
         {
             LoadData();

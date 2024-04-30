@@ -724,10 +724,11 @@
             // 
             // label5
             // 
+            this.label5.AllowDrop = true;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Coral;
-            this.label5.Location = new System.Drawing.Point(111, 44);
+            this.label5.Location = new System.Drawing.Point(111, 42);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 29);
             this.label5.TabIndex = 1;
@@ -839,8 +840,8 @@
         private Guna.UI2.WinForms.Guna2Button btn4Star;
         private Guna.UI2.WinForms.Guna2Button btn5Star;
         private Guna.UI2.WinForms.Guna2Button btnAll;
-        private Guna.UI2.WinForms.Guna2RatingStar ratingStar;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label lblNumberReview;
+        public Guna.UI2.WinForms.Guna2RatingStar ratingStar;
     }
 }

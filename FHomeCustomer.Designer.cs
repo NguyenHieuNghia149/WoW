@@ -30,7 +30,7 @@
         {
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Repairandmaintenance = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.Chart = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -60,64 +60,64 @@
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Electricians = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.paneljob = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.Familyandcare = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label14 = new System.Windows.Forms.Label();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Transport = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label25 = new System.Windows.Forms.Label();
-            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.financialandaccounting = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label24 = new System.Windows.Forms.Label();
             this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Digitalandtechnology = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label17 = new System.Windows.Forms.Label();
-            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Plumbing = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label12 = new System.Windows.Forms.Label();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Cleaningservice = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label15 = new System.Windows.Forms.Label();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Carpentry = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Mechanics = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnPost = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Repairandmaintenance)).BeginInit();
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel5.SuspendLayout();
             this.guna2CustomGradientPanel6.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Electricians)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.paneljob.SuspendLayout();
+            this.Familyandcare.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Transport)).BeginInit();
             this.guna2GradientPanel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.financialandaccounting)).BeginInit();
             this.guna2GradientPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
             this.guna2GradientPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Digitalandtechnology)).BeginInit();
             this.guna2GradientPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Plumbing)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cleaningservice)).BeginInit();
             this.guna2GradientPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Carpentry)).BeginInit();
             this.guna2GradientPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mechanics)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,17 +142,17 @@
             this.label10.Text = "Repair and maintenance \r\n";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2PictureBox1
+            // Repairandmaintenance
             // 
-            this.guna2PictureBox1.Image = global::TheGioiViecLam.Properties.Resources.undraw_automobile_repair_ywci;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(190, 106);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 6;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            this.Repairandmaintenance.Image = global::TheGioiViecLam.Properties.Resources.undraw_automobile_repair_ywci;
+            this.Repairandmaintenance.ImageRotate = 0F;
+            this.Repairandmaintenance.Location = new System.Drawing.Point(3, 4);
+            this.Repairandmaintenance.Name = "Repairandmaintenance";
+            this.Repairandmaintenance.Size = new System.Drawing.Size(190, 106);
+            this.Repairandmaintenance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Repairandmaintenance.TabIndex = 6;
+            this.Repairandmaintenance.TabStop = false;
+            this.Repairandmaintenance.Click += new System.EventHandler(this.Repairandmaintenance_Click);
             // 
             // guna2CustomGradientPanel3
             // 
@@ -483,7 +483,7 @@
             this.guna2GradientPanel1.BorderRadius = 10;
             this.guna2GradientPanel1.BorderThickness = 2;
             this.guna2GradientPanel1.Controls.Add(this.label10);
-            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2GradientPanel1.Controls.Add(this.Repairandmaintenance);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(18, 21);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(204, 140);
@@ -509,16 +509,17 @@
             this.guna2GradientCircleButton1.Size = new System.Drawing.Size(46, 36);
             this.guna2GradientCircleButton1.TabIndex = 12;
             // 
-            // guna2PictureBox2
+            // Electricians
             // 
-            this.guna2PictureBox2.Image = global::TheGioiViecLam.Properties.Resources.undraw_electricity_k2ft;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 4);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(190, 106);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 6;
-            this.guna2PictureBox2.TabStop = false;
+            this.Electricians.Image = global::TheGioiViecLam.Properties.Resources.undraw_electricity_k2ft;
+            this.Electricians.ImageRotate = 0F;
+            this.Electricians.Location = new System.Drawing.Point(3, 4);
+            this.Electricians.Name = "Electricians";
+            this.Electricians.Size = new System.Drawing.Size(190, 106);
+            this.Electricians.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Electricians.TabIndex = 6;
+            this.Electricians.TabStop = false;
+            this.Electricians.Click += new System.EventHandler(this.Electricians_Click);
             // 
             // label13
             // 
@@ -566,27 +567,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to WoW";
             // 
-            // paneljob
+            // Familyandcare
             // 
-            this.paneljob.BorderRadius = 28;
-            this.paneljob.Controls.Add(this.guna2GradientPanel5);
-            this.paneljob.Controls.Add(this.guna2GradientPanel10);
-            this.paneljob.Controls.Add(this.guna2GradientPanel9);
-            this.paneljob.Controls.Add(this.guna2GradientPanel7);
-            this.paneljob.Controls.Add(this.guna2GradientPanel8);
-            this.paneljob.Controls.Add(this.guna2GradientPanel3);
-            this.paneljob.Controls.Add(this.guna2GradientPanel6);
-            this.paneljob.Controls.Add(this.guna2GradientPanel4);
-            this.paneljob.Controls.Add(this.guna2GradientPanel2);
-            this.paneljob.Controls.Add(this.guna2GradientPanel1);
-            this.paneljob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.paneljob.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.paneljob.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.paneljob.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.paneljob.Location = new System.Drawing.Point(7, 194);
-            this.paneljob.Name = "paneljob";
-            this.paneljob.Size = new System.Drawing.Size(460, 480);
-            this.paneljob.TabIndex = 13;
+            this.Familyandcare.BorderRadius = 28;
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel5);
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel10);
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel9);
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel7);
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel8);
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel3);
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel6);
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel4);
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel2);
+            this.Familyandcare.Controls.Add(this.guna2GradientPanel1);
+            this.Familyandcare.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.Familyandcare.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.Familyandcare.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.Familyandcare.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.Familyandcare.Location = new System.Drawing.Point(7, 194);
+            this.Familyandcare.Name = "Familyandcare";
+            this.Familyandcare.Size = new System.Drawing.Size(460, 486);
+            this.Familyandcare.TabIndex = 13;
             // 
             // guna2GradientPanel5
             // 
@@ -594,7 +595,7 @@
             this.guna2GradientPanel5.BorderRadius = 10;
             this.guna2GradientPanel5.BorderThickness = 2;
             this.guna2GradientPanel5.Controls.Add(this.label14);
-            this.guna2GradientPanel5.Controls.Add(this.guna2PictureBox5);
+            this.guna2GradientPanel5.Controls.Add(this.Transport);
             this.guna2GradientPanel5.Location = new System.Drawing.Point(18, 459);
             this.guna2GradientPanel5.Name = "guna2GradientPanel5";
             this.guna2GradientPanel5.Size = new System.Drawing.Size(204, 140);
@@ -610,16 +611,17 @@
             this.label14.TabIndex = 6;
             this.label14.Text = "Transport";
             // 
-            // guna2PictureBox5
+            // Transport
             // 
-            this.guna2PictureBox5.Image = global::TheGioiViecLam.Properties.Resources.delivery_truck;
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(53, 27);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(93, 63);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox5.TabIndex = 6;
-            this.guna2PictureBox5.TabStop = false;
+            this.Transport.Image = global::TheGioiViecLam.Properties.Resources.delivery_truck;
+            this.Transport.ImageRotate = 0F;
+            this.Transport.Location = new System.Drawing.Point(53, 27);
+            this.Transport.Name = "Transport";
+            this.Transport.Size = new System.Drawing.Size(93, 63);
+            this.Transport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Transport.TabIndex = 6;
+            this.Transport.TabStop = false;
+            this.Transport.Click += new System.EventHandler(this.Transport_Click);
             // 
             // guna2GradientPanel10
             // 
@@ -627,7 +629,7 @@
             this.guna2GradientPanel10.BorderRadius = 10;
             this.guna2GradientPanel10.BorderThickness = 2;
             this.guna2GradientPanel10.Controls.Add(this.label25);
-            this.guna2GradientPanel10.Controls.Add(this.guna2PictureBox10);
+            this.guna2GradientPanel10.Controls.Add(this.financialandaccounting);
             this.guna2GradientPanel10.Location = new System.Drawing.Point(234, 611);
             this.guna2GradientPanel10.Name = "guna2GradientPanel10";
             this.guna2GradientPanel10.Size = new System.Drawing.Size(204, 140);
@@ -643,16 +645,17 @@
             this.label25.TabIndex = 6;
             this.label25.Text = "financial and accounting";
             // 
-            // guna2PictureBox10
+            // financialandaccounting
             // 
-            this.guna2PictureBox10.Image = global::TheGioiViecLam.Properties.Resources.accounting;
-            this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(53, 27);
-            this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(93, 63);
-            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox10.TabIndex = 6;
-            this.guna2PictureBox10.TabStop = false;
+            this.financialandaccounting.Image = global::TheGioiViecLam.Properties.Resources.accounting;
+            this.financialandaccounting.ImageRotate = 0F;
+            this.financialandaccounting.Location = new System.Drawing.Point(53, 27);
+            this.financialandaccounting.Name = "financialandaccounting";
+            this.financialandaccounting.Size = new System.Drawing.Size(93, 63);
+            this.financialandaccounting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.financialandaccounting.TabIndex = 6;
+            this.financialandaccounting.TabStop = false;
+            this.financialandaccounting.Click += new System.EventHandler(this.financialandaccounting_Click);
             // 
             // guna2GradientPanel9
             // 
@@ -686,29 +689,31 @@
             this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox9.TabIndex = 6;
             this.guna2PictureBox9.TabStop = false;
+            this.guna2PictureBox9.Click += new System.EventHandler(this.guna2PictureBox9_Click);
             // 
             // guna2GradientPanel7
             // 
             this.guna2GradientPanel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel7.BorderRadius = 10;
             this.guna2GradientPanel7.BorderThickness = 2;
-            this.guna2GradientPanel7.Controls.Add(this.guna2PictureBox7);
+            this.guna2GradientPanel7.Controls.Add(this.Digitalandtechnology);
             this.guna2GradientPanel7.Controls.Add(this.label16);
             this.guna2GradientPanel7.Location = new System.Drawing.Point(231, 459);
             this.guna2GradientPanel7.Name = "guna2GradientPanel7";
             this.guna2GradientPanel7.Size = new System.Drawing.Size(204, 140);
             this.guna2GradientPanel7.TabIndex = 9;
             // 
-            // guna2PictureBox7
+            // Digitalandtechnology
             // 
-            this.guna2PictureBox7.Image = global::TheGioiViecLam.Properties.Resources.digital_services;
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(50, 27);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(93, 63);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox7.TabIndex = 7;
-            this.guna2PictureBox7.TabStop = false;
+            this.Digitalandtechnology.Image = global::TheGioiViecLam.Properties.Resources.digital_services;
+            this.Digitalandtechnology.ImageRotate = 0F;
+            this.Digitalandtechnology.Location = new System.Drawing.Point(50, 27);
+            this.Digitalandtechnology.Name = "Digitalandtechnology";
+            this.Digitalandtechnology.Size = new System.Drawing.Size(93, 63);
+            this.Digitalandtechnology.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Digitalandtechnology.TabIndex = 7;
+            this.Digitalandtechnology.TabStop = false;
+            this.Digitalandtechnology.Click += new System.EventHandler(this.Digitalandtechnology_Click);
             // 
             // label16
             // 
@@ -726,7 +731,7 @@
             this.guna2GradientPanel8.BorderRadius = 10;
             this.guna2GradientPanel8.BorderThickness = 2;
             this.guna2GradientPanel8.Controls.Add(this.label17);
-            this.guna2GradientPanel8.Controls.Add(this.guna2PictureBox8);
+            this.guna2GradientPanel8.Controls.Add(this.Plumbing);
             this.guna2GradientPanel8.Location = new System.Drawing.Point(231, 313);
             this.guna2GradientPanel8.Name = "guna2GradientPanel8";
             this.guna2GradientPanel8.Size = new System.Drawing.Size(204, 140);
@@ -742,16 +747,17 @@
             this.label17.TabIndex = 6;
             this.label17.Text = "Plumbing";
             // 
-            // guna2PictureBox8
+            // Plumbing
             // 
-            this.guna2PictureBox8.Image = global::TheGioiViecLam.Properties.Resources.pipe;
-            this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(40, 31);
-            this.guna2PictureBox8.Name = "guna2PictureBox8";
-            this.guna2PictureBox8.Size = new System.Drawing.Size(106, 56);
-            this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox8.TabIndex = 6;
-            this.guna2PictureBox8.TabStop = false;
+            this.Plumbing.Image = global::TheGioiViecLam.Properties.Resources.pipe;
+            this.Plumbing.ImageRotate = 0F;
+            this.Plumbing.Location = new System.Drawing.Point(40, 31);
+            this.Plumbing.Name = "Plumbing";
+            this.Plumbing.Size = new System.Drawing.Size(106, 56);
+            this.Plumbing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Plumbing.TabIndex = 6;
+            this.Plumbing.TabStop = false;
+            this.Plumbing.Click += new System.EventHandler(this.Plumbing_Click);
             // 
             // guna2GradientPanel3
             // 
@@ -759,7 +765,7 @@
             this.guna2GradientPanel3.BorderRadius = 10;
             this.guna2GradientPanel3.BorderThickness = 2;
             this.guna2GradientPanel3.Controls.Add(this.label12);
-            this.guna2GradientPanel3.Controls.Add(this.guna2PictureBox3);
+            this.guna2GradientPanel3.Controls.Add(this.Cleaningservice);
             this.guna2GradientPanel3.Location = new System.Drawing.Point(18, 167);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(204, 140);
@@ -775,16 +781,17 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Cleaning service ";
             // 
-            // guna2PictureBox3
+            // Cleaningservice
             // 
-            this.guna2PictureBox3.Image = global::TheGioiViecLam.Properties.Resources.undraw_Clean_up_re_504g;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(190, 107);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 6;
-            this.guna2PictureBox3.TabStop = false;
+            this.Cleaningservice.Image = global::TheGioiViecLam.Properties.Resources.undraw_Clean_up_re_504g;
+            this.Cleaningservice.ImageRotate = 0F;
+            this.Cleaningservice.Location = new System.Drawing.Point(3, 3);
+            this.Cleaningservice.Name = "Cleaningservice";
+            this.Cleaningservice.Size = new System.Drawing.Size(190, 107);
+            this.Cleaningservice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Cleaningservice.TabIndex = 6;
+            this.Cleaningservice.TabStop = false;
+            this.Cleaningservice.Click += new System.EventHandler(this.Cleaningservice_Click);
             // 
             // guna2GradientPanel6
             // 
@@ -792,7 +799,7 @@
             this.guna2GradientPanel6.BorderRadius = 10;
             this.guna2GradientPanel6.BorderThickness = 2;
             this.guna2GradientPanel6.Controls.Add(this.label15);
-            this.guna2GradientPanel6.Controls.Add(this.guna2PictureBox6);
+            this.guna2GradientPanel6.Controls.Add(this.Carpentry);
             this.guna2GradientPanel6.Location = new System.Drawing.Point(18, 313);
             this.guna2GradientPanel6.Name = "guna2GradientPanel6";
             this.guna2GradientPanel6.Size = new System.Drawing.Size(204, 140);
@@ -808,39 +815,41 @@
             this.label15.TabIndex = 6;
             this.label15.Text = "Carpentry";
             // 
-            // guna2PictureBox6
+            // Carpentry
             // 
-            this.guna2PictureBox6.Image = global::TheGioiViecLam.Properties.Resources.undraw_winter_activities_vv0v;
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(3, 3);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(190, 107);
-            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox6.TabIndex = 6;
-            this.guna2PictureBox6.TabStop = false;
+            this.Carpentry.Image = global::TheGioiViecLam.Properties.Resources.undraw_winter_activities_vv0v;
+            this.Carpentry.ImageRotate = 0F;
+            this.Carpentry.Location = new System.Drawing.Point(3, 3);
+            this.Carpentry.Name = "Carpentry";
+            this.Carpentry.Size = new System.Drawing.Size(190, 107);
+            this.Carpentry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Carpentry.TabIndex = 6;
+            this.Carpentry.TabStop = false;
+            this.Carpentry.Click += new System.EventHandler(this.Carpentry_Click);
             // 
             // guna2GradientPanel4
             // 
             this.guna2GradientPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
             this.guna2GradientPanel4.BorderRadius = 10;
             this.guna2GradientPanel4.BorderThickness = 2;
-            this.guna2GradientPanel4.Controls.Add(this.guna2PictureBox4);
+            this.guna2GradientPanel4.Controls.Add(this.Mechanics);
             this.guna2GradientPanel4.Controls.Add(this.label13);
             this.guna2GradientPanel4.Location = new System.Drawing.Point(231, 167);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
             this.guna2GradientPanel4.Size = new System.Drawing.Size(204, 140);
             this.guna2GradientPanel4.TabIndex = 8;
             // 
-            // guna2PictureBox4
+            // Mechanics
             // 
-            this.guna2PictureBox4.Image = global::TheGioiViecLam.Properties.Resources.mechanic;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(40, 21);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(106, 56);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 7;
-            this.guna2PictureBox4.TabStop = false;
+            this.Mechanics.Image = global::TheGioiViecLam.Properties.Resources.mechanic;
+            this.Mechanics.ImageRotate = 0F;
+            this.Mechanics.Location = new System.Drawing.Point(40, 21);
+            this.Mechanics.Name = "Mechanics";
+            this.Mechanics.Size = new System.Drawing.Size(106, 56);
+            this.Mechanics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Mechanics.TabIndex = 7;
+            this.Mechanics.TabStop = false;
+            this.Mechanics.Click += new System.EventHandler(this.Mechanics_Click);
             // 
             // guna2GradientPanel2
             // 
@@ -848,7 +857,7 @@
             this.guna2GradientPanel2.BorderRadius = 10;
             this.guna2GradientPanel2.BorderThickness = 2;
             this.guna2GradientPanel2.Controls.Add(this.label11);
-            this.guna2GradientPanel2.Controls.Add(this.guna2PictureBox2);
+            this.guna2GradientPanel2.Controls.Add(this.Electricians);
             this.guna2GradientPanel2.Location = new System.Drawing.Point(231, 21);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(204, 140);
@@ -906,14 +915,14 @@
             this.Controls.Add(this.guna2CustomGradientPanel6);
             this.Controls.Add(this.guna2GradientCircleButton1);
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Controls.Add(this.paneljob);
+            this.Controls.Add(this.Familyandcare);
             this.Controls.Add(this.txtSearch);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FHomeCustomer";
             this.Text = "FHomeCustomer";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Repairandmaintenance)).EndInit();
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
             this.guna2CustomGradientPanel4.ResumeLayout(false);
@@ -926,34 +935,34 @@
             this.guna2CustomGradientPanel6.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Electricians)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            this.paneljob.ResumeLayout(false);
+            this.Familyandcare.ResumeLayout(false);
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2GradientPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Transport)).EndInit();
             this.guna2GradientPanel10.ResumeLayout(false);
             this.guna2GradientPanel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.financialandaccounting)).EndInit();
             this.guna2GradientPanel9.ResumeLayout(false);
             this.guna2GradientPanel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
             this.guna2GradientPanel7.ResumeLayout(false);
             this.guna2GradientPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Digitalandtechnology)).EndInit();
             this.guna2GradientPanel8.ResumeLayout(false);
             this.guna2GradientPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Plumbing)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cleaningservice)).EndInit();
             this.guna2GradientPanel6.ResumeLayout(false);
             this.guna2GradientPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Carpentry)).EndInit();
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mechanics)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -964,7 +973,7 @@
 
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox Repairandmaintenance;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private System.Windows.Forms.Label Chart;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
@@ -994,35 +1003,35 @@
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;
-        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        public Guna.UI2.WinForms.Guna2PictureBox Electricians;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel paneljob;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel Familyandcare;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        private Guna.UI2.WinForms.Guna2PictureBox Transport;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel10;
         private System.Windows.Forms.Label label25;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox10;
+        private Guna.UI2.WinForms.Guna2PictureBox financialandaccounting;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
         private System.Windows.Forms.Label label24;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox9;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
+        private Guna.UI2.WinForms.Guna2PictureBox Digitalandtechnology;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
         private System.Windows.Forms.Label label17;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
+        private Guna.UI2.WinForms.Guna2PictureBox Plumbing;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox Cleaningservice;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
         private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
+        private Guna.UI2.WinForms.Guna2PictureBox Carpentry;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private Guna.UI2.WinForms.Guna2PictureBox Mechanics;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         public Guna.UI2.WinForms.Guna2Button btnPost;

@@ -123,7 +123,7 @@
             this.guna2PictureBox1.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(258, 215);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -294,6 +294,7 @@
             this.ratingStar.Location = new System.Drawing.Point(650, 137);
             this.ratingStar.Name = "ratingStar";
             this.ratingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(153)))), ((int)(((byte)(92)))));
+            this.ratingStar.ReadOnly = true;
             this.ratingStar.Size = new System.Drawing.Size(112, 22);
             this.ratingStar.TabIndex = 37;
             // 
@@ -376,7 +377,7 @@
             this.Controls.Add(this.txtIDP);
             this.Controls.Add(this.guna2PictureBox1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCWorkInFor";
             this.Size = new System.Drawing.Size(860, 265);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -404,9 +405,9 @@
         public Guna.UI2.WinForms.Guna2TextBox txtWTime;
         private System.Windows.Forms.Label lblReview;
         public Guna.UI2.WinForms.Guna2Button btnSave;
-        private Guna.UI2.WinForms.Guna2RatingStar ratingStar;
         public Guna.UI2.WinForms.Guna2TextBox txtCost;
         public Guna.UI2.WinForms.Guna2TextBox txtLocation;
         private System.Windows.Forms.Label lblLocation;
+        public Guna.UI2.WinForms.Guna2RatingStar ratingStar;
     }
 }

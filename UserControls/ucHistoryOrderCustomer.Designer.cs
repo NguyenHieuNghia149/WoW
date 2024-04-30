@@ -50,7 +50,7 @@
             this.picturebox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.jobField = new System.Windows.Forms.Label();
+            this.lblJobField = new System.Windows.Forms.Label();
             this.lblstatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -80,7 +80,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(955, 279);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // guna2Separator3
             // 
@@ -110,7 +109,6 @@
             this.lblMinutes.Size = new System.Drawing.Size(95, 21);
             this.lblMinutes.TabIndex = 11;
             this.lblMinutes.Text = "time: 1h30 ";
-            this.lblMinutes.Click += new System.EventHandler(this.lblMinutes_Click);
             // 
             // label3
             // 
@@ -132,7 +130,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(952, 60);
             this.panel4.TabIndex = 9;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // guna2Separator4
             // 
@@ -159,7 +156,6 @@
             this.btnbomb.Size = new System.Drawing.Size(180, 45);
             this.btnbomb.TabIndex = 2;
             this.btnbomb.Text = "Bomb";
-            this.btnbomb.Click += new System.EventHandler(this.btnbomb_Click);
             // 
             // btnReview
             // 
@@ -310,7 +306,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.guna2Separator1);
-            this.panel2.Controls.Add(this.jobField);
+            this.panel2.Controls.Add(this.lblJobField);
             this.panel2.Controls.Add(this.lblstatus);
             this.panel2.Location = new System.Drawing.Point(0, 3);
             this.panel2.Name = "panel2";
@@ -326,15 +322,15 @@
             this.guna2Separator1.Size = new System.Drawing.Size(987, 10);
             this.guna2Separator1.TabIndex = 13;
             // 
-            // jobField
+            // lblJobField
             // 
-            this.jobField.AutoSize = true;
-            this.jobField.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.jobField.Location = new System.Drawing.Point(39, 10);
-            this.jobField.Name = "jobField";
-            this.jobField.Size = new System.Drawing.Size(69, 29);
-            this.jobField.TabIndex = 1;
-            this.jobField.Text = "CARS";
+            this.lblJobField.AutoSize = true;
+            this.lblJobField.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.lblJobField.Location = new System.Drawing.Point(39, 10);
+            this.lblJobField.Name = "lblJobField";
+            this.lblJobField.Size = new System.Drawing.Size(69, 29);
+            this.lblJobField.TabIndex = 1;
+            this.lblJobField.Text = "CARS";
             // 
             // lblstatus
             // 
@@ -379,7 +375,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label lblstatus;
-        public System.Windows.Forms.Label jobField;
+        public System.Windows.Forms.Label lblJobField;
         public System.Windows.Forms.Label lbljobname;
         public System.Windows.Forms.Label lblHours;
         public System.Windows.Forms.Label lblviewmore;
