@@ -432,3 +432,27 @@ LEFT JOIN
     JobField jf ON j.IDJF = jf.IDJF -- Liên kết bảng JobField để lấy IDJF
 GROUP BY 
     p.IDP, p.WTime, p.JobName, p.Cost, p.Experience, p.District, p.WID, p.City, p.Email, p.PhoneNum, p.IDJ, j.IDJF; -- Thêm j.IDJF vào danh sách GROUP BY
+
+-- THEM BANG CHO WORKER BOOK
+CREATE TABLE WorkerBook (
+	OrderNum INT IDENTITY (1, 1),
+	RequireID INT,
+	WEmail char(20),
+)
+GO
+
+CREATE FUNCTION fnCheckBook(@requireID INT, @wEmail Nchar(20))
+RETURNS INT 
+AS
+BEGIN
+DECLARE @n INT
+IF(EXISTS(SELECT * FROM WorkerBook WHERE RequireID = @requireID AND WEmail = @wEmail))
+	BEGIN
+		SELECT @n = 1
+	END
+ELSE
+	BEGIN
+		SELECT @n = 0
+	END
+RETURN @n
+END

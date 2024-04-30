@@ -37,8 +37,8 @@ namespace TheGioiViecLam.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=worldofwork;Integrated Securit" +
-            "y=True;MultipleActiveResultSets=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=huhu;Integrated Security=True;" +
+            "MultipleActiveResultSets=True")]
         public string City {
             get {
                 return ((string)(this["City"]));

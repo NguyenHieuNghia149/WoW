@@ -55,7 +55,7 @@ namespace TheGioiViecLam
 
                     UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer(); //phải tạo UC trong vòng lặp
 
-                    ucHis.btnViewDetail.Click += (s, ev) => UCHis_btnViewDetail_Click(RequireID, s, ev); //view detail
+                    ucHis.btnViewDetail.Click += (s, ev) => UCHis_btnViewDetail_Click(RequireID, account, s, ev); //view detail
                     ucHis.txtRequireID.Visible = false;
 
                     ucHis.txtRequireID.Text = "0000" + RequireID;
@@ -98,9 +98,9 @@ namespace TheGioiViecLam
             LoadUCRequire_FromDatabase();
         }
 
-        private void UCHis_btnViewDetail_Click(string RequireID, object sender, EventArgs e)
+        private void UCHis_btnViewDetail_Click(string RequireID, string account, object sender, EventArgs e)
         {
-            FViewRequire_Detail_Worker form = new FViewRequire_Detail_Worker(RequireID);
+            FViewRequire_Detail_Worker form = new FViewRequire_Detail_Worker(RequireID, account);
             form.ShowDialog();
         }
     }

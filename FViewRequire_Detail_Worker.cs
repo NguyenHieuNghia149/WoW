@@ -19,13 +19,17 @@ namespace TheGioiViecLam
 {
     public partial class FViewRequire_Detail_Worker : Form
     {
+        public string account;
         public string ID;
         DBConnection db = new DBConnection();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public FViewRequire_Detail_Worker(string ID)
+        public FViewRequire_Detail_Worker(string ID, string account)
         {
+            this.ID = ID;
+            this.account = account;
             InitializeComponent();
             LoadIntoTextbox(ID);
+            LoadBtn();
         }
         private void LoadIntoTextbox(string ID)
         {
@@ -68,6 +72,56 @@ namespace TheGioiViecLam
             finally
             {
                 conn.Close();
+            }
+        }
+
+        private void LoadBtn()
+        {
+            try
+            {
+                conn.Open();
+                string query = string.Format("SELECT checknum = dbo.fnCheckBook({0},'{1}')", ID, account);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int checknum = int.Parse(reader["checknum"].ToString());
+                    if(checknum == 1)
+                        btnBook.Enabled = false;
+                    else
+                        btnBook.Enabled = true;
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnBook_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = string.Format("INSERT INTO WorkerBook(RequireID,WEmail) VALUES ({0},'{1}')",ID,account);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                db.Execute(query);
+                LoadBtn();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
     }

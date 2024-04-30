@@ -45,8 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.panel_His = new System.Windows.Forms.Panel();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBook = new Guna.UI2.WinForms.Guna2Button();
             this.lblCity = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel_His.SuspendLayout();
             this.SuspendLayout();
@@ -335,7 +336,8 @@
             this.panel_His.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.panel_His.BackColor = System.Drawing.Color.White;
             this.panel_His.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_His.Controls.Add(this.guna2Button1);
+            this.panel_His.Controls.Add(this.btnCancel);
+            this.panel_His.Controls.Add(this.btnBook);
             this.panel_His.Controls.Add(this.txtDetail);
             this.panel_His.Controls.Add(this.txtCity);
             this.panel_His.Controls.Add(this.lblJobName);
@@ -359,6 +361,40 @@
             this.panel_His.Size = new System.Drawing.Size(1118, 574);
             this.panel_His.TabIndex = 11;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(688, 481);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(178, 45);
+            this.btnCancel.TabIndex = 83;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnBook
+            // 
+            this.btnBook.BorderRadius = 10;
+            this.btnBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnBook.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBook.ForeColor = System.Drawing.Color.White;
+            this.btnBook.Location = new System.Drawing.Point(902, 481);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Size = new System.Drawing.Size(178, 45);
+            this.btnBook.TabIndex = 82;
+            this.btnBook.Text = "Book";
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
+            // 
             // lblCity
             // 
             this.lblCity.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
@@ -369,22 +405,6 @@
             this.lblCity.Size = new System.Drawing.Size(44, 24);
             this.lblCity.TabIndex = 67;
             this.lblCity.Text = "City";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(918, 481);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(178, 45);
-            this.guna2Button1.TabIndex = 82;
-            this.guna2Button1.Text = "Book";
             // 
             // guna2BorderlessForm1
             // 
@@ -425,8 +445,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Panel panel_His;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnBook;
         private System.Windows.Forms.Label lblCity;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
     }
 }
