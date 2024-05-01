@@ -214,6 +214,7 @@
             this.btnStatific.Name = "btnStatific";
             this.btnStatific.Size = new System.Drawing.Size(53, 52);
             this.btnStatific.TabIndex = 23;
+            this.btnStatific.Click += new System.EventHandler(this.btnStatific_Click);
             // 
             // btnSignOut
             // 

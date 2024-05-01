@@ -166,8 +166,6 @@ create table dbo.Post(
 
 Go
 ----Trigger nhap vao Post (Nhap nhung thong tin con lai)
-
---DROP TRIGGER tg_Insert_Post
 CREATE TRIGGER tg_Insert_Post ON Post 
 FOR INSERT, UPDATE AS
 BEGIN
@@ -197,109 +195,6 @@ BEGIN
 	
 	INSERT INTO Post(IDP,Email,JobName,WTime,Cost,Detail,Experience, WID)
 	VALUES(@IDP,@Email,@JobName,@WTime,@Cost,@Detail,@Experience,@WID)
-END
-GO
-
-----Procedure update vao Post co WID
-CREATE PROCEDURE pd_Update_Post_(@IDP NCHAR(20),@Email CHAR(20),@JobName NCHAR(20),
-	@WTime NCHAR(20),@Cost NCHAR(20),@Detail NCHAR(20),@Experience NCHAR(20)) AS
-BEGIN
-	DECLARE @WID NCHAR(20)
-	SELECT @WID = WID FROM Worker WHERE WEmail = @Email
-	
-	UPDATE Post SET Email = @Email,JobName = @JobName,WTime = @WTime,
-	CREATE TABLE TaiXe (
-    MaTaiXe INT,
-    HoTen NVARCHAR(100) NOT NULL,
-    NgaySinh DATE,
-    GioiTinh NVARCHAR(10) ,
-    DiaChi NVARCHAR(255) ,
-    SoDienThoai NVARCHAR(20) NOT NULL,
-    TrangThai NVARCHAR(50) ,
-    CONSTRAINT PK_TaiXe PRIMARY KEY (MaTaiXe)
-);
-go
--- Tạo bảng xe
-CREATE TABLE Xe (
-    MaXe INT,
-    BienSoXe NVARCHAR(20) NOT NULL,
-    LoaiXe NVARCHAR(50) NOT NULL,
-    TrangThai NVARCHAR(50) NOT NULL,
-    DoTai FLOAT NOT NULL, 
-    KhongGianHamChua FLOAT NOT NULL,
-    SoGhe INT NOT NULL,
-    CONSTRAINT PK_Xe PRIMARY KEY (MaXe)
-);
-go
-
--- Tạo bảng lộ trình
-CREATE TABLE LoTrinh (
-    MaLoTrinh INT,
-    TenLoTrinh NVARCHAR(100) NOT NULL,
-    DiemXuatPhat NVARCHAR(255) NOT NULL,
-    DiemKetThuc NVARCHAR(255) NOT NULL,
-    Mota NVARCHAR(MAX),
-    TrangThai NVARCHAR(50) NOT NULL,
-    CONSTRAINT PK_LoTrinh PRIMARY KEY (MaLoTrinh)
-);
-go
--- Tạo bảng chuyến đi
-CREATE TABLE ChuyenDi (
-    MaChuyenDi INT,
-    MaLoTrinh INT,
-    ThoiDiemXuatPhat DATETIME NOT NULL,
-    ThoiDiemKetThuc DATETIME NOT NULL,
-    SoGheTrong INT NOT NULL,
-    TrangThai NVARCHAR(30),
-    CONSTRAINT PK_ChuyenDi PRIMARY KEY (MaChuyenDi),
-    CONSTRAINT FK_ChuyenDi_LoTrinh FOREIGN KEY (MaLoTrinh) REFERENCES LoTrinh(MaLoTrinh)
-);
-go
--- Tạo bảng khách hàng
-CREATE TABLE KhachHang (
-    MaKhachHang INT,
-    HoTen NVARCHAR(100) NOT NULL,
-    SoDienThoai NVARCHAR(20) NOT NULL,
-    DiaChi NVARCHAR(255),
-    CONSTRAINT PK_KhachHang PRIMARY KEY (MaKhachHang)
-);
-go
--- Tạo bảng hàng hoá gửi
-CREATE TABLE HangHoaGui (
-    MaHangHoa INT,
-    MaKhachHang INT,
-    TenHangHoa NVARCHAR(100) NOT NULL,
-    LoaiHang NVARCHAR(100) NOT NULL,
-    KichThuoc FLOAT NOT NULL,
-    KhoiLuong FLOAT NOT NULL,
-    TrangThai NVARCHAR(50) NOT NULL,
-    MaChuyenDi INT,
-    CONSTRAINT PK_HangHoaGui PRIMARY KEY (MaHangHoa),
-    CONSTRAINT FK_HangHoaGui_KhachHang FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang),
-	CONSTRAINT FK_HangHoaGui_ChuyenDi FOREIGN KEY (MaChuyenDi) REFERENCES ChuyenDi(MaChuyenDi)
-);
-go
--- Tạo bảng tham gia
-CREATE TABLE ThamGia (
-    MaKhachHang INT,
-    MaChuyenDi INT,
-    ChiPhi FLOAT NOT NULL,
-	SoGheMua INT,
-    CONSTRAINT PK_ThamGia PRIMARY KEY (MaKhachHang, MaChuyenDi),
-    CONSTRAINT FK_ThamGia_KhachHang FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang),
-    CONSTRAINT FK_ThamGia_ChuyenDi FOREIGN KEY (MaChuyenDi) REFERENCES ChuyenDi(MaChuyenDi)
-);
-go
--- Tạo bảng khởi hành
-CREATE TABLE KhoiHanh (
-    MaTaiXe INT,
-    MaChuyenDi INT,
-    MaXe INT,
-    CONSTRAINT PK_KhoiHanh PRIMARY KEY (MaTaiXe, MaChuyenDi, MaXe),
-    CONSTRAINT FK_KhoiHanh_TaiXe FOREIGN KEY (MaTaiXe) REFERENCES TaiXe(MaTaiXe),
-    CONSTRAINT FK_KhoiHanh_ChuyenDi FOREIGN KEY (MaChuyenDi) REFERENCES ChuyenDi(MaChuyenDi),
-    CONSTRAINT FK_KhoiHanh_Xe FOREIGN KEY (MaXe) REFERENCES Xe(MaXe)
-);	Cost = @Cost,Detail = @Detail,Experience = @Experience, WID = @WID WHERE IDP = @IDP
 END
 GO
 
@@ -347,10 +242,6 @@ go
 SELECT Customer.Fullname as fullname,Orders.OrderNum as OrderNum, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = 'Anh@gmail.com' and Customer.CEmail = Orders.CEmail
 
 ----------Data cho FRequirement_Jobs----------
---B1: 
-DROP TABLE Requirement
-GO
---B2 :
 CREATE TABLE Requirement(
 	OrderNum INT IDENTITY (1, 1),
 	RequireID INT,
@@ -369,10 +260,6 @@ CREATE TABLE Requirement(
 GO
 
 --Procedure nhap Requirement---
---B3:
-DROP PROCEDURE pd_Requirement_Insert
-GO
---B4 :
 CREATE PROCEDURE pd_Requirement_Insert(@RequireID INT,@CEmail Char(50),@JobName Nchar(500),@Detail Nchar(500)) AS
 BEGIN
 	DECLARE @CGender Nchar(20),@FullName Nchar(20),@City Nchar(20),
@@ -386,7 +273,6 @@ BEGIN
 END
 GO
 
---B5 : 
 EXEC pd_Requirement_Insert 1,'Nam@gmail.com','Fixing cars',
 	'My car has a flat tire and scratches on the outside paint. I need a mechanic who can replace all 4 wheels because I think they are quite old, and replace the entire outside paint. My house has a garden and a hose, I need you to do it right at my house because I cant move my car anywhere.'
 EXEC pd_Requirement_Insert 2,'Nam@gmail.com','Painting Walls',
@@ -455,4 +341,39 @@ ELSE
 		SELECT @n = 0
 	END
 RETURN @n
+END
+
+-- THEM BANG LUONG CHO WORKER
+CREATE TABLE Salary(
+	OrderNum INT IDENTITY (1, 1),
+	ReceiveTime DATETIME,
+	WID Nchar(20),
+	WEmail char(50),
+	Charge char(50),
+	IDP Nchar(20),
+	foreign key (WID)  references Worker(WID),
+	foreign key (IDP)  references Post(IDP),
+)
+GO
+
+CREATE PROCEDURE spInsertSalary(@wEmail char(50), @idp nchar(20)) AS
+BEGIN
+	DECLARE @wid Nchar(20), @receiveTime DATE, @charge char(50)
+	SELECT @receiveTime = GETDATE()
+	SELECT @wid = WID FROM Worker WHERE WEmail = @wEmail
+	SELECT @charge = Cost FROM Post WHERE IDP = @idp
+	INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES (@receiveTime,@wid,@wEmail,@charge,@idp)
+END
+GO
+
+EXEC spInsertSalary 'Anh@gmail.com','P00001'
+GO
+
+CREATE FUNCTION fnSelectSalary(@wEmail char(50), @month char(20))
+RETURNS INT 
+AS
+BEGIN
+	DECLARE @sumSalary INT
+	SELECT @sumSalary = SUM(CAST(Charge AS INT)) FROM Salary WHERE WEmail = @wEmail AND @month = MONTH (ReceiveTime)
+	RETURN @sumSalary
 END

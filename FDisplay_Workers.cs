@@ -68,6 +68,9 @@ namespace TheGioiViecLam
             OpenChildForm(new FHomeWorker(account));
         }
 
-     
+        private void btnStatific_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FSalary_Worker(account));
+        }
     }
 }
