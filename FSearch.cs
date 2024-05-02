@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Windows.Media;
 using TheGioiViecLam.model;
+using System.Collections;
 
 namespace TheGioiViecLam
 {
@@ -20,39 +21,38 @@ namespace TheGioiViecLam
         UCWorkInFor uc_workinfor = new UCWorkInFor();
         public string postID;
         public string account;
-        public string field;
-        public FSearch(string account,string field)
+        public string jobfield;
+        public FSearch(string account, string jobfield)
         {
             InitializeComponent();
             this.account = account;
-            this.field = field;
+            this.jobfield = jobfield;
             paneFilter.Visible = false;
         }
 
-        private void ucWorkInFor_Click(string wid,string postID, object sender, EventArgs e)
+        private void ucWorkInFor_Click(string wid, string postID, object sender, EventArgs e)
         {
-            
+
             if (sender is UCWorkInFor uCWorkInFor)
             {
-                FWorkdetail form = new FWorkdetail(wid,postID, account);
+                FWorkdetail form = new FWorkdetail(wid, postID, account);
                 form.Show();
-            }         
+            }
         }
 
 
         private void BtnSave_Click(string postID, object sender, EventArgs e)
         {
-             string sql = string.Format("INSERT INTO Saves (IDP, CEmail) VALUES ('{0}', '{1}')", postID, account);
-             db.Execute(sql);
-             LoadData();
+            string sql = string.Format("INSERT INTO Saves (IDP, CEmail) VALUES ('{0}', '{1}')", postID, account);
+            db.Execute(sql);
+            LoadData();
         }
         public void FHome_Load(object sender, EventArgs e)
         {
-            LoadData();          
+            LoadData();
         }
         private void LoadData()
         {
-            // Đặt mã xử lý logic ở đây, ví dụ:
             LoadUCThueFromDatabase();
             LoadCitiesIntoComboBox();
         }
@@ -61,7 +61,7 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string query = "SELECT DISTINCT City FROM dbo.Post"; // Sử dụng DISTINCT để lấy các thành phố duy nhất
+                string query = "SELECT DISTINCT City FROM Cities";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -86,11 +86,12 @@ namespace TheGioiViecLam
         {
             try
             {
+                cbx_districts.Items.Clear();
                 conn.Open();
                 string selectedCity = cbx_cities.SelectedItem?.ToString();
                 if (!string.IsNullOrEmpty(selectedCity))
                 {
-                    string query = "SELECT DISTINCT District FROM dbo.Worker WHERE City = @City";
+                    string query = "SELECT DISTINCT District FROM Cities WHERE City = @City";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@City", selectedCity);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -115,17 +116,17 @@ namespace TheGioiViecLam
         }
         private void LoadUCThueFromDatabase()
         {
-            PanelBottom.AutoScroll = true; // Kích hoạt thanh cuộn cho PanelBottom
+            PanelBottom.AutoScroll = true;
 
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT * FROM PostsWithAverageRating WHERE IDJF = '{0}'", field) ;
+                string sqlStr = string.Format("SELECT * FROM PostsWithAverageRating WHERE JobField = '{0}'", jobfield);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dataSet = new DataSet();
                 adapter.Fill(dataSet);
                 PanelBottom.Controls.Clear();
-                int y = 0; // Biến để điều chỉnh vị trí theo trục y của các UC
+                int y = 0;
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
                     string Time = row["WTime"].ToString();
@@ -133,7 +134,7 @@ namespace TheGioiViecLam
                     string price = row["Cost"].ToString();
                     string experience = row["Experience"].ToString();
                     string location = row["District"].ToString();
-                    string postID = row["IDP"].ToString(); // Lấy giá trị IDP
+                    string postID = row["IDP"].ToString();
                     string WID = row["WID"].ToString();
                     float Rating = Convert.ToInt32(row["Rating"]);
 
@@ -151,11 +152,8 @@ namespace TheGioiViecLam
                     }
                     else
                     {
-                        // Gán một sự kiện trống
                         uCWorkInFor.btnSave.Click += (s, ev) => { };
                     }
-
-                    // Gán giá trị cho các thành phần của UserControl
                     uCWorkInFor.txtWTime.Text = Time;
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price;
@@ -165,10 +163,8 @@ namespace TheGioiViecLam
                     uCWorkInFor.btnDelete.Enabled = false;
                     uCWorkInFor.btnDelete.Visible = false;
                     uCWorkInFor.ratingStar.Value = Rating;
-
-                    // Đặt vị trí cho UserControl
                     uCWorkInFor.Location = new Point(50, y);
-                    y += uCWorkInFor.Height + 10; // Tăng y để tránh chồng chéo
+                    y += uCWorkInFor.Height + 10;
                     PanelBottom.Controls.Add(uCWorkInFor);
                 }
             }
@@ -186,7 +182,7 @@ namespace TheGioiViecLam
         {
             try
             {
-                string sqlStr = string.Format("SELECT COUNT(*) FROM Saves WHERE IDP = '{0}'and CEmail= '{1}'", postID,account);
+                string sqlStr = string.Format("SELECT COUNT(*) FROM Saves WHERE IDP = '{0}'and CEmail= '{1}'", postID, account);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 int count = (int)cmd.ExecuteScalar();
                 return count > 0;
@@ -208,30 +204,22 @@ namespace TheGioiViecLam
         }
         private void cbx_districts_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedDistrict = cbx_districts.SelectedItem.ToString();    
+            string selectedDistrict = cbx_districts.SelectedItem.ToString();
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
             string searchText = txt_Search.Text.Trim();
-
-            // Phân tách thông tin tìm kiếm thành các từ ngữ
             string[] keywords = searchText.Split(' ');
 
             try
             {
                 conn.Open();
-
-                // Tạo câu truy vấn SQL ban đầu
                 string query = "SELECT * FROM PostsWithAverageRating";
-
-                // Nếu City và District được chọn, thêm điều kiện vào câu truy vấn
                 if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
                 {
                     query += " WHERE City = @City AND District = @District";
                 }
-
-                // Nếu có từ khóa tìm kiếm, thêm điều kiện vào câu truy vấn
                 if (keywords.Length > 0)
                 {
                     if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
@@ -254,24 +242,17 @@ namespace TheGioiViecLam
                 }
 
                 SqlCommand cmd = new SqlCommand(query, conn);
-
-                // Thêm các tham số vào câu truy vấn
                 if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
                 {
                     cmd.Parameters.AddWithValue("@City", cbx_cities.SelectedItem?.ToString());
                     cmd.Parameters.AddWithValue("@District", cbx_districts.SelectedItem?.ToString());
                 }
-
                 for (int i = 0; i < keywords.Length; i++)
                 {
                     cmd.Parameters.AddWithValue("@Keyword" + i, "%" + keywords[i] + "%");
                 }
-
                 SqlDataReader reader = cmd.ExecuteReader();
-
-                // Xóa tất cả các UC hiện có trên panel trước khi thêm các UC mới
                 PanelBottom.Controls.Clear();
-
                 int y = 0;
                 while (reader.Read())
                 {
@@ -282,8 +263,6 @@ namespace TheGioiViecLam
                     string postID = reader["IDP"].ToString(); // Lấy giá trị IDP
                     string WID = reader["WID"].ToString();
                     float Rating = Convert.ToInt32(reader["Rating"]);
-
-
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
                     if (CheckIDPInSaves(postID))
                     {
@@ -296,7 +275,7 @@ namespace TheGioiViecLam
                     }
                     else
                     {
-                        uCWorkInFor.btnSave.Click += (s, ev) => { }; // Gán một sự kiện trống
+                        uCWorkInFor.btnSave.Click += (s, ev) => { };
                     }
                     uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
                     uCWorkInFor.txtJobName.Text = job;
@@ -306,13 +285,10 @@ namespace TheGioiViecLam
                     uCWorkInFor.btnDelete.Enabled = false;
                     uCWorkInFor.btnDelete.Visible = false;
                     uCWorkInFor.ratingStar.Value = Rating;
-
-                    // Đặt vị trí cho UC
                     uCWorkInFor.Location = new Point(50, y);
-                    y += uCWorkInFor.Height + 10; // Tăng y để tránh chồng chéo
+                    y += uCWorkInFor.Height + 10;
                     PanelBottom.Controls.Add(uCWorkInFor);
                 }
-
                 reader.Close();
             }
             catch (Exception ex)
@@ -331,20 +307,28 @@ namespace TheGioiViecLam
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            if (paneFilter.Visible == false)
-            {
-                paneFilter.Visible = true;
-                
-            }
-            else
-            {
-                paneFilter.Visible = false;
-                
-
-            }
 
         }
 
-       
+        private void paneFilter_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ScrollBar_ValueChanged(object sender, EventArgs e)
+        {
+            string values = ScrollBar.Value.ToString();
+            lblValue.Text = values + "$";
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,6 @@
             this.panel_Body = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnhome = new Guna.UI2.WinForms.Guna2Button();
             this.btnprofile = new Guna.UI2.WinForms.Guna2Button();
             this.btncontact = new Guna.UI2.WinForms.Guna2Button();
@@ -40,6 +39,7 @@
             this.btnPost = new Guna.UI2.WinForms.Guna2Button();
             this.btnCalender = new Guna.UI2.WinForms.Guna2Button();
             this.btnexit = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -88,16 +88,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(73, 484);
             this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Separator1.FillThickness = 3;
-            this.guna2Separator1.Location = new System.Drawing.Point(11, 79);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(60, 20);
-            this.guna2Separator1.TabIndex = 2;
             // 
             // btnhome
             // 
@@ -251,6 +241,16 @@
             this.btnexit.TabIndex = 11;
             this.btnexit.Click += new System.EventHandler(this.btn_SignOut_Click);
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator1.FillThickness = 3;
+            this.guna2Separator1.Location = new System.Drawing.Point(11, 79);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(60, 20);
+            this.guna2Separator1.TabIndex = 2;
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -289,13 +289,13 @@
         private Guna.UI2.WinForms.Guna2Button btnprofile;
         private Guna.UI2.WinForms.Guna2Button btncontact;
         private Guna.UI2.WinForms.Guna2Button btnfavourite;
-        private Guna.UI2.WinForms.Guna2Button btnorders;
         private Guna.UI2.WinForms.Guna2Button btnexit;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         public System.Windows.Forms.Panel panel_Body;
-        private Guna.UI2.WinForms.Guna2Button btnPost;
         private Guna.UI2.WinForms.Guna2Button btnCalender;
+        public Guna.UI2.WinForms.Guna2Button btnPost;
+        public Guna.UI2.WinForms.Guna2Button btnorders;
     }
 }

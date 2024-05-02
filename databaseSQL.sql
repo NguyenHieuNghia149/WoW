@@ -385,3 +385,8 @@ BEGIN
 	SELECT @sumSalary = SUM(CAST(Charge AS INT)) FROM Salary WHERE WEmail = @wEmail AND @month = MONTH (ReceiveTime)
 	RETURN @sumSalary
 END
+
+SELECT TOP 1 Post.JobName, Post.Cost, Orders.ODate, Orders.OStatus 
+FROM Orders 
+INNER JOIN Post ON Orders.IDP = Post.IDP 
+ORDER BY ODate DESC

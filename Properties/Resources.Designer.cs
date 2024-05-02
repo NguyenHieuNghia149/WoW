@@ -83,6 +83,16 @@ namespace TheGioiViecLam.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow__1_ {
+            get {
+                object obj = ResourceManager.GetObject("arrow (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bar_chart {
             get {
                 object obj = ResourceManager.GetObject("bar-chart", resourceCulture);
@@ -316,6 +326,16 @@ namespace TheGioiViecLam.Properties {
         internal static System.Drawing.Bitmap IMG_2403 {
             get {
                 object obj = ResourceManager.GetObject("IMG_2403", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap is_not_equal_to {
+            get {
+                object obj = ResourceManager.GetObject("is-not-equal-to", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

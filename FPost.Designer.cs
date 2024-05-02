@@ -29,134 +29,453 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPost));
-            this.panel_Bot = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbbDistrict = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbCities = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbTime = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbJobJield = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbExperience = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.lblJobName = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblCost = new System.Windows.Forms.Label();
-            this.lblPhoneNum = new System.Windows.Forms.Label();
-            this.lblCity = new System.Windows.Forms.Label();
-            this.lblDistrict = new System.Windows.Forms.Label();
-            this.lblDetail = new System.Windows.Forms.Label();
-            this.panel_Top = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtJob = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblJob = new System.Windows.Forms.Label();
             this.btn = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.picturePost = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbboxExperience = new System.Windows.Forms.ComboBox();
-            this.cbboxWTime = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDP = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbboxDistrict = new System.Windows.Forms.ComboBox();
-            this.cbboxJobName = new System.Windows.Forms.ComboBox();
             this.txtPhoneNum = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCost = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDetail = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnPost = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.lblDetail = new System.Windows.Forms.Label();
+            this.lblDistrict = new System.Windows.Forms.Label();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.lblPhoneNum = new System.Windows.Forms.Label();
+            this.lblCost = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblJobName = new System.Windows.Forms.Label();
+            this.panel_Bot = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel_Top = new Guna.UI2.WinForms.Guna2Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePost)).BeginInit();
             this.panel_Top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel_Bot
+            // cbbDistrict
             // 
-            this.panel_Bot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel_Bot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Bot.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_Bot.Location = new System.Drawing.Point(0, 351);
-            this.panel_Bot.Name = "panel_Bot";
-            this.panel_Bot.Size = new System.Drawing.Size(1332, 552);
-            this.panel_Bot.TabIndex = 3;
+            this.cbbDistrict.BackColor = System.Drawing.Color.Transparent;
+            this.cbbDistrict.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.cbbDistrict.BorderRadius = 5;
+            this.cbbDistrict.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDistrict.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbDistrict.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbDistrict.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.cbbDistrict.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbDistrict.ItemHeight = 30;
+            this.cbbDistrict.Location = new System.Drawing.Point(732, 155);
+            this.cbbDistrict.Name = "cbbDistrict";
+            this.cbbDistrict.Size = new System.Drawing.Size(328, 36);
+            this.cbbDistrict.TabIndex = 53;
+            // 
+            // cbbCities
+            // 
+            this.cbbCities.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCities.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.cbbCities.BorderRadius = 5;
+            this.cbbCities.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCities.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCities.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCities.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.cbbCities.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCities.ItemHeight = 30;
+            this.cbbCities.Location = new System.Drawing.Point(718, 106);
+            this.cbbCities.Name = "cbbCities";
+            this.cbbCities.Size = new System.Drawing.Size(342, 36);
+            this.cbbCities.TabIndex = 52;
+            this.cbbCities.SelectedValueChanged += new System.EventHandler(this.cbbCities_SelectedValueChanged);
+            // 
+            // cbbTime
+            // 
+            this.cbbTime.BackColor = System.Drawing.Color.Transparent;
+            this.cbbTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.cbbTime.BorderRadius = 5;
+            this.cbbTime.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTime.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTime.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.cbbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbTime.ItemHeight = 30;
+            this.cbbTime.Items.AddRange(new object[] {
+            "Under 1",
+            "1-2",
+            "2-3",
+            "3-4",
+            "4-5",
+            "Over 5"});
+            this.cbbTime.Location = new System.Drawing.Point(352, 155);
+            this.cbbTime.Name = "cbbTime";
+            this.cbbTime.Size = new System.Drawing.Size(286, 36);
+            this.cbbTime.TabIndex = 51;
+            // 
+            // cbbJobJield
+            // 
+            this.cbbJobJield.BackColor = System.Drawing.Color.Transparent;
+            this.cbbJobJield.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.cbbJobJield.BorderRadius = 5;
+            this.cbbJobJield.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbJobJield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbJobJield.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbJobJield.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbJobJield.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.cbbJobJield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbJobJield.ItemHeight = 30;
+            this.cbbJobJield.Location = new System.Drawing.Point(395, 63);
+            this.cbbJobJield.Name = "cbbJobJield";
+            this.cbbJobJield.Size = new System.Drawing.Size(242, 36);
+            this.cbbJobJield.TabIndex = 50;
+            // 
+            // cbbExperience
+            // 
+            this.cbbExperience.BackColor = System.Drawing.Color.Transparent;
+            this.cbbExperience.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.cbbExperience.BorderRadius = 5;
+            this.cbbExperience.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbExperience.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbExperience.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbExperience.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbExperience.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.cbbExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbExperience.ItemHeight = 30;
+            this.cbbExperience.Items.AddRange(new object[] {
+            "Under 1",
+            "1-2",
+            "2-3",
+            "3-4",
+            "4-5",
+            "Over 5"});
+            this.cbbExperience.Location = new System.Drawing.Point(395, 18);
+            this.cbbExperience.Name = "cbbExperience";
+            this.cbbExperience.Size = new System.Drawing.Size(242, 36);
+            this.cbbExperience.TabIndex = 49;
             // 
             // guna2Separator2
             // 
             this.guna2Separator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(23)))), ((int)(((byte)(81)))));
-            this.guna2Separator2.Location = new System.Drawing.Point(12, 343);
+            this.guna2Separator2.FillThickness = 2;
+            this.guna2Separator2.Location = new System.Drawing.Point(159, 327);
+            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(1452, 10);
+            this.guna2Separator2.Size = new System.Drawing.Size(815, 16);
             this.guna2Separator2.TabIndex = 14;
             // 
-            // lblJobName
+            // txtJob
             // 
-            this.lblJobName.AutoSize = true;
-            this.lblJobName.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJobName.Location = new System.Drawing.Point(278, 76);
-            this.lblJobName.Name = "lblJobName";
-            this.lblJobName.Size = new System.Drawing.Size(94, 28);
-            this.lblJobName.TabIndex = 17;
-            this.lblJobName.Text = "JobField";
+            this.txtJob.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.txtJob.BorderRadius = 5;
+            this.txtJob.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtJob.DefaultText = "";
+            this.txtJob.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtJob.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtJob.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtJob.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJob.ForeColor = System.Drawing.Color.Black;
+            this.txtJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtJob.Location = new System.Drawing.Point(352, 103);
+            this.txtJob.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtJob.Name = "txtJob";
+            this.txtJob.PasswordChar = '\0';
+            this.txtJob.PlaceholderText = "";
+            this.txtJob.SelectedText = "";
+            this.txtJob.Size = new System.Drawing.Size(286, 36);
+            this.txtJob.TabIndex = 48;
             // 
-            // lblTime
+            // lblJob
             // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(278, 132);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(61, 28);
-            this.lblTime.TabIndex = 18;
-            this.lblTime.Text = "Time";
+            this.lblJob.AutoSize = true;
+            this.lblJob.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.lblJob.Location = new System.Drawing.Point(297, 109);
+            this.lblJob.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJob.Name = "lblJob";
+            this.lblJob.Size = new System.Drawing.Size(35, 21);
+            this.lblJob.TabIndex = 47;
+            this.lblJob.Text = "Job";
             // 
-            // lblCost
+            // btn
             // 
-            this.lblCost.AutoSize = true;
-            this.lblCost.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCost.Location = new System.Drawing.Point(282, 186);
-            this.lblCost.Name = "lblCost";
-            this.lblCost.Size = new System.Drawing.Size(56, 28);
-            this.lblCost.TabIndex = 19;
-            this.lblCost.Text = "Cost";
+            this.btn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn.Image = global::TheGioiViecLam.Properties.Resources.photo__1_1;
+            this.btn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn.ImageRotate = 0F;
+            this.btn.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn.Location = new System.Drawing.Point(113, 255);
+            this.btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn.Name = "btn";
+            this.btn.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn.Size = new System.Drawing.Size(47, 51);
+            this.btn.TabIndex = 46;
             // 
-            // lblPhoneNum
+            // picturePost
             // 
-            this.lblPhoneNum.AutoSize = true;
-            this.lblPhoneNum.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNum.Location = new System.Drawing.Point(740, 73);
-            this.lblPhoneNum.Name = "lblPhoneNum";
-            this.lblPhoneNum.Size = new System.Drawing.Size(162, 28);
-            this.lblPhoneNum.TabIndex = 21;
-            this.lblPhoneNum.Text = "Phone Number";
+            this.picturePost.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.picturePost.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.picturePost.ImageRotate = 0F;
+            this.picturePost.Location = new System.Drawing.Point(23, 22);
+            this.picturePost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picturePost.Name = "picturePost";
+            this.picturePost.Size = new System.Drawing.Size(241, 223);
+            this.picturePost.TabIndex = 45;
+            this.picturePost.TabStop = false;
+            this.picturePost.Click += new System.EventHandler(this.picturePost_Click);
             // 
-            // lblCity
+            // label2
             // 
-            this.lblCity.AutoSize = true;
-            this.lblCity.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(739, 128);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(50, 28);
-            this.lblCity.TabIndex = 22;
-            this.lblCity.Text = "City";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.label2.Location = new System.Drawing.Point(297, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 21);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Experience";
             // 
-            // lblDistrict
+            // label1
             // 
-            this.lblDistrict.AutoSize = true;
-            this.lblDistrict.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistrict.Location = new System.Drawing.Point(740, 183);
-            this.lblDistrict.Name = "lblDistrict";
-            this.lblDistrict.Size = new System.Drawing.Size(83, 28);
-            this.lblDistrict.TabIndex = 23;
-            this.lblDistrict.Text = "District";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(661, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 21);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Post ID";
+            // 
+            // txtIDP
+            // 
+            this.txtIDP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.txtIDP.BorderRadius = 5;
+            this.txtIDP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIDP.DefaultText = "";
+            this.txtIDP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIDP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIDP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDP.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDP.ForeColor = System.Drawing.Color.Black;
+            this.txtIDP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDP.Location = new System.Drawing.Point(733, 18);
+            this.txtIDP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIDP.Name = "txtIDP";
+            this.txtIDP.PasswordChar = '\0';
+            this.txtIDP.PlaceholderText = "";
+            this.txtIDP.SelectedText = "";
+            this.txtIDP.Size = new System.Drawing.Size(327, 36);
+            this.txtIDP.TabIndex = 40;
+            // 
+            // txtPhoneNum
+            // 
+            this.txtPhoneNum.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.txtPhoneNum.BorderRadius = 5;
+            this.txtPhoneNum.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneNum.DefaultText = "";
+            this.txtPhoneNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNum.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNum.ForeColor = System.Drawing.Color.Black;
+            this.txtPhoneNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNum.Location = new System.Drawing.Point(786, 63);
+            this.txtPhoneNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPhoneNum.Name = "txtPhoneNum";
+            this.txtPhoneNum.PasswordChar = '\0';
+            this.txtPhoneNum.PlaceholderText = "";
+            this.txtPhoneNum.SelectedText = "";
+            this.txtPhoneNum.Size = new System.Drawing.Size(274, 36);
+            this.txtPhoneNum.TabIndex = 36;
+            // 
+            // txtCost
+            // 
+            this.txtCost.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.txtCost.BorderRadius = 5;
+            this.txtCost.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCost.DefaultText = "";
+            this.txtCost.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCost.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCost.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.ForeColor = System.Drawing.Color.Black;
+            this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCost.Location = new System.Drawing.Point(352, 203);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.PasswordChar = '\0';
+            this.txtCost.PlaceholderText = "";
+            this.txtCost.SelectedText = "";
+            this.txtCost.Size = new System.Drawing.Size(286, 36);
+            this.txtCost.TabIndex = 33;
+            // 
+            // txtDetail
+            // 
+            this.txtDetail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.txtDetail.BorderRadius = 15;
+            this.txtDetail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDetail.DefaultText = "";
+            this.txtDetail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDetail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDetail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDetail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDetail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDetail.Location = new System.Drawing.Point(301, 275);
+            this.txtDetail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtDetail.Name = "txtDetail";
+            this.txtDetail.PasswordChar = '\0';
+            this.txtDetail.PlaceholderText = "Detail";
+            this.txtDetail.SelectedText = "";
+            this.txtDetail.Size = new System.Drawing.Size(688, 41);
+            this.txtDetail.TabIndex = 32;
+            this.txtDetail.TextOffset = new System.Drawing.Point(0, -10);
+            // 
+            // btnPost
+            // 
+            this.btnPost.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnPost.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnPost.Image = ((System.Drawing.Image)(resources.GetObject("btnPost.Image")));
+            this.btnPost.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnPost.ImageRotate = 0F;
+            this.btnPost.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnPost.Location = new System.Drawing.Point(1049, 215);
+            this.btnPost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPost.Name = "btnPost";
+            this.btnPost.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnPost.Size = new System.Drawing.Size(47, 54);
+            this.btnPost.TabIndex = 31;
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // lblDetail
             // 
             this.lblDetail.AutoSize = true;
-            this.lblDetail.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetail.Location = new System.Drawing.Point(278, 273);
+            this.lblDetail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.lblDetail.Location = new System.Drawing.Point(304, 248);
+            this.lblDetail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDetail.Name = "lblDetail";
-            this.lblDetail.Size = new System.Drawing.Size(112, 28);
+            this.lblDetail.Size = new System.Drawing.Size(84, 21);
             this.lblDetail.TabIndex = 29;
             this.lblDetail.Text = "Job Detail";
             // 
+            // lblDistrict
+            // 
+            this.lblDistrict.AutoSize = true;
+            this.lblDistrict.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDistrict.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.lblDistrict.Location = new System.Drawing.Point(661, 155);
+            this.lblDistrict.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDistrict.Name = "lblDistrict";
+            this.lblDistrict.Size = new System.Drawing.Size(64, 21);
+            this.lblDistrict.TabIndex = 23;
+            this.lblDistrict.Text = "District";
+            // 
+            // lblCity
+            // 
+            this.lblCity.AutoSize = true;
+            this.lblCity.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.lblCity.Location = new System.Drawing.Point(661, 109);
+            this.lblCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(38, 21);
+            this.lblCity.TabIndex = 22;
+            this.lblCity.Text = "City";
+            // 
+            // lblPhoneNum
+            // 
+            this.lblPhoneNum.AutoSize = true;
+            this.lblPhoneNum.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.lblPhoneNum.Location = new System.Drawing.Point(661, 63);
+            this.lblPhoneNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPhoneNum.Name = "lblPhoneNum";
+            this.lblPhoneNum.Size = new System.Drawing.Size(118, 21);
+            this.lblPhoneNum.TabIndex = 21;
+            this.lblPhoneNum.Text = "Phone Number";
+            // 
+            // lblCost
+            // 
+            this.lblCost.AutoSize = true;
+            this.lblCost.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.lblCost.Location = new System.Drawing.Point(297, 208);
+            this.lblCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCost.Name = "lblCost";
+            this.lblCost.Size = new System.Drawing.Size(43, 21);
+            this.lblCost.TabIndex = 19;
+            this.lblCost.Text = "Cost";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.lblTime.Location = new System.Drawing.Point(297, 160);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(47, 21);
+            this.lblTime.TabIndex = 18;
+            this.lblTime.Text = "Time";
+            // 
+            // lblJobName
+            // 
+            this.lblJobName.AutoSize = true;
+            this.lblJobName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.lblJobName.Location = new System.Drawing.Point(297, 63);
+            this.lblJobName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJobName.Name = "lblJobName";
+            this.lblJobName.Size = new System.Drawing.Size(70, 21);
+            this.lblJobName.TabIndex = 17;
+            this.lblJobName.Text = "JobField";
+            // 
+            // panel_Bot
+            // 
+            this.panel_Bot.BackColor = System.Drawing.Color.White;
+            this.panel_Bot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel_Bot.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_Bot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.panel_Bot.Location = new System.Drawing.Point(-9, 326);
+            this.panel_Bot.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel_Bot.Name = "panel_Bot";
+            this.panel_Bot.Size = new System.Drawing.Size(1114, 318);
+            this.panel_Bot.TabIndex = 5;
+            // 
             // panel_Top
             // 
+            this.panel_Top.BackColor = System.Drawing.Color.White;
+            this.panel_Top.Controls.Add(this.cbbDistrict);
+            this.panel_Top.Controls.Add(this.cbbCities);
+            this.panel_Top.Controls.Add(this.cbbTime);
+            this.panel_Top.Controls.Add(this.cbbJobJield);
+            this.panel_Top.Controls.Add(this.cbbExperience);
+            this.panel_Top.Controls.Add(this.guna2Separator2);
+            this.panel_Top.Controls.Add(this.txtJob);
+            this.panel_Top.Controls.Add(this.lblJob);
             this.panel_Top.Controls.Add(this.btn);
-            this.panel_Top.Controls.Add(this.guna2PictureBox1);
+            this.panel_Top.Controls.Add(this.picturePost);
             this.panel_Top.Controls.Add(this.label2);
-            this.panel_Top.Controls.Add(this.cbboxExperience);
-            this.panel_Top.Controls.Add(this.cbboxWTime);
             this.panel_Top.Controls.Add(this.label1);
             this.panel_Top.Controls.Add(this.txtIDP);
-            this.panel_Top.Controls.Add(this.txtCity);
-            this.panel_Top.Controls.Add(this.cbboxDistrict);
-            this.panel_Top.Controls.Add(this.cbboxJobName);
             this.panel_Top.Controls.Add(this.txtPhoneNum);
             this.panel_Top.Controls.Add(this.txtCost);
             this.panel_Top.Controls.Add(this.txtDetail);
@@ -168,271 +487,60 @@
             this.panel_Top.Controls.Add(this.lblCost);
             this.panel_Top.Controls.Add(this.lblTime);
             this.panel_Top.Controls.Add(this.lblJobName);
-            this.panel_Top.Controls.Add(this.guna2Separator2);
-            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Top.Location = new System.Drawing.Point(0, 0);
+            this.panel_Top.Location = new System.Drawing.Point(-9, -22);
+            this.panel_Top.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(1332, 351);
-            this.panel_Top.TabIndex = 2;
-            // 
-            // btn
-            // 
-            this.btn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn.Image = global::TheGioiViecLam.Properties.Resources.photo__1_1;
-            this.btn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn.ImageRotate = 0F;
-            this.btn.Location = new System.Drawing.Point(103, 260);
-            this.btn.Name = "btn";
-            this.btn.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn.Size = new System.Drawing.Size(64, 54);
-            this.btn.TabIndex = 46;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 38);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(251, 200);
-            this.guna2PictureBox1.TabIndex = 45;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(278, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 28);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Experience";
-            // 
-            // cbboxExperience
-            // 
-            this.cbboxExperience.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxExperience.FormattingEnabled = true;
-            this.cbboxExperience.Items.AddRange(new object[] {
-            "Under 1",
-            "1-2",
-            "2-3",
-            "3-4",
-            "4-5",
-            "Over 5"});
-            this.cbboxExperience.Location = new System.Drawing.Point(421, 17);
-            this.cbboxExperience.Name = "cbboxExperience";
-            this.cbboxExperience.Size = new System.Drawing.Size(253, 36);
-            this.cbboxExperience.TabIndex = 43;
-            // 
-            // cbboxWTime
-            // 
-            this.cbboxWTime.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxWTime.FormattingEnabled = true;
-            this.cbboxWTime.Items.AddRange(new object[] {
-            "Under 1",
-            "1-2",
-            "2-3",
-            "3-4",
-            "4-5",
-            "Over 5"});
-            this.cbboxWTime.Location = new System.Drawing.Point(421, 126);
-            this.cbboxWTime.Name = "cbboxWTime";
-            this.cbboxWTime.Size = new System.Drawing.Size(253, 36);
-            this.cbboxWTime.TabIndex = 44;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(739, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 28);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Post ID";
-            // 
-            // txtIDP
-            // 
-            this.txtIDP.BorderRadius = 5;
-            this.txtIDP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIDP.DefaultText = "";
-            this.txtIDP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIDP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIDP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIDP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIDP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDP.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDP.ForeColor = System.Drawing.Color.Black;
-            this.txtIDP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDP.Location = new System.Drawing.Point(936, 16);
-            this.txtIDP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtIDP.Name = "txtIDP";
-            this.txtIDP.PasswordChar = '\0';
-            this.txtIDP.PlaceholderText = "";
-            this.txtIDP.SelectedText = "";
-            this.txtIDP.Size = new System.Drawing.Size(253, 36);
-            this.txtIDP.TabIndex = 40;
-            // 
-            // txtCity
-            // 
-            this.txtCity.BorderRadius = 5;
-            this.txtCity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCity.DefaultText = "";
-            this.txtCity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCity.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.ForeColor = System.Drawing.Color.Black;
-            this.txtCity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCity.Location = new System.Drawing.Point(936, 121);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.PasswordChar = '\0';
-            this.txtCity.PlaceholderText = "";
-            this.txtCity.SelectedText = "";
-            this.txtCity.Size = new System.Drawing.Size(253, 36);
-            this.txtCity.TabIndex = 39;
-            // 
-            // cbboxDistrict
-            // 
-            this.cbboxDistrict.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxDistrict.FormattingEnabled = true;
-            this.cbboxDistrict.Location = new System.Drawing.Point(936, 176);
-            this.cbboxDistrict.Name = "cbboxDistrict";
-            this.cbboxDistrict.Size = new System.Drawing.Size(253, 36);
-            this.cbboxDistrict.TabIndex = 38;
-            // 
-            // cbboxJobName
-            // 
-            this.cbboxJobName.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbboxJobName.FormattingEnabled = true;
-            this.cbboxJobName.Location = new System.Drawing.Point(421, 73);
-            this.cbboxJobName.Name = "cbboxJobName";
-            this.cbboxJobName.Size = new System.Drawing.Size(253, 36);
-            this.cbboxJobName.TabIndex = 37;
-            // 
-            // txtPhoneNum
-            // 
-            this.txtPhoneNum.BorderRadius = 5;
-            this.txtPhoneNum.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhoneNum.DefaultText = "";
-            this.txtPhoneNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhoneNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhoneNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNum.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNum.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNum.Location = new System.Drawing.Point(936, 66);
-            this.txtPhoneNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhoneNum.Name = "txtPhoneNum";
-            this.txtPhoneNum.PasswordChar = '\0';
-            this.txtPhoneNum.PlaceholderText = "";
-            this.txtPhoneNum.SelectedText = "";
-            this.txtPhoneNum.Size = new System.Drawing.Size(253, 36);
-            this.txtPhoneNum.TabIndex = 36;
-            // 
-            // txtCost
-            // 
-            this.txtCost.BorderRadius = 5;
-            this.txtCost.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCost.DefaultText = "";
-            this.txtCost.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCost.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCost.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCost.ForeColor = System.Drawing.Color.Black;
-            this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCost.Location = new System.Drawing.Point(421, 181);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCost.Name = "txtCost";
-            this.txtCost.PasswordChar = '\0';
-            this.txtCost.PlaceholderText = "";
-            this.txtCost.SelectedText = "";
-            this.txtCost.Size = new System.Drawing.Size(253, 36);
-            this.txtCost.TabIndex = 33;
-            // 
-            // txtDetail
-            // 
-            this.txtDetail.BorderRadius = 15;
-            this.txtDetail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDetail.DefaultText = "";
-            this.txtDetail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDetail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDetail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDetail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDetail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDetail.Location = new System.Drawing.Point(421, 239);
-            this.txtDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDetail.Name = "txtDetail";
-            this.txtDetail.PasswordChar = '\0';
-            this.txtDetail.PlaceholderText = "";
-            this.txtDetail.SelectedText = "";
-            this.txtDetail.Size = new System.Drawing.Size(768, 97);
-            this.txtDetail.TabIndex = 32;
-            // 
-            // btnPost
-            // 
-            this.btnPost.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnPost.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnPost.Image = ((System.Drawing.Image)(resources.GetObject("btnPost.Image")));
-            this.btnPost.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnPost.ImageRotate = 0F;
-            this.btnPost.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnPost.Location = new System.Drawing.Point(1201, 229);
-            this.btnPost.Name = "btnPost";
-            this.btnPost.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnPost.Size = new System.Drawing.Size(119, 108);
-            this.btnPost.TabIndex = 31;
-            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
+            this.panel_Top.Size = new System.Drawing.Size(1124, 343);
+            this.panel_Top.TabIndex = 4;
             // 
             // FPost
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1332, 903);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1106, 622);
             this.Controls.Add(this.panel_Bot);
             this.Controls.Add(this.panel_Top);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FPost";
             this.Text = "FPost";
             this.Load += new System.EventHandler(this.FPost_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picturePost)).EndInit();
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Panel panel_Bot;
+
+        private Guna.UI2.WinForms.Guna2ComboBox cbbDistrict;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCities;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbTime;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbJobJield;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbExperience;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private System.Windows.Forms.Label lblJobName;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblCost;
-        private System.Windows.Forms.Label lblPhoneNum;
-        private System.Windows.Forms.Label lblCity;
-        private System.Windows.Forms.Label lblDistrict;
-        private System.Windows.Forms.Label lblDetail;
-        private Guna.UI2.WinForms.Guna2Panel panel_Top;
-        private Guna.UI2.WinForms.Guna2ImageButton btnPost;
-        public Guna.UI2.WinForms.Guna2TextBox txtDetail;
-        public Guna.UI2.WinForms.Guna2TextBox txtCost;
-        public Guna.UI2.WinForms.Guna2TextBox txtPhoneNum;
-        public Guna.UI2.WinForms.Guna2TextBox txtCity;
-        public System.Windows.Forms.ComboBox cbboxJobName;
-        public System.Windows.Forms.ComboBox cbboxDistrict;
+        public Guna.UI2.WinForms.Guna2TextBox txtJob;
+        private System.Windows.Forms.Label lblJob;
+        private Guna.UI2.WinForms.Guna2ImageButton btn;
+        private Guna.UI2.WinForms.Guna2PictureBox picturePost;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2TextBox txtIDP;
-        public System.Windows.Forms.ComboBox cbboxExperience;
-        private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.ComboBox cbboxWTime;
-        private Guna.UI2.WinForms.Guna2ImageButton btn;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        public Guna.UI2.WinForms.Guna2TextBox txtPhoneNum;
+        public Guna.UI2.WinForms.Guna2TextBox txtCost;
+        public Guna.UI2.WinForms.Guna2TextBox txtDetail;
+        private Guna.UI2.WinForms.Guna2ImageButton btnPost;
+        private System.Windows.Forms.Label lblDetail;
+        private System.Windows.Forms.Label lblDistrict;
+        private System.Windows.Forms.Label lblCity;
+        private System.Windows.Forms.Label lblPhoneNum;
+        private System.Windows.Forms.Label lblCost;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblJobName;
+        private Guna.UI2.WinForms.Guna2Panel panel_Bot;
+        private Guna.UI2.WinForms.Guna2Panel panel_Top;
     }
 }

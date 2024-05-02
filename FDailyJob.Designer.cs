@@ -28,55 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnYesterday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTomorow = new Guna.UI2.WinForms.Guna2Button();
+            this.dt = new System.Windows.Forms.DateTimePicker();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnJob = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.dt = new System.Windows.Forms.DateTimePicker();
-            this.btnTomorow = new Guna.UI2.WinForms.Guna2Button();
-            this.btnYesterday = new Guna.UI2.WinForms.Guna2Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mnToday = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2Panel1.SuspendLayout();
             this.panelTop.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnJob
-            // 
-            this.pnJob.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnJob.Location = new System.Drawing.Point(3, 67);
-            this.pnJob.Name = "pnJob";
-            this.pnJob.Size = new System.Drawing.Size(1297, 663);
-            this.pnJob.TabIndex = 1;
-            this.pnJob.Paint += new System.Windows.Forms.PaintEventHandler(this.pnJob_Paint);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.pnJob);
-            this.guna2Panel1.Controls.Add(this.panelTop);
-            this.guna2Panel1.Location = new System.Drawing.Point(12, 50);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1303, 733);
-            this.guna2Panel1.TabIndex = 4;
             // 
             // panelTop
             // 
+            this.panelTop.BackColor = System.Drawing.Color.White;
+            this.panelTop.Controls.Add(this.guna2Button1);
             this.panelTop.Controls.Add(this.dt);
             this.panelTop.Controls.Add(this.btnTomorow);
             this.panelTop.Controls.Add(this.btnYesterday);
-            this.panelTop.Location = new System.Drawing.Point(3, 0);
+            this.panelTop.Location = new System.Drawing.Point(126, 3);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1297, 61);
+            this.panelTop.Size = new System.Drawing.Size(1051, 61);
             this.panelTop.TabIndex = 0;
             // 
-            // dt
+            // btnYesterday
             // 
-            this.dt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dt.Location = new System.Drawing.Point(517, 9);
-            this.dt.Name = "dt";
-            this.dt.Size = new System.Drawing.Size(355, 26);
-            this.dt.TabIndex = 3;
-            this.dt.ValueChanged += new System.EventHandler(this.dt_ValueChanged);
+            this.btnYesterday.BackColor = System.Drawing.Color.Transparent;
+            this.btnYesterday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnYesterday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnYesterday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnYesterday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnYesterday.FillColor = System.Drawing.Color.White;
+            this.btnYesterday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnYesterday.ForeColor = System.Drawing.Color.White;
+            this.btnYesterday.Image = global::TheGioiViecLam.Properties.Resources.left_arrow;
+            this.btnYesterday.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnYesterday.Location = new System.Drawing.Point(3, 9);
+            this.btnYesterday.Name = "btnYesterday";
+            this.btnYesterday.Size = new System.Drawing.Size(65, 45);
+            this.btnYesterday.TabIndex = 1;
             // 
             // btnTomorow
             // 
@@ -84,81 +74,84 @@
             this.btnTomorow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTomorow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTomorow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTomorow.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTomorow.FillColor = System.Drawing.Color.White;
             this.btnTomorow.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTomorow.ForeColor = System.Drawing.Color.White;
             this.btnTomorow.Image = global::TheGioiViecLam.Properties.Resources.right_arrow;
             this.btnTomorow.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnTomorow.Location = new System.Drawing.Point(1095, 9);
+            this.btnTomorow.Location = new System.Drawing.Point(984, 0);
             this.btnTomorow.Name = "btnTomorow";
-            this.btnTomorow.Size = new System.Drawing.Size(184, 45);
+            this.btnTomorow.Size = new System.Drawing.Size(65, 45);
             this.btnTomorow.TabIndex = 2;
-            this.btnTomorow.Click += new System.EventHandler(this.btnTomorow_Click);
             // 
-            // btnYesterday
+            // dt
             // 
-            this.btnYesterday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnYesterday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnYesterday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnYesterday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnYesterday.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnYesterday.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnYesterday.ForeColor = System.Drawing.Color.White;
-            this.btnYesterday.Image = global::TheGioiViecLam.Properties.Resources.left_arrow;
-            this.btnYesterday.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnYesterday.Location = new System.Drawing.Point(21, 9);
-            this.btnYesterday.Name = "btnYesterday";
-            this.btnYesterday.Size = new System.Drawing.Size(211, 45);
-            this.btnYesterday.TabIndex = 1;
-            this.btnYesterday.Click += new System.EventHandler(this.btnYesterday_Click);
+            this.dt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dt.Location = new System.Drawing.Point(235, 9);
+            this.dt.Name = "dt";
+            this.dt.Size = new System.Drawing.Size(355, 26);
+            this.dt.TabIndex = 3;
             // 
-            // menuStrip1
+            // guna2Button1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnToday});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1327, 28);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.guna2Button1.BorderThickness = 2;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(615, 9);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 26);
+            this.guna2Button1.TabIndex = 4;
+            this.guna2Button1.Text = "Today";
             // 
-            // mnToday
+            // pnJob
             // 
-            this.mnToday.Name = "mnToday";
-            this.mnToday.Size = new System.Drawing.Size(63, 24);
-            this.mnToday.Text = "Today";
-            this.mnToday.Click += new System.EventHandler(this.mnToday_Click);
+            this.pnJob.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnJob.FillColor = System.Drawing.Color.White;
+            this.pnJob.Location = new System.Drawing.Point(126, 70);
+            this.pnJob.Name = "pnJob";
+            this.pnJob.Size = new System.Drawing.Size(1054, 663);
+            this.pnJob.TabIndex = 1;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.pnJob);
+            this.guna2Panel1.Controls.Add(this.panelTop);
+            this.guna2Panel1.Location = new System.Drawing.Point(-123, -5);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1177, 733);
+            this.guna2Panel1.TabIndex = 7;
             // 
             // FDailyJob
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1327, 786);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1057, 723);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FDailyJob";
             this.Text = "FDailyJob";
-            this.guna2Panel1.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        public Guna.UI2.WinForms.Guna2Panel pnJob;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public Guna.UI2.WinForms.Guna2Panel panelTop;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.DateTimePicker dt;
         private Guna.UI2.WinForms.Guna2Button btnTomorow;
         private Guna.UI2.WinForms.Guna2Button btnYesterday;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mnToday;
+        public Guna.UI2.WinForms.Guna2Panel pnJob;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

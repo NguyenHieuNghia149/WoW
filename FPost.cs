@@ -12,6 +12,8 @@ using System.Collections;
 using TheGioiViecLam.model;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Data.SqlTypes;
+using TheGioiViecLam.DAO;
+using System.IO;
 
 namespace TheGioiViecLam
 {
@@ -20,35 +22,32 @@ namespace TheGioiViecLam
         DBConnection db = new DBConnection();
         public string account;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        ImageDao imageDao = new ImageDao();
+
 
         public FPost(string account)
         {
             InitializeComponent();
             this.account = account;
-            LoadJobNameIntoComboBox();
-            LoadPhoneNum(account);
-            LoadDistrictIntoComboBox(account);
-            LoadCity(account);
-            Load_UCWorkInFor_FromDatabase(account);
+
         }
         private void FPost_Load(object sender, EventArgs e)
         {
             LoadJobNameIntoComboBox();
-            LoadDistrictIntoComboBox(account);
-            LoadCity(account);
-            LoadPhoneNum(account);
+            LoadDistrictIntoComboBox();
+            LoadCity();
             Load_UCWorkInFor_FromDatabase(account);
 
         }
 
-    
-        public void UCWorkInFor_Click(string WID,string IDP, object sender, EventArgs e)
+
+        public void UCWorkInFor_Click(string WID, string IDP, object sender, EventArgs e)
         {
             if (sender is UCWorkInFor uCWorkInFor)
             {
                 string postID = uCWorkInFor.txtIDP.Text;
                 // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(WID,IDP,account);
+                FWorkdetail form = new FWorkdetail(WID, IDP, account);
                 form.Show();
             }
         }
@@ -57,14 +56,14 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string query = "SELECT JobName FROM Job";
+                string query = "SELECT distinct FieldName FROM JobField";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    string JobName = reader["JobName"].ToString();
-                    cbboxJobName.Items.Add(JobName);
+                    string JobName = reader["FieldName"].ToString();
+                    cbbJobJield.Items.Add(JobName);
                 }
 
                 reader.Close();
@@ -78,20 +77,20 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
-        private void LoadCity(string account)
+        private void LoadCity()
         {
             try
             {
                 conn.Open();
 
-                string query = string.Format("SELECT City FROM Worker WHERE WEmail = '{0}'", account);
+                string query = string.Format("SELECT distinct  City FROM Cities");
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
                     string City = reader["City"].ToString();
-                    txtCity.Text = City;
+                    cbbCities.Items.Add(City);
                 }
 
                 reader.Close();
@@ -105,46 +104,21 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
-        private void LoadPhoneNum(string account)
+        private void LoadDistrictIntoComboBox()
         {
             try
             {
+                cbbDistrict.Items.Clear();
                 conn.Open();
-                string query = string.Format("SELECT PhoneNum FROM Worker WHERE WEmail = '{0}'", account);
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    string PhoneNum = reader["PhoneNum"].ToString();
-                    txtPhoneNum.Text = PhoneNum;
-                }
-
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-        private void LoadDistrictIntoComboBox(string account)
-        {
-            try
-            {
-                conn.Open();
-                string City = txtCity.Text;
-                string query = string.Format("SELECT District FROM Worker WHERE City = N'{0}' ", City);
+                string City = cbbCities.Text;
+                string query = string.Format("SELECT distinct District  FROM Cities WHERE City = N'{0}' ", City);
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
                     string District = reader["District"].ToString();
-                    cbboxDistrict.Items.Add(District);
+                    cbbDistrict.Items.Add(District);
                 }
 
                 reader.Close();
@@ -160,8 +134,7 @@ namespace TheGioiViecLam
         }
         private void Load_UCWorkInFor_FromDatabase(string account)
         {
-            panel_Bot.AutoScroll = true; // Tạo thanh cuộn cho panel4
-
+            panel_Bot.AutoScroll = true; 
             try
             {
 
@@ -173,15 +146,8 @@ namespace TheGioiViecLam
                 DataSet dataSet = new DataSet();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
-
-                // Điền dữ liệu từ cơ sở dữ liệu vào DataSet
-                adapter.Fill(dataSet);
-
-                // Xóa tất cả các UC hiện có trong Panel trước khi thêm UC mới
                 panel_Bot.Controls.Clear();
-
-                // Duyệt qua các dòng dữ liệu trong DataSet và tạo UCPosted tương ứng
-                int y = 0; // Biến để điều chỉnh vị trí theo trục y của các UC
+                int y = 0; 
 
                 while (reader.Read())
                 {
@@ -192,8 +158,11 @@ namespace TheGioiViecLam
                     string Experience = reader["Experience"].ToString();
                     string IDP = reader["IDP"].ToString();
                     string WID = reader["WID"].ToString();
+                    byte[] b = reader["img"] as byte[];
+
                     UCWorkInFor ucWorkInFor = new UCWorkInFor();
-                    ucWorkInFor.Click += (s, ev) => UCWorkInFor_Click(WID,IDP, s, ev);
+
+                    ucWorkInFor.Click += (s, ev) => UCWorkInFor_Click(WID, IDP, s, ev);
 
                     ucWorkInFor.txtJobName.Text = JobName;
                     ucWorkInFor.txtWTime.Text = WTime;
@@ -201,8 +170,11 @@ namespace TheGioiViecLam
                     ucWorkInFor.txtLocation.Text = District;
                     ucWorkInFor.txtExperience.Text = Experience;
                     ucWorkInFor.txtIDP.Text = IDP;
-
-                    // Thêm UC vào panel
+                    if (b != null)
+                    {
+                        MemoryStream ms = new MemoryStream(b);
+                        ucWorkInFor.picturePost.Image = Image.FromStream(ms);
+                    }
 
                     ucWorkInFor.Location = new Point(20, y);
                     y += ucWorkInFor.Height + 5;
@@ -226,24 +198,39 @@ namespace TheGioiViecLam
         {
             try
             {
-                string query = string.Format("EXEC pd_Insert_Post_ N'{0}',N'{1}',N'{2}',N'{3}',N'{4}','{5}',N'{6}'",
-                    txtIDP.Text, account, cbboxJobName.Text, cbboxWTime.Text, txtCost.Text, txtDetail.Text, cbboxExperience.Text);
+                byte[] b = imageDao.imageToByteArray(picturePost.Image);
+                string query = string.Format("EXEC pd_Insert_Post_ @IDP, @Account, @Job, @Time, @Cost, @Detail, @Experience, @PhoneNum, @Cities, @District, @JobJield, @Image");
                 SqlCommand cmd = new SqlCommand(query, conn);
-                db.Execute(query);
+                cmd.Parameters.AddWithValue("@IDP", txtIDP.Text);
+                cmd.Parameters.AddWithValue("@Account", account);
+                cmd.Parameters.AddWithValue("@Job", txtJob.Text);
+                cmd.Parameters.AddWithValue("@Time", cbbTime.Text);
+                cmd.Parameters.AddWithValue("@Cost", txtCost.Text);
+                cmd.Parameters.AddWithValue("@Detail", txtDetail.Text);
+                cmd.Parameters.AddWithValue("@Experience", cbbExperience.Text);
+                cmd.Parameters.AddWithValue("@PhoneNum", txtPhoneNum.Text);
+                cmd.Parameters.AddWithValue("@Cities", cbbCities.Text);
+                cmd.Parameters.AddWithValue("@District", cbbDistrict.Text);
+                cmd.Parameters.AddWithValue("@JobJield", cbbJobJield.Text);
+                cmd.Parameters.Add("@Image", SqlDbType.VarBinary, -1).Value = b;
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
                 FPost_Load(sender, e);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Thất bại " + ex);
             }
+
+
         }
-
-
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            string query = string.Format("UPDATE Post SET JobName='{0}',WTime='{1}',Cost='{2}',Detail='{3}',Experience='{4}',City =N'{6}',District=N'{7}' WHERE IDP ='{5}'",
-               cbboxJobName.Text, cbboxWTime.Text, txtCost.Text, txtDetail.Text, cbboxExperience.Text, txtIDP.Text, txtCity.Text, cbboxDistrict.Text);
+            string query = string.Format("UPDATE Post SET JobField='{0}',WTime='{1}',Cost='{2}',Detail='{3}',Experience='{4}',City =N'{6}',District=N'{7}',JobName=N'{8}' WHERE IDP ='{5}'",
+               cbbJobJield.Text, cbbTime.Text, txtCost.Text, txtDetail.Text, cbbExperience.Text, txtIDP.Text, cbbCities.Text, cbbDistrict.Text, txtJob.Text);
             db.Execute(query);
             FPost_Load(sender, e);
 
@@ -256,5 +243,19 @@ namespace TheGioiViecLam
             FPost_Load(sender, e);
         }
 
+        private void cbbCities_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LoadDistrictIntoComboBox();
+        }
+
+        private void picturePost_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                picturePost.Image = Image.FromFile(open.FileName);
+                this.Text = open.FileName;
+            }
+        }
     }
 }
