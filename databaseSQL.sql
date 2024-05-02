@@ -366,7 +366,15 @@ BEGIN
 END
 GO
 
+SELECT * FROM Salary
+
 EXEC spInsertSalary 'Anh@gmail.com','P00001'
+GO
+
+INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-01-01','W00001','Anh@gmail.com','100','P00001')
+INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-02-01','W00001','Anh@gmail.com','250','P00001')
+INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-03-01','W00001','Anh@gmail.com','150','P00001')
+INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-04-01','W00001','Anh@gmail.com','200','P00001')
 GO
 
 CREATE FUNCTION fnSelectSalary(@wEmail char(50), @month char(20))

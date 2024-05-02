@@ -82,7 +82,6 @@
             chartFont8.FontName = "Arial";
             tick3.Font = chartFont8;
             this.ChartSalary.ZAxes.Ticks = tick3;
-            this.ChartSalary.Load += new System.EventHandler(this.ChartSalary_Load);
             // 
             // cCharge
             // 
