@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
             this.lblaccount = new System.Windows.Forms.Label();
             this.txtReview = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel1.SuspendLayout();
+            this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // panelMain
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.pictureBox);
-            this.guna2Panel1.Controls.Add(this.RatingStar);
-            this.guna2Panel1.Controls.Add(this.lblaccount);
-            this.guna2Panel1.Controls.Add(this.txtReview);
-            this.guna2Panel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1275, 286);
-            this.guna2Panel1.TabIndex = 0;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            this.panelMain.BackColor = System.Drawing.Color.White;
+            this.panelMain.Controls.Add(this.pictureBox);
+            this.panelMain.Controls.Add(this.RatingStar);
+            this.panelMain.Controls.Add(this.lblaccount);
+            this.panelMain.Controls.Add(this.txtReview);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1061, 269);
+            this.panelMain.TabIndex = 1;
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(26, 198);
+            this.pictureBox.Location = new System.Drawing.Point(26, 176);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(131, 83);
             this.pictureBox.TabIndex = 13;
@@ -61,7 +61,7 @@
             // 
             // RatingStar
             // 
-            this.RatingStar.Location = new System.Drawing.Point(26, 38);
+            this.RatingStar.Location = new System.Drawing.Point(26, 27);
             this.RatingStar.Name = "RatingStar";
             this.RatingStar.ReadOnly = true;
             this.RatingStar.Size = new System.Drawing.Size(120, 28);
@@ -70,7 +70,7 @@
             // lblaccount
             // 
             this.lblaccount.AutoSize = true;
-            this.lblaccount.Location = new System.Drawing.Point(22, 11);
+            this.lblaccount.Location = new System.Drawing.Point(12, 0);
             this.lblaccount.Name = "lblaccount";
             this.lblaccount.Size = new System.Drawing.Size(181, 24);
             this.lblaccount.TabIndex = 11;
@@ -89,26 +89,29 @@
             this.txtReview.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtReview.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReview.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtReview.Location = new System.Drawing.Point(6, 73);
+            this.txtReview.Location = new System.Drawing.Point(6, 51);
             this.txtReview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtReview.Name = "txtReview";
             this.txtReview.PasswordChar = '\0';
             this.txtReview.PlaceholderText = "";
+            this.txtReview.ReadOnly = true;
             this.txtReview.SelectedText = "";
-            this.txtReview.Size = new System.Drawing.Size(1262, 118);
+            this.txtReview.Size = new System.Drawing.Size(1052, 118);
             this.txtReview.TabIndex = 10;
-            this.txtReview.TextChanged += new System.EventHandler(this.txtReview_TextChanged);
+            this.txtReview.TextOffset = new System.Drawing.Point(0, -40);
             // 
             // UCreview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.panelMain);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCreview";
-            this.Size = new System.Drawing.Size(1281, 292);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.Size = new System.Drawing.Size(1061, 269);
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -116,10 +119,10 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        public Guna.UI2.WinForms.Guna2TextBox txtReview;
+        private Guna.UI2.WinForms.Guna2Panel panelMain;
         public System.Windows.Forms.PictureBox pictureBox;
         public Guna.UI2.WinForms.Guna2RatingStar RatingStar;
         public System.Windows.Forms.Label lblaccount;
+        public Guna.UI2.WinForms.Guna2TextBox txtReview;
     }
 }

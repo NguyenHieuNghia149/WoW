@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btndeny = new Guna.UI2.WinForms.Guna2Button();
-            this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
             this.txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnDone = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,27 +38,10 @@
             this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCustomer = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtJob = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.guna2Panel1.Controls.Add(this.btndeny);
-            this.guna2Panel1.Controls.Add(this.btnConfirm);
-            this.guna2Panel1.Controls.Add(this.txtStatus);
-            this.guna2Panel1.Controls.Add(this.btnDone);
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.txtfromMinute);
-            this.guna2Panel1.Controls.Add(this.txtfromHours);
-            this.guna2Panel1.Controls.Add(this.txtAddress);
-            this.guna2Panel1.Controls.Add(this.txtPhoneNumber);
-            this.guna2Panel1.Controls.Add(this.txtCustomer);
-            this.guna2Panel1.Controls.Add(this.txtJob);
-            this.guna2Panel1.Location = new System.Drawing.Point(7, 3);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1283, 153);
-            this.guna2Panel1.TabIndex = 2;
             // 
             // btndeny
             // 
@@ -71,27 +52,11 @@
             this.btndeny.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(32)))), ((int)(((byte)(78)))));
             this.btndeny.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btndeny.ForeColor = System.Drawing.Color.White;
-            this.btndeny.Location = new System.Drawing.Point(1153, 92);
+            this.btndeny.Location = new System.Drawing.Point(857, 94);
             this.btndeny.Name = "btndeny";
             this.btndeny.Size = new System.Drawing.Size(108, 45);
             this.btndeny.TabIndex = 14;
             this.btndeny.Text = "Deny";
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(162)))), ((int)(((byte)(227)))));
-            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(1029, 92);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(108, 45);
-            this.btnConfirm.TabIndex = 13;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // txtStatus
             // 
@@ -105,7 +70,7 @@
             this.txtStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
             this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Location = new System.Drawing.Point(539, 47);
+            this.txtStatus.Location = new System.Drawing.Point(678, 50);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.PasswordChar = '\0';
@@ -123,18 +88,17 @@
             this.btnDone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(205)))), ((int)(((byte)(159)))));
             this.btnDone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDone.ForeColor = System.Drawing.Color.White;
-            this.btnDone.Location = new System.Drawing.Point(903, 92);
+            this.btnDone.Location = new System.Drawing.Point(629, 94);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(108, 45);
             this.btnDone.TabIndex = 11;
             this.btnDone.Text = "Done";
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(445, 47);
+            this.label1.Location = new System.Drawing.Point(587, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 22);
             this.label1.TabIndex = 6;
@@ -152,7 +116,7 @@
             this.txtfromMinute.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtfromMinute.ForeColor = System.Drawing.Color.Black;
             this.txtfromMinute.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtfromMinute.Location = new System.Drawing.Point(467, 44);
+            this.txtfromMinute.Location = new System.Drawing.Point(609, 51);
             this.txtfromMinute.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtfromMinute.Name = "txtfromMinute";
             this.txtfromMinute.PasswordChar = '\0';
@@ -173,7 +137,7 @@
             this.txtfromHours.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtfromHours.ForeColor = System.Drawing.Color.Black;
             this.txtfromHours.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtfromHours.Location = new System.Drawing.Point(400, 44);
+            this.txtfromHours.Location = new System.Drawing.Point(542, 51);
             this.txtfromHours.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtfromHours.Name = "txtfromHours";
             this.txtfromHours.PasswordChar = '\0';
@@ -194,13 +158,13 @@
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(873, 2);
+            this.txtAddress.Location = new System.Drawing.Point(15, 51);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
             this.txtAddress.PlaceholderText = "Dia Chi";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(321, 36);
+            this.txtAddress.Size = new System.Drawing.Size(492, 36);
             this.txtAddress.TabIndex = 3;
             // 
             // txtPhoneNumber
@@ -215,7 +179,7 @@
             this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(597, 1);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(609, 6);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
@@ -236,7 +200,7 @@
             this.txtCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCustomer.ForeColor = System.Drawing.Color.Black;
             this.txtCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCustomer.Location = new System.Drawing.Point(330, 0);
+            this.txtCustomer.Location = new System.Drawing.Point(342, 7);
             this.txtCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.PasswordChar = '\0';
@@ -257,7 +221,7 @@
             this.txtJob.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtJob.ForeColor = System.Drawing.Color.Black;
             this.txtJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJob.Location = new System.Drawing.Point(3, 1);
+            this.txtJob.Location = new System.Drawing.Point(15, 7);
             this.txtJob.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJob.Name = "txtJob";
             this.txtJob.PasswordChar = '\0';
@@ -266,13 +230,52 @@
             this.txtJob.Size = new System.Drawing.Size(321, 36);
             this.txtJob.TabIndex = 0;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.Controls.Add(this.btndeny);
+            this.guna2Panel1.Controls.Add(this.btnConfirm);
+            this.guna2Panel1.Controls.Add(this.txtStatus);
+            this.guna2Panel1.Controls.Add(this.btnDone);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.txtfromMinute);
+            this.guna2Panel1.Controls.Add(this.txtfromHours);
+            this.guna2Panel1.Controls.Add(this.txtAddress);
+            this.guna2Panel1.Controls.Add(this.txtPhoneNumber);
+            this.guna2Panel1.Controls.Add(this.txtCustomer);
+            this.guna2Panel1.Controls.Add(this.txtJob);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(976, 148);
+            this.guna2Panel1.TabIndex = 4;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(162)))), ((int)(((byte)(227)))));
+            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(743, 94);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(108, 45);
+            this.btnConfirm.TabIndex = 13;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click_1);
+            // 
             // ucAOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucAOrder";
-            this.Size = new System.Drawing.Size(1297, 159);
+            this.Size = new System.Drawing.Size(976, 148);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -281,17 +284,17 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public Guna.UI2.WinForms.Guna2Button btndeny;
-        public Guna.UI2.WinForms.Guna2Button btnConfirm;
         public Guna.UI2.WinForms.Guna2TextBox txtStatus;
         public Guna.UI2.WinForms.Guna2Button btnDone;
         private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2TextBox txtfromMinute;
         public Guna.UI2.WinForms.Guna2TextBox txtfromHours;
-        public Guna.UI2.WinForms.Guna2TextBox txtJob;
         public Guna.UI2.WinForms.Guna2TextBox txtAddress;
         public Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
         public Guna.UI2.WinForms.Guna2TextBox txtCustomer;
+        public Guna.UI2.WinForms.Guna2TextBox txtJob;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        public Guna.UI2.WinForms.Guna2Button btnConfirm;
     }
 }

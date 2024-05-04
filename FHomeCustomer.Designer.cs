@@ -924,6 +924,7 @@
             this.btnPost.Size = new System.Drawing.Size(180, 45);
             this.btnPost.TabIndex = 45;
             this.btnPost.Text = "Post now";
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // guna2GradientCircleButton1
             // 

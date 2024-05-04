@@ -367,9 +367,10 @@
             this.panelMain.Controls.Add(this.label6);
             this.panelMain.Controls.Add(this.txtIDP);
             this.panelMain.Controls.Add(this.picturePost);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(225)))), ((int)(((byte)(250)))));
             this.panelMain.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
-            this.panelMain.Location = new System.Drawing.Point(8, 8);
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(758, 245);
             this.panelMain.TabIndex = 2;

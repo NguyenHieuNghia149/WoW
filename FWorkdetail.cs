@@ -53,12 +53,12 @@ namespace TheGioiViecLam
                     ucW.txtCity.Text = reader["City"].ToString();
                     ucW.txtAddress.Text = reader["District"].ToString();
                     ucW.txtPhone.Text = reader["PhoneNum"].ToString();
-/*                    byte[] b = reader["img"] as byte[];
+                    byte[] b = reader["img"] as byte[];
                     if (b != null)
                     {
                         MemoryStream ms = new MemoryStream(b);
                         ucW.ptbox.Image = Image.FromStream(ms);
-                    }*/
+                    }
                     // Gán dữ liệu cho các TextBox khác tại đây
                 }
             }
@@ -99,7 +99,7 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sqlStr2 = @"SELECT Review.Rating, Review.Review, Review.Img, Customer.Fullname
+                string sqlStr2 = @"SELECT Review.Rating, Review.Review, Review.Img, Customer.Fullname, Review.Img
                   FROM Review
                   INNER JOIN Customer ON Review.CEmail = Customer.CEmail
                   WHERE Review.CEmail = @CEmail AND Review.IDP = @IDP AND Review.WID = @WID";
@@ -117,10 +117,17 @@ namespace TheGioiViecLam
                     string Review = row["Review"].ToString();
                     string Img = row["Img"].ToString();
                     string name = row["Fullname"].ToString();
+                    byte[] b = row["img"] as byte[];
                     UCreview uCreview = new UCreview();
                     uCreview.txtReview.Text = Review;
                     uCreview.RatingStar.Value = Rating;
                     uCreview.lblaccount.Text = name;
+                   
+                    if (b != null)
+                    {
+                        MemoryStream ms = new MemoryStream(b);
+                        uCreview.pictureBox.Image = Image.FromStream(ms);
+                    }
                     uCreview.Location = new Point(0, y);
                     y += uCreview.Height + 7; // Tăng y để tránh chồng chéo
                     panel1.Controls.Add(uCreview);

@@ -28,5 +28,10 @@ namespace TheGioiViecLam
         {
 
         }
+
+        private void panelMain_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

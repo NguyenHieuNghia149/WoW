@@ -43,12 +43,14 @@ namespace TheGioiViecLam
 
         public void UCWorkInFor_Click(string WID, string IDP, object sender, EventArgs e)
         {
+            MessageBox.Show("haha");
+            FWorkdetail form = new FWorkdetail(WID, IDP, account);
+            form.Show();
+    
             if (sender is UCWorkInFor uCWorkInFor)
             {
-                string postID = uCWorkInFor.txtIDP.Text;
-                // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(WID, IDP, account);
-                form.Show();
+                /*string postID = uCWorkInFor.txtIDP.Text;*/
+              
             }
         }
         private void LoadJobNameIntoComboBox()
@@ -132,6 +134,7 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
+
         private void Load_UCWorkInFor_FromDatabase(string account)
         {
             panel_Bot.AutoScroll = true; 
@@ -161,9 +164,9 @@ namespace TheGioiViecLam
                     byte[] b = reader["img"] as byte[];
 
                     UCWorkInFor ucWorkInFor = new UCWorkInFor();
-
-                    ucWorkInFor.Click += (s, ev) => UCWorkInFor_Click(WID, IDP, s, ev);
-
+                   // ucWorkInFor.panelMain_Click += (s, ev) => UCWorkInFor_Click(WID, IDP, s, ev); 
+                    ucWorkInFor.panelMain.Click += (s, ev) => UCWorkInFor_Click(WID, IDP, s, ev);
+     
                     ucWorkInFor.txtJobName.Text = JobName;
                     ucWorkInFor.txtWTime.Text = WTime;
                     ucWorkInFor.txtCost.Text = Cost;

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,11 +35,19 @@ namespace TheGioiViecLam
         private ucHistoryOrderCustomer CreateUCOrderFromDataRow(DataRow row)
         {
             ucHistoryOrderCustomer uc = new ucHistoryOrderCustomer();;
-            uc.lbljobname.Text = row["jobname"].ToString();
+            uc.lblJobField.Text = row["JobField"].ToString();
+            uc.lbljobname.Text =  "JobName: " +row["jobname"].ToString();
             uc.lblCost.Text = row["cost"].ToString();
             uc.lblstatus.Text = row["OStatus"].ToString();
             uc.lblHours.Text = row["FromHours"].ToString();
             uc.lblMinutes.Text = row["FromHours"].ToString();
+            byte[] b = row["img"] as byte[];
+            if (b != null)
+            {
+                MemoryStream ms = new MemoryStream(b);
+                uc.picturebox.Image = Image.FromStream(ms);
+            }
+
             string WID = row["WID"].ToString();
             string IDP = row["IDP"].ToString();
             switch (uc.lblstatus.Text)
@@ -110,7 +119,7 @@ namespace TheGioiViecLam
 
                 conn.Open();
                 string sql = string.Format("SELECT Customer.Fullname as fullname, Post.WID as WID, Customer.PhoneNum as phonenumber," +
-                    " Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time," +
+                    " Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time,Post.JobField as JobField,Post.img as img," +
                     " Orders.IDP as IDP, OStatus, ODate, FromHours, FromMinutes, Customer.Fullname as CIDWorkerName, Customer.CID FROM Post " +
                     " INNER JOIN Orders ON Post.IDP = Orders.IDP " +
                     " INNER JOIN Customer ON Customer.CEmail = Orders.CEmail " +

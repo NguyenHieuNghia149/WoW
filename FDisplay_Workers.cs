@@ -16,12 +16,12 @@ namespace TheGioiViecLam
         public FDisplay_Workers(string account)
         {
             InitializeComponent();
-            OpenChildForm(new FHomeWorker(account));
+            OpenChildForm(new FHomeWorker(account,this));
             btnhome.Checked = true;
             this.account = account;
         }
-        private Form currentFormChild;
-        private void OpenChildForm(Form childForm)
+        public Form currentFormChild;
+        public void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
             {
@@ -65,7 +65,7 @@ namespace TheGioiViecLam
 
         private void btnhome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FHomeWorker(account));
+            OpenChildForm(new FHomeWorker(account, this));
         }
 
         private void btnStatific_Click(object sender, EventArgs e)

@@ -98,5 +98,10 @@ namespace TheGioiViecLam
         {
             OpenChildForm(new FRequirement_Jobs(account));
         }
+
+        private void btnCalender_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FJobCalenderCustomer(account));
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Windows.Media;
 using TheGioiViecLam.model;
 using System.Collections;
+using System.IO;
 
 namespace TheGioiViecLam
 {
@@ -32,11 +33,12 @@ namespace TheGioiViecLam
 
         private void ucWorkInFor_Click(string wid, string postID, object sender, EventArgs e)
         {
+            FWorkdetail form = new FWorkdetail(wid, postID, account);
+            form.Show();
 
             if (sender is UCWorkInFor uCWorkInFor)
             {
-                FWorkdetail form = new FWorkdetail(wid, postID, account);
-                form.Show();
+              
             }
         }
 
@@ -121,7 +123,7 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT * FROM PostsWithAverageRating WHERE JobField = '{0}'", jobfield);
+                string sqlStr = string.Format("SELECT * FROM PostsWithAverageRating WHERE FieldName = '{0}'", jobfield);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dataSet = new DataSet();
                 adapter.Fill(dataSet);
@@ -137,9 +139,10 @@ namespace TheGioiViecLam
                     string postID = row["IDP"].ToString();
                     string WID = row["WID"].ToString();
                     float Rating = Convert.ToInt32(row["Rating"]);
+                    byte[] b = row["img"] as byte[];
 
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
-                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
+                    uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
 
                     if (CheckIDPInSaves(postID))
                     {
@@ -163,6 +166,11 @@ namespace TheGioiViecLam
                     uCWorkInFor.btnDelete.Enabled = false;
                     uCWorkInFor.btnDelete.Visible = false;
                     uCWorkInFor.ratingStar.Value = Rating;
+                    if (b != null)
+                    {
+                        MemoryStream ms = new MemoryStream(b);
+                        uCWorkInFor.picturePost.Image = Image.FromStream(ms);
+                    }
                     uCWorkInFor.Location = new Point(50, y);
                     y += uCWorkInFor.Height + 10;
                     PanelBottom.Controls.Add(uCWorkInFor);
@@ -263,6 +271,8 @@ namespace TheGioiViecLam
                     string postID = reader["IDP"].ToString(); // Lấy giá trị IDP
                     string WID = reader["WID"].ToString();
                     float Rating = Convert.ToInt32(reader["Rating"]);
+                    byte[] b = reader["img"] as byte[];
+
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
                     if (CheckIDPInSaves(postID))
                     {
@@ -285,6 +295,11 @@ namespace TheGioiViecLam
                     uCWorkInFor.btnDelete.Enabled = false;
                     uCWorkInFor.btnDelete.Visible = false;
                     uCWorkInFor.ratingStar.Value = Rating;
+                    if (b != null)
+                    {
+                        MemoryStream ms = new MemoryStream(b);
+                        uCWorkInFor.picturePost.Image = Image.FromStream(ms);
+                    }
                     uCWorkInFor.Location = new Point(50, y);
                     y += uCWorkInFor.Height + 10;
                     PanelBottom.Controls.Add(uCWorkInFor);
@@ -307,7 +322,14 @@ namespace TheGioiViecLam
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-
+            if (paneFilter.Visible == false)
+            {
+                paneFilter.Visible = true;
+            }
+            else
+            {
+                paneFilter.Visible = false;
+            }
         }
 
         private void paneFilter_Paint(object sender, PaintEventArgs e)

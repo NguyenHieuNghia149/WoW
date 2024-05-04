@@ -810,7 +810,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Button btnSave;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblCity;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblWork;
@@ -856,5 +855,6 @@
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label lblNumberReview;
         public Guna.UI2.WinForms.Guna2RatingStar ratingStar;
+        public Guna.UI2.WinForms.Guna2Button btnSave;
     }
 }

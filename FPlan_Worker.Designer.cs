@@ -34,12 +34,14 @@
             this.btnCalender = new Guna.UI2.WinForms.Guna2Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelCalender = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnReview = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btnReview);
             this.guna2Panel1.Controls.Add(this.btnDenied);
             this.guna2Panel1.Controls.Add(this.btnCompleted);
             this.guna2Panel1.Controls.Add(this.btnCalender);
@@ -136,6 +138,29 @@
             this.panelCalender.Size = new System.Drawing.Size(969, 647);
             this.panelCalender.TabIndex = 0;
             // 
+            // btnReview
+            // 
+            this.btnReview.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnReview.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.btnReview.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnReview.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.btnReview.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReview.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReview.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReview.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReview.FillColor = System.Drawing.Color.White;
+            this.btnReview.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.btnReview.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.btnReview.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnReview.Location = new System.Drawing.Point(464, 5);
+            this.btnReview.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReview.Name = "btnReview";
+            this.btnReview.PressedColor = System.Drawing.Color.White;
+            this.btnReview.Size = new System.Drawing.Size(133, 33);
+            this.btnReview.TabIndex = 3;
+            this.btnReview.Text = "Review";
+            // 
             // FPlan_Worker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -162,5 +187,6 @@
         private Guna.UI2.WinForms.Guna2Button btnCompleted;
         private System.Windows.Forms.Panel panelMain;
         private Guna.UI2.WinForms.Guna2Panel panelCalender;
+        private Guna.UI2.WinForms.Guna2Button btnReview;
     }
 }

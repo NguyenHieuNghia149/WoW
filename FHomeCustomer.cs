@@ -26,6 +26,7 @@ namespace TheGioiViecLam
             InitializeComponent();
             Familyandcare.AutoScroll = true;
             this.FDisplay_Customers = fDisplay_Customers;
+            LoadHistoryOrder();
         }
 
         private void guna2PictureBox9_Click(object sender, EventArgs e)

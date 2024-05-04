@@ -259,10 +259,10 @@
         private Guna.UI2.WinForms.Guna2Button btnMenu;
         private Guna.UI2.WinForms.Guna2Button btnhome;
         private Guna.UI2.WinForms.Guna2Button btnProfile;
-        private Guna.UI2.WinForms.Guna2Button btnPost;
-        private Guna.UI2.WinForms.Guna2Button btnPlan;
-        private Guna.UI2.WinForms.Guna2Button btnSearchRequire;
-        private Guna.UI2.WinForms.Guna2Button btnStatific;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
+        public Guna.UI2.WinForms.Guna2Button btnPost;
+        public Guna.UI2.WinForms.Guna2Button btnPlan;
+        public Guna.UI2.WinForms.Guna2Button btnSearchRequire;
+        public Guna.UI2.WinForms.Guna2Button btnStatific;
     }
 }

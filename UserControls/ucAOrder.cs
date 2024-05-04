@@ -66,6 +66,10 @@ namespace TheGioiViecLam.UserControls
         private void btnDone_Click(object sender, EventArgs e)
         {
         }
-     
+
+        private void btnConfirm_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,21 +35,22 @@
             // 
             this.ucCalender1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ucCalender1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucCalender1.Location = new System.Drawing.Point(23, 12);
+            this.ucCalender1.Location = new System.Drawing.Point(0, -4);
             this.ucCalender1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ucCalender1.Name = "ucCalender1";
-            this.ucCalender1.Size = new System.Drawing.Size(1106, 804);
-            this.ucCalender1.TabIndex = 0;
+            this.ucCalender1.Size = new System.Drawing.Size(1156, 696);
+            this.ucCalender1.TabIndex = 1;
             // 
             // FCalenderCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 853);
+            this.ClientSize = new System.Drawing.Size(988, 705);
             this.Controls.Add(this.ucCalender1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FCalenderCustomer";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCalenderCustomer";
             this.ResumeLayout(false);
 

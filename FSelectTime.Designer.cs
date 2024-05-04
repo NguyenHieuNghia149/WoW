@@ -48,9 +48,10 @@
             this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(205)))), ((int)(((byte)(153)))));
             this.btnConfirm.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(314, 131);
+            this.btnConfirm.Location = new System.Drawing.Point(269, 129);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(180, 45);
+            this.btnConfirm.Size = new System.Drawing.Size(93, 45);
             this.btnConfirm.TabIndex = 13;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
@@ -64,9 +65,10 @@
             this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.btnCancel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(55, 131);
+            this.btnCancel.Location = new System.Drawing.Point(73, 129);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(180, 45);
+            this.btnCancel.Size = new System.Drawing.Size(93, 45);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "Cancel";
             // 
@@ -74,7 +76,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(418, 63);
+            this.label3.Location = new System.Drawing.Point(344, 64);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 25);
             this.label3.TabIndex = 11;
@@ -84,7 +87,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(180, 63);
+            this.label2.Location = new System.Drawing.Point(154, 64);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 25);
             this.label2.TabIndex = 10;
@@ -95,10 +99,10 @@
             this.NumericMinutes.BackColor = System.Drawing.Color.Transparent;
             this.NumericMinutes.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NumericMinutes.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NumericMinutes.Location = new System.Drawing.Point(298, 51);
-            this.NumericMinutes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NumericMinutes.Location = new System.Drawing.Point(241, 46);
+            this.NumericMinutes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.NumericMinutes.Name = "NumericMinutes";
-            this.NumericMinutes.Size = new System.Drawing.Size(114, 48);
+            this.NumericMinutes.Size = new System.Drawing.Size(95, 43);
             this.NumericMinutes.TabIndex = 9;
             // 
             // numericHours
@@ -106,17 +110,18 @@
             this.numericHours.BackColor = System.Drawing.Color.Transparent;
             this.numericHours.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numericHours.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.numericHours.Location = new System.Drawing.Point(55, 51);
-            this.numericHours.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numericHours.Location = new System.Drawing.Point(51, 46);
+            this.numericHours.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.numericHours.Name = "numericHours";
-            this.numericHours.Size = new System.Drawing.Size(114, 48);
+            this.numericHours.Size = new System.Drawing.Size(95, 43);
             this.numericHours.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 10);
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(286, 25);
             this.label1.TabIndex = 7;
@@ -124,9 +129,10 @@
             // 
             // FSelectTime
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 187);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(463, 203);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label3);
@@ -134,6 +140,8 @@
             this.Controls.Add(this.NumericMinutes);
             this.Controls.Add(this.numericHours);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FSelectTime";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FSelectTime";

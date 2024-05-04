@@ -41,7 +41,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnPost = new Guna.UI2.WinForms.Guna2Button();
             this.btnfindjob = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panelStatific = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -75,7 +75,7 @@
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel5.SuspendLayout();
-            this.guna2CustomGradientPanel3.SuspendLayout();
+            this.panelStatific.SuspendLayout();
             this.guna2CircleProgressBar1.SuspendLayout();
             this.guna2CustomGradientPanel6.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
@@ -239,6 +239,7 @@
             this.btnPost.Size = new System.Drawing.Size(180, 45);
             this.btnPost.TabIndex = 5;
             this.btnPost.Text = "Post now";
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // btnfindjob
             // 
@@ -257,23 +258,25 @@
             this.btnfindjob.Size = new System.Drawing.Size(180, 45);
             this.btnfindjob.TabIndex = 9;
             this.btnfindjob.Text = "Find job";
+            this.btnfindjob.Click += new System.EventHandler(this.btnfindjob_Click);
             // 
-            // guna2CustomGradientPanel3
+            // panelStatific
             // 
-            this.guna2CustomGradientPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel3.BorderRadius = 20;
-            this.guna2CustomGradientPanel3.BorderThickness = 1;
-            this.guna2CustomGradientPanel3.Controls.Add(this.guna2CircleProgressBar1);
-            this.guna2CustomGradientPanel3.Controls.Add(this.guna2CustomGradientPanel6);
-            this.guna2CustomGradientPanel3.Controls.Add(this.Chart);
-            this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(12, 227);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(686, 400);
-            this.guna2CustomGradientPanel3.TabIndex = 10;
+            this.panelStatific.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.panelStatific.BorderRadius = 20;
+            this.panelStatific.BorderThickness = 1;
+            this.panelStatific.Controls.Add(this.guna2CircleProgressBar1);
+            this.panelStatific.Controls.Add(this.guna2CustomGradientPanel6);
+            this.panelStatific.Controls.Add(this.Chart);
+            this.panelStatific.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.panelStatific.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.panelStatific.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.panelStatific.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.panelStatific.Location = new System.Drawing.Point(12, 227);
+            this.panelStatific.Name = "panelStatific";
+            this.panelStatific.Size = new System.Drawing.Size(686, 400);
+            this.panelStatific.TabIndex = 10;
+            this.panelStatific.Click += new System.EventHandler(this.panelStatific_Click);
             // 
             // guna2CircleProgressBar1
             // 
@@ -527,6 +530,7 @@
             this.panelSeeReview.Name = "panelSeeReview";
             this.panelSeeReview.Size = new System.Drawing.Size(256, 97);
             this.panelSeeReview.TabIndex = 2;
+            this.panelSeeReview.Click += new System.EventHandler(this.panelSeeReview_Click);
             // 
             // label13
             // 
@@ -560,6 +564,7 @@
             this.panelCalender.Name = "panelCalender";
             this.panelCalender.Size = new System.Drawing.Size(256, 97);
             this.panelCalender.TabIndex = 2;
+            this.panelCalender.Click += new System.EventHandler(this.panelCalender_Click);
             // 
             // label12
             // 
@@ -593,6 +598,7 @@
             this.panelHistoryOrder.Name = "panelHistoryOrder";
             this.panelHistoryOrder.Size = new System.Drawing.Size(256, 97);
             this.panelHistoryOrder.TabIndex = 0;
+            this.panelHistoryOrder.Click += new System.EventHandler(this.panelHistoryOrder_Click);
             // 
             // label11
             // 
@@ -662,7 +668,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 716);
             this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.guna2CustomGradientPanel4);
-            this.Controls.Add(this.guna2CustomGradientPanel3);
+            this.Controls.Add(this.panelStatific);
             this.Controls.Add(this.btnfindjob);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
@@ -681,8 +687,8 @@
             this.guna2CustomGradientPanel2.PerformLayout();
             this.guna2CustomGradientPanel5.ResumeLayout(false);
             this.guna2CustomGradientPanel5.PerformLayout();
-            this.guna2CustomGradientPanel3.ResumeLayout(false);
-            this.guna2CustomGradientPanel3.PerformLayout();
+            this.panelStatific.ResumeLayout(false);
+            this.panelStatific.PerformLayout();
             this.guna2CircleProgressBar1.ResumeLayout(false);
             this.guna2CustomGradientPanel6.ResumeLayout(false);
             this.guna2CustomGradientPanel6.PerformLayout();
@@ -715,7 +721,7 @@
         public Guna.UI2.WinForms.Guna2Button btnPost;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;
         public Guna.UI2.WinForms.Guna2Button btnfindjob;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelStatific;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;

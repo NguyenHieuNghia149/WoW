@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fhomecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhomecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fwritereview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fwritereview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fwritereview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fwritereview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fhomecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhomecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\forders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:forders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fhomeworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fhomeworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fwritereport_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fwritereport_customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fseereview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fseereview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fwritereport_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fwritereport_workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fplan_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fplan_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\forders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:forders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\frequire_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:frequire_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fselecttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fselecttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,63 +102,160 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FPost.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FPost.cs",
+              "RelativeDocumentMoniker": "FPost.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FPost.cs [Design]",
+              "RelativeToolTip": "FPost.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:06:09.457Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FWriteReview.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWriteReview.cs",
+              "RelativeDocumentMoniker": "FWriteReview.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWriteReview.cs*",
+              "RelativeToolTip": "FWriteReview.cs*",
+              "ViewState": "AQIAABkAAAAAAAAAAAAzwCoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:04:42.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FWriteReview.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWriteReview.cs",
+              "RelativeDocumentMoniker": "FWriteReview.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWriteReview.cs [Design]*",
+              "RelativeToolTip": "FWriteReview.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:04:28.029Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FWriteReport_Workers.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWriteReport_Workers.cs",
+              "RelativeDocumentMoniker": "FWriteReport_Workers.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWriteReport_Workers.cs [Design]",
+              "RelativeToolTip": "FWriteReport_Workers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:04:27.252Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FWriteReport_Customers.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWriteReport_Customers.cs",
+              "RelativeDocumentMoniker": "FWriteReport_Customers.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWriteReport_Customers.cs [Design]",
+              "RelativeToolTip": "FWriteReport_Customers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:04:25.611Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FSeeReview.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSeeReview.cs",
+              "RelativeDocumentMoniker": "FSeeReview.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSeeReview.cs [Design]",
+              "RelativeToolTip": "FSeeReview.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:04:22.517Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FSelectTime.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSelectTime.cs",
+              "RelativeDocumentMoniker": "FSelectTime.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSelectTime.cs [Design]",
+              "RelativeToolTip": "FSelectTime.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:04:21.741Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FRequire_Detail.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FRequire_Detail.cs",
+              "RelativeDocumentMoniker": "FRequire_Detail.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FRequire_Detail.cs [Design]",
+              "RelativeToolTip": "FRequire_Detail.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:04:19.5Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FOrders.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FOrders.cs",
+              "RelativeDocumentMoniker": "FOrders.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FOrders.cs [Design]",
+              "RelativeToolTip": "FOrders.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T14:54:57.742Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FPlan_Worker.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FPlan_Worker.cs",
+              "RelativeDocumentMoniker": "FPlan_Worker.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FPlan_Worker.cs [Design]",
+              "RelativeToolTip": "FPlan_Worker.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T14:54:53.142Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FPost.cs",
               "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FPost.cs",
               "RelativeDocumentMoniker": "FPost.cs",
               "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FPost.cs",
               "RelativeToolTip": "FPost.cs",
-              "ViewState": "AQIAAJwAAAAAAAAAAAAuwMEAAAANAAAA",
+              "ViewState": "AQIAALsAAAAAAAAAAAAwwNwAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T12:05:53.175Z",
+              "WhenOpened": "2024-05-04T14:53:15.796Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FHomeCustomer.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FHomeCustomer.cs",
-              "RelativeDocumentMoniker": "FHomeCustomer.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FHomeCustomer.cs [Design]",
-              "RelativeToolTip": "FHomeCustomer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T12:05:29.526Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FHomeWorker.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FHomeWorker.cs",
-              "RelativeDocumentMoniker": "FHomeWorker.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FHomeWorker.cs [Design]",
-              "RelativeToolTip": "FHomeWorker.cs [Design]",
+              "Title": "FOrders.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FOrders.cs",
+              "RelativeDocumentMoniker": "FOrders.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FOrders.cs",
+              "RelativeToolTip": "FOrders.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAzwCYAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T12:05:26.082Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-04T14:53:11.395Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 221,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FHomeCustomer.cs",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FHomeCustomer.cs",
-              "RelativeDocumentMoniker": "FHomeCustomer.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FHomeCustomer.cs",
-              "RelativeToolTip": "FHomeCustomer.cs",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAuwIYAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T12:05:33.089Z",
-              "EditorCaption": ""
             }
           ]
         }

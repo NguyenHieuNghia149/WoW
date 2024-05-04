@@ -221,6 +221,7 @@
             this.btnCalender.Name = "btnCalender";
             this.btnCalender.Size = new System.Drawing.Size(63, 52);
             this.btnCalender.TabIndex = 13;
+            this.btnCalender.Click += new System.EventHandler(this.btnCalender_Click);
             // 
             // btnexit
             // 
