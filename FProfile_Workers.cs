@@ -26,15 +26,16 @@ namespace TheGioiViecLam
           
             this.account = account;
             Load_AllTxtBox(account);
-            LoadDistrictIntoComboBox(account);
-            LoadCityIntoComboBox(account);
+            LoadCityIntoComboBox();
         }
-        private void LoadDistrictIntoComboBox(string account)
+        private void LoadDistrictIntoComboBox()
         {
             try
             {
+                cbboxDistrict.Items.Clear();
                 conn.Open();
-                string query = string.Format("SELECT DISTINCT District FROM Worker WHERE WEmail = '{0}' ", account);
+                string City = cbboxCity.Text;
+                string query = string.Format("SELECT distinct District  FROM Cities WHERE City = N'{0}' ", City);
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -55,12 +56,13 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
-        private void LoadCityIntoComboBox(string account)
+        private void LoadCityIntoComboBox()
         {
             try
             {
                 conn.Open();
-                string query = string.Format("SELECT DISTINCT City FROM Worker WHERE WEmail = '{0}' ", account);
+
+                string query = string.Format("SELECT distinct  City FROM Cities");
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -82,7 +84,7 @@ namespace TheGioiViecLam
             }
         }
 
-        private void Load_AllTxtBox(string account) //khong hien cac combo box
+        private void Load_AllTxtBox(string account)
         {
             try
             {
@@ -134,9 +136,7 @@ namespace TheGioiViecLam
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            string query = string.Format("UPDATE Worker SET FullName=N'{0}',Gender='{1}',PhoneNum='{2}',Birthday='{3}',City=N'{4}',District=N'{5}',WAddress='{6}',WID ='{7}' WHERE WEmail = '{8}'",
-                txtFullName.Text, cbboxGender.Text, txtPhoneNum.Text, dtpBirthday.Value, cbboxCity.Text, cbboxDistrict.Text, txtAddress.Text, txtWID.Text, account);
-            db.Execute(query);
+          
 
         }
 
@@ -160,6 +160,42 @@ namespace TheGioiViecLam
             cmd.Parameters.AddWithValue("@account", account);
             cmd.ExecuteNonQuery();
             conn.Close();
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                byte[] b = imageDao.imageToByteArray(pictureBox.Image);
+                conn.Open();
+                string query = string.Format("Update Worker set WID = @ID, Fullname = @Fullname, Gender = @Gender, Birthday = @Birthday, City = @City, District = @District, PhoneNum = @Phonenumber, WAddress = @Address, img = @img where WEmail = @account");
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ID", txtWID.Text);
+                cmd.Parameters.AddWithValue("@Fullname", txtFullName.Text);
+                cmd.Parameters.AddWithValue("@Gender", cbboxGender.Text);
+                cmd.Parameters.AddWithValue("@Birthday", dtpBirthday.Value);
+                cmd.Parameters.AddWithValue("@City", cbboxCity.Text);
+                cmd.Parameters.AddWithValue("@District", cbboxDistrict.Text);
+                cmd.Parameters.AddWithValue("@Phonenumber", txtPhoneNum.Text);
+                cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
+                cmd.Parameters.AddWithValue("@img", b);
+                cmd.Parameters.AddWithValue("@account", account);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("Sucessfull");
+                conn.Close();
+            }
+        }
+
+        private void cbboxCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDistrictIntoComboBox();
         }
     }
 }

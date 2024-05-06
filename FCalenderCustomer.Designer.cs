@@ -38,7 +38,7 @@
             this.ucCalender1.Location = new System.Drawing.Point(0, -4);
             this.ucCalender1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ucCalender1.Name = "ucCalender1";
-            this.ucCalender1.Size = new System.Drawing.Size(1156, 696);
+            this.ucCalender1.Size = new System.Drawing.Size(991, 696);
             this.ucCalender1.TabIndex = 1;
             // 
             // FCalenderCustomer
@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(988, 705);
             this.Controls.Add(this.ucCalender1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FCalenderCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCalenderCustomer";

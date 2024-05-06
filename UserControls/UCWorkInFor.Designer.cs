@@ -336,7 +336,6 @@
             // picturePost
             // 
             this.picturePost.Image = ((System.Drawing.Image)(resources.GetObject("picturePost.Image")));
-            this.picturePost.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
             this.picturePost.ImageRotate = 0F;
             this.picturePost.Location = new System.Drawing.Point(14, 9);
             this.picturePost.Margin = new System.Windows.Forms.Padding(4);

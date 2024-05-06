@@ -466,6 +466,7 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(70, 45);
             this.btnBack.TabIndex = 13;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnFilter
             // 

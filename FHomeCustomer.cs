@@ -101,6 +101,7 @@ namespace TheGioiViecLam
 
         private void panelDifferent_Click(object sender, EventArgs e)
         {
+            FDisplay_Customers.ReplaceFHome_CustomerWithFSearch("Different                                                                              ");
 
         }
 

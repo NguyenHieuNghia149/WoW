@@ -555,6 +555,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WoW.sql" />
     <None Include="Resources\arrow %281%29.png" />
     <None Include="Resources\is-not-equal-to.png" />
     <None Include="Resources\calendar.png" />

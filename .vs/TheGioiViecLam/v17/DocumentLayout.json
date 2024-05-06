@@ -3,56 +3,12 @@
   "WorkspaceRootPath": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\fsigninforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsigninforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fcalenderworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fcalenderworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fviewrequire_detail_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fviewrequire_detail_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\fviewrequire_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fviewrequire_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fworkdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fworkdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fwaitconfirmorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fwaitconfirmorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\fsignupforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsignupforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\fsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\fviewrequire_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fviewrequire_worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\fsignupforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsignupforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\fsigninforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fsigninforworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|d:\\year2semeter2\\winformproject\\project\\wow\\fcalenderworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C5F231E-8CF7-4F5D-AB47-824153C0CCBA}|TheGioiViecLam.csproj|solutionrelative:fcalenderworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,163 +62,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FViewRequire_Detail_Worker.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FViewRequire_Detail_Worker.cs",
-              "RelativeDocumentMoniker": "FViewRequire_Detail_Worker.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FViewRequire_Detail_Worker.cs [Design]",
-              "RelativeToolTip": "FViewRequire_Detail_Worker.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T14:53:03.665Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FWorkdetail.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWorkdetail.cs",
-              "RelativeDocumentMoniker": "FWorkdetail.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWorkdetail.cs [Design]",
-              "RelativeToolTip": "FWorkdetail.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T14:53:00.75Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FWaitConfirmOrder.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWaitConfirmOrder.cs",
-              "RelativeDocumentMoniker": "FWaitConfirmOrder.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FWaitConfirmOrder.cs [Design]",
-              "RelativeToolTip": "FWaitConfirmOrder.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T14:53:00.254Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FSearch.cs",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSearch.cs",
-              "RelativeDocumentMoniker": "FSearch.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSearch.cs",
-              "RelativeToolTip": "FSearch.cs",
-              "ViewState": "AQIAAMQAAAAAAAAAAAAIwM4AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T14:42:32.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FViewRequire_Worker.cs",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FViewRequire_Worker.cs",
-              "RelativeDocumentMoniker": "FViewRequire_Worker.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FViewRequire_Worker.cs",
-              "RelativeToolTip": "FViewRequire_Worker.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAwwBEAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T14:42:20.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FSearch.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSearch.cs",
-              "RelativeDocumentMoniker": "FSearch.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSearch.cs [Design]",
-              "RelativeToolTip": "FSearch.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T14:41:48.718Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FSignUpforWorkers.cs",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignUpforWorkers.cs",
-              "RelativeDocumentMoniker": "FSignUpforWorkers.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignUpforWorkers.cs",
-              "RelativeToolTip": "FSignUpforWorkers.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAwEoAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T14:31:11.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FSignUp.cs",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignUp.cs",
-              "RelativeDocumentMoniker": "FSignUp.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignUp.cs",
-              "RelativeToolTip": "FSignUp.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAkwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T14:33:39.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FSignInforWorkers.cs",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignInforWorkers.cs",
-              "RelativeDocumentMoniker": "FSignInforWorkers.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignInforWorkers.cs",
-              "RelativeToolTip": "FSignInforWorkers.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAhwEgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T10:22:44.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FSignInforWorkers.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignInforWorkers.cs",
-              "RelativeDocumentMoniker": "FSignInforWorkers.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignInforWorkers.cs [Design]",
-              "RelativeToolTip": "FSignInforWorkers.cs [Design]",
+              "Title": "FCalenderWorker.cs",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FCalenderWorker.cs",
+              "RelativeDocumentMoniker": "FCalenderWorker.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FCalenderWorker.cs",
+              "RelativeToolTip": "FCalenderWorker.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAwwJ4AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T10:22:40.432Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FSignUpforWorkers.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignUpforWorkers.cs",
-              "RelativeDocumentMoniker": "FSignUpforWorkers.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignUpforWorkers.cs [Design]",
-              "RelativeToolTip": "FSignUpforWorkers.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T10:22:35.141Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-06T19:19:10.583Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FSignUp.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignUp.cs",
-              "RelativeDocumentMoniker": "FSignUp.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FSignUp.cs [Design]",
-              "RelativeToolTip": "FSignUp.cs [Design]",
+              "Title": "FCalenderWorker.cs [Design]",
+              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FCalenderWorker.cs",
+              "RelativeDocumentMoniker": "FCalenderWorker.cs",
+              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FCalenderWorker.cs [Design]",
+              "RelativeToolTip": "FCalenderWorker.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T10:22:34.574Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FViewRequire_Worker.cs [Design]",
-              "DocumentMoniker": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FViewRequire_Worker.cs",
-              "RelativeDocumentMoniker": "FViewRequire_Worker.cs",
-              "ToolTip": "D:\\Year2Semeter2\\WINFORMPROJECT\\project\\WoW\\FViewRequire_Worker.cs [Design]",
-              "RelativeToolTip": "FViewRequire_Worker.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T10:21:36.143Z",
+              "WhenOpened": "2024-05-06T19:19:07.093Z",
               "EditorCaption": " [Design]"
             }
           ]

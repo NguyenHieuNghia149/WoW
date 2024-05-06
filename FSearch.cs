@@ -390,5 +390,10 @@ namespace TheGioiViecLam
 
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

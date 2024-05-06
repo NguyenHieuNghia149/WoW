@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txtGender = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDistrict = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -44,28 +42,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbCity = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbCity = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dtBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnChange = new Guna.UI2.WinForms.Guna2Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.cbbDistrict = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::TheGioiViecLam.Properties.Resources.photo__1_1;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(131, 377);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(51, 38);
-            this.guna2ImageButton1.TabIndex = 82;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.imagebtnPostImage_Click);
             // 
             // txtGender
             // 
@@ -99,29 +84,6 @@
             this.label3.Size = new System.Drawing.Size(63, 21);
             this.label3.TabIndex = 81;
             this.label3.Text = "Gender";
-            // 
-            // txtDistrict
-            // 
-            this.txtDistrict.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.txtDistrict.BorderRadius = 10;
-            this.txtDistrict.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDistrict.DefaultText = "";
-            this.txtDistrict.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDistrict.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDistrict.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDistrict.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDistrict.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDistrict.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.txtDistrict.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDistrict.Location = new System.Drawing.Point(687, 331);
-            this.txtDistrict.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDistrict.Name = "txtDistrict";
-            this.txtDistrict.PasswordChar = '\0';
-            this.txtDistrict.PlaceholderText = "District";
-            this.txtDistrict.SelectedText = "";
-            this.txtDistrict.Size = new System.Drawing.Size(283, 35);
-            this.txtDistrict.TabIndex = 78;
             // 
             // label4
             // 
@@ -232,6 +194,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(283, 35);
             this.txtEmail.TabIndex = 63;
@@ -271,7 +234,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(302, 410);
+            this.txtAddress.Location = new System.Drawing.Point(305, 426);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
@@ -294,7 +257,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(308, 377);
+            this.label8.Location = new System.Drawing.Point(301, 401);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 21);
             this.label8.TabIndex = 74;
@@ -310,24 +273,25 @@
             this.label9.TabIndex = 66;
             this.label9.Text = "Email";
             // 
-            // cbCity
+            // cbbCity
             // 
-            this.cbCity.BackColor = System.Drawing.Color.Transparent;
-            this.cbCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.cbCity.BorderRadius = 10;
-            this.cbCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCity.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.cbCity.ItemHeight = 30;
-            this.cbCity.Items.AddRange(new object[] {
+            this.cbbCity.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.cbbCity.BorderRadius = 10;
+            this.cbbCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCity.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.cbbCity.ItemHeight = 30;
+            this.cbbCity.Items.AddRange(new object[] {
             "Hồ Chí Minh"});
-            this.cbCity.Location = new System.Drawing.Point(302, 321);
-            this.cbCity.Name = "cbCity";
-            this.cbCity.Size = new System.Drawing.Size(179, 36);
-            this.cbCity.TabIndex = 72;
+            this.cbbCity.Location = new System.Drawing.Point(305, 335);
+            this.cbbCity.Name = "cbbCity";
+            this.cbbCity.Size = new System.Drawing.Size(283, 36);
+            this.cbbCity.TabIndex = 72;
+            this.cbbCity.SelectedIndexChanged += new System.EventHandler(this.cbbCity_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -356,25 +320,26 @@
             this.dtBirthday.TabIndex = 71;
             this.dtBirthday.Value = new System.DateTime(2024, 3, 11, 17, 9, 15, 208);
             // 
-            // guna2Button1
+            // btnChange
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(735, 469);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(120, 40);
-            this.guna2Button1.TabIndex = 68;
-            this.guna2Button1.Text = "Change";
+            this.btnChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChange.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.ForeColor = System.Drawing.Color.White;
+            this.btnChange.Location = new System.Drawing.Point(812, 467);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(120, 40);
+            this.btnChange.TabIndex = 68;
+            this.btnChange.Text = "Change";
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(308, 299);
+            this.label11.Location = new System.Drawing.Point(311, 313);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(38, 21);
             this.label11.TabIndex = 70;
@@ -390,16 +355,35 @@
             this.label12.TabIndex = 69;
             this.label12.Text = "Birthday";
             // 
+            // cbbDistrict
+            // 
+            this.cbbDistrict.BackColor = System.Drawing.Color.Transparent;
+            this.cbbDistrict.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.cbbDistrict.BorderRadius = 10;
+            this.cbbDistrict.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDistrict.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbDistrict.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbDistrict.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDistrict.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.cbbDistrict.ItemHeight = 30;
+            this.cbbDistrict.Items.AddRange(new object[] {
+            "Hồ Chí Minh"});
+            this.cbbDistrict.Location = new System.Drawing.Point(688, 335);
+            this.cbbDistrict.Name = "cbbDistrict";
+            this.cbbDistrict.Size = new System.Drawing.Size(282, 36);
+            this.cbbDistrict.TabIndex = 83;
+            this.cbbDistrict.SelectedIndexChanged += new System.EventHandler(this.cbbDistrict_SelectedIndexChanged);
+            // 
             // FProfile_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1029, 806);
-            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.cbbDistrict);
             this.Controls.Add(this.txtGender);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtDistrict);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.pictureBox);
@@ -412,13 +396,14 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cbCity);
+            this.Controls.Add(this.cbbCity);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtBirthday);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FProfile_Customers";
             this.Text = " ";
@@ -429,11 +414,8 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2TextBox txtGender;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtDistrict;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtID;
         private Guna.UI2.WinForms.Guna2PictureBox pictureBox;
@@ -446,11 +428,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2ComboBox cbCity;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCity;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtBirthday;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnChange;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbDistrict;
     }
 }

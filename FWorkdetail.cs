@@ -7,6 +7,7 @@ using System.IO;
 using System.Drawing;
 using System.Data;
 using TheGioiViecLam.UserControls;
+using System.Drawing.Printing;
 namespace TheGioiViecLam
 {
     public partial class FWorkdetail : Form
@@ -52,7 +53,7 @@ namespace TheGioiViecLam
                     ucW.txtWorkDetail.Text = reader["Detail"].ToString();
                     ucW.txtEmail.Text = reader["Email"].ToString();
                     ucW.txtCity.Text = reader["City"].ToString();
-                    ucW.txtAddress.Text = reader["District"].ToString();
+                    ucW.txtAddress.Text = reader["Address"].ToString();
                     ucW.txtPhone.Text = reader["PhoneNum"].ToString();
                     byte[] b = reader["img"] as byte[];
                     if (b != null)
@@ -60,7 +61,7 @@ namespace TheGioiViecLam
                         MemoryStream ms = new MemoryStream(b);
                         ucW.ptbox.Image = Image.FromStream(ms);
                     }
-                    // Gán dữ liệu cho các TextBox khác tại đây
+                    
                 }
             }
             catch (Exception ex)
@@ -82,6 +83,7 @@ namespace TheGioiViecLam
                 {
                     ucW.lblNumberReview.Text = averageRating.ToString();
                     ucW.ratingStar.Value = Convert.ToInt32(averageRating);
+                    ucW.rating.Value = Convert.ToInt32(averageRating);
                 }
                 else
                 {
@@ -143,7 +145,30 @@ namespace TheGioiViecLam
             {
                 conn.Close();
             }
-
+            try
+            {
+                conn.Open();
+                string query = string.Format("SELECT Count(*) as count from Saves Where IDP = '{0}'", selectedPostID);
+                SqlCommand cmd3 = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd3.ExecuteReader();
+                while (reader.Read())
+                {
+                    ucW.lblfavourite.Text = "(" + reader["count"].ToString() + ")";
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
+
+      /*  private void LoadFavourite()
+        {
+          
+        }*/
     }
 }

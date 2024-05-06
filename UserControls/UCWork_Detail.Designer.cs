@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCWork_Detail));
             this.panelDetail = new System.Windows.Forms.Panel();
             this.lblReview = new System.Windows.Forms.Label();
-            this.favourite = new System.Windows.Forms.Label();
+            this.lblfavourite = new System.Windows.Forms.Label();
             this.rating = new Guna.UI2.WinForms.Guna2RatingStar();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.btnHavePicture = new Guna.UI2.WinForms.Guna2Button();
@@ -83,7 +83,7 @@
             // panelDetail
             // 
             this.panelDetail.Controls.Add(this.lblReview);
-            this.panelDetail.Controls.Add(this.favourite);
+            this.panelDetail.Controls.Add(this.lblfavourite);
             this.panelDetail.Controls.Add(this.rating);
             this.panelDetail.Controls.Add(this.panelMain);
             this.panelDetail.Controls.Add(this.txtCost);
@@ -132,21 +132,21 @@
             this.lblReview.TabIndex = 153;
             this.lblReview.Text = "Service Reviews";
             // 
-            // favourite
+            // lblfavourite
             // 
-            this.favourite.AutoSize = true;
-            this.favourite.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.favourite.Location = new System.Drawing.Point(305, 359);
-            this.favourite.Name = "favourite";
-            this.favourite.Size = new System.Drawing.Size(42, 21);
-            this.favourite.TabIndex = 155;
-            this.favourite.Text = "(56)";
+            this.lblfavourite.AutoSize = true;
+            this.lblfavourite.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.lblfavourite.Location = new System.Drawing.Point(255, 359);
+            this.lblfavourite.Name = "lblfavourite";
+            this.lblfavourite.Size = new System.Drawing.Size(42, 21);
+            this.lblfavourite.TabIndex = 155;
+            this.lblfavourite.Text = "(56)";
             // 
             // rating
             // 
-            this.rating.Location = new System.Drawing.Point(112, 359);
+            this.rating.Location = new System.Drawing.Point(101, 356);
             this.rating.Name = "rating";
-            this.rating.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.rating.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
             this.rating.ReadOnly = true;
             this.rating.Size = new System.Drawing.Size(120, 28);
             this.rating.TabIndex = 154;
@@ -354,6 +354,7 @@
             this.txtCost.Name = "txtCost";
             this.txtCost.PasswordChar = '\0';
             this.txtCost.PlaceholderText = "";
+            this.txtCost.ReadOnly = true;
             this.txtCost.SelectedText = "";
             this.txtCost.Size = new System.Drawing.Size(66, 34);
             this.txtCost.TabIndex = 148;
@@ -375,6 +376,7 @@
             this.txtWork.Name = "txtWork";
             this.txtWork.PasswordChar = '\0';
             this.txtWork.PlaceholderText = "";
+            this.txtWork.ReadOnly = true;
             this.txtWork.SelectedText = "";
             this.txtWork.Size = new System.Drawing.Size(406, 64);
             this.txtWork.TabIndex = 147;
@@ -436,6 +438,7 @@
             this.txtTime.Name = "txtTime";
             this.txtTime.PasswordChar = '\0';
             this.txtTime.PlaceholderText = "";
+            this.txtTime.ReadOnly = true;
             this.txtTime.SelectedText = "";
             this.txtTime.Size = new System.Drawing.Size(55, 34);
             this.txtTime.TabIndex = 145;
@@ -467,6 +470,7 @@
             this.txtExperience.Name = "txtExperience";
             this.txtExperience.PasswordChar = '\0';
             this.txtExperience.PlaceholderText = "";
+            this.txtExperience.ReadOnly = true;
             this.txtExperience.SelectedText = "";
             this.txtExperience.Size = new System.Drawing.Size(55, 34);
             this.txtExperience.TabIndex = 144;
@@ -483,13 +487,14 @@
             this.txtCity.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.txtCity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCity.Location = new System.Drawing.Point(672, 132);
+            this.txtCity.Location = new System.Drawing.Point(645, 131);
             this.txtCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCity.Name = "txtCity";
             this.txtCity.PasswordChar = '\0';
             this.txtCity.PlaceholderText = "";
+            this.txtCity.ReadOnly = true;
             this.txtCity.SelectedText = "";
-            this.txtCity.Size = new System.Drawing.Size(144, 34);
+            this.txtCity.Size = new System.Drawing.Size(211, 34);
             this.txtCity.TabIndex = 143;
             // 
             // txtEmail
@@ -504,13 +509,14 @@
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(672, 79);
+            this.txtEmail.Location = new System.Drawing.Point(645, 84);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(144, 34);
+            this.txtEmail.Size = new System.Drawing.Size(211, 34);
             this.txtEmail.TabIndex = 142;
             // 
             // txtAddress
@@ -525,13 +531,14 @@
             this.txtAddress.Font = new System.Drawing.Font("Tahoma", 10.2F);
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(672, 231);
+            this.txtAddress.Location = new System.Drawing.Point(620, 240);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
             this.txtAddress.PlaceholderText = "";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(144, 38);
+            this.txtAddress.Size = new System.Drawing.Size(236, 38);
             this.txtAddress.TabIndex = 141;
             // 
             // txtPhone
@@ -546,13 +553,14 @@
             this.txtPhone.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(672, 172);
+            this.txtPhone.Location = new System.Drawing.Point(645, 186);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PasswordChar = '\0';
             this.txtPhone.PlaceholderText = "";
+            this.txtPhone.ReadOnly = true;
             this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(144, 34);
+            this.txtPhone.Size = new System.Drawing.Size(211, 34);
             this.txtPhone.TabIndex = 140;
             // 
             // txtName
@@ -572,15 +580,16 @@
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
+            this.txtName.ReadOnly = true;
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(152, 34);
+            this.txtName.Size = new System.Drawing.Size(140, 34);
             this.txtName.TabIndex = 139;
             // 
             // guna2PictureBox11
             // 
             this.guna2PictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox11.Image")));
             this.guna2PictureBox11.ImageRotate = 0F;
-            this.guna2PictureBox11.Location = new System.Drawing.Point(268, 359);
+            this.guna2PictureBox11.Location = new System.Drawing.Point(227, 358);
             this.guna2PictureBox11.Name = "guna2PictureBox11";
             this.guna2PictureBox11.Size = new System.Drawing.Size(31, 25);
             this.guna2PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -651,8 +660,9 @@
             this.txtWorkDetail.Name = "txtWorkDetail";
             this.txtWorkDetail.PasswordChar = '\0';
             this.txtWorkDetail.PlaceholderText = "Work Detail";
+            this.txtWorkDetail.ReadOnly = true;
             this.txtWorkDetail.SelectedText = "";
-            this.txtWorkDetail.Size = new System.Drawing.Size(356, 141);
+            this.txtWorkDetail.Size = new System.Drawing.Size(396, 141);
             this.txtWorkDetail.TabIndex = 133;
             this.txtWorkDetail.TextOffset = new System.Drawing.Point(0, -50);
             // 
@@ -670,7 +680,7 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(544, 194);
+            this.lblPhone.Location = new System.Drawing.Point(521, 199);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(118, 21);
             this.lblPhone.TabIndex = 131;
@@ -690,7 +700,7 @@
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(544, 143);
+            this.lblCity.Location = new System.Drawing.Point(521, 143);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(38, 21);
             this.lblCity.TabIndex = 129;
@@ -700,7 +710,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(544, 241);
+            this.lblAddress.Location = new System.Drawing.Point(521, 240);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(70, 21);
             this.lblAddress.TabIndex = 128;
@@ -710,7 +720,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(544, 92);
+            this.lblEmail.Location = new System.Drawing.Point(521, 92);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(47, 21);
             this.lblEmail.TabIndex = 127;
@@ -793,8 +803,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblReview;
-        private System.Windows.Forms.Label favourite;
-        private Guna.UI2.WinForms.Guna2RatingStar rating;
         private Guna.UI2.WinForms.Guna2Panel panelMain;
         private Guna.UI2.WinForms.Guna2Button btnHavePicture;
         private Guna.UI2.WinForms.Guna2Button btn1Star;
@@ -837,5 +845,7 @@
         public Guna.UI2.WinForms.Guna2Button btnSave;
         public Guna.UI2.WinForms.Guna2Button btnBook;
         public System.Windows.Forms.Panel panelDetail;
+        public System.Windows.Forms.Label lblfavourite;
+        public Guna.UI2.WinForms.Guna2RatingStar rating;
     }
 }

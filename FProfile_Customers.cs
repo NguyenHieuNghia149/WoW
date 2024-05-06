@@ -29,7 +29,7 @@ namespace TheGioiViecLam
             InitializeComponent();
             LoadInformation(account);
             this.account = account;
-            MessageBox.Show(account);
+            LoadCity();
         }
 
 
@@ -53,6 +53,7 @@ namespace TheGioiViecLam
                     string phonenumer = reader["PhoneNum"].ToString();
                     string address = reader["CAddress"].ToString();
                     string id = reader["CID"].ToString();
+                    
                 
                     byte[] b = reader["img"] as byte[];
                     if(b != null) {
@@ -66,13 +67,11 @@ namespace TheGioiViecLam
                     txtAddress.Text = address;
                     txtID.Text = id;
                     txtPhoneNumber.Text = phonenumer;
-                    txtDistrict.Text = District;
-                    cbCity.Text = city;
+                    cbbDistrict.Text = District;
+                    cbbCity.Text = city;
                     dtBirthday.Text = birthday;
                 }
                 reader.Close();
-
-
             }
             catch (Exception ex)
             {
@@ -95,19 +94,100 @@ namespace TheGioiViecLam
             }
         }
 
-        private void imagebtnPostImage_Click(object sender, EventArgs e)
+        private void btnChange_Click(object sender, EventArgs e)
         {
-            byte[] b = imageDao.imageToByteArray(pictureBox.Image);
-            conn.Open();
-            string query = string.Format("Update Customer set img = @image where CEmail = @account");
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@image", b);
-            cmd.Parameters.AddWithValue("@account", account);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                byte[] b = imageDao.imageToByteArray(pictureBox.Image);
+                conn.Open();
+                string query = string.Format("Update Customer set CID = @ID, Fullname = @Fullname, Gender = @Gender, CBirthday = @Birthday, City = @City, District = @District, PhoneNum = @Phonenumber, CAddress = @Address, img = @img where CEmail = @account");
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ID",txtID.Text);
+                cmd.Parameters.AddWithValue("@Fullname", txtFullname.Text);
+                cmd.Parameters.AddWithValue("@Gender", txtGender.Text);
+                cmd.Parameters.AddWithValue("@Birthday", dtBirthday.Value);
+                cmd.Parameters.AddWithValue("@City", cbbCity.Text);
+                cmd.Parameters.AddWithValue("@District", cbbDistrict.Text);
+                cmd.Parameters.AddWithValue("@Phonenumber", txtPhoneNumber.Text);
+                cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
+                cmd.Parameters.AddWithValue("@img", b);
+                cmd.Parameters.AddWithValue("@account", account);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("Sucessfull");
+                conn.Close();
+            }
         }
-        //Chuyen  anh sang byte
+        private void LoadCity()
+        {
+            try
+            {
+                conn.Open();
 
-    
+                string query = string.Format("SELECT distinct  City FROM Cities");
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string City = reader["City"].ToString();
+                    cbbCity.Items.Add(City);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        private void LoadDistrictIntoComboBox()
+        {
+            try
+            {
+                cbbDistrict.Items.Clear();
+                conn.Open();
+                string City = cbbCity.Text;
+                string query = string.Format("SELECT distinct District  FROM Cities WHERE City = N'{0}' ", City);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string District = reader["District"].ToString();
+                    cbbDistrict.Items.Add(District);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void cbbCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDistrictIntoComboBox();
+        }
+
+        private void cbbDistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

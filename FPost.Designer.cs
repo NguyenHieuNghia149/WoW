@@ -37,7 +37,6 @@
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.txtJob = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblJob = new System.Windows.Forms.Label();
-            this.btn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.picturePost = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,6 +54,8 @@
             this.lblJobName = new System.Windows.Forms.Label();
             this.panel_Bot = new Guna.UI2.WinForms.Guna2Panel();
             this.panel_Top = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picturePost)).BeginInit();
             this.panel_Top.SuspendLayout();
             this.SuspendLayout();
@@ -204,21 +205,6 @@
             this.lblJob.TabIndex = 47;
             this.lblJob.Text = "Job";
             // 
-            // btn
-            // 
-            this.btn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn.Image = global::TheGioiViecLam.Properties.Resources.photo__1_1;
-            this.btn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn.ImageRotate = 0F;
-            this.btn.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn.Location = new System.Drawing.Point(113, 255);
-            this.btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn.Name = "btn";
-            this.btn.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn.Size = new System.Drawing.Size(47, 51);
-            this.btn.TabIndex = 46;
-            // 
             // picturePost
             // 
             this.picturePost.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -228,6 +214,7 @@
             this.picturePost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picturePost.Name = "picturePost";
             this.picturePost.Size = new System.Drawing.Size(241, 223);
+            this.picturePost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picturePost.TabIndex = 45;
             this.picturePost.TabStop = false;
             this.picturePost.Click += new System.EventHandler(this.picturePost_Click);
@@ -356,7 +343,7 @@
             this.btnPost.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnPost.ImageRotate = 0F;
             this.btnPost.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnPost.Location = new System.Drawing.Point(1049, 215);
+            this.btnPost.Location = new System.Drawing.Point(1046, 262);
             this.btnPost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPost.Name = "btnPost";
             this.btnPost.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -463,6 +450,8 @@
             // panel_Top
             // 
             this.panel_Top.BackColor = System.Drawing.Color.White;
+            this.panel_Top.Controls.Add(this.txtAddress);
+            this.panel_Top.Controls.Add(this.lblAddress);
             this.panel_Top.Controls.Add(this.cbbDistrict);
             this.panel_Top.Controls.Add(this.cbbCities);
             this.panel_Top.Controls.Add(this.cbbTime);
@@ -471,7 +460,6 @@
             this.panel_Top.Controls.Add(this.guna2Separator2);
             this.panel_Top.Controls.Add(this.txtJob);
             this.panel_Top.Controls.Add(this.lblJob);
-            this.panel_Top.Controls.Add(this.btn);
             this.panel_Top.Controls.Add(this.picturePost);
             this.panel_Top.Controls.Add(this.label2);
             this.panel_Top.Controls.Add(this.label1);
@@ -490,8 +478,43 @@
             this.panel_Top.Location = new System.Drawing.Point(-9, -22);
             this.panel_Top.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(1124, 343);
+            this.panel_Top.Size = new System.Drawing.Size(1114, 343);
             this.panel_Top.TabIndex = 4;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.txtAddress.BorderRadius = 5;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Location = new System.Drawing.Point(733, 203);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PlaceholderText = "";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(342, 36);
+            this.txtAddress.TabIndex = 55;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
+            this.lblAddress.Location = new System.Drawing.Point(655, 208);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(70, 21);
+            this.lblAddress.TabIndex = 54;
+            this.lblAddress.Text = "Address";
             // 
             // FPost
             // 
@@ -524,7 +547,6 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         public Guna.UI2.WinForms.Guna2TextBox txtJob;
         private System.Windows.Forms.Label lblJob;
-        private Guna.UI2.WinForms.Guna2ImageButton btn;
         private Guna.UI2.WinForms.Guna2PictureBox picturePost;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -542,5 +564,7 @@
         private System.Windows.Forms.Label lblJobName;
         private Guna.UI2.WinForms.Guna2Panel panel_Bot;
         private Guna.UI2.WinForms.Guna2Panel panel_Top;
+        public Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        private System.Windows.Forms.Label lblAddress;
     }
 }

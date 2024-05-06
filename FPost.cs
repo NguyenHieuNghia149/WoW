@@ -34,7 +34,7 @@ namespace TheGioiViecLam
         private void FPost_Load(object sender, EventArgs e)
         {
             LoadJobNameIntoComboBox();
-            LoadDistrictIntoComboBox();
+           // LoadDistrictIntoComboBox();
             LoadCity();
             Load_UCWorkInFor_FromDatabase(account);
 
@@ -43,15 +43,8 @@ namespace TheGioiViecLam
 
         public void UCWorkInFor_Click(string WID, string IDP, object sender, EventArgs e)
         {
-            MessageBox.Show("haha");
             FWorkdetail form = new FWorkdetail(WID, IDP, account);
             form.Show();
-    
-            if (sender is UCWorkInFor uCWorkInFor)
-            {
-                /*string postID = uCWorkInFor.txtIDP.Text;*/
-              
-            }
         }
         private void LoadJobNameIntoComboBox()
         {
@@ -164,7 +157,6 @@ namespace TheGioiViecLam
                     byte[] b = reader["img"] as byte[];
 
                     UCWorkInFor ucWorkInFor = new UCWorkInFor();
-                   // ucWorkInFor.panelMain_Click += (s, ev) => UCWorkInFor_Click(WID, IDP, s, ev); 
                     ucWorkInFor.panelMain.Click += (s, ev) => UCWorkInFor_Click(WID, IDP, s, ev);
      
                     ucWorkInFor.txtJobName.Text = JobName;
@@ -201,9 +193,12 @@ namespace TheGioiViecLam
         {
             try
             {
+                conn.Open();
                 byte[] b = imageDao.imageToByteArray(picturePost.Image);
-                string query = string.Format("EXEC pd_Insert_Post_ @IDP, @Account, @Job, @Time, @Cost, @Detail, @Experience, @PhoneNum, @Cities, @District, @JobJield, @Image");
+                string query = string.Format("EXEC pd_Insert_Post_ @IDP, @Account, @Job, @Time, @Cost, @Detail, @Experience, @PhoneNum, @Cities, @District, @JobJield, @Image,@Address");
                 SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataSet dataSet = new DataSet();
                 cmd.Parameters.AddWithValue("@IDP", txtIDP.Text);
                 cmd.Parameters.AddWithValue("@Account", account);
                 cmd.Parameters.AddWithValue("@Job", txtJob.Text);
@@ -216,15 +211,17 @@ namespace TheGioiViecLam
                 cmd.Parameters.AddWithValue("@District", cbbDistrict.Text);
                 cmd.Parameters.AddWithValue("@JobJield", cbbJobJield.Text);
                 cmd.Parameters.Add("@Image", SqlDbType.VarBinary, -1).Value = b;
-
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
+                cmd.ExecuteNonQuery();               
                 FPost_Load(sender, e);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Thất bại " + ex);
+            }
+            finally
+            {
+                conn.Close();
             }
 
 
