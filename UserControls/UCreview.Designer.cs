@@ -44,11 +44,10 @@
             this.panelMain.Controls.Add(this.RatingStar);
             this.panelMain.Controls.Add(this.lblaccount);
             this.panelMain.Controls.Add(this.txtReview);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Location = new System.Drawing.Point(3, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1061, 269);
+            this.panelMain.Size = new System.Drawing.Size(1008, 266);
             this.panelMain.TabIndex = 1;
             // 
             // pictureBox
@@ -63,6 +62,7 @@
             // 
             this.RatingStar.Location = new System.Drawing.Point(26, 27);
             this.RatingStar.Name = "RatingStar";
+            this.RatingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.RatingStar.ReadOnly = true;
             this.RatingStar.Size = new System.Drawing.Size(120, 28);
             this.RatingStar.TabIndex = 12;
@@ -96,7 +96,7 @@
             this.txtReview.PlaceholderText = "";
             this.txtReview.ReadOnly = true;
             this.txtReview.SelectedText = "";
-            this.txtReview.Size = new System.Drawing.Size(1052, 118);
+            this.txtReview.Size = new System.Drawing.Size(993, 118);
             this.txtReview.TabIndex = 10;
             this.txtReview.TextOffset = new System.Drawing.Point(0, -40);
             // 
@@ -107,9 +107,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCreview";
-            this.Size = new System.Drawing.Size(1061, 269);
+            this.Size = new System.Drawing.Size(1014, 269);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

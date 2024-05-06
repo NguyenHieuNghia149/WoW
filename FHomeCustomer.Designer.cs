@@ -375,6 +375,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(120)))), ((int)(((byte)(101)))));
             this.label22.Location = new System.Drawing.Point(249, 40);
@@ -386,6 +387,7 @@
             // lblTime
             // 
             this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.Location = new System.Drawing.Point(23, 40);
             this.lblTime.Name = "lblTime";
@@ -396,6 +398,7 @@
             // lblCost
             // 
             this.lblCost.AutoSize = true;
+            this.lblCost.BackColor = System.Drawing.Color.Transparent;
             this.lblCost.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCost.Location = new System.Drawing.Point(23, 22);
             this.lblCost.Name = "lblCost";
@@ -406,6 +409,7 @@
             // lblJobname
             // 
             this.lblJobname.AutoSize = true;
+            this.lblJobname.BackColor = System.Drawing.Color.Transparent;
             this.lblJobname.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobname.Location = new System.Drawing.Point(22, 4);
             this.lblJobname.Name = "lblJobname";

@@ -31,13 +31,13 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panelRecent = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCustomerName = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblCost = new System.Windows.Forms.Label();
+            this.lblJobName = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.btnPost = new Guna.UI2.WinForms.Guna2Button();
             this.btnfindjob = new Guna.UI2.WinForms.Guna2Button();
@@ -73,7 +73,7 @@
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.guna2CustomGradientPanel2.SuspendLayout();
+            this.panelRecent.SuspendLayout();
             this.guna2CustomGradientPanel5.SuspendLayout();
             this.panelStatific.SuspendLayout();
             this.guna2CircleProgressBar1.SuspendLayout();
@@ -123,20 +123,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to WoW";
             // 
-            // guna2CustomGradientPanel2
+            // panelRecent
             // 
-            this.guna2CustomGradientPanel2.BorderRadius = 18;
-            this.guna2CustomGradientPanel2.BorderThickness = 1;
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2CustomGradientPanel5);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label18);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(660, 69);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(382, 122);
-            this.guna2CustomGradientPanel2.TabIndex = 8;
+            this.panelRecent.BorderRadius = 18;
+            this.panelRecent.BorderThickness = 1;
+            this.panelRecent.Controls.Add(this.guna2CustomGradientPanel5);
+            this.panelRecent.Controls.Add(this.label18);
+            this.panelRecent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.panelRecent.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.panelRecent.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.panelRecent.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
+            this.panelRecent.Location = new System.Drawing.Point(660, 69);
+            this.panelRecent.Name = "panelRecent";
+            this.panelRecent.Size = new System.Drawing.Size(382, 122);
+            this.panelRecent.TabIndex = 8;
             // 
             // guna2CustomGradientPanel5
             // 
@@ -144,11 +144,11 @@
             this.guna2CustomGradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2CustomGradientPanel5.BorderRadius = 20;
             this.guna2CustomGradientPanel5.BorderThickness = 1;
-            this.guna2CustomGradientPanel5.Controls.Add(this.label3);
+            this.guna2CustomGradientPanel5.Controls.Add(this.lblCustomerName);
             this.guna2CustomGradientPanel5.Controls.Add(this.label22);
-            this.guna2CustomGradientPanel5.Controls.Add(this.label21);
-            this.guna2CustomGradientPanel5.Controls.Add(this.label20);
-            this.guna2CustomGradientPanel5.Controls.Add(this.label19);
+            this.guna2CustomGradientPanel5.Controls.Add(this.lblTime);
+            this.guna2CustomGradientPanel5.Controls.Add(this.lblCost);
+            this.guna2CustomGradientPanel5.Controls.Add(this.lblJobName);
             this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(254)))), ((int)(((byte)(247)))));
             this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(254)))), ((int)(((byte)(247)))));
             this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(14, 28);
@@ -156,16 +156,16 @@
             this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(355, 83);
             this.guna2CustomGradientPanel5.TabIndex = 7;
             // 
-            // label3
+            // lblCustomerName
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(254)))), ((int)(((byte)(247)))));
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Customer: Nguyen Hieu Nghia";
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCustomerName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerName.Location = new System.Drawing.Point(26, 22);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(205, 18);
+            this.lblCustomerName.TabIndex = 4;
+            this.lblCustomerName.Text = "Customer: Nguyen Hieu Nghia";
             // 
             // label22
             // 
@@ -178,37 +178,38 @@
             this.label22.TabIndex = 3;
             this.label22.Text = "Completed";
             // 
-            // label21
+            // lblTime
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(254)))), ((int)(((byte)(247)))));
-            this.label21.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(22, 58);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(83, 18);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "Time: 1h30";
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblTime.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(22, 58);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(83, 18);
+            this.lblTime.TabIndex = 2;
+            this.lblTime.Text = "Time: 1h30";
             // 
-            // label20
+            // lblCost
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(254)))), ((int)(((byte)(247)))));
-            this.label20.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(26, 40);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(79, 18);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Cost: 200$";
+            this.lblCost.AutoSize = true;
+            this.lblCost.BackColor = System.Drawing.Color.Transparent;
+            this.lblCost.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCost.Location = new System.Drawing.Point(26, 40);
+            this.lblCost.Name = "lblCost";
+            this.lblCost.Size = new System.Drawing.Size(79, 18);
+            this.lblCost.TabIndex = 1;
+            this.lblCost.Text = "Cost: 200$";
             // 
-            // label19
+            // lblJobName
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(22, 4);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(110, 18);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Washing Cars";
+            this.lblJobName.AutoSize = true;
+            this.lblJobName.BackColor = System.Drawing.Color.Transparent;
+            this.lblJobName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobName.Location = new System.Drawing.Point(22, 4);
+            this.lblJobName.Name = "lblJobName";
+            this.lblJobName.Size = new System.Drawing.Size(110, 18);
+            this.lblJobName.TabIndex = 0;
+            this.lblJobName.Text = "Washing Cars";
             // 
             // label18
             // 
@@ -599,6 +600,7 @@
             this.panelHistoryOrder.Size = new System.Drawing.Size(256, 97);
             this.panelHistoryOrder.TabIndex = 0;
             this.panelHistoryOrder.Click += new System.EventHandler(this.panelHistoryOrder_Click);
+            this.panelHistoryOrder.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHistoryOrder_Paint);
             // 
             // label11
             // 
@@ -670,7 +672,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel4);
             this.Controls.Add(this.panelStatific);
             this.Controls.Add(this.btnfindjob);
-            this.Controls.Add(this.guna2CustomGradientPanel2);
+            this.Controls.Add(this.panelRecent);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2GradientCircleButton1);
             this.Controls.Add(this.btnPost);
@@ -680,11 +682,10 @@
             this.Name = "FHomeWorker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FHomeWorker";
-            this.Load += new System.EventHandler(this.FHomeWorker_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            this.guna2CustomGradientPanel2.ResumeLayout(false);
-            this.guna2CustomGradientPanel2.PerformLayout();
+            this.panelRecent.ResumeLayout(false);
+            this.panelRecent.PerformLayout();
             this.guna2CustomGradientPanel5.ResumeLayout(false);
             this.guna2CustomGradientPanel5.PerformLayout();
             this.panelStatific.ResumeLayout(false);
@@ -710,13 +711,13 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelRecent;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCustomerName;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblCost;
+        private System.Windows.Forms.Label lblJobName;
         private System.Windows.Forms.Label label18;
         public Guna.UI2.WinForms.Guna2Button btnPost;
         private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;

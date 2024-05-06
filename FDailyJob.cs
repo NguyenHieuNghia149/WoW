@@ -105,7 +105,7 @@ namespace TheGioiViecLam
             }
         }
 
-        private void LoadJobDetails(ucAOrder ucJob, Order job)
+       /* private void LoadJobDetails(ucAOrder ucJob, Order job)
         {
             ucJob.txtAddress.Text = job.Address;
             ucJob.txtCustomer.Text = job.Customername;
@@ -114,7 +114,7 @@ namespace TheGioiViecLam
             ucJob.txtJob.Text = job.Jobname;
             ucJob.txtPhoneNumber.Text = job.Phonenumber;
             ucJob.txtStatus.Text = job.Status;
-        }
+        }*/
 
         private void ajob_Done( object sender, EventArgs e,string OrderNum)
         {
