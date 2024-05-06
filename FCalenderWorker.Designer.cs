@@ -40,6 +40,7 @@
             this.ucCalender1.Name = "ucCalender1";
             this.ucCalender1.Size = new System.Drawing.Size(1105, 613);
             this.ucCalender1.TabIndex = 0;
+            this.ucCalender1.Load += new System.EventHandler(this.ucCalender1_Load);
             // 
             // FCalenderWorker
             // 

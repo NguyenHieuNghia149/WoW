@@ -396,3 +396,16 @@ SELECT Customer.Fullname as fullname, Customer.CEmail as CEmail, Customer.PhoneN
 SELECT Review.CEmail as CEmail, Review.Img as img, Review.Rating as rating, Review.Review as review, Post.JobName as Jobname, Customer.Fullname as Fullname FROM Review,Post,Customer where Review.WID = Post.WID and Review.CEmail = Customer.CEmail and Post.Email = 'Hung@gmail.com'
 
 Select top 1 Orders.ODate as date, Orders.FromHours as fromhour, Orders.FromMinutes as fromminutes, Orders.OStatus as status, Customer.Fullname as CustomerName, Post.JobName as JobName From Orders,Post,Customer where Orders.IDP = Post.IDP and Orders.CEmail = Customer.CEmail and Post.Email = 'Hung@gmail.com' and Orders.OStatus = 'Done' ORDER BY Orders.ODate DESC
+
+
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00001',N'Repair and maintenance')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00002',N'Electricians')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00003',N'Cleaning service')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00004',N'Mechanics')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00005',N'Carpentry')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00006',N'Plumbing')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00007',N'Transport')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00008',N'Digital and Technology')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF00009',N'Family and Care')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF000010',N'Financial and accounting')
+INSERT INTO JobField(IDJF,FieldName) VALUES (N'JF000011',N'Different')

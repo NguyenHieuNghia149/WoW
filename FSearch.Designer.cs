@@ -42,13 +42,10 @@
             this.cb3 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.cb1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.cb2 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.btnOldest = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLatest = new Guna.UI2.WinForms.Guna2Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2RatingStar4 = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.guna2RatingStar3 = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.guna2RatingStar2 = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.Rating1Star = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.Rating2Star = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.Rating3Star = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.Rating4Star = new Guna.UI2.WinForms.Guna2RatingStar();
             this.label3 = new System.Windows.Forms.Label();
             this.Rating5Star = new Guna.UI2.WinForms.Guna2RatingStar();
             this.label2 = new System.Windows.Forms.Label();
@@ -173,13 +170,10 @@
             this.paneFilter.Controls.Add(this.cb3);
             this.paneFilter.Controls.Add(this.cb1);
             this.paneFilter.Controls.Add(this.cb2);
-            this.paneFilter.Controls.Add(this.btnOldest);
-            this.paneFilter.Controls.Add(this.btnLatest);
-            this.paneFilter.Controls.Add(this.label8);
-            this.paneFilter.Controls.Add(this.guna2RatingStar4);
-            this.paneFilter.Controls.Add(this.guna2RatingStar3);
-            this.paneFilter.Controls.Add(this.guna2RatingStar2);
-            this.paneFilter.Controls.Add(this.guna2RatingStar1);
+            this.paneFilter.Controls.Add(this.Rating1Star);
+            this.paneFilter.Controls.Add(this.Rating2Star);
+            this.paneFilter.Controls.Add(this.Rating3Star);
+            this.paneFilter.Controls.Add(this.Rating4Star);
             this.paneFilter.Controls.Add(this.label3);
             this.paneFilter.Controls.Add(this.Rating5Star);
             this.paneFilter.Controls.Add(this.label2);
@@ -189,7 +183,7 @@
             this.paneFilter.Controls.Add(this.label1);
             this.paneFilter.Location = new System.Drawing.Point(665, 119);
             this.paneFilter.Name = "paneFilter";
-            this.paneFilter.Size = new System.Drawing.Size(266, 394);
+            this.paneFilter.Size = new System.Drawing.Size(266, 325);
             this.paneFilter.TabIndex = 5;
             // 
             // cb5
@@ -208,6 +202,7 @@
             this.cb5.UncheckedState.BorderRadius = 0;
             this.cb5.UncheckedState.BorderThickness = 0;
             this.cb5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb5.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // cb4
             // 
@@ -225,6 +220,7 @@
             this.cb4.UncheckedState.BorderRadius = 0;
             this.cb4.UncheckedState.BorderThickness = 0;
             this.cb4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb4.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // cb3
             // 
@@ -242,6 +238,7 @@
             this.cb3.UncheckedState.BorderRadius = 0;
             this.cb3.UncheckedState.BorderThickness = 0;
             this.cb3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb3.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // cb1
             // 
@@ -259,6 +256,7 @@
             this.cb1.UncheckedState.BorderRadius = 0;
             this.cb1.UncheckedState.BorderThickness = 0;
             this.cb1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb1.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
             // cb2
             // 
@@ -276,95 +274,47 @@
             this.cb2.UncheckedState.BorderRadius = 0;
             this.cb2.UncheckedState.BorderThickness = 0;
             this.cb2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb2.CheckedChanged += new System.EventHandler(this.CheckBox_CheckedChanged);
             // 
-            // btnOldest
+            // Rating1Star
             // 
-            this.btnOldest.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.btnOldest.BorderRadius = 10;
-            this.btnOldest.BorderThickness = 1;
-            this.btnOldest.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnOldest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOldest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOldest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOldest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOldest.FillColor = System.Drawing.Color.White;
-            this.btnOldest.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOldest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.btnOldest.Location = new System.Drawing.Point(144, 294);
-            this.btnOldest.Name = "btnOldest";
-            this.btnOldest.Size = new System.Drawing.Size(95, 22);
-            this.btnOldest.TabIndex = 1015;
-            this.btnOldest.Text = "Oldest";
+            this.Rating1Star.Location = new System.Drawing.Point(19, 239);
+            this.Rating1Star.Name = "Rating1Star";
+            this.Rating1Star.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.Rating1Star.ReadOnly = true;
+            this.Rating1Star.Size = new System.Drawing.Size(120, 28);
+            this.Rating1Star.TabIndex = 1008;
+            this.Rating1Star.Value = 1F;
             // 
-            // btnLatest
+            // Rating2Star
             // 
-            this.btnLatest.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.btnLatest.BorderRadius = 10;
-            this.btnLatest.BorderThickness = 1;
-            this.btnLatest.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnLatest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLatest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLatest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLatest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLatest.FillColor = System.Drawing.Color.White;
-            this.btnLatest.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLatest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.btnLatest.Location = new System.Drawing.Point(19, 294);
-            this.btnLatest.Name = "btnLatest";
-            this.btnLatest.Size = new System.Drawing.Size(95, 22);
-            this.btnLatest.TabIndex = 1014;
-            this.btnLatest.Text = "Latest";
+            this.Rating2Star.Location = new System.Drawing.Point(19, 205);
+            this.Rating2Star.Name = "Rating2Star";
+            this.Rating2Star.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.Rating2Star.ReadOnly = true;
+            this.Rating2Star.Size = new System.Drawing.Size(120, 28);
+            this.Rating2Star.TabIndex = 1007;
+            this.Rating2Star.Value = 2F;
             // 
-            // label8
+            // Rating3Star
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.label8.Location = new System.Drawing.Point(15, 270);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 21);
-            this.label8.TabIndex = 1013;
-            this.label8.Text = "Status:";
+            this.Rating3Star.Location = new System.Drawing.Point(19, 171);
+            this.Rating3Star.Name = "Rating3Star";
+            this.Rating3Star.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.Rating3Star.ReadOnly = true;
+            this.Rating3Star.Size = new System.Drawing.Size(120, 28);
+            this.Rating3Star.TabIndex = 1006;
+            this.Rating3Star.Value = 3F;
             // 
-            // guna2RatingStar4
+            // Rating4Star
             // 
-            this.guna2RatingStar4.Location = new System.Drawing.Point(19, 239);
-            this.guna2RatingStar4.Name = "guna2RatingStar4";
-            this.guna2RatingStar4.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2RatingStar4.ReadOnly = true;
-            this.guna2RatingStar4.Size = new System.Drawing.Size(120, 28);
-            this.guna2RatingStar4.TabIndex = 1008;
-            this.guna2RatingStar4.Value = 1F;
-            // 
-            // guna2RatingStar3
-            // 
-            this.guna2RatingStar3.Location = new System.Drawing.Point(19, 205);
-            this.guna2RatingStar3.Name = "guna2RatingStar3";
-            this.guna2RatingStar3.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2RatingStar3.ReadOnly = true;
-            this.guna2RatingStar3.Size = new System.Drawing.Size(120, 28);
-            this.guna2RatingStar3.TabIndex = 1007;
-            this.guna2RatingStar3.Value = 2F;
-            // 
-            // guna2RatingStar2
-            // 
-            this.guna2RatingStar2.Location = new System.Drawing.Point(19, 171);
-            this.guna2RatingStar2.Name = "guna2RatingStar2";
-            this.guna2RatingStar2.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2RatingStar2.ReadOnly = true;
-            this.guna2RatingStar2.Size = new System.Drawing.Size(120, 28);
-            this.guna2RatingStar2.TabIndex = 1006;
-            this.guna2RatingStar2.Value = 3F;
-            // 
-            // guna2RatingStar1
-            // 
-            this.guna2RatingStar1.Location = new System.Drawing.Point(19, 137);
-            this.guna2RatingStar1.Name = "guna2RatingStar1";
-            this.guna2RatingStar1.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2RatingStar1.ReadOnly = true;
-            this.guna2RatingStar1.Size = new System.Drawing.Size(120, 28);
-            this.guna2RatingStar1.TabIndex = 1005;
-            this.guna2RatingStar1.Value = 4F;
+            this.Rating4Star.Location = new System.Drawing.Point(19, 137);
+            this.Rating4Star.Name = "Rating4Star";
+            this.Rating4Star.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.Rating4Star.ReadOnly = true;
+            this.Rating4Star.Size = new System.Drawing.Size(120, 28);
+            this.Rating4Star.TabIndex = 1005;
+            this.Rating4Star.Value = 4F;
             // 
             // label3
             // 
@@ -433,7 +383,7 @@
             this.btnApply.FillColor = System.Drawing.Color.White;
             this.btnApply.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.btnApply.Location = new System.Drawing.Point(153, 359);
+            this.btnApply.Location = new System.Drawing.Point(149, 287);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(95, 22);
             this.btnApply.TabIndex = 1;
@@ -560,18 +510,15 @@
         private Guna.UI2.WinForms.Guna2CheckBox cb3;
         private Guna.UI2.WinForms.Guna2CheckBox cb1;
         private Guna.UI2.WinForms.Guna2CheckBox cb2;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar4;
-        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar3;
-        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar2;
-        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
+        private Guna.UI2.WinForms.Guna2RatingStar Rating1Star;
+        private Guna.UI2.WinForms.Guna2RatingStar Rating2Star;
+        private Guna.UI2.WinForms.Guna2RatingStar Rating3Star;
+        private Guna.UI2.WinForms.Guna2RatingStar Rating4Star;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2RatingStar Rating5Star;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2HScrollBar ScrollBar;
         private System.Windows.Forms.Label label1;
-        public Guna.UI2.WinForms.Guna2Button btnOldest;
-        public Guna.UI2.WinForms.Guna2Button btnLatest;
         public System.Windows.Forms.Label lblValue;
         public Guna.UI2.WinForms.Guna2Button btnApply;
     }

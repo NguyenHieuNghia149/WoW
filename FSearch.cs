@@ -13,6 +13,7 @@ using TheGioiViecLam.model;
 using System.Collections;
 using System.IO;
 using Guna.UI2.WinForms;
+using Guna.Charts.WinForms;
 
 namespace TheGioiViecLam
 {
@@ -24,8 +25,8 @@ namespace TheGioiViecLam
         public string postID;
         public string account;
         public string jobfield;
-        public string cost;
-        public string review;
+        public int cost;
+        public float review;
         public string status;
         public FSearch(string account, string jobfield)
         {
@@ -39,11 +40,6 @@ namespace TheGioiViecLam
         {
             FWorkdetail form = new FWorkdetail(wid, postID, account);
             form.Show();
-
-            if (sender is UCWorkInFor uCWorkInFor)
-            {
-              
-            }
         }
 
 
@@ -252,6 +248,8 @@ namespace TheGioiViecLam
                     }
                     query += ")";
                 }
+                query += " AND Cost > @Cost";
+                query += " AND Rating >= @Rating";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
@@ -263,6 +261,9 @@ namespace TheGioiViecLam
                 {
                     cmd.Parameters.AddWithValue("@Keyword" + i, "%" + keywords[i] + "%");
                 }
+                cmd.Parameters.AddWithValue("@Cost", cost);
+                cmd.Parameters.AddWithValue("@Rating", review);
+
                 SqlDataReader reader = cmd.ExecuteReader();
                 PanelBottom.Controls.Clear();
                 int y = 0;
@@ -343,52 +344,75 @@ namespace TheGioiViecLam
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            cost = lblValue.Text;
-            Guna2CheckBox selectedCheckBox = (Guna2CheckBox)sender;
-            // If the selected checkbox is checked, uncheck all other checkboxes
-            if (selectedCheckBox.Checked)
+            string numberString = lblValue.Text.Replace("$", "").Trim();
+            if (!string.IsNullOrEmpty(numberString))
             {
-                switch (selectedCheckBox.Name)
+                if (int.TryParse(numberString, out int costValue))
                 {
-                    case "cb1":
-                        cb2.Checked = false;
-                        cb3.Checked = false;
-                        cb4.Checked = false;
-                        cb5.Checked = false;
-                        review = "1";
-                        break;
-                    case "cb2":
-                        cb1.Checked = false;
-                        cb3.Checked = false;
-                        cb4.Checked = false;
-                        cb5.Checked = false;
-                        review = "2";
-                        break;
-                    case "cb3":
-                        cb1.Checked = false;
-                        cb2.Checked = false;
-                        cb4.Checked = false;
-                        cb5.Checked = false;
-                        review = "3";
-                        break;
-                    case "cb4":
-                        cb1.Checked = false;
-                        cb2.Checked = false;
-                        cb3.Checked = false;
-                        cb5.Checked = false;
-                        review = "4";
-                        break;
-                    case "cb5":
-                        cb1.Checked = false;
-                        cb2.Checked = false;
-                        cb3.Checked = false;
-                        cb4.Checked = false;
-                        review = "5";
-                        break;
+                    cost = costValue;
+                    MessageBox.Show("done!");
                 }
-                Update();
+                else
+                {
+                    MessageBox.Show("Invalid cost value!");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No numeric value found!");
+                return;
+            }
 
+            // Gán giá trị float cho các CheckBox trong paneFilter
+            cb1.Tag = 1f;
+            cb2.Tag = 2f;
+            cb3.Tag = 3f;
+            cb4.Tag = 4f;
+            cb5.Tag = 5f;
+
+            // Khi các checkbox được chọn, gán giá trị review tương ứng
+            if (cb1.Checked)
+            {
+                review = float.Parse(cb1.Tag.ToString());
+            }
+            else if (cb2.Checked)
+            {
+                review = float.Parse(cb2.Tag.ToString());
+            }
+            else if (cb3.Checked)
+            {
+                review = float.Parse(cb3.Tag.ToString());
+            }
+            else if (cb4.Checked)
+            {
+                review = float.Parse(cb4.Tag.ToString());
+            }
+            else if (cb5.Checked)
+            {
+                review = float.Parse(cb5.Tag.ToString());
             }
         }
+        private void CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            // Xử lý sự kiện CheckedChanged của các CheckBox ở đây
+            if (sender is CheckBox selectedCheckBox && selectedCheckBox.Checked)
+            {
+                // Duyệt qua tất cả các CheckBox trên Form
+                foreach (Control control in paneFilter.Controls)
+                {
+                    if (control is CheckBox checkBox && checkBox != selectedCheckBox)
+                    {
+                        // Hủy chọn các CheckBox khác
+                        checkBox.Checked = false;
+                    }
+                }
+            }
+            else if (sender is CheckBox deselectedCheckBox && !deselectedCheckBox.Checked)
+            {
+                // Nếu checkbox hiện tại đã được chọn trước đó và người dùng chọn lại, không làm gì cả
+            }
+        }
+
     }
 }
