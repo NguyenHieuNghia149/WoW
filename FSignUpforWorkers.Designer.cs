@@ -37,9 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.txtDistrict = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblDistrict = new System.Windows.Forms.Label();
-            this.txtCity = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCity = new System.Windows.Forms.Label();
             this.dtBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtGender = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,6 +55,8 @@
             this.lblPassConFirm = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.cbbDistrict = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbCity = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // lblFullname
@@ -134,6 +134,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.txtAddress.BorderRadius = 10;
             this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAddress.DefaultText = "";
@@ -164,28 +165,6 @@
             this.lblAddress.TabIndex = 77;
             this.lblAddress.Text = "Address";
             // 
-            // txtDistrict
-            // 
-            this.txtDistrict.BorderRadius = 10;
-            this.txtDistrict.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDistrict.DefaultText = "";
-            this.txtDistrict.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDistrict.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDistrict.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDistrict.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDistrict.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDistrict.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDistrict.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDistrict.Location = new System.Drawing.Point(560, 452);
-            this.txtDistrict.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDistrict.Name = "txtDistrict";
-            this.txtDistrict.PasswordChar = '\0';
-            this.txtDistrict.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.txtDistrict.PlaceholderText = "District";
-            this.txtDistrict.SelectedText = "";
-            this.txtDistrict.Size = new System.Drawing.Size(432, 43);
-            this.txtDistrict.TabIndex = 76;
-            // 
             // lblDistrict
             // 
             this.lblDistrict.AutoSize = true;
@@ -195,28 +174,6 @@
             this.lblDistrict.Size = new System.Drawing.Size(72, 20);
             this.lblDistrict.TabIndex = 75;
             this.lblDistrict.Text = "District";
-            // 
-            // txtCity
-            // 
-            this.txtCity.BorderRadius = 10;
-            this.txtCity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCity.DefaultText = "";
-            this.txtCity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCity.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCity.Location = new System.Drawing.Point(58, 452);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.PasswordChar = '\0';
-            this.txtCity.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.txtCity.PlaceholderText = "City";
-            this.txtCity.SelectedText = "";
-            this.txtCity.Size = new System.Drawing.Size(432, 43);
-            this.txtCity.TabIndex = 74;
             // 
             // lblCity
             // 
@@ -245,6 +202,7 @@
             // 
             // txtGender
             // 
+            this.txtGender.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.txtGender.BorderRadius = 10;
             this.txtGender.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGender.DefaultText = "";
@@ -277,6 +235,7 @@
             // 
             // txtPhoneNumber
             // 
+            this.txtPhoneNumber.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.txtPhoneNumber.BorderRadius = 10;
             this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhoneNumber.DefaultText = "";
@@ -300,6 +259,7 @@
             // txtID
             // 
             this.txtID.AcceptsReturn = true;
+            this.txtID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.txtID.BorderRadius = 10;
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtID.DefaultText = "";
@@ -352,6 +312,7 @@
             // 
             // txtFullname
             // 
+            this.txtFullname.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.txtFullname.BorderRadius = 10;
             this.txtFullname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFullname.DefaultText = "";
@@ -384,6 +345,7 @@
             // 
             // txtPasswordConfirm
             // 
+            this.txtPasswordConfirm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.txtPasswordConfirm.BorderRadius = 10;
             this.txtPasswordConfirm.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPasswordConfirm.DefaultText = "";
@@ -406,6 +368,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.txtPassword.BorderRadius = 10;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
@@ -428,6 +391,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.txtEmail.BorderRadius = 10;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.DefaultText = "";
@@ -442,7 +406,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
             this.txtEmail.PlaceholderText = "Email";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(432, 43);
@@ -478,17 +442,53 @@
             this.lblEmail.TabIndex = 57;
             this.lblEmail.Text = "Email";
             // 
+            // cbbDistrict
+            // 
+            this.cbbDistrict.BackColor = System.Drawing.Color.Transparent;
+            this.cbbDistrict.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
+            this.cbbDistrict.BorderRadius = 10;
+            this.cbbDistrict.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDistrict.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbDistrict.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbDistrict.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDistrict.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbDistrict.ItemHeight = 30;
+            this.cbbDistrict.Location = new System.Drawing.Point(560, 464);
+            this.cbbDistrict.Name = "cbbDistrict";
+            this.cbbDistrict.Size = new System.Drawing.Size(432, 36);
+            this.cbbDistrict.TabIndex = 80;
+            this.cbbDistrict.SelectedIndexChanged += new System.EventHandler(this.cbbDistrict_SelectedIndexChanged);
+            // 
+            // cbbCity
+            // 
+            this.cbbCity.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(53)))), ((int)(((byte)(158)))));
+            this.cbbCity.BorderRadius = 10;
+            this.cbbCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCity.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCity.ItemHeight = 30;
+            this.cbbCity.Location = new System.Drawing.Point(58, 464);
+            this.cbbCity.Name = "cbbCity";
+            this.cbbCity.Size = new System.Drawing.Size(432, 36);
+            this.cbbCity.TabIndex = 79;
+            this.cbbCity.SelectedIndexChanged += new System.EventHandler(this.cbbCity_SelectedIndexChanged);
+            // 
             // FSignUpforWorkers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1046, 888);
+            this.Controls.Add(this.cbbDistrict);
+            this.Controls.Add(this.cbbCity);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.txtDistrict);
             this.Controls.Add(this.lblDistrict);
-            this.Controls.Add(this.txtCity);
             this.Controls.Add(this.lblCity);
             this.Controls.Add(this.dtBirthday);
             this.Controls.Add(this.txtGender);
@@ -530,9 +530,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private System.Windows.Forms.Label lblAddress;
-        private Guna.UI2.WinForms.Guna2TextBox txtDistrict;
         private System.Windows.Forms.Label lblDistrict;
-        private Guna.UI2.WinForms.Guna2TextBox txtCity;
         private System.Windows.Forms.Label lblCity;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtBirthday;
         private Guna.UI2.WinForms.Guna2TextBox txtGender;
@@ -550,5 +548,7 @@
         private System.Windows.Forms.Label lblPassConFirm;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;
+        public Guna.UI2.WinForms.Guna2ComboBox cbbDistrict;
+        public Guna.UI2.WinForms.Guna2ComboBox cbbCity;
     }
 }
