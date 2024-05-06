@@ -251,6 +251,12 @@
     <Compile Include="FSignUpforWorkers.Designer.cs">
       <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FViewPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FViewPost.Designer.cs">
+      <DependentUpon>FViewPost.cs</DependentUpon>
+    </Compile>
     <Compile Include="FViewRequire_Detail_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSignUpforWorkers.resx">
       <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FViewPost.resx">
+      <DependentUpon>FViewPost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FViewRequire_Detail_Worker.resx">
       <DependentUpon>FViewRequire_Detail_Worker.cs</DependentUpon>

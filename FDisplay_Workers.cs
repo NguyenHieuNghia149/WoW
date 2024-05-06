@@ -43,7 +43,7 @@ namespace TheGioiViecLam
         }
         private void btnPost_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FPost(account));
+            OpenChildForm(new FViewPost(account));
         }
 
         private void btnPlan_Click(object sender, EventArgs e)

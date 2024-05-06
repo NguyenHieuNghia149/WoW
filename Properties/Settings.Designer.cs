@@ -26,23 +26,23 @@ namespace TheGioiViecLam.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=worldofwork;Integrated Securit" +
-            "y=True;MultipleActiveResultSets=True\n")]
-        public string connStr {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=huhu;Integrated Data Source=(l" +
+            "ocaldb)\\mssqllocaldb;Initial Catalog=WorldofWork;Integrated Security=True;Multip" +
+            "leActiveResultSets=True")]
+        public string City {
             get {
-                return ((string)(this["connStr"]));
+                return ((string)(this["City"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=huhu;Integrated Data Source=(l" +
-            "ocaldb)\\mssqllocaldb;Initial Catalog=worldofwork;Integrated Security=True;Multip" +
-            "leActiveResultSets=True")]
-        public string City {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=WorldofWork;Integrated Securit" +
+            "y=True;MultipleActiveResultSets=True\n")]
+        public string connStr {
             get {
-                return ((string)(this["City"]));
+                return ((string)(this["connStr"]));
             }
         }
     }
