@@ -17,7 +17,7 @@ namespace TheGioiViecLam
         public UCWork_Detail()
         {
             InitializeComponent();
-            AutoScroll = true;
+            panelDetail.AutoScroll = true;
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -31,5 +31,9 @@ namespace TheGioiViecLam
             form.ShowDialog();
         }
 
+        private void UCWork_Detail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

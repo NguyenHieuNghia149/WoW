@@ -249,9 +249,9 @@
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.Location = new System.Drawing.Point(556, 126);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(56, 20);
+            this.lblFullName.Size = new System.Drawing.Size(85, 20);
             this.lblFullName.TabIndex = 36;
-            this.lblFullName.Text = "Email";
+            this.lblFullName.Text = "Fullname";
             // 
             // txtGender
             // 
@@ -307,7 +307,7 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(145)))));
-            this.txtPhoneNumber.PlaceholderText = "Confirm Password ";
+            this.txtPhoneNumber.PlaceholderText = "Phone number";
             this.txtPhoneNumber.SelectedText = "";
             this.txtPhoneNumber.Size = new System.Drawing.Size(432, 43);
             this.txtPhoneNumber.TabIndex = 43;
