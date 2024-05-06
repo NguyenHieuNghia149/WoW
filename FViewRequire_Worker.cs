@@ -24,7 +24,9 @@ namespace TheGioiViecLam
         {
             this.account = account;
             InitializeComponent();
-            
+            LoadCitiesIntoComboBox();
+
+
         }
 
         private void LoadUCRequire_FromDatabase()
@@ -102,6 +104,77 @@ namespace TheGioiViecLam
         {
             FViewRequire_Detail_Worker form = new FViewRequire_Detail_Worker(RequireID, account);
             form.ShowDialog();
+        }
+
+        private void cbx_cities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbx_districts.Items.Clear();
+            string selectedCity = cbx_cities.SelectedItem.ToString();
+            LoadDistrictsIntoComboBox();
+        }
+
+        private void cbx_districts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedDistrict = cbx_districts.SelectedItem.ToString();
+
+        }
+        private void LoadCitiesIntoComboBox()
+        {
+            try
+            {
+                conn.Open();
+                string query = "SELECT DISTINCT City FROM Cities";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string city = reader["City"].ToString();
+                    cbx_cities.Items.Add(city);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void LoadDistrictsIntoComboBox()
+        {
+            try
+            {
+                cbx_districts.Items.Clear();
+                conn.Open();
+                string selectedCity = cbx_cities.SelectedItem?.ToString();
+                if (!string.IsNullOrEmpty(selectedCity))
+                {
+                    string query = "SELECT DISTINCT District FROM Cities WHERE City = @City";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@City", selectedCity);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string district = reader["District"].ToString();
+                        cbx_districts.Items.Add(district);
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

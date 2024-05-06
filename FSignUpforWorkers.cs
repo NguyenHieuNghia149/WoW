@@ -20,6 +20,7 @@ namespace TheGioiViecLam
         public FSignUpforWorkers()
         {
             InitializeComponent();
+            LoadCitiesIntoComboBox();
         }
         private bool CheckPassword(string pass) // kiem tra password
         {
@@ -40,8 +41,8 @@ namespace TheGioiViecLam
             string fullname = txtFullname.Text;
             string gender = txtGender.Text;
             DateTime birthday = dtBirthday.Value;
-            string city = txtCity.Text;
-            string district = txtDistrict.Text;
+            string city = cbbCity.Text;
+            string district = cbbDistrict.Text;
             string address = txtAddress.Text;
             string phonenumber = txtPhoneNumber.Text;
             if (!CheckPassword(password))
@@ -82,5 +83,77 @@ namespace TheGioiViecLam
                 MessageBox.Show("The email is already registered, please register another email!");
             }
         }
+
+        private void cbbCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbbDistrict.Items.Clear();
+            string selectedCity = cbbCity.SelectedItem.ToString();
+            LoadDistrictsIntoComboBox();
+        }
+
+        private void cbbDistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedDistrict = cbbDistrict.SelectedItem.ToString();
+
+        }
+        private void LoadCitiesIntoComboBox()
+        {
+            try
+            {
+                conn.Open();
+                string query = "SELECT DISTINCT City FROM Cities";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string city = reader["City"].ToString();
+                    cbbCity.Items.Add(city);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void LoadDistrictsIntoComboBox()
+        {
+            try
+            {
+                cbbDistrict.Items.Clear();
+                conn.Open();
+                string selectedCity = cbbCity.SelectedItem?.ToString();
+                if (!string.IsNullOrEmpty(selectedCity))
+                {
+                    string query = "SELECT DISTINCT District FROM Cities WHERE City = @City";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@City", selectedCity);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string district = reader["District"].ToString();
+                        cbbDistrict.Items.Add(district);
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }

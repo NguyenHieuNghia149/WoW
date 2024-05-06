@@ -70,7 +70,6 @@ namespace TheGioiViecLam
             FSignUpforWorkers form = new FSignUpforWorkers();
             form.Show();
             this.Hide();
-            this.Close();
         }
     }
 }

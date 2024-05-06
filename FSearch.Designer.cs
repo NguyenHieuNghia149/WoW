@@ -82,7 +82,7 @@
             this.cbx_districts.ItemHeight = 30;
             this.cbx_districts.Location = new System.Drawing.Point(278, 49);
             this.cbx_districts.Name = "cbx_districts";
-            this.cbx_districts.Size = new System.Drawing.Size(140, 36);
+            this.cbx_districts.Size = new System.Drawing.Size(166, 36);
             this.cbx_districts.TabIndex = 12;
             this.cbx_districts.SelectedIndexChanged += new System.EventHandler(this.cbx_districts_SelectedIndexChanged);
             // 
@@ -120,7 +120,7 @@
             this.txt_Search.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Search.Location = new System.Drawing.Point(424, 49);
+            this.txt_Search.Location = new System.Drawing.Point(450, 49);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
