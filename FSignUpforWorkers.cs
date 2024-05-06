@@ -63,7 +63,7 @@ namespace TheGioiViecLam
                 return;
             }
 
-            if (db.Login("Select * from Customer where WEmail = '" + email + "'").Count() != 0)
+            if (db.Login("Select * from Worker where WEmail = '" + email + "'").Count() != 0)
             {
                 MessageBox.Show("Email is exist!!");
                 return;

@@ -36,8 +36,8 @@ namespace TheGioiViecLam
             LoadJobNameIntoComboBox();
            // LoadDistrictIntoComboBox();
             LoadCity();
-            Load_UCWorkInFor_FromDatabase(account);
-
+            LoadPhoneNum(account);
+            LoadPID();
         }
 
 
@@ -45,6 +45,12 @@ namespace TheGioiViecLam
         {
             FWorkdetail form = new FWorkdetail(WID, IDP, account);
             form.Show();
+
+            if (sender is UCWorkInFor uCWorkInFor)
+            {
+                /*string postID = uCWorkInFor.txtIDP.Text;*/
+
+            }
         }
         private void LoadJobNameIntoComboBox()
         {
@@ -127,65 +133,83 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
-
-        private void Load_UCWorkInFor_FromDatabase(string account)
+        private void LoadPhoneNum(string account)
         {
-            panel_Bot.AutoScroll = true; 
             try
             {
-
-                UCWorkInFor uCPosted = new UCWorkInFor();
-
                 conn.Open();
-                string query = string.Format("SELECT * FROM Post WHERE Email = '{0}'", account);
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataSet dataSet = new DataSet();
+
+                string query = string.Format("SELECT PhoneNum FROM Worker WHERE WEmail = '{0}'", account);
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
-                panel_Bot.Controls.Clear();
-                int y = 0; 
 
                 while (reader.Read())
                 {
-                    string JobName = reader["JobName"].ToString();
-                    string WTime = reader["WTime"].ToString();
-                    string Cost = reader["Cost"].ToString();
-                    string District = reader["District"].ToString();
-                    string Experience = reader["Experience"].ToString();
-                    string IDP = reader["IDP"].ToString();
-                    string WID = reader["WID"].ToString();
-                    byte[] b = reader["img"] as byte[];
-
-                    UCWorkInFor ucWorkInFor = new UCWorkInFor();
-                    ucWorkInFor.panelMain.Click += (s, ev) => UCWorkInFor_Click(WID, IDP, s, ev);
-     
-                    ucWorkInFor.txtJobName.Text = JobName;
-                    ucWorkInFor.txtWTime.Text = WTime;
-                    ucWorkInFor.txtCost.Text = Cost;
-                    ucWorkInFor.txtLocation.Text = District;
-                    ucWorkInFor.txtExperience.Text = Experience;
-                    ucWorkInFor.txtIDP.Text = IDP;
-                    if (b != null)
-                    {
-                        MemoryStream ms = new MemoryStream(b);
-                        ucWorkInFor.picturePost.Image = Image.FromStream(ms);
-                    }
-
-                    ucWorkInFor.Location = new Point(20, y);
-                    y += ucWorkInFor.Height + 5;
-
-                    panel_Bot.Controls.Add(ucWorkInFor);
+                    string PhoneNum = reader["PhoneNum"].ToString();
+                    txtPhoneNum.Text = PhoneNum;
                 }
 
                 reader.Close();
             }
-            catch (Exception exc)
+            catch (Exception ex)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
                 conn.Close();
+            }
+        }
+
+        private void LoadPID()
+        {
+            try
+            {
+                conn.Open();
+                string query = string.Format("SELECT MAX(IDP)+1 AS MAX FROM Post");
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string PID = reader["MAX"].ToString();
+                    txtIDP.Text = PID;
+                }
+                reader.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thất bại " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            txtIDP.Visible = false; //ẩn đi ID
+        }
+
+        /* private void btnEdit_Click(object sender, EventArgs e)
+         {
+             string query = string.Format("UPDATE Post SET JobField='{0}',WTime='{1}',Cost='{2}',Detail='{3}',Experience='{4}',City =N'{6}',District=N'{7}',JobName=N'{8}' WHERE IDP ='{5}'",
+                cbbJobJield.Text, cbbTime.Text, txtCost.Text, txtDetail.Text, cbbExperience.Text, txtIDP.Text, cbbCities.Text, cbbDistrict.Text, txtJob.Text);
+             db.Execute(query);
+             FPost_Load(sender, e);
+
+         }*/
+
+        private void cbbCities_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LoadDistrictIntoComboBox();
+        }
+
+        private void picturePost_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                picturePost.Image = Image.FromFile(open.FileName);
+                this.Text = open.FileName;
             }
         }
 
@@ -211,51 +235,23 @@ namespace TheGioiViecLam
                 cmd.Parameters.AddWithValue("@District", cbbDistrict.Text);
                 cmd.Parameters.AddWithValue("@JobJield", cbbJobJield.Text);
                 cmd.Parameters.Add("@Image", SqlDbType.VarBinary, -1).Value = b;
-                cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
-                cmd.ExecuteNonQuery();               
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Successfull!!!");
                 FPost_Load(sender, e);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Thất bại " + ex);
             }
-            finally
-            {
-                conn.Close();
-            }
-
-
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnComplete_Click(object sender, EventArgs e)
         {
-            string query = string.Format("UPDATE Post SET JobField='{0}',WTime='{1}',Cost='{2}',Detail='{3}',Experience='{4}',City =N'{6}',District=N'{7}',JobName=N'{8}' WHERE IDP ='{5}'",
-               cbbJobJield.Text, cbbTime.Text, txtCost.Text, txtDetail.Text, cbbExperience.Text, txtIDP.Text, cbbCities.Text, cbbDistrict.Text, txtJob.Text);
-            db.Execute(query);
-            FPost_Load(sender, e);
-
-        }
-
-        private void btndelete_Click(object sender, EventArgs e)
-        {
-            string query = string.Format("EXEC pd_delete_Post_Order N'{0}'", txtIDP.Text);
-            db.Execute(query);
-            FPost_Load(sender, e);
-        }
-
-        private void cbbCities_SelectedValueChanged(object sender, EventArgs e)
-        {
-            LoadDistrictIntoComboBox();
-        }
-
-        private void picturePost_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                picturePost.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
-            }
+            this.Hide();
+            this.Close();
         }
     }
 }

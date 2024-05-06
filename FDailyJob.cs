@@ -18,19 +18,21 @@ namespace TheGioiViecLam
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         private string OrderNum;
         private string account;
+        private string CEmail;
         private List<Order> jobs;
         private DateTime date;
         public DateTime Date { get => date; set => date = value; }
         public List<Order> Jobs { get => jobs; set => jobs = value; }
 
         FlowLayoutPanel fPanel = new FlowLayoutPanel();
-        public FDailyJob(DateTime date, string account, List<Order> jobs,string OrderNum)
+        public FDailyJob(DateTime date, string account, List<Order> jobs,string OrderNum,string CEmail)
         {
             InitializeComponent();
             this.date = date;
             this.account = account;
             this.jobs = jobs;
             this.OrderNum = OrderNum;
+            this.CEmail = CEmail;
             fPanel.Width = pnJob.Width;
             fPanel.Height = pnJob.Height;
             pnJob.Controls.Add(fPanel);
@@ -48,9 +50,9 @@ namespace TheGioiViecLam
                 {
                     ucAOrder ucJob = new ucAOrder(job);
                     ucJob.Tag = job;
-                    ucJob.btndeny.Click += (s, ev) => ajob_Denied(s, ev, OrderNum);
-                    ucJob.btnConfirm.Click += (s, ev) => ajob_Confirmed(s, ev, OrderNum);
-                    ucJob.btnDone.Click += (s, ev) => ajob_Done(s, ev, OrderNum);
+                    ucJob.btndeny.Click += (s, ev) => ajob_Denied(s, ev, OrderNum,CEmail);
+                    ucJob.btnConfirm.Click += (s, ev) => ajob_Confirmed(s, ev, OrderNum,CEmail);
+                    ucJob.btnDone.Click += (s, ev) => ajob_Done(s, ev, OrderNum,CEmail);
                     fPanel.Controls.Add(ucJob);
                 }
             }
@@ -84,9 +86,8 @@ namespace TheGioiViecLam
                     job.Phonenumber = reader["phonenumber"].ToString();
                     job.Address = reader["CAddress"].ToString();
                     job.Status = reader["OStatus"].ToString();
-
                     // Kiểm tra xem trạng thái là "Unconfirm" hay không
-                    if (job.Status == "Unconfirm                                                                                           " && job.Status == "Confirmed                                                                                           ")
+                    if (job.Status == "Unconfirm                                                                                           " || job.Status == "Confirmed                                                                                           ")
                     {
                         jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
                     }
@@ -104,26 +105,15 @@ namespace TheGioiViecLam
                 conn.Close(); // Đảm bảo đóng kết nối sau khi sử dụng xong
             }
         }
-
-       /* private void LoadJobDetails(ucAOrder ucJob, Order job)
-        {
-            ucJob.txtAddress.Text = job.Address;
-            ucJob.txtCustomer.Text = job.Customername;
-            ucJob.txtfromHours.Text = job.FromHours;
-            ucJob.txtfromMinute.Text = job.FromMinutes;
-            ucJob.txtJob.Text = job.Jobname;
-            ucJob.txtPhoneNumber.Text = job.Phonenumber;
-            ucJob.txtStatus.Text = job.Status;
-        }*/
-
-        private void ajob_Done( object sender, EventArgs e,string OrderNum)
+        private void ajob_Done( object sender, EventArgs e,string OrderNum,string CEmail)
         {
             try
             {
                 conn.Open();
-                string query = "UPDATE Orders SET OStatus = 'Done' WHERE OrderNum = @OrderNum";
+                string query = "UPDATE Orders SET OStatus = 'Done' WHERE OrderNum = @OrderNum and CEmail = @CEmail";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@OrderNum", OrderNum);
+                cmd.Parameters.AddWithValue("@CEmail", CEmail);
                 int rowsAffected = cmd.ExecuteNonQuery();
                 conn.Close();
                 jobs = GetData();
@@ -139,14 +129,15 @@ namespace TheGioiViecLam
         }
 
 
-        private void ajob_Confirmed( object sender, EventArgs e, string OrderNum)
+        private void ajob_Confirmed( object sender, EventArgs e, string OrderNum, string CEmail)
         {
             try
             {
                 conn.Open();
-                string query = "UPDATE Orders SET OStatus = 'Confirmed' WHERE OrderNum = @OrderNum ";
+                string query = "UPDATE Orders SET OStatus = 'Confirmed' WHERE OrderNum = @OrderNum and CEmail = @CEmail ";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@OrderNum", OrderNum);
+                cmd.Parameters.AddWithValue("@CEmail", CEmail);
                 int rowsAffected = cmd.ExecuteNonQuery();
                 conn.Close();
 
@@ -161,15 +152,15 @@ namespace TheGioiViecLam
             {
             }
         }
-
-        private void ajob_Denied( object sender, EventArgs e, string OrderNum)
+        private void ajob_Denied( object sender, EventArgs e, string OrderNum, string CEmail)
         {
             try
             {
                 conn.Open();
-                string query = "UPDATE Orders SET OStatus = 'Deny' WHERE OrderNum = @OrderNum ";
+                string query = "UPDATE Orders SET OStatus = 'Deny' WHERE OrderNum = @OrderNum and CEmail = @CEmail";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@OrderNum", OrderNum);
+                cmd.Parameters.AddWithValue("@CEmail", CEmail);
                 int rowsAffected = cmd.ExecuteNonQuery();
                 conn.Close();
 
@@ -204,12 +195,10 @@ namespace TheGioiViecLam
         {
             dt.Value = dt.Value.AddDays(1);
         }
-
         private void mnToday_Click(object sender, EventArgs e)
         {
             dt.Value = DateTime.Now;
         }
-
         private void pnJob_Paint(object sender, PaintEventArgs e)
         {
         }

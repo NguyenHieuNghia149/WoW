@@ -41,15 +41,17 @@ namespace TheGioiViecLam
 
         private string account;
         private string OrderNum;
+        private string CEmail;
         public FCalenderWorker(string account)
         {
             this.account = account;
             InitializeComponent();
-
             RefreshJobs();
         }
-
-
+        private void ucCalender1_Load(object sender, EventArgs e)
+        {
+            SetDefaultDate();
+        }
         private void RefreshJobs()
         {
             ucCalender1.timerNotify.Start();
@@ -208,7 +210,6 @@ namespace TheGioiViecLam
         void SetDefaultDate()
         {
             ucCalender1.dt.Value = DateTime.Now;
-
         }
         private void dt_ValueChanged(object sender, EventArgs e)
         {
@@ -286,7 +287,8 @@ namespace TheGioiViecLam
                     job.Address = reader["CAddress"].ToString();
                     job.Status = reader["OStatus"].ToString();
                     OrderNum = reader["OrderNum"].ToString();
-                    if (job.Status == "Unconfirm                                                                                           " && job.Status == "Confirmed                                                                                           ")
+                    CEmail = reader["CEmail"].ToString();    
+                    if (job.Status == "Unconfirm                                                                                           " || job.Status == "Confirmed                                                                                           ")
                     {
                         jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
                     }
@@ -305,12 +307,36 @@ namespace TheGioiViecLam
             }
         }
 
+        private List<FDailyJob> dailyJobForms = new List<FDailyJob>();
+
         private void Btn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty((sender as Control).Text))
                 return;
-            FDailyJob dailyJob = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)), account, jobs, OrderNum);
-            dailyJob.ShowDialog();
+
+            // Kiểm tra trong danh sách xem cửa sổ đã tồn tại hay chưa
+            FDailyJob existingForm = dailyJobForms.FirstOrDefault(form => form.Date == new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)));
+            if (existingForm != null && !existingForm.IsDisposed)
+            {
+                existingForm.WindowState = FormWindowState.Normal; // Đưa cửa sổ đã tồn tại lên phía trước
+                existingForm.Focus();
+            }
+            else
+            {
+                // Tạo một cửa sổ mới và thêm vào danh sách
+                FDailyJob newForm = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)), account, jobs, OrderNum,CEmail);
+                newForm.FormClosed += DailyJobForm_FormClosed; // Xử lý sự kiện khi cửa sổ đóng
+                newForm.ShowDialog();
+                dailyJobForms.Add(newForm);
+            }
         }
+
+        // Xử lý sự kiện khi cửa sổ FDailyJob đóng
+        private void DailyJobForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FDailyJob closedForm = sender as FDailyJob;
+            dailyJobForms.Remove(closedForm); // Xóa cửa sổ đã đóng khỏi danh sách
+        }
+
     }
 }
