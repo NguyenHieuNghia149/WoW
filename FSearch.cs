@@ -12,6 +12,7 @@ using System.Windows.Media;
 using TheGioiViecLam.model;
 using System.Collections;
 using System.IO;
+using Guna.UI2.WinForms;
 
 namespace TheGioiViecLam
 {
@@ -23,6 +24,9 @@ namespace TheGioiViecLam
         public string postID;
         public string account;
         public string jobfield;
+        public string cost;
+        public string review;
+        public string status;
         public FSearch(string account, string jobfield)
         {
             InitializeComponent();
@@ -331,26 +335,60 @@ namespace TheGioiViecLam
                 paneFilter.Visible = false;
             }
         }
-
-        private void paneFilter_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void ScrollBar_ValueChanged(object sender, EventArgs e)
         {
             string values = ScrollBar.Value.ToString();
             lblValue.Text = values + "$";
         }
 
-        private void txt_Search_TextChanged(object sender, EventArgs e)
+        private void btnApply_Click(object sender, EventArgs e)
         {
+            cost = lblValue.Text;
+            Guna2CheckBox selectedCheckBox = (Guna2CheckBox)sender;
+            // If the selected checkbox is checked, uncheck all other checkboxes
+            if (selectedCheckBox.Checked)
+            {
+                switch (selectedCheckBox.Name)
+                {
+                    case "cb1":
+                        cb2.Checked = false;
+                        cb3.Checked = false;
+                        cb4.Checked = false;
+                        cb5.Checked = false;
+                        review = "1";
+                        break;
+                    case "cb2":
+                        cb1.Checked = false;
+                        cb3.Checked = false;
+                        cb4.Checked = false;
+                        cb5.Checked = false;
+                        review = "2";
+                        break;
+                    case "cb3":
+                        cb1.Checked = false;
+                        cb2.Checked = false;
+                        cb4.Checked = false;
+                        cb5.Checked = false;
+                        review = "3";
+                        break;
+                    case "cb4":
+                        cb1.Checked = false;
+                        cb2.Checked = false;
+                        cb3.Checked = false;
+                        cb5.Checked = false;
+                        review = "4";
+                        break;
+                    case "cb5":
+                        cb1.Checked = false;
+                        cb2.Checked = false;
+                        cb3.Checked = false;
+                        cb4.Checked = false;
+                        review = "5";
+                        break;
+                }
+                Update();
 
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }

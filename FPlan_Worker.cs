@@ -42,7 +42,7 @@ namespace TheGioiViecLam
 
         private void btnCompleted_Click(object sender, EventArgs e)
         {
-            FCompletedJob form = new FCompletedJob();
+            FCompletedJob form = new FCompletedJob(account, "Done                                                                                                ");
             panelCalender.Controls.Clear();
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
@@ -51,11 +51,26 @@ namespace TheGioiViecLam
             form.BringToFront();
         }
 
-
-
         private void btnDenied_Click(object sender, EventArgs e)
         {
+            FCompletedJob form = new FCompletedJob(account, "Deny                                                                                                ");
+            panelCalender.Controls.Clear();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panelCalender.Controls.Add(form);
+            form.Show();
+            form.BringToFront();
+        }
 
+        private void btnReview_Click(object sender, EventArgs e)
+        {
+            FSeeReview form = new FSeeReview(account);
+            panelCalender.Controls.Clear();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panelCalender.Controls.Add(form);
+            form.Show();
+            form.BringToFront();
         }
     }
 }

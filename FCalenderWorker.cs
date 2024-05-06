@@ -65,9 +65,7 @@ namespace TheGioiViecLam
             LoadMatrix();
 
             AddNumbertoMatrix(ucCalender1.dt.Value);
-            jobs = GetData(); // Cập nhật danh sách jobs từ
-                              // Cập nhật danh sách jobs từ cơ sở dữ liệu
-                              // Thực hiện các thao tác khác cần thiết sau khi cập nhật danh sách jobs
+            jobs = GetData(); 
         }
         private void Btnblock_Click(object sender, EventArgs e)
         {
@@ -151,12 +149,14 @@ namespace TheGioiViecLam
                     control.lblbuoisang.Visible = true;
                     control.lblbuoisang.Text = "7:00 - 11:00: " + jobCountForMorning.ToString();
                     control.btnday.FillColor = Color.FromArgb(227, 254, 247);
+                    control.btnday.ForeColor = Color.Black;
                 }
                 if (jobCountForAfter > 0)
                 {
                     control.lblbuoichieu.Visible = true;
                     control.lblbuoichieu.Text = "12:00 - 18:00: " + jobCountForMorning.ToString();
                     control.btnday.FillColor = Color.FromArgb(227, 254, 247);
+                    control.btnday.ForeColor = Color.Black;
                 }
 
                 if (collum >= 6)
@@ -286,9 +286,6 @@ namespace TheGioiViecLam
                     job.Address = reader["CAddress"].ToString();
                     job.Status = reader["OStatus"].ToString();
                     OrderNum = reader["OrderNum"].ToString();
-                    jobs.Add(job);
-
-                    // Kiểm tra xem trạng thái là "Unconfirm" hay không
                     if (job.Status == "Unconfirm                                                                                           " && job.Status == "Confirmed                                                                                           ")
                     {
                         jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"

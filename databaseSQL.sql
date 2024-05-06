@@ -392,3 +392,7 @@ INNER JOIN Post ON Orders.IDP = Post.IDP
 ORDER BY ODate DESC
 
 select * from Review
+SELECT Customer.Fullname as fullname, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = 'Hung@gmail.com' and Customer.CEmail = Orders.CEmail and OStatus = 'Done'
+SELECT Review.CEmail as CEmail, Review.Img as img, Review.Rating as rating, Review.Review as review, Post.JobName as Jobname, Customer.Fullname as Fullname FROM Review,Post,Customer where Review.WID = Post.WID and Review.CEmail = Customer.CEmail and Post.Email = 'Hung@gmail.com'
+
+Select top 1 Orders.ODate as date, Orders.FromHours as fromhour, Orders.FromMinutes as fromminutes, Orders.OStatus as status, Customer.Fullname as CustomerName, Post.JobName as JobName From Orders,Post,Customer where Orders.IDP = Post.IDP and Orders.CEmail = Customer.CEmail and Post.Email = 'Hung@gmail.com' and Orders.OStatus = 'Done' ORDER BY Orders.ODate DESC

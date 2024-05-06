@@ -30,32 +30,33 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cbx_districts = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnOldest = new Guna.UI2.WinForms.Guna2Button();
             this.cbx_cities = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.worldOfWorkDataSet = new TheGioiViecLam.WorldOfWorkDataSet();
+            this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.paneFilter = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.cb5 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cb4 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cb3 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cb1 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cb2 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.btnOldest = new Guna.UI2.WinForms.Guna2Button();
             this.btnLatest = new Guna.UI2.WinForms.Guna2Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2RatingStar4 = new Guna.UI2.WinForms.Guna2RatingStar();
             this.guna2RatingStar3 = new Guna.UI2.WinForms.Guna2RatingStar();
             this.guna2RatingStar2 = new Guna.UI2.WinForms.Guna2RatingStar();
             this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
             this.label3 = new System.Windows.Forms.Label();
-            this.worldOfWorkDataSet = new TheGioiViecLam.WorldOfWorkDataSet();
-            this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Rating5Star = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.paneFilter = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblValue = new System.Windows.Forms.Label();
             this.ScrollBar = new Guna.UI2.WinForms.Guna2HScrollBar();
+            this.btnApply = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnFilter = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_Search = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PanelBottom = new System.Windows.Forms.Panel();
@@ -84,25 +85,6 @@
             this.cbx_districts.Size = new System.Drawing.Size(140, 36);
             this.cbx_districts.TabIndex = 12;
             this.cbx_districts.SelectedIndexChanged += new System.EventHandler(this.cbx_districts_SelectedIndexChanged);
-            // 
-            // btnOldest
-            // 
-            this.btnOldest.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.btnOldest.BorderRadius = 10;
-            this.btnOldest.BorderThickness = 1;
-            this.btnOldest.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnOldest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOldest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOldest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOldest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOldest.FillColor = System.Drawing.Color.White;
-            this.btnOldest.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOldest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.btnOldest.Location = new System.Drawing.Point(144, 294);
-            this.btnOldest.Name = "btnOldest";
-            this.btnOldest.Size = new System.Drawing.Size(95, 22);
-            this.btnOldest.TabIndex = 1015;
-            this.btnOldest.Text = "Oldest";
             // 
             // cbx_cities
             // 
@@ -147,6 +129,173 @@
             this.txt_Search.Size = new System.Drawing.Size(412, 44);
             this.txt_Search.TabIndex = 8;
             // 
+            // worldOfWorkDataSet
+            // 
+            this.worldOfWorkDataSet.DataSetName = "WorldOfWorkDataSet";
+            this.worldOfWorkDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // workerBindingSource
+            // 
+            this.workerBindingSource.DataMember = "Worker";
+            this.workerBindingSource.DataSource = this.worldOfWorkDataSet;
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.paneFilter);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.cbx_districts);
+            this.panel1.Controls.Add(this.cbx_cities);
+            this.panel1.Controls.Add(this.btnFilter);
+            this.panel1.Controls.Add(this.btn_Search);
+            this.panel1.Controls.Add(this.txt_Search);
+            this.panel1.Controls.Add(this.PanelBottom);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1039, 641);
+            this.panel1.TabIndex = 7;
+            // 
+            // paneFilter
+            // 
+            this.paneFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.paneFilter.BorderRadius = 15;
+            this.paneFilter.BorderThickness = 2;
+            this.paneFilter.Controls.Add(this.cb5);
+            this.paneFilter.Controls.Add(this.cb4);
+            this.paneFilter.Controls.Add(this.cb3);
+            this.paneFilter.Controls.Add(this.cb1);
+            this.paneFilter.Controls.Add(this.cb2);
+            this.paneFilter.Controls.Add(this.btnOldest);
+            this.paneFilter.Controls.Add(this.btnLatest);
+            this.paneFilter.Controls.Add(this.label8);
+            this.paneFilter.Controls.Add(this.guna2RatingStar4);
+            this.paneFilter.Controls.Add(this.guna2RatingStar3);
+            this.paneFilter.Controls.Add(this.guna2RatingStar2);
+            this.paneFilter.Controls.Add(this.guna2RatingStar1);
+            this.paneFilter.Controls.Add(this.label3);
+            this.paneFilter.Controls.Add(this.Rating5Star);
+            this.paneFilter.Controls.Add(this.label2);
+            this.paneFilter.Controls.Add(this.lblValue);
+            this.paneFilter.Controls.Add(this.ScrollBar);
+            this.paneFilter.Controls.Add(this.btnApply);
+            this.paneFilter.Controls.Add(this.label1);
+            this.paneFilter.Location = new System.Drawing.Point(665, 119);
+            this.paneFilter.Name = "paneFilter";
+            this.paneFilter.Size = new System.Drawing.Size(266, 394);
+            this.paneFilter.TabIndex = 5;
+            // 
+            // cb5
+            // 
+            this.cb5.AutoSize = true;
+            this.cb5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb5.CheckedState.BorderRadius = 0;
+            this.cb5.CheckedState.BorderThickness = 0;
+            this.cb5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb5.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cb5.Location = new System.Drawing.Point(149, 110);
+            this.cb5.Name = "cb5";
+            this.cb5.Size = new System.Drawing.Size(18, 17);
+            this.cb5.TabIndex = 1020;
+            this.cb5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb5.UncheckedState.BorderRadius = 0;
+            this.cb5.UncheckedState.BorderThickness = 0;
+            this.cb5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // cb4
+            // 
+            this.cb4.AutoSize = true;
+            this.cb4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb4.CheckedState.BorderRadius = 0;
+            this.cb4.CheckedState.BorderThickness = 0;
+            this.cb4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb4.Location = new System.Drawing.Point(149, 137);
+            this.cb4.Name = "cb4";
+            this.cb4.Size = new System.Drawing.Size(86, 28);
+            this.cb4.TabIndex = 1019;
+            this.cb4.Text = "above";
+            this.cb4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb4.UncheckedState.BorderRadius = 0;
+            this.cb4.UncheckedState.BorderThickness = 0;
+            this.cb4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // cb3
+            // 
+            this.cb3.AutoSize = true;
+            this.cb3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb3.CheckedState.BorderRadius = 0;
+            this.cb3.CheckedState.BorderThickness = 0;
+            this.cb3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb3.Location = new System.Drawing.Point(149, 171);
+            this.cb3.Name = "cb3";
+            this.cb3.Size = new System.Drawing.Size(86, 28);
+            this.cb3.TabIndex = 1018;
+            this.cb3.Text = "above";
+            this.cb3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb3.UncheckedState.BorderRadius = 0;
+            this.cb3.UncheckedState.BorderThickness = 0;
+            this.cb3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // cb1
+            // 
+            this.cb1.AutoSize = true;
+            this.cb1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb1.CheckedState.BorderRadius = 0;
+            this.cb1.CheckedState.BorderThickness = 0;
+            this.cb1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb1.Location = new System.Drawing.Point(149, 239);
+            this.cb1.Name = "cb1";
+            this.cb1.Size = new System.Drawing.Size(86, 28);
+            this.cb1.TabIndex = 1017;
+            this.cb1.Text = "above";
+            this.cb1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb1.UncheckedState.BorderRadius = 0;
+            this.cb1.UncheckedState.BorderThickness = 0;
+            this.cb1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // cb2
+            // 
+            this.cb2.AutoSize = true;
+            this.cb2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb2.CheckedState.BorderRadius = 0;
+            this.cb2.CheckedState.BorderThickness = 0;
+            this.cb2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb2.Location = new System.Drawing.Point(149, 205);
+            this.cb2.Name = "cb2";
+            this.cb2.Size = new System.Drawing.Size(86, 28);
+            this.cb2.TabIndex = 1016;
+            this.cb2.Text = "above";
+            this.cb2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb2.UncheckedState.BorderRadius = 0;
+            this.cb2.UncheckedState.BorderThickness = 0;
+            this.cb2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // btnOldest
+            // 
+            this.btnOldest.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.btnOldest.BorderRadius = 10;
+            this.btnOldest.BorderThickness = 1;
+            this.btnOldest.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnOldest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOldest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOldest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOldest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOldest.FillColor = System.Drawing.Color.White;
+            this.btnOldest.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOldest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.btnOldest.Location = new System.Drawing.Point(144, 294);
+            this.btnOldest.Name = "btnOldest";
+            this.btnOldest.Size = new System.Drawing.Size(95, 22);
+            this.btnOldest.TabIndex = 1015;
+            this.btnOldest.Text = "Oldest";
+            // 
             // btnLatest
             // 
             this.btnLatest.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
@@ -176,36 +325,6 @@
             this.label8.Size = new System.Drawing.Size(63, 21);
             this.label8.TabIndex = 1013;
             this.label8.Text = "Status:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label7.Location = new System.Drawing.Point(145, 242);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 21);
-            this.label7.TabIndex = 1012;
-            this.label7.Text = "above";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label5.Location = new System.Drawing.Point(145, 175);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 21);
-            this.label5.TabIndex = 1010;
-            this.label5.Text = "above";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label4.Location = new System.Drawing.Point(145, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 21);
-            this.label4.TabIndex = 1009;
-            this.label4.Text = "above";
             // 
             // guna2RatingStar4
             // 
@@ -256,32 +375,6 @@
             this.label3.Size = new System.Drawing.Size(0, 21);
             this.label3.TabIndex = 1004;
             // 
-            // worldOfWorkDataSet
-            // 
-            this.worldOfWorkDataSet.DataSetName = "WorldOfWorkDataSet";
-            this.worldOfWorkDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // workerBindingSource
-            // 
-            this.workerBindingSource.DataMember = "Worker";
-            this.workerBindingSource.DataSource = this.worldOfWorkDataSet;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label6.Location = new System.Drawing.Point(145, 208);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 21);
-            this.label6.TabIndex = 1011;
-            this.label6.Text = "above";
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
             // Rating5Star
             // 
             this.Rating5Star.Location = new System.Drawing.Point(19, 103);
@@ -291,87 +384,6 @@
             this.Rating5Star.Size = new System.Drawing.Size(120, 28);
             this.Rating5Star.TabIndex = 1003;
             this.Rating5Star.Value = 5F;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2Button1.Location = new System.Drawing.Point(153, 359);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(95, 22);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Apply";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.paneFilter);
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Controls.Add(this.cbx_districts);
-            this.panel1.Controls.Add(this.cbx_cities);
-            this.panel1.Controls.Add(this.btnFilter);
-            this.panel1.Controls.Add(this.btn_Search);
-            this.panel1.Controls.Add(this.txt_Search);
-            this.panel1.Controls.Add(this.PanelBottom);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1039, 641);
-            this.panel1.TabIndex = 7;
-            // 
-            // btnBack
-            // 
-            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBack.FillColor = System.Drawing.Color.White;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Image = global::TheGioiViecLam.Properties.Resources.arrow__1_;
-            this.btnBack.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnBack.Location = new System.Drawing.Point(4, 12);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(70, 45);
-            this.btnBack.TabIndex = 13;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // paneFilter
-            // 
-            this.paneFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.paneFilter.BorderRadius = 15;
-            this.paneFilter.BorderThickness = 2;
-            this.paneFilter.Controls.Add(this.btnOldest);
-            this.paneFilter.Controls.Add(this.btnLatest);
-            this.paneFilter.Controls.Add(this.label8);
-            this.paneFilter.Controls.Add(this.label7);
-            this.paneFilter.Controls.Add(this.label6);
-            this.paneFilter.Controls.Add(this.label5);
-            this.paneFilter.Controls.Add(this.label4);
-            this.paneFilter.Controls.Add(this.guna2RatingStar4);
-            this.paneFilter.Controls.Add(this.guna2RatingStar3);
-            this.paneFilter.Controls.Add(this.guna2RatingStar2);
-            this.paneFilter.Controls.Add(this.guna2RatingStar1);
-            this.paneFilter.Controls.Add(this.label3);
-            this.paneFilter.Controls.Add(this.Rating5Star);
-            this.paneFilter.Controls.Add(this.label2);
-            this.paneFilter.Controls.Add(this.lblValue);
-            this.paneFilter.Controls.Add(this.ScrollBar);
-            this.paneFilter.Controls.Add(this.guna2Button1);
-            this.paneFilter.Controls.Add(this.label1);
-            this.paneFilter.Location = new System.Drawing.Point(665, 119);
-            this.paneFilter.Name = "paneFilter";
-            this.paneFilter.Size = new System.Drawing.Size(266, 394);
-            this.paneFilter.TabIndex = 5;
             // 
             // label2
             // 
@@ -390,9 +402,9 @@
             this.lblValue.Font = new System.Drawing.Font("Tahoma", 10F);
             this.lblValue.Location = new System.Drawing.Point(64, 18);
             this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(54, 21);
+            this.lblValue.Size = new System.Drawing.Size(19, 21);
             this.lblValue.TabIndex = 1001;
-            this.lblValue.Text = "label2";
+            this.lblValue.Text = "0";
             // 
             // ScrollBar
             // 
@@ -409,6 +421,25 @@
             this.ScrollBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ScrollBar.ValueChanged += new System.EventHandler(this.ScrollBar_ValueChanged);
             // 
+            // btnApply
+            // 
+            this.btnApply.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.btnApply.BorderRadius = 10;
+            this.btnApply.BorderThickness = 1;
+            this.btnApply.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApply.FillColor = System.Drawing.Color.White;
+            this.btnApply.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.btnApply.Location = new System.Drawing.Point(153, 359);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(95, 22);
+            this.btnApply.TabIndex = 1;
+            this.btnApply.Text = "Apply";
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -419,6 +450,22 @@
             this.label1.Size = new System.Drawing.Size(49, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cost:";
+            // 
+            // btnBack
+            // 
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.FillColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Image = global::TheGioiViecLam.Properties.Resources.arrow__1_;
+            this.btnBack.ImageSize = new System.Drawing.Size(60, 60);
+            this.btnBack.Location = new System.Drawing.Point(4, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(70, 45);
+            this.btnBack.TabIndex = 13;
             // 
             // btnFilter
             // 
@@ -497,34 +544,35 @@
 
         private Guna.UI2.WinForms.Guna2ComboBox cbx_districts;
         private Guna.UI2.WinForms.Guna2CircleButton btnFilter;
-        private Guna.UI2.WinForms.Guna2Button btnOldest;
         public Guna.UI2.WinForms.Guna2ComboBox cbx_cities;
         private Guna.UI2.WinForms.Guna2CircleButton btn_Search;
         private Guna.UI2.WinForms.Guna2TextBox txt_Search;
-        private Guna.UI2.WinForms.Guna2Button btnLatest;
+        private WorldOfWorkDataSet worldOfWorkDataSet;
+        private System.Windows.Forms.BindingSource workerBindingSource;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelBottom;
+        private WorldOfWorkDataSetTableAdapters.WorkerTableAdapter workerTableAdapter;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel paneFilter;
+        private Guna.UI2.WinForms.Guna2CheckBox cb5;
+        private Guna.UI2.WinForms.Guna2CheckBox cb4;
+        private Guna.UI2.WinForms.Guna2CheckBox cb3;
+        private Guna.UI2.WinForms.Guna2CheckBox cb1;
+        private Guna.UI2.WinForms.Guna2CheckBox cb2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar4;
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar3;
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar2;
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
         private System.Windows.Forms.Label label3;
-        private WorldOfWorkDataSet worldOfWorkDataSet;
-        private System.Windows.Forms.BindingSource workerBindingSource;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel paneFilter;
         private Guna.UI2.WinForms.Guna2RatingStar Rating5Star;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblValue;
         private Guna.UI2.WinForms.Guna2HScrollBar ScrollBar;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel PanelBottom;
-        private WorldOfWorkDataSetTableAdapters.WorkerTableAdapter workerTableAdapter;
-        private Guna.UI2.WinForms.Guna2Button btnBack;
+        public Guna.UI2.WinForms.Guna2Button btnOldest;
+        public Guna.UI2.WinForms.Guna2Button btnLatest;
+        public System.Windows.Forms.Label lblValue;
+        public Guna.UI2.WinForms.Guna2Button btnApply;
     }
 }
