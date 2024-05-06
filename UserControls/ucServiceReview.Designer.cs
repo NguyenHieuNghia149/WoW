@@ -39,7 +39,6 @@
             this.ratingStar = new Guna.UI2.WinForms.Guna2RatingStar();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNumberReview = new System.Windows.Forms.Label();
-            this.lblReview = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,10 +55,10 @@
             this.panelMain.Controls.Add(this.ratingStar);
             this.panelMain.Controls.Add(this.label1);
             this.panelMain.Controls.Add(this.lblNumberReview);
-            this.panelMain.Location = new System.Drawing.Point(0, 71);
+            this.panelMain.Location = new System.Drawing.Point(5, 18);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1432, 155);
-            this.panelMain.TabIndex = 0;
+            this.panelMain.Size = new System.Drawing.Size(928, 114);
+            this.panelMain.TabIndex = 2;
             // 
             // btnHavePicture
             // 
@@ -74,9 +73,9 @@
             this.btnHavePicture.FillColor = System.Drawing.Color.White;
             this.btnHavePicture.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHavePicture.ForeColor = System.Drawing.Color.Black;
-            this.btnHavePicture.Location = new System.Drawing.Point(246, 87);
+            this.btnHavePicture.Location = new System.Drawing.Point(197, 68);
             this.btnHavePicture.Name = "btnHavePicture";
-            this.btnHavePicture.Size = new System.Drawing.Size(147, 45);
+            this.btnHavePicture.Size = new System.Drawing.Size(147, 28);
             this.btnHavePicture.TabIndex = 9;
             this.btnHavePicture.Text = "Have Pictures";
             // 
@@ -93,9 +92,9 @@
             this.btn1Star.FillColor = System.Drawing.Color.White;
             this.btn1Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1Star.ForeColor = System.Drawing.Color.Black;
-            this.btn1Star.Location = new System.Drawing.Point(744, 28);
+            this.btn1Star.Location = new System.Drawing.Point(644, 19);
             this.btn1Star.Name = "btn1Star";
-            this.btn1Star.Size = new System.Drawing.Size(83, 45);
+            this.btn1Star.Size = new System.Drawing.Size(72, 31);
             this.btn1Star.TabIndex = 8;
             this.btn1Star.Text = "1 Star";
             // 
@@ -112,9 +111,9 @@
             this.btn2Star.FillColor = System.Drawing.Color.White;
             this.btn2Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2Star.ForeColor = System.Drawing.Color.Black;
-            this.btn2Star.Location = new System.Drawing.Point(643, 28);
+            this.btn2Star.Location = new System.Drawing.Point(550, 19);
             this.btn2Star.Name = "btn2Star";
-            this.btn2Star.Size = new System.Drawing.Size(83, 45);
+            this.btn2Star.Size = new System.Drawing.Size(72, 31);
             this.btn2Star.TabIndex = 7;
             this.btn2Star.Text = "2 Star";
             // 
@@ -131,9 +130,9 @@
             this.btn3Star.FillColor = System.Drawing.Color.White;
             this.btn3Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3Star.ForeColor = System.Drawing.Color.Black;
-            this.btn3Star.Location = new System.Drawing.Point(542, 28);
+            this.btn3Star.Location = new System.Drawing.Point(458, 19);
             this.btn3Star.Name = "btn3Star";
-            this.btn3Star.Size = new System.Drawing.Size(83, 45);
+            this.btn3Star.Size = new System.Drawing.Size(72, 31);
             this.btn3Star.TabIndex = 6;
             this.btn3Star.Text = "3 Star";
             // 
@@ -150,9 +149,9 @@
             this.btn4Star.FillColor = System.Drawing.Color.White;
             this.btn4Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4Star.ForeColor = System.Drawing.Color.Black;
-            this.btn4Star.Location = new System.Drawing.Point(436, 28);
+            this.btn4Star.Location = new System.Drawing.Point(368, 19);
             this.btn4Star.Name = "btn4Star";
-            this.btn4Star.Size = new System.Drawing.Size(83, 45);
+            this.btn4Star.Size = new System.Drawing.Size(72, 31);
             this.btn4Star.TabIndex = 5;
             this.btn4Star.Text = "4 Star";
             // 
@@ -169,9 +168,9 @@
             this.btn5Star.FillColor = System.Drawing.Color.White;
             this.btn5Star.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5Star.ForeColor = System.Drawing.Color.Black;
-            this.btn5Star.Location = new System.Drawing.Point(337, 27);
+            this.btn5Star.Location = new System.Drawing.Point(281, 19);
             this.btn5Star.Name = "btn5Star";
-            this.btn5Star.Size = new System.Drawing.Size(83, 45);
+            this.btn5Star.Size = new System.Drawing.Size(72, 31);
             this.btn5Star.TabIndex = 4;
             this.btn5Star.Text = "5 Star";
             // 
@@ -189,9 +188,9 @@
             this.btnAll.FillColor = System.Drawing.Color.White;
             this.btnAll.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAll.ForeColor = System.Drawing.Color.Black;
-            this.btnAll.Location = new System.Drawing.Point(237, 28);
+            this.btnAll.Location = new System.Drawing.Point(197, 19);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(83, 45);
+            this.btnAll.Size = new System.Drawing.Size(72, 31);
             this.btnAll.TabIndex = 3;
             this.btnAll.Text = "ALL";
             // 
@@ -199,7 +198,7 @@
             // 
             this.ratingStar.BorderColor = System.Drawing.Color.Black;
             this.ratingStar.BorderThickness = 1;
-            this.ratingStar.Location = new System.Drawing.Point(57, 87);
+            this.ratingStar.Location = new System.Drawing.Point(23, 53);
             this.ratingStar.Name = "ratingStar";
             this.ratingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
             this.ratingStar.Size = new System.Drawing.Size(145, 28);
@@ -210,63 +209,50 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(111, 44);
+            this.label1.Location = new System.Drawing.Point(77, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "out of 5";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblNumberReview
             // 
             this.lblNumberReview.AutoSize = true;
             this.lblNumberReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumberReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.lblNumberReview.Location = new System.Drawing.Point(51, 34);
+            this.lblNumberReview.Location = new System.Drawing.Point(17, 10);
             this.lblNumberReview.Name = "lblNumberReview";
             this.lblNumberReview.Size = new System.Drawing.Size(62, 38);
             this.lblNumberReview.TabIndex = 0;
             this.lblNumberReview.Text = "4.6";
             // 
-            // lblReview
-            // 
-            this.lblReview.AutoSize = true;
-            this.lblReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReview.Location = new System.Drawing.Point(33, 20);
-            this.lblReview.Name = "lblReview";
-            this.lblReview.Size = new System.Drawing.Size(223, 32);
-            this.lblReview.TabIndex = 1;
-            this.lblReview.Text = "Service Reviews";
-            // 
             // ucServiceReview
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.lblReview);
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panelMain);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ucServiceReview";
-            this.Size = new System.Drawing.Size(1201, 288);
+            this.Size = new System.Drawing.Size(936, 156);
             this.Load += new System.EventHandler(this.ucServiceReview_Load);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel panelMain;
-        private System.Windows.Forms.Label lblReview;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblNumberReview;
-        private Guna.UI2.WinForms.Guna2Button btnAll;
-        private Guna.UI2.WinForms.Guna2RatingStar ratingStar;
+        private Guna.UI2.WinForms.Guna2Button btnHavePicture;
+        private Guna.UI2.WinForms.Guna2Button btn1Star;
         private Guna.UI2.WinForms.Guna2Button btn2Star;
         private Guna.UI2.WinForms.Guna2Button btn3Star;
         private Guna.UI2.WinForms.Guna2Button btn4Star;
         private Guna.UI2.WinForms.Guna2Button btn5Star;
-        private Guna.UI2.WinForms.Guna2Button btn1Star;
-        private Guna.UI2.WinForms.Guna2Button btnHavePicture;
+        private Guna.UI2.WinForms.Guna2Button btnAll;
+        private Guna.UI2.WinForms.Guna2RatingStar ratingStar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNumberReview;
     }
 }

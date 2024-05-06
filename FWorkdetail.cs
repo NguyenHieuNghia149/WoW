@@ -26,6 +26,7 @@ namespace TheGioiViecLam
             ucW.btnBook.Click += BtnBook_Click;
             this.account = account;
             this.wid = wid;
+            ucW.AutoScroll = true;
         }
         private void BtnBook_Click(object sender, EventArgs e)
         {
@@ -110,7 +111,7 @@ namespace TheGioiViecLam
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd2); // Đổi từ sqlStr thành cmd2
                 DataSet dataSet = new DataSet();
                 adapter.Fill(dataSet);
-                int y = 690; // Biến để điều chỉnh vị trí theo trục y của các UC
+                int y = 730; // Biến để điều chỉnh vị trí theo trục y của các UC
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
                     int Rating = Convert.ToInt32(row["Rating"]);
@@ -130,7 +131,7 @@ namespace TheGioiViecLam
                     }
                     uCreview.Location = new Point(0, y);
                     y += uCreview.Height + 7; // Tăng y để tránh chồng chéo
-                    panel1.Controls.Add(uCreview);
+                    ucW.panelDetail.Controls.Add(uCreview);
                     uCreview.BringToFront();
                 }
             }
