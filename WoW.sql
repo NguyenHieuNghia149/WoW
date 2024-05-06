@@ -368,3 +368,8 @@ INSERT INTO Cities (ID, City, District) VALUES
 GO
 
 select * from Post 
+
+select distinct JobName from Post where Email = 'Anh@gmail.com' 
+select count(JobName) as N from Post where Email = 'Anh@gmail.com' 
+select * from Salary
+select max(charge) as N from Salary
