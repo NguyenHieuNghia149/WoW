@@ -139,7 +139,7 @@ BEGIN
 	SELECT @WID = WID FROM Worker WHERE WEmail = @Email
 	SELECT @Fullname = Fullname FROM Worker WHERE WEmail = @Email
 
-	INSERT INTO Post(IDP,Email,JobName,WTime,Cost,Detail,Experience,PhoneNum,City,District,JobField,img,WID,FullName,Address)
+	INSERT INTO Post(IDP,Email,JobName,WTime,Cost,Detail,Experience,PhoneNum,City,District,JobField,img,WID,FullName,WAddress)
 	VALUES(@IDP,@Email,@JobName,@WTime,@Cost,@Detail,@Experience,@PhoneNum,@City,@District,@JobField,@img,@WID,@FullName,@Address)
 END
 GO
@@ -366,3 +366,10 @@ INSERT INTO Cities (ID, City, District) VALUES
 (29, N'Hà Nội', N'Quận Bắc Từ Liêm'),
 (30, N'Hà Nội', N'Quận Hà Đông');
 GO
+
+select * from Post 
+
+select distinct JobName from Post where Email = 'Anh@gmail.com' 
+select count(JobName) as N from Post where Email = 'Anh@gmail.com' 
+select * from Salary
+select max(charge) as N from Salary

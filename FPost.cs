@@ -34,23 +34,9 @@ namespace TheGioiViecLam
         private void FPost_Load(object sender, EventArgs e)
         {
             LoadJobNameIntoComboBox();
-           // LoadDistrictIntoComboBox();
+            LoadDistrictIntoComboBox();
             LoadCity();
-            LoadPhoneNum(account);
             LoadPID();
-        }
-
-
-        public void UCWorkInFor_Click(string WID, string IDP, object sender, EventArgs e)
-        {
-            FWorkdetail form = new FWorkdetail(WID, IDP, account);
-            form.Show();
-
-            if (sender is UCWorkInFor uCWorkInFor)
-            {
-                /*string postID = uCWorkInFor.txtIDP.Text;*/
-
-            }
         }
         private void LoadJobNameIntoComboBox()
         {
@@ -133,34 +119,6 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
-        private void LoadPhoneNum(string account)
-        {
-            try
-            {
-                conn.Open();
-
-                string query = string.Format("SELECT PhoneNum FROM Worker WHERE WEmail = '{0}'", account);
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    string PhoneNum = reader["PhoneNum"].ToString();
-                    txtPhoneNum.Text = PhoneNum;
-                }
-
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
         private void LoadPID()
         {
             try
@@ -188,35 +146,17 @@ namespace TheGioiViecLam
             }
             txtIDP.Visible = false; //ẩn đi ID
         }
-
-        /* private void btnEdit_Click(object sender, EventArgs e)
-         {
-             string query = string.Format("UPDATE Post SET JobField='{0}',WTime='{1}',Cost='{2}',Detail='{3}',Experience='{4}',City =N'{6}',District=N'{7}',JobName=N'{8}' WHERE IDP ='{5}'",
-                cbbJobJield.Text, cbbTime.Text, txtCost.Text, txtDetail.Text, cbbExperience.Text, txtIDP.Text, cbbCities.Text, cbbDistrict.Text, txtJob.Text);
-             db.Execute(query);
-             FPost_Load(sender, e);
-
-         }*/
-
         private void cbbCities_SelectedValueChanged(object sender, EventArgs e)
         {
             LoadDistrictIntoComboBox();
         }
-
-        private void picturePost_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                picturePost.Image = Image.FromFile(open.FileName);
-                this.Text = open.FileName;
-            }
-        }
-
         private void btnPost_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(txtIDP.Text);
             try
             {
+                /*if (conn.State == ConnectionState.Open)
+                    conn.Close();*/
                 conn.Open();
                 byte[] b = imageDao.imageToByteArray(picturePost.Image);
                 string query = string.Format("EXEC pd_Insert_Post_ @IDP, @Account, @Job, @Time, @Cost, @Detail, @Experience, @PhoneNum, @Cities, @District, @JobJield, @Image,@Address");
@@ -234,24 +174,38 @@ namespace TheGioiViecLam
                 cmd.Parameters.AddWithValue("@Cities", cbbCities.Text);
                 cmd.Parameters.AddWithValue("@District", cbbDistrict.Text);
                 cmd.Parameters.AddWithValue("@JobJield", cbbJobJield.Text);
+                cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
                 cmd.Parameters.Add("@Image", SqlDbType.VarBinary, -1).Value = b;
 
-                conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Successfull!!!");
-                FPost_Load(sender, e);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Thất bại " + ex);
             }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
+            FPost_Load(sender, e);
             this.Hide();
             this.Close();
+        }
+
+        private void picturePost_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                picturePost.Image = Image.FromFile(open.FileName);
+                this.Text = open.FileName;
+            }
         }
     }
 }

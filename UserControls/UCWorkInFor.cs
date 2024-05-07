@@ -19,19 +19,5 @@ namespace TheGioiViecLam
         {
             InitializeComponent();
         }
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelMain_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

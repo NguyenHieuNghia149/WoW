@@ -15,6 +15,7 @@ using TheGioiViecLam.model;
 using Guna.UI2.Designer;
 using TheGioiViecLam.UserControls;
 using System.Globalization;
+using System.Windows.Media;
 
 namespace TheGioiViecLam
 {
@@ -31,20 +32,64 @@ namespace TheGioiViecLam
 
         private void Nhap_Load(object sender, EventArgs e)
         {
+            LoadPieChart(account);
+            LoadLineChart();
+        }
+        private void LoadPieChart(string account)
+        {
+            chartPost.Titles.Add("My Post");
+
+            try
+            {
+                conn.Open();
+                string query1 = string.Format("select count(JobName) as N from Post where Email = '{0}' ", account);
+                string query2 = string.Format("select distinct JobName from Post where Email = '{0}'", account);
+                
+                SqlCommand cmd1 = new SqlCommand(query1, conn);
+                SqlCommand cmd2 = new SqlCommand(query2, conn);
+
+                SqlDataReader reader1 = cmd1.ExecuteReader();
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                int n = 0;
+                while (reader1.Read())
+                {
+                    if (reader1["N"] != DBNull.Value)
+                    {
+                        n = int.Parse(reader1["N"].ToString());
+                    }
+                }
+                reader1.Close();
+                if (n != 0)
+                {
+                    while (reader2.Read())
+                    {
+                        int percent = 100 / n;
+                        string JobName = reader2["JobName"].ToString();
+                        chartPost.Series["s1"].Points.AddXY(JobName, percent.ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        private void LoadLineChart()
+        {
             for (int i = 1; i <= 12; i++)
             {
                 var date = new DateTime(2024, i, 1);
                 string monthName = CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(date.Month);
-                int value = SelectValue(account,i);
+                int value = SelectValue(account, i);
                 cCharge.DataPoints.Add(monthName, value);
-
-                /*var charts = cCharge;
-                charts.DataPoints.Clear();
-                charts.DataPoints.Add(monthName, value1);*/
             }
             ChartSalary.Update();
         }
-
         private int SelectValue(string account, int month)
         {
             int n = 0;
@@ -52,8 +97,11 @@ namespace TheGioiViecLam
             {
                 conn.Open();
                 string query = string.Format("SELECT SumSalary = dbo.fnSelectSalary('{0}','{1}')", account, month);
+                string query2 = string.Format("select max(charge) as MAX from Salary");
                 SqlCommand cmd = new SqlCommand(query, conn);
+                SqlCommand cmd2 = new SqlCommand(query2, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader2 = cmd2.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -65,6 +113,14 @@ namespace TheGioiViecLam
                 ChartSalary.Update();
                 reader.Close();
 
+                while (reader2.Read())
+                {
+                    if (reader2["MAX"] != DBNull.Value)
+                    {
+                        lblMaxCharge.Text = reader2["MAX"].ToString();
+                    }
+                }
+                reader2.Close();
             }
             catch (Exception ex)
             {
