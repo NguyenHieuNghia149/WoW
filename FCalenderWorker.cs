@@ -35,8 +35,6 @@ namespace TheGioiViecLam
 
 
         public int AppTime { get => appTime; set => appTime = value; }
-
-        // calendercs calendercs = new calendercs();
         List<Order> jobs = new List<Order>();
 
         private string account;

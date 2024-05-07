@@ -33,6 +33,7 @@ namespace TheGioiViecLam
             this.jobs = jobs;
             this.OrderNum = OrderNum;
             this.CEmail = CEmail;
+            MessageBox.Show(account);
             fPanel.Width = pnJob.Width;
             fPanel.Height = pnJob.Height;
             pnJob.Controls.Add(fPanel);
@@ -53,6 +54,7 @@ namespace TheGioiViecLam
                     ucJob.btndeny.Click += (s, ev) => ajob_Denied(s, ev, OrderNum,CEmail);
                     ucJob.btnConfirm.Click += (s, ev) => ajob_Confirmed(s, ev, OrderNum,CEmail);
                     ucJob.btnDone.Click += (s, ev) => ajob_Done(s, ev, OrderNum,CEmail);
+
                     fPanel.Controls.Add(ucJob);
                 }
             }
