@@ -15,6 +15,7 @@ namespace TheGioiViecLam
 {
     public partial class FDailyJob : Form
     {
+        DBConnection db = new DBConnection();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         private string OrderNum;
         private string account;
@@ -125,9 +126,9 @@ namespace TheGioiViecLam
             }
             finally
             {
+               
             }
         }
-
 
         private void ajob_Confirmed( object sender, EventArgs e, string OrderNum, string CEmail)
         {

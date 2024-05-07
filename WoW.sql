@@ -139,7 +139,7 @@ BEGIN
 	SELECT @WID = WID FROM Worker WHERE WEmail = @Email
 	SELECT @Fullname = Fullname FROM Worker WHERE WEmail = @Email
 
-	INSERT INTO Post(IDP,Email,JobName,WTime,Cost,Detail,Experience,PhoneNum,City,District,JobField,img,WID,FullName,Address)
+	INSERT INTO Post(IDP,Email,JobName,WTime,Cost,Detail,Experience,PhoneNum,City,District,JobField,img,WID,FullName,WAddress)
 	VALUES(@IDP,@Email,@JobName,@WTime,@Cost,@Detail,@Experience,@PhoneNum,@City,@District,@JobField,@img,@WID,@FullName,@Address)
 END
 GO
@@ -297,7 +297,7 @@ BEGIN
 	INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES (@receiveTime,@wid,@wEmail,@charge,@idp)
 END
 GO
-
+select * from Post
 -- SELECT * FROM Salary
 
 EXEC spInsertSalary 'Anh@gmail.com',1
@@ -307,15 +307,24 @@ INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-03-01','W000
 INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-04-01','W00001','Anh@gmail.com','200',1)
 GO
 
+DROP FUNCTION fnSelectSalary
+GO
 CREATE FUNCTION fnSelectSalary(@wEmail char(50), @month char(20))
 RETURNS INT 
 AS
 BEGIN
 	DECLARE @sumSalary INT
-	SELECT @sumSalary = SUM(CAST(Charge AS INT)) FROM Salary WHERE WEmail = @wEmail AND @month = MONTH (ReceiveTime)
+	--SELECT @IDP = IDP from Orders WHERE CEmail = @cEmail
+	--SELECT @wEmail = Email FROM Post WHERE IDP = @IDP
+	SELECT @sumSalary = SUM(CAST(Cost AS INT)) FROM Post INNER JOIN Orders ON Post.IDP = Orders.IDP 
+	WHERE Post.Email = @wEmail AND @month = MONTH (ODate) AND Orders.OStatus = 'Done'
 	RETURN @sumSalary
 END
 GO
+
+SELECT * FROM Orders
+
+SELECT IDP FROM Orders WHERE CEmail = ''
 --SELECT TOP 1 Post.JobName, Post.Cost, Orders.ODate, Orders.OStatus 
 --FROM Orders 
 --INNER JOIN Post ON Orders.IDP = Post.IDP 
@@ -365,4 +374,24 @@ INSERT INTO Cities (ID, City, District) VALUES
 (28, N'Hà Nội', N'Quận Nam Từ Liêm'),
 (29, N'Hà Nội', N'Quận Bắc Từ Liêm'),
 (30, N'Hà Nội', N'Quận Hà Đông');
+GO
+
+select * from Post 
+
+select distinct JobName from Post where Email = 'Anh@gmail.com' 
+select count(JobName) as N from Post where Email = 'Anh@gmail.com' 
+select * from Salary
+select max(charge) as N from Salary
+
+CREATE FUNCTION fnSelectMaxSalary(@wEmail char(50), @month char(20))
+RETURNS INT 
+AS
+BEGIN
+	DECLARE @maxSalary INT
+	--SELECT @IDP = IDP from Orders WHERE CEmail = @cEmail
+	--SELECT @wEmail = Email FROM Post WHERE IDP = @IDP
+	SELECT @maxSalary = MAX(CAST(Cost AS INT)) FROM Post INNER JOIN Orders ON Post.IDP = Orders.IDP 
+	WHERE Post.Email = @wEmail AND @month = MONTH (ODate) AND Orders.OStatus = 'Done'
+	RETURN @maxSalary
+END
 GO

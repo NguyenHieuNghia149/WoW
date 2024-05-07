@@ -38,7 +38,7 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sql = string.Format("select PostsWithAverageRating.Rating as Rating ,PostsWithAverageRating.IDP as IDP,PostsWithAverageRating.WID as WID, PostsWithAverageRating.JobName as JobName, PostsWithAverageRating.Cost as Cost," +
+                string sql = string.Format("select PostsWithAverageRating.Rating as Rating ,PostsWithAverageRating.IDP as IDP,PostsWithAverageRating.WID as WID, PostsWithAverageRating.JobName as JobName, PostsWithAverageRating.Cost as Cost,PostsWithAverageRating.Address as Address," +
                     " PostsWithAverageRating.Experience as Experience,PostsWithAverageRating.WTime as Time, PostsWithAverageRating.District as District," +
                     " CEmail from Saves,PostsWithAverageRating where  PostsWithAverageRating.IDP = Saves.IDP and Saves.CEmail = '{0}'", account);
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
@@ -54,13 +54,13 @@ namespace TheGioiViecLam
                     string job = row["JobName"].ToString();
                     string price = row["Cost"].ToString();
                     string experience = row["Experience"].ToString();
-                    string location = row["District"].ToString();
+                    string location = row["Address"].ToString();
                     string time = row["Time"].ToString();
                     string postID = row["IDP"].ToString();
                     string wid = row["WID"].ToString() ;
                     int Rating = Convert.ToInt32(row["Rating"]);
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
-                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(wid,postID, s, ev);
+                    uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(wid,postID, s, ev);
                     uCWorkInFor.btnDelete.Click += (s, ev) => Delete_Click(postID, s, ev);
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price;
@@ -87,12 +87,12 @@ namespace TheGioiViecLam
 
         private void ucWorkInFor_Click(string wid,string postID, object sender, EventArgs e)
         {
-
+            FWorkdetail form = new FWorkdetail(wid, postID, account);
+            form.Show();
             if (sender is UCWorkInFor uCWorkInFor)
             {
                 // Tạo và hiển thị form FWorkdetail
-                FWorkdetail form = new FWorkdetail(wid,postID,account);
-                form.Show();
+                
             }
         }
         private void Delete_Click(string postID, object sender, EventArgs e)

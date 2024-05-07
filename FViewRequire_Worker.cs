@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using TheGioiViecLam.UserControls;
+using System.IO;
+using TheGioiViecLam.model;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Net;
 
 namespace TheGioiViecLam
 {
@@ -166,6 +170,88 @@ namespace TheGioiViecLam
 
                     reader.Close();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string searchText = txt_Search.Text.Trim();
+            string[] keywords = searchText.Split(' ');
+
+            try
+            {
+                conn.Open();
+                string query = "SELECT * FROM Requirement";
+                if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
+                {
+                    query += " WHERE City = @City AND District = @District";
+                }
+                if (keywords.Length > 0)
+                {
+                    if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
+                    {
+                        query += " AND (";
+                    }
+                    else
+                    {
+                        query += " WHERE (";
+                    }
+
+                    for (int i = 0; i < keywords.Length; i++)
+                    {
+                        if (i > 0)
+                            query += " OR ";
+
+                        query += "JobName LIKE @Keyword" + i;
+                    }
+                    query += ")";
+                }
+            
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
+                {
+                    cmd.Parameters.AddWithValue("@City", cbx_cities.SelectedItem?.ToString());
+                    cmd.Parameters.AddWithValue("@District", cbx_districts.SelectedItem?.ToString());
+                }
+                for (int i = 0; i < keywords.Length; i++)
+                {
+                    cmd.Parameters.AddWithValue("@Keyword" + i, "%" + keywords[i] + "%");
+                }
+              
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                panel_View.Controls.Clear();
+                int y = 0;
+                while (reader.Read())
+                {
+                    string RequireID = reader["RequireID"].ToString();
+                    string Detail = reader["Detail"].ToString();
+                    string JobName = reader["JobName"].ToString();
+                    string CAddress = reader["CAddress"].ToString();
+
+
+                    UCHistory_Require_Customer ucHis = new UCHistory_Require_Customer(); //phải tạo UC trong vòng lặp
+
+                    ucHis.btnViewDetail.Click += (s, ev) => UCHis_btnViewDetail_Click(RequireID, account, s, ev); //view detail
+                    ucHis.txtRequireID.Visible = false;
+
+                    ucHis.txtRequireID.Text = "0000" + RequireID;
+                    ucHis.txtDetail.Text = Detail;
+                    ucHis.lblJobName.Text = JobName;
+                    ucHis.txtCAddress.Text = CAddress;
+
+                    panel_View.Controls.Add(ucHis);
+                }
+                reader.Close();
             }
             catch (Exception ex)
             {

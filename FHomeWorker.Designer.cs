@@ -137,6 +137,7 @@
             this.panelRecent.Name = "panelRecent";
             this.panelRecent.Size = new System.Drawing.Size(382, 122);
             this.panelRecent.TabIndex = 8;
+            this.panelRecent.Click += new System.EventHandler(this.panelRecent_Click);
             // 
             // guna2CustomGradientPanel5
             // 

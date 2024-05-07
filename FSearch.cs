@@ -135,7 +135,7 @@ namespace TheGioiViecLam
                     string job = row["JobName"].ToString();
                     string price = row["Cost"].ToString();
                     string experience = row["Experience"].ToString();
-                    string location = row["District"].ToString();
+                    string location = row["Address"].ToString();
                     string postID = row["IDP"].ToString();
                     string WID = row["WID"].ToString();
                     float Rating = Convert.ToInt32(row["Rating"]);
@@ -272,7 +272,7 @@ namespace TheGioiViecLam
                     string job = reader["JobName"].ToString();
                     string price = reader["Cost"].ToString();
                     string experience = reader["Experience"].ToString();
-                    string location = reader["District"].ToString();
+                    string location = reader["Address"].ToString();
                     string postID = reader["IDP"].ToString(); // Lấy giá trị IDP
                     string WID = reader["WID"].ToString();
                     float Rating = Convert.ToInt32(reader["Rating"]);

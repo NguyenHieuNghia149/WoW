@@ -43,8 +43,23 @@
             Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.ChartSalary = new Guna.Charts.WinForms.GunaChart();
             this.cCharge = new Guna.Charts.WinForms.GunaLineDataset();
+            this.gunaPieDataset1 = new Guna.Charts.WinForms.GunaPieDataset();
+            this.chartPost = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblMaxCharge = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPost)).BeginInit();
+            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.guna2CustomGradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ChartSalary
@@ -53,9 +68,9 @@
             this.cCharge});
             chartFont1.FontName = "Arial";
             this.ChartSalary.Legend.LabelFont = chartFont1;
-            this.ChartSalary.Location = new System.Drawing.Point(12, 2);
+            this.ChartSalary.Location = new System.Drawing.Point(2, 150);
             this.ChartSalary.Name = "ChartSalary";
-            this.ChartSalary.Size = new System.Drawing.Size(779, 492);
+            this.ChartSalary.Size = new System.Drawing.Size(517, 341);
             this.ChartSalary.TabIndex = 0;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -90,16 +105,126 @@
             this.cCharge.Label = "Charge";
             this.cCharge.TargetChart = this.ChartSalary;
             // 
+            // gunaPieDataset1
+            // 
+            this.gunaPieDataset1.Label = "Pie1";
+            // 
+            // chartPost
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartPost.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartPost.Legends.Add(legend1);
+            this.chartPost.Location = new System.Drawing.Point(537, 161);
+            this.chartPost.Name = "chartPost";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "s1";
+            this.chartPost.Series.Add(series1);
+            this.chartPost.Size = new System.Drawing.Size(418, 315);
+            this.chartPost.TabIndex = 4;
+            this.chartPost.Text = "chart1";
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.label5);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblMaxCharge);
+            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(56, 23);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(402, 121);
+            this.guna2CustomGradientPanel1.TabIndex = 5;
+            // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.Controls.Add(this.label4);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label2);
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(553, 23);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(402, 121);
+            this.guna2CustomGradientPanel2.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(15, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 34);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Highest:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(14, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(205, 34);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Most booked:";
+            // 
+            // lblMaxCharge
+            // 
+            this.lblMaxCharge.AutoSize = true;
+            this.lblMaxCharge.BackColor = System.Drawing.Color.Transparent;
+            this.lblMaxCharge.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxCharge.ForeColor = System.Drawing.Color.White;
+            this.lblMaxCharge.Location = new System.Drawing.Point(15, 67);
+            this.lblMaxCharge.Name = "lblMaxCharge";
+            this.lblMaxCharge.Size = new System.Drawing.Size(41, 34);
+            this.lblMaxCharge.TabIndex = 1;
+            this.lblMaxCharge.Text = "0 ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(14, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 34);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "0 ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(229, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 34);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "$";
+            // 
             // FSalary_Worker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1087, 566);
+            this.Controls.Add(this.guna2CustomGradientPanel2);
+            this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.chartPost);
             this.Controls.Add(this.ChartSalary);
             this.Name = "FSalary_Worker";
             this.Text = "Nhap";
             this.Load += new System.EventHandler(this.Nhap_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chartPost)).EndInit();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.PerformLayout();
+            this.guna2CustomGradientPanel2.ResumeLayout(false);
+            this.guna2CustomGradientPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -108,5 +233,14 @@
 
         public Guna.Charts.WinForms.GunaChart ChartSalary;
         public Guna.Charts.WinForms.GunaLineDataset cCharge;
+        private Guna.Charts.WinForms.GunaPieDataset gunaPieDataset1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPost;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblMaxCharge;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
     }
 }

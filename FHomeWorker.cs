@@ -56,7 +56,8 @@ namespace TheGioiViecLam
 
         private void btnPost_Click(object sender, EventArgs e)
         {
-            FDisplay_Workers.OpenChildForm(new FPost(account));
+            FDisplay_Workers.OpenChildForm(new FViewPost(account));
+
             FDisplay_Workers.btnPost.Checked = true;
         }
 
@@ -96,6 +97,11 @@ namespace TheGioiViecLam
             {
                 conn.Close();
             }
+        }
+
+        private void panelRecent_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

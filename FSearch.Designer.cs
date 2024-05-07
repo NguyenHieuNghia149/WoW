@@ -53,7 +53,6 @@
             this.ScrollBar = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.btnApply = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnFilter = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_Search = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PanelBottom = new System.Windows.Forms.Panel();
@@ -146,7 +145,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.paneFilter);
-            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.cbx_districts);
             this.panel1.Controls.Add(this.cbx_cities);
             this.panel1.Controls.Add(this.btnFilter);
@@ -401,22 +399,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cost:";
             // 
-            // btnBack
-            // 
-            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBack.FillColor = System.Drawing.Color.White;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Image = global::TheGioiViecLam.Properties.Resources.arrow__1_;
-            this.btnBack.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnBack.Location = new System.Drawing.Point(4, 12);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(70, 45);
-            this.btnBack.TabIndex = 13;
-            // 
             // btnFilter
             // 
             this.btnFilter.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -449,7 +431,7 @@
             this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Search.ForeColor = System.Drawing.Color.White;
             this.btn_Search.Image = global::TheGioiViecLam.Properties.Resources.search__2_;
-            this.btn_Search.Location = new System.Drawing.Point(786, 56);
+            this.btn_Search.Location = new System.Drawing.Point(814, 56);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btn_Search.Size = new System.Drawing.Size(37, 29);
@@ -503,7 +485,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel PanelBottom;
         private WorldOfWorkDataSetTableAdapters.WorkerTableAdapter workerTableAdapter;
-        private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel paneFilter;
         private Guna.UI2.WinForms.Guna2CheckBox cb5;
         private Guna.UI2.WinForms.Guna2CheckBox cb4;

@@ -93,11 +93,12 @@
             this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Search.ForeColor = System.Drawing.Color.White;
             this.btn_Search.Image = global::TheGioiViecLam.Properties.Resources.search__2_;
-            this.btn_Search.Location = new System.Drawing.Point(746, 20);
+            this.btn_Search.Location = new System.Drawing.Point(784, 20);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btn_Search.Size = new System.Drawing.Size(37, 29);
             this.btn_Search.TabIndex = 14;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // txt_Search
             // 
