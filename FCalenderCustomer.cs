@@ -115,7 +115,7 @@ namespace TheGioiViecLam
                 control.btnday.Text = i.ToString();
                 control.btnday.Click += Btn_Click;
                 control.lblbuoisang.Visible = false;
-                control.lblbuoichieu.Visible = false;
+                control.lblbuoichieu.Visible = false;   
 
                 // Xóa màu đỏ của ngày trước đó
                 if (!isEqualDate(useday, date))
