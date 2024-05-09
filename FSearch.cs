@@ -248,7 +248,7 @@ namespace TheGioiViecLam
                     }
                     query += ")";
                 }
-                query += " AND Cost > @Cost";
+                query += " AND Cost < @Cost";
                 query += " AND Rating >= @Rating";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -279,6 +279,7 @@ namespace TheGioiViecLam
                     byte[] b = reader["img"] as byte[];
 
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
+                    uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
                     if (CheckIDPInSaves(postID))
                     {
                         uCWorkInFor.btnSave.FillColor = System.Drawing.Color.Gray;
@@ -292,7 +293,6 @@ namespace TheGioiViecLam
                     {
                         uCWorkInFor.btnSave.Click += (s, ev) => { };
                     }
-                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price + "$";
                     uCWorkInFor.txtExperience.Text = experience.ToString();

@@ -28,7 +28,7 @@ namespace TheGioiViecLam
             InitializeComponent();
             this.account = account;
         }
-        private void Load_UCWorkInFor_FromDatabase(string account)
+        public void Load_UCWorkInFor_FromDatabase(string account)
         { 
             panelBody.AutoScroll = true;
             try

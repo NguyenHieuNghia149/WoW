@@ -16,5 +16,10 @@ namespace TheGioiViecLam.UserControls
         {
             InitializeComponent();
         }
+
+        private void btnOptionn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

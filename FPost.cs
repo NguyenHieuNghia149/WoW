@@ -24,7 +24,6 @@ namespace TheGioiViecLam
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         ImageDao imageDao = new ImageDao();
 
-
         public FPost(string account)
         {
             InitializeComponent();
@@ -180,14 +179,15 @@ namespace TheGioiViecLam
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Successfull!!!");
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Thất bại " + ex);
             }
             finally
-            {
-                conn.Close();
+            {                 
+                conn.Close();   
             }
         }
 

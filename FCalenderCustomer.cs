@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheGioiViecLam.model;
 using TheGioiViecLam.UserControls;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace TheGioiViecLam
@@ -38,33 +39,44 @@ namespace TheGioiViecLam
         public int AppTime { get => appTime; set => appTime = value; }
 
         // calendercs calendercs = new calendercs();
-        List<Order> jobs = new List<Order>();
         private string postID;
         private string account;
-        private DateTime currentDate;
         public FCalenderCustomer(string postID, string account)
         {
-            InitializeComponent();
-            this.postID = postID;
             this.account = account;
+            InitializeComponent();
+            RefreshJobs();
+        }
+        private void RefreshJobs()
+        {
             ucCalender1.timerNotify.Start();
             appTime = 0;
             ucCalender1.btnNexrMonth.Click += btnNexrMonth_Click;
             ucCalender1.btnPreviousMonth.Click += btnPreviousMonth_Click;
             ucCalender1.btnToday.Click += btnToday_Click;
             ucCalender1.dt.ValueChanged += dt_ValueChanged;
-          
+            ucCalender1.timerNotify.Tick += TimerNotify_Tick;
+            ucCalender1.cboxnotify.CheckedChanged += Cboxnotify_CheckedChanged;
+            ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
+            ucCalender1.btnblock.Click += Btnblock_Click;
             LoadMatrix();
-            ucCalender1.btnblock.Visible = false;
-            //jobs = GetData();
+
+            AddNumbertoMatrix(ucCalender1.dt.Value);
 
         }
-
-        void Setdefaultjob()
+        private void Btnblock_Click(object sender, EventArgs e)
         {
-            jobs = new List<Order>();
-        }
 
+        }
+        private void Cboxnotify_CheckedChanged(object sender, EventArgs e)
+        {
+            ucCalender1.numericNotify.Enabled = ucCalender1.cboxnotify.Checked;
+        }
+        private void NumericNotify_ValueChanged(object sender, EventArgs e)
+        {
+            Cons.notifyTime = (int)ucCalender1.numericNotify.Value;
+        }
+  
         void LoadMatrix()
         {
             matrix = new List<List<ucDayofCalender>>();
@@ -115,8 +127,8 @@ namespace TheGioiViecLam
                 control.btnday.Text = i.ToString();
                 control.btnday.Click += Btn_Click;
                 control.lblbuoisang.Visible = false;
-                control.lblbuoichieu.Visible = false;   
-
+                control.lblbuoichieu.Visible = false;
+               
                 // Xóa màu đỏ của ngày trước đó
                 if (!isEqualDate(useday, date))
                 {
@@ -125,7 +137,6 @@ namespace TheGioiViecLam
                 }
                 if (useday.DayOfWeek == DayOfWeek.Sunday)
                 {
-                    // control.btnday.FillColor = Color.Yellow; // Đổi màu cho ngày Chủ nhật
                     control.btnday.ForeColor = Color.FromArgb(220, 107, 25); // Đổi màu chữ để dễ đọc
                 }
                 if (isEqualDate(useday, DateTime.Now))
@@ -138,7 +149,7 @@ namespace TheGioiViecLam
                     control.btnday.FillColor = Color.FromArgb(255, 32, 78);
                     control.btnday.ForeColor = Color.White;
                 }
-
+              
                 if (collum >= 6)
                 {
                     line++;
@@ -146,8 +157,7 @@ namespace TheGioiViecLam
                 useday = useday.AddDays(1);
             }
         }
-
-
+       
 
         bool isEqualDate(DateTime date1, DateTime date2)
         {
@@ -166,6 +176,7 @@ namespace TheGioiViecLam
                 }
             }
         }
+      
         void SetDefaultDate()
         {
             ucCalender1.dt.Value = DateTime.Now;
@@ -191,16 +202,30 @@ namespace TheGioiViecLam
         {
             SetDefaultDate();
         }
-
+        private void TimerNotify_Tick(object sender, EventArgs e)
+        {
+            /*if (ucCalender1.cboxnotify.Checked) // Kiểm tra xem ô đánh dấu đã được chọn hay không
+            {
+                appTime++;
+                if (appTime >= Cons.notifyTime)
+                {
+                    DateTime currentDay = DateTime.Now;
+                    List<Order> todayJob = jobs.Where(p => p.Date.Date == currentDay.Date).ToList();
+                    if (todayJob.Count > 0)
+                    {
+                        ucCalender1.notify.ShowBalloonTip(Cons.notifyTimeOut, "Lich Cong Viec", string.Format("Ban co {0} cong viec trong ngay hom nay", todayJob.Count), ToolTipIcon.Info);
+                    }
+                    appTime = 0;
+                }*/
+            //}
+        }
         private void Btn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty((sender as Control).Text))
+            /*if (string.IsNullOrEmpty((sender as Control).Text))
                 return;
             FSelectTime selectTime = new FSelectTime(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)), postID, account);
-            selectTime.ShowDialog();
+            selectTime.ShowDialog();*/
 
         }
-
-
     }
 }

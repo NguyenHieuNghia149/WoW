@@ -117,7 +117,7 @@ namespace TheGioiViecLam
                 {
                     if (reader2["MAX"] != DBNull.Value)
                     {
-                        lblMaxCharge.Text = reader2["MAX"].ToString();
+                        lblMaxCharge.Text = reader2["MAX"].ToString() + "$";
                     }
                 }
                 reader2.Close();
@@ -131,6 +131,11 @@ namespace TheGioiViecLam
                 conn.Close();
             }
             return n;
+        }
+        
+        private void LoadMaxJob()
+        {
+
         }
     }
 }

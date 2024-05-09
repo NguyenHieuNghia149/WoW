@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TheGioiViecLam.UserControls
 {
-    public partial class UCOrders : UserControl
+    public partial class ucDayMini : UserControl
     {
-        public UCOrders()
+        public ucDayMini()
         {
             InitializeComponent();
-        }
-
-        private void lblReview_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

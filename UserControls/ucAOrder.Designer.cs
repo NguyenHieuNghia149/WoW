@@ -88,11 +88,13 @@
             this.btnDone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(205)))), ((int)(((byte)(159)))));
             this.btnDone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDone.ForeColor = System.Drawing.Color.White;
+            this.btnDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnDone.Location = new System.Drawing.Point(629, 94);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(108, 45);
             this.btnDone.TabIndex = 11;
             this.btnDone.Text = "Done";
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click_1);
             // 
             // label1
             // 
@@ -249,6 +251,7 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(976, 148);
             this.panelMain.TabIndex = 4;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // btnConfirm
             // 

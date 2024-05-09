@@ -1,4 +1,6 @@
 
+
++
 USE WorldofWork
 go
 Create table dbo.Customer(	
@@ -186,6 +188,7 @@ CREATE TABLE Requirement(
 	CAddress Nchar(500),
 	JobName Nchar(500),
 	Detail Nchar(500),
+	Address NVARCHAR(100),
 	Primary key (RequireID,CEmail),
 	foreign key (CEmail)  references Customer(CEmail),
 )
@@ -395,3 +398,33 @@ BEGIN
 	RETURN @maxSalary
 END
 GO
+
+SELECT 
+    Customer.Fullname as fullname, 
+    Orders.OrderNum as OrderNum, 
+    Customer.CEmail as CEmail, 
+    Customer.PhoneNum as phonenumber, 
+    Post.IDP as IDpost, 
+    Post.JobName as jobname, 
+    Post.Cost as cost, 
+    Post.Experience as experience, 
+    Post.WTime as Wtime, 
+    Orders.IDP, 
+    OStatus, 
+    ODate, 
+    FromHours, 
+    FromMinutes, 
+    Post.Fullname as WorkerName,
+    Customer.CAddress as CAddress 
+FROM 
+    Post,
+    Orders,
+    Customer 
+WHERE 
+    Post
+	
+	IDP = Orders.IDP 
+    AND Customer.CEmail = Orders.CEmail
+    AND Orders.OStatus = 'Unconfirm'; -- Thêm điều kiện lọc theo trạng thái 'Unconfirm'
+
+SELECT * from Orders Where OStatus = 'Unconfirm'

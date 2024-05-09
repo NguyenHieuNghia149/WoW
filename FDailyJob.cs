@@ -54,6 +54,7 @@ namespace TheGioiViecLam
                     ucJob.btndeny.Click += (s, ev) => ajob_Denied(s, ev, OrderNum,CEmail);
                     ucJob.btnConfirm.Click += (s, ev) => ajob_Confirmed(s, ev, OrderNum,CEmail);
                     ucJob.btnDone.Click += (s, ev) => ajob_Done(s, ev, OrderNum,CEmail);
+
                     fPanel.Controls.Add(ucJob);
                 }
             }

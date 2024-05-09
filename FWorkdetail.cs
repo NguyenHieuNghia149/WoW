@@ -31,7 +31,7 @@ namespace TheGioiViecLam
         }
         private void BtnBook_Click(object sender, EventArgs e)
         {
-            FCalenderCustomer form = new FCalenderCustomer(selectedPostID, account);
+            FSelectTime form = new FSelectTime(selectedPostID, account);
             form.ShowDialog();
         }
         private void FWorkdetail_Load(object sender, EventArgs e)

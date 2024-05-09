@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnYesterday = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTomorow = new Guna.UI2.WinForms.Guna2Button();
-            this.dt = new System.Windows.Forms.DateTimePicker();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.dt = new System.Windows.Forms.DateTimePicker();
+            this.btnTomorow = new Guna.UI2.WinForms.Guna2Button();
+            this.btnYesterday = new Guna.UI2.WinForms.Guna2Button();
             this.pnJob = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelTop.SuspendLayout();
@@ -51,22 +51,30 @@
             this.panelTop.Size = new System.Drawing.Size(1051, 61);
             this.panelTop.TabIndex = 0;
             // 
-            // btnYesterday
+            // guna2Button1
             // 
-            this.btnYesterday.BackColor = System.Drawing.Color.Transparent;
-            this.btnYesterday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnYesterday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnYesterday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnYesterday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnYesterday.FillColor = System.Drawing.Color.White;
-            this.btnYesterday.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnYesterday.ForeColor = System.Drawing.Color.White;
-            this.btnYesterday.Image = global::TheGioiViecLam.Properties.Resources.left_arrow;
-            this.btnYesterday.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnYesterday.Location = new System.Drawing.Point(3, 9);
-            this.btnYesterday.Name = "btnYesterday";
-            this.btnYesterday.Size = new System.Drawing.Size(65, 45);
-            this.btnYesterday.TabIndex = 1;
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.guna2Button1.BorderThickness = 2;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(615, 9);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 26);
+            this.guna2Button1.TabIndex = 4;
+            this.guna2Button1.Text = "Today";
+            // 
+            // dt
+            // 
+            this.dt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dt.Location = new System.Drawing.Point(235, 9);
+            this.dt.Name = "dt";
+            this.dt.Size = new System.Drawing.Size(355, 26);
+            this.dt.TabIndex = 3;
             // 
             // btnTomorow
             // 
@@ -84,30 +92,22 @@
             this.btnTomorow.Size = new System.Drawing.Size(65, 45);
             this.btnTomorow.TabIndex = 2;
             // 
-            // dt
+            // btnYesterday
             // 
-            this.dt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dt.Location = new System.Drawing.Point(235, 9);
-            this.dt.Name = "dt";
-            this.dt.Size = new System.Drawing.Size(355, 26);
-            this.dt.TabIndex = 3;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2Button1.BorderThickness = 2;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(615, 9);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 26);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Today";
+            this.btnYesterday.BackColor = System.Drawing.Color.Transparent;
+            this.btnYesterday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnYesterday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnYesterday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnYesterday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnYesterday.FillColor = System.Drawing.Color.White;
+            this.btnYesterday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnYesterday.ForeColor = System.Drawing.Color.White;
+            this.btnYesterday.Image = global::TheGioiViecLam.Properties.Resources.left_arrow;
+            this.btnYesterday.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnYesterday.Location = new System.Drawing.Point(3, 9);
+            this.btnYesterday.Name = "btnYesterday";
+            this.btnYesterday.Size = new System.Drawing.Size(65, 45);
+            this.btnYesterday.TabIndex = 1;
             // 
             // pnJob
             // 
@@ -132,10 +132,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1057, 723);
+            this.ClientSize = new System.Drawing.Size(1057, 603);
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FDailyJob";
             this.Text = "FDailyJob";
             this.panelTop.ResumeLayout(false);

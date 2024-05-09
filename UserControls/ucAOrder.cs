@@ -71,5 +71,15 @@ namespace TheGioiViecLam.UserControls
         {
 
         }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDone_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

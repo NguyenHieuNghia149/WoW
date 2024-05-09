@@ -181,9 +181,9 @@
             this.cbbJobJield.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbJobJield.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbJobJield.ItemHeight = 30;
-            this.cbbJobJield.Location = new System.Drawing.Point(288, 31);
+            this.cbbJobJield.Location = new System.Drawing.Point(266, 31);
             this.cbbJobJield.Name = "cbbJobJield";
-            this.cbbJobJield.Size = new System.Drawing.Size(206, 36);
+            this.cbbJobJield.Size = new System.Drawing.Size(254, 36);
             this.cbbJobJield.TabIndex = 50;
             // 
             // cbbExperience
@@ -238,7 +238,7 @@
             this.lblJob.AutoSize = true;
             this.lblJob.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
-            this.lblJob.Location = new System.Drawing.Point(212, 84);
+            this.lblJob.Location = new System.Drawing.Point(201, 83);
             this.lblJob.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblJob.Name = "lblJob";
             this.lblJob.Size = new System.Drawing.Size(35, 21);
@@ -347,7 +347,7 @@
             this.picturePost.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picturePost.Image = ((System.Drawing.Image)(resources.GetObject("picturePost.Image")));
             this.picturePost.ImageRotate = 0F;
-            this.picturePost.Location = new System.Drawing.Point(15, 47);
+            this.picturePost.Location = new System.Drawing.Point(4, 49);
             this.picturePost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picturePost.Name = "picturePost";
             this.picturePost.Size = new System.Drawing.Size(189, 150);
@@ -477,7 +477,7 @@
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
-            this.lblCity.Location = new System.Drawing.Point(501, 39);
+            this.lblCity.Location = new System.Drawing.Point(527, 39);
             this.lblCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(38, 21);
@@ -501,7 +501,7 @@
             this.lblCost.AutoSize = true;
             this.lblCost.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
-            this.lblCost.Location = new System.Drawing.Point(211, 178);
+            this.lblCost.Location = new System.Drawing.Point(200, 177);
             this.lblCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCost.Name = "lblCost";
             this.lblCost.Size = new System.Drawing.Size(43, 21);
@@ -513,7 +513,7 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
-            this.lblTime.Location = new System.Drawing.Point(212, 132);
+            this.lblTime.Location = new System.Drawing.Point(201, 131);
             this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(47, 21);
@@ -525,7 +525,7 @@
             this.lblJobName.AutoSize = true;
             this.lblJobName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(3)))), ((int)(((byte)(66)))));
-            this.lblJobName.Location = new System.Drawing.Point(211, 38);
+            this.lblJobName.Location = new System.Drawing.Point(200, 38);
             this.lblJobName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblJobName.Name = "lblJobName";
             this.lblJobName.Size = new System.Drawing.Size(70, 21);

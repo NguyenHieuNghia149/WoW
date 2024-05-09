@@ -35,8 +35,6 @@ namespace TheGioiViecLam
 
 
         public int AppTime { get => appTime; set => appTime = value; }
-
-        // calendercs calendercs = new calendercs();
         List<Order> jobs = new List<Order>();
 
         private string account;
@@ -122,8 +120,11 @@ namespace TheGioiViecLam
                 ucDayofCalender control = matrix[line][collum];
                 control.btnday.Text = i.ToString();
                 control.btnday.Click += Btn_Click;
+                control.btnOptionn.Click += (s, ev) => btnOption_Click(control.panelOption,s,ev);
                 control.lblbuoisang.Visible = false;
                 control.lblbuoichieu.Visible = false;
+                control.panelOption.Visible = false;
+                
                 int jobCountForMorning = CountJobForDay(useday, 11, 59);
                 int jobCountForAfter = CountJobForAfter(useday, 18, 59);
                 // Xóa màu đỏ của ngày trước đó
@@ -131,6 +132,8 @@ namespace TheGioiViecLam
                 {
                     control.btnday.FillColor = Color.White;
                     control.btnday.ForeColor = Color.Black; // Đảm bảo màu chữ trở lại màu đen
+                   // Đảm bảo màu chữ trở lại màu đen
+
                 }
                 if (useday.DayOfWeek == DayOfWeek.Sunday)
                 {
@@ -139,11 +142,15 @@ namespace TheGioiViecLam
                 if (isEqualDate(useday, DateTime.Now))
                 {
                     control.btnday.FillColor = Color.FromArgb(106, 212, 221);
+                    control.btnOptionn.BackColor = Color.FromArgb(106, 212, 221);
                 }
                 if (isEqualDate(useday, date)) // ngay danh daus
                 {
                     control.btnday.FillColor = Color.FromArgb(255, 32, 78);
                     control.btnday.ForeColor = Color.White;
+                   // control.btnOptionn.FillColor = Color.Transparent;
+                    control.btnOptionn.BackColor = Color.FromArgb(255, 32, 78);
+
                 }
 
                 if (jobCountForMorning > 0)
@@ -156,7 +163,7 @@ namespace TheGioiViecLam
                 if (jobCountForAfter > 0)
                 {
                     control.lblbuoichieu.Visible = true;
-                    control.lblbuoichieu.Text = "12:00 - 18:00: " + jobCountForMorning.ToString();
+                    control.lblbuoichieu.Text = "12:00 - 18:00: " + jobCountForAfter.ToString();
                     control.btnday.FillColor = Color.FromArgb(227, 254, 247);
                     control.btnday.ForeColor = Color.Black;
                 }
@@ -270,8 +277,6 @@ namespace TheGioiViecLam
                 while (reader.Read())
                 {
                     Order job = new Order();
-
-                    // Kiểm tra xem cột có giá trị null không trước khi chuyển đổi kiểu dữ liệu
                     if (!reader.IsDBNull(reader.GetOrdinal("ODate")))
                     {
                         job.Date = reader.GetDateTime(reader.GetOrdinal("ODate"));
@@ -287,10 +292,10 @@ namespace TheGioiViecLam
                     job.Address = reader["CAddress"].ToString();
                     job.Status = reader["OStatus"].ToString();
                     OrderNum = reader["OrderNum"].ToString();
-                    CEmail = reader["CEmail"].ToString();    
+                    CEmail = reader["CEmail"].ToString();
                     if (job.Status == "Unconfirm                                                                                           " || job.Status == "Confirmed                                                                                           ")
                     {
-                        jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
+                        jobs.Add(job);
                     }
                 }
                 reader.Close();
@@ -330,9 +335,20 @@ namespace TheGioiViecLam
                 dailyJobForms.Add(newForm);
             }
         }
+        private void btnOption_Click(Control control,object sender, EventArgs e)
+        {
+            if (control.Visible == false)
+            {
+                control.Visible= true;
+            }
+            else
+            {
+               control.Visible = false;
+            }
+        }
 
-        // Xử lý sự kiện khi cửa sổ FDailyJob đóng
-        private void DailyJobForm_FormClosed(object sender, FormClosedEventArgs e)
+            // Xử lý sự kiện khi cửa sổ FDailyJob đóng
+            private void DailyJobForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             FDailyJob closedForm = sender as FDailyJob;
             dailyJobForms.Remove(closedForm); // Xóa cửa sổ đã đóng khỏi danh sách

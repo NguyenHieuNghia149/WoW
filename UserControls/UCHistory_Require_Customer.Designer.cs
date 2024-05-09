@@ -71,7 +71,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.lblJobName);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 3);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(459, 405);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(459, 250);
             this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
             // txtDetail
@@ -95,7 +95,7 @@
             this.txtDetail.PlaceholderText = "";
             this.txtDetail.ReadOnly = true;
             this.txtDetail.SelectedText = "";
-            this.txtDetail.Size = new System.Drawing.Size(418, 248);
+            this.txtDetail.Size = new System.Drawing.Size(418, 101);
             this.txtDetail.TabIndex = 65;
             // 
             // btnDelete
@@ -108,7 +108,7 @@
             this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(184, 355);
+            this.btnDelete.Location = new System.Drawing.Point(185, 207);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(120)))), ((int)(((byte)(2)))));
             this.btnDelete.Size = new System.Drawing.Size(106, 34);
@@ -126,7 +126,7 @@
             this.txtRequireID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRequireID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRequireID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRequireID.Location = new System.Drawing.Point(12, 355);
+            this.txtRequireID.Location = new System.Drawing.Point(13, 207);
             this.txtRequireID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRequireID.Name = "txtRequireID";
             this.txtRequireID.PasswordChar = '\0';
@@ -146,7 +146,7 @@
             this.btnViewDetail.FillColor = System.Drawing.Color.Blue;
             this.btnViewDetail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewDetail.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetail.Location = new System.Drawing.Point(307, 355);
+            this.btnViewDetail.Location = new System.Drawing.Point(308, 207);
             this.btnViewDetail.Name = "btnViewDetail";
             this.btnViewDetail.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(120)))), ((int)(((byte)(2)))));
             this.btnViewDetail.Size = new System.Drawing.Size(123, 34);
@@ -166,7 +166,7 @@
             this.txtCAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCAddress.ForeColor = System.Drawing.Color.Black;
             this.txtCAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCAddress.Location = new System.Drawing.Point(12, 312);
+            this.txtCAddress.Location = new System.Drawing.Point(12, 165);
             this.txtCAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCAddress.Name = "txtCAddress";
             this.txtCAddress.PasswordChar = '\0';
@@ -197,7 +197,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCHistory_Require_Customer";
-            this.Size = new System.Drawing.Size(462, 405);
+            this.Size = new System.Drawing.Size(462, 256);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

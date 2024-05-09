@@ -327,6 +327,18 @@
     <Compile Include="UserControls\ucCalender.Designer.cs">
       <DependentUpon>ucCalender.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucCalenderMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCalenderMini.Designer.cs">
+      <DependentUpon>ucCalenderMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDayMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDayMini.Designer.cs">
+      <DependentUpon>ucDayMini.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucDayofCalender.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -344,12 +356,6 @@
     </Compile>
     <Compile Include="UserControls\UCHistory_Require_Customer.Designer.cs">
       <DependentUpon>UCHistory_Require_Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UCOrders.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UCOrders.Designer.cs">
-      <DependentUpon>UCOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCreview.cs">
       <SubType>UserControl</SubType>
@@ -514,6 +520,12 @@
     <EmbeddedResource Include="UserControls\ucCalender.resx">
       <DependentUpon>ucCalender.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCalenderMini.resx">
+      <DependentUpon>ucCalenderMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDayMini.resx">
+      <DependentUpon>ucDayMini.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucDayofCalender.resx">
       <DependentUpon>ucDayofCalender.cs</DependentUpon>
     </EmbeddedResource>
@@ -522,9 +534,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCHistory_Require_Customer.resx">
       <DependentUpon>UCHistory_Require_Customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCOrders.resx">
-      <DependentUpon>UCOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCreview.resx">
       <DependentUpon>UCreview.cs</DependentUpon>
@@ -564,6 +573,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\option.png" />
+    <None Include="Resources\option1.png" />
+    <None Include="Resources\heart %284%29.png" />
     <Content Include="WoW.sql" />
     <None Include="Resources\arrow %281%29.png" />
     <None Include="Resources\is-not-equal-to.png" />
