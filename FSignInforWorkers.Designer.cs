@@ -219,6 +219,7 @@
             this.Controls.Add(this.lblForgetpass);
             this.Controls.Add(this.label1);
             this.Name = "FSignInforWorkers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FSignInforEmploy";
             this.Load += new System.EventHandler(this.FSignInforWorkers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

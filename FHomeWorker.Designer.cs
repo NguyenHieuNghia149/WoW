@@ -296,10 +296,10 @@
             this.btnPrevious.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPrevious.ForeColor = System.Drawing.Color.White;
             this.btnPrevious.Image = global::TheGioiViecLam.Properties.Resources.next_button__1_;
-            this.btnPrevious.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnPrevious.Location = new System.Drawing.Point(498, 352);
+            this.btnPrevious.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnPrevious.Location = new System.Drawing.Point(287, 13);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(88, 45);
+            this.btnPrevious.Size = new System.Drawing.Size(50, 45);
             this.btnPrevious.TabIndex = 49;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
@@ -314,10 +314,10 @@
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.Image = global::TheGioiViecLam.Properties.Resources.next_button;
-            this.btnNext.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnNext.Location = new System.Drawing.Point(592, 352);
+            this.btnNext.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnNext.Location = new System.Drawing.Point(630, 13);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(88, 45);
+            this.btnNext.Size = new System.Drawing.Size(50, 45);
             this.btnNext.TabIndex = 48;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
@@ -326,9 +326,9 @@
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("JetBrains Mono", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
-            this.lblDate.Location = new System.Drawing.Point(360, 13);
+            this.lblDate.Location = new System.Drawing.Point(343, 13);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(320, 50);
+            this.lblDate.Size = new System.Drawing.Size(284, 50);
             this.lblDate.TabIndex = 47;
             this.lblDate.Text = "MONTH, YEAR";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -481,7 +481,6 @@
             this.pbSaturday.TabIndex = 36;
             this.pbSaturday.Text = "guna2VProgressBar5";
             this.pbSaturday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.pbSaturday.Value = 58;
             // 
             // pbSunday
             // 
@@ -493,7 +492,6 @@
             this.pbSunday.TabIndex = 35;
             this.pbSunday.Text = "guna2VProgressBar6";
             this.pbSunday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.pbSunday.Value = 80;
             // 
             // pbFriday
             // 
@@ -512,7 +510,6 @@
             this.pbTuesday.TabIndex = 33;
             this.pbTuesday.Text = "guna2VProgressBar4";
             this.pbTuesday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.pbTuesday.Value = 50;
             // 
             // pbWednesday
             // 
@@ -533,7 +530,6 @@
             this.pbThusday.TabIndex = 31;
             this.pbThusday.Text = "guna2VProgressBar2";
             this.pbThusday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.pbThusday.Value = 10;
             // 
             // pbMonday
             // 
@@ -545,7 +541,6 @@
             this.pbMonday.TabIndex = 30;
             this.pbMonday.Text = "guna2VProgressBar1";
             this.pbMonday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.pbMonday.Value = 43;
             // 
             // Chart
             // 
@@ -654,7 +649,6 @@
             this.panelHistoryOrder.Size = new System.Drawing.Size(256, 97);
             this.panelHistoryOrder.TabIndex = 0;
             this.panelHistoryOrder.Click += new System.EventHandler(this.panelHistoryOrder_Click);
-            this.panelHistoryOrder.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHistoryOrder_Paint);
             // 
             // label11
             // 
