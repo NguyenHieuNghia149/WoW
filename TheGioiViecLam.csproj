@@ -576,6 +576,9 @@
     <None Include="Resources\option.png" />
     <None Include="Resources\option1.png" />
     <None Include="Resources\heart %284%29.png" />
+    <None Include="Resources\next-button.png" />
+    <None Include="Resources\next-button %281%29.png" />
+    <None Include="Resources\next-button1.png" />
     <Content Include="WoW.sql" />
     <None Include="Resources\arrow %281%29.png" />
     <None Include="Resources\is-not-equal-to.png" />

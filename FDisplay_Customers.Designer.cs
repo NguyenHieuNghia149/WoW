@@ -41,7 +41,6 @@
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnStatitics = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -84,7 +83,6 @@
             this.flowLayoutPanel1.Controls.Add(this.btnPost);
             this.flowLayoutPanel1.Controls.Add(this.btnCalender);
             this.flowLayoutPanel1.Controls.Add(this.btnExit);
-            this.flowLayoutPanel1.Controls.Add(this.btnStatitics);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 107);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -267,24 +265,6 @@
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // btnStatitics
-            // 
-            this.btnStatitics.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnStatitics.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnStatitics.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnStatitics.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnStatitics.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnStatitics.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.btnStatitics.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnStatitics.ForeColor = System.Drawing.Color.White;
-            this.btnStatitics.Image = global::TheGioiViecLam.Properties.Resources.logout;
-            this.btnStatitics.ImageSize = new System.Drawing.Size(37, 27);
-            this.btnStatitics.Location = new System.Drawing.Point(4, 484);
-            this.btnStatitics.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStatitics.Name = "btnStatitics";
-            this.btnStatitics.Size = new System.Drawing.Size(60, 52);
-            this.btnStatitics.TabIndex = 14;
-            // 
             // FDisplay_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -318,6 +298,5 @@
         private Guna.UI2.WinForms.Guna2Button btnCalender;
         public Guna.UI2.WinForms.Guna2Button btnPost;
         public Guna.UI2.WinForms.Guna2Button btnorders;
-        private Guna.UI2.WinForms.Guna2Button btnStatitics;
     }
 }

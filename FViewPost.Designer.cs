@@ -78,6 +78,7 @@
             this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FViewPost";
             this.Text = "FViewPost";
             this.Load += new System.EventHandler(this.FViewPost_Load);

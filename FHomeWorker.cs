@@ -1,16 +1,19 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheGioiViecLam.DAO;
 using TheGioiViecLam.model;
-
 namespace TheGioiViecLam
 {
     public partial class FHomeWorker : Form
@@ -18,17 +21,24 @@ namespace TheGioiViecLam
         private string account;
         private FDisplay_Workers FDisplay_Workers;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-
+        int month, year;
         public FHomeWorker(string account, FDisplay_Workers fDisplay_Workers)
         {
             this.account = account;
             InitializeComponent();
             this.FDisplay_Workers = fDisplay_Workers;
             Load();
+            LoadStatitic(new List<Guna2VProgressBar> { pbMonday }, 2,month,year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbTuesday }, 3, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbWednesday }, 4, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbThusday }, 5, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbFriday }, 6, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbSaturday }, 7, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbSunday }, 8, month, year);
         }
       
         private void FHomeWorker_Load(object sender, EventArgs e)
-        {
+        {       
 
         }
 
@@ -97,11 +107,94 @@ namespace TheGioiViecLam
             {
                 conn.Close();
             }
+
+            DateTime date = DateTime.Now;
+            month = date.Month;
+            year = date.Year;
+            
+            String monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
+            lblDate.Text = monthname + " " + year;
+
         }
 
         private void panelRecent_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            month++;
+            String monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
+            lblDate.Text = monthname + " " + year;
+            LoadStatitic(new List<Guna2VProgressBar> { pbMonday }, 2, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbTuesday }, 3, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbWednesday }, 4, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbThusday }, 5, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbFriday }, 6, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbSaturday }, 7, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbSunday }, 8, month, year);
+
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            month--;
+            String monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
+            lblDate.Text = monthname + " " + year;
+            LoadStatitic(new List<Guna2VProgressBar> { pbMonday }, 2, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbTuesday }, 3, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbWednesday }, 4, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbThusday }, 5, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbFriday }, 6, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbSaturday }, 7, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbSunday }, 8, month, year);
+        }
+
+        private void LoadStatitic(List<Guna2VProgressBar> progressBarList, int day,int month, int year)
+        {
+            try
+            {
+                conn.Open();
+                string query = string.Format("select count(*) as countJob from Orders, Post where Orders.IDP = Post.IDP and Post.Email = '{0}' and (Orders.OStatus = 'Unconfirm' or Orders.OStatus = 'Confirm') and DATEPART(dw, Orders.ODate) = '{1}' and  MONTH(Orders.ODate) = {2} AND YEAR(Orders.ODate) = {3}", account, day,month,year);
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    int countJob = (int)cmd.ExecuteScalar();
+                    int value = countJob * 10;
+                    foreach (var progressBar in progressBarList)
+                    {
+                        progressBar.Value = value;
+                        if ( value <= 30 )
+                        {
+                            progressBar.ProgressColor = Color.FromArgb(195, 255, 147);
+                            progressBar.ProgressColor2 = Color.FromArgb(195, 255, 147);
+                        }
+                        else if (value > 30 && value < 60 )
+                        {
+                            progressBar.ProgressColor = Color.FromArgb(255, 101, 0);
+                            progressBar.ProgressColor2 = Color.FromArgb(255, 101, 0);
+                        }
+                        else
+                        {
+                            progressBar.ProgressColor = Color.FromArgb(196, 12, 12);
+                            progressBar.ProgressColor2 = Color.FromArgb(196, 12, 12);
+                        }
+                            
+
+                    }
+                   
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
     }
 }

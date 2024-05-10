@@ -78,7 +78,7 @@ namespace TheGioiViecLam
                 for (int j = 0; j < Cons.DayofWeek; j++)
                 {
                     ucDayMini newControl = new ucDayMini();
-                    newControl.Location = new Point(j * (newControl.Width + Cons.margin), i * (newControl.Height + Cons.margin));
+                    newControl.Location = new Point(j * (newControl.Width + Cons.marginMini), i * (newControl.Height + Cons.marginMini));
                     ucCalenderMini1.panelMain.Controls.Add(newControl);
                     matrix[i].Add(newControl);
                 }

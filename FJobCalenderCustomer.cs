@@ -62,7 +62,6 @@ namespace TheGioiViecLam
             ucCalender1.timerNotify.Tick += TimerNotify_Tick;
             ucCalender1.cboxnotify.CheckedChanged += Cboxnotify_CheckedChanged;
             ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
-            ucCalender1.btnblock.Click += Btnblock_Click;
             LoadMatrix();
 
             AddNumbertoMatrix(ucCalender1.dt.Value);
@@ -74,11 +73,11 @@ namespace TheGioiViecLam
         }
         private void Cboxnotify_CheckedChanged(object sender, EventArgs e)
         {
-            ucCalender1.numericNotify.Enabled = ucCalender1.cboxnotify.Checked;
+          //  ucCalender1.numericNotify.Enabled = ucCalender1.cboxnotify.Checked;
         }
         private void NumericNotify_ValueChanged(object sender, EventArgs e)
         {
-            Cons.notifyTime = (int)ucCalender1.numericNotify.Value;
+          //  Cons.notifyTime = (int)ucCalender1.numericNotify.Value;
         }
         void Setdefaultjob()
         {

@@ -24,16 +24,23 @@ namespace TheGioiViecLam
         public string account;
         DBConnection db = new DBConnection();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        int year;
         public FSalary_Worker(string account)
         {
             this.account = account;
             InitializeComponent();
+
         }
 
         private void Nhap_Load(object sender, EventArgs e)
         {
             LoadPieChart(account);
             LoadLineChart();
+            LoadMaxJob();
+            DateTime date = DateTime.Now;
+            year = date.Year;
+            lblYear.Text = year.ToString();
+
         }
         private void LoadPieChart(string account)
         {
@@ -132,10 +139,42 @@ namespace TheGioiViecLam
             }
             return n;
         }
-        
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            year--;
+            lblYear.Text = year.ToString();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            year++;
+            lblYear.Text =  year.ToString();
+        }
+
         private void LoadMaxJob()
         {
 
+            try
+            {
+                conn.Open();
+                string query = string.Format("SELECT count(*) as n from Orders,Post where Orders.IDP = Post.IDP and Post.Email = '{0}' and Orders.OStatus = 'Done' ", account);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                   string count = reader["n"].ToString();
+                   lblMaxJob.Text = count;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

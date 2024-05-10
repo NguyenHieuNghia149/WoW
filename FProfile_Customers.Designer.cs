@@ -312,7 +312,7 @@
             this.dtBirthday.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.dtBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtBirthday.Location = new System.Drawing.Point(313, 252);
+            this.dtBirthday.Location = new System.Drawing.Point(305, 252);
             this.dtBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtBirthday.Name = "dtBirthday";

@@ -1,6 +1,6 @@
 
 
-+
+
 USE WorldofWork
 go
 Create table dbo.Customer(	
@@ -420,11 +420,11 @@ FROM
     Post,
     Orders,
     Customer 
-WHERE 
-    Post
-	
+WHERE
 	IDP = Orders.IDP 
     AND Customer.CEmail = Orders.CEmail
     AND Orders.OStatus = 'Unconfirm'; -- Thêm điều kiện lọc theo trạng thái 'Unconfirm'
 
 SELECT * from Orders Where OStatus = 'Unconfirm'
+
+SELECT count(*) as n from Orders,Post where Orders.IDP = Post.IDP and Post.Email = 'Hung@gmail.com' and Orders.OStatus = 'Done'

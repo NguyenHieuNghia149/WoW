@@ -33,15 +33,16 @@
             this.pnMain = new Guna.UI2.WinForms.Guna2Panel();
             this.pnMatrix = new Guna.UI2.WinForms.Guna2Panel();
             this.pnBottom = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnSunday = new Guna.UI2.WinForms.Guna2Button();
             this.btnSaturday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNexrMonth = new Guna.UI2.WinForms.Guna2Button();
             this.btnFriday = new Guna.UI2.WinForms.Guna2Button();
             this.btnThursday = new Guna.UI2.WinForms.Guna2Button();
             this.btnWednesday = new Guna.UI2.WinForms.Guna2Button();
             this.btnTuesday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSunday = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPreviousMonth = new Guna.UI2.WinForms.Guna2Button();
             this.btnMonday = new Guna.UI2.WinForms.Guna2Button();
             this.pnTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnblock = new Guna.UI2.WinForms.Guna2Button();
             this.dt = new System.Windows.Forms.DateTimePicker();
             this.btnToday = new Guna.UI2.WinForms.Guna2Button();
             this.numericNotify = new System.Windows.Forms.NumericUpDown();
@@ -49,8 +50,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.timerNotify = new System.Windows.Forms.Timer(this.components);
             this.notify = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btnNexrMonth = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPreviousMonth = new Guna.UI2.WinForms.Guna2Button();
             this.pnMain.SuspendLayout();
             this.pnBottom.SuspendLayout();
             this.pnTop.SuspendLayout();
@@ -94,23 +93,6 @@
             this.pnBottom.Size = new System.Drawing.Size(979, 52);
             this.pnBottom.TabIndex = 0;
             // 
-            // btnSunday
-            // 
-            this.btnSunday.BackColor = System.Drawing.Color.Transparent;
-            this.btnSunday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSunday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSunday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSunday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSunday.FillColor = System.Drawing.SystemColors.Window;
-            this.btnSunday.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnSunday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.btnSunday.Location = new System.Drawing.Point(761, 9);
-            this.btnSunday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSunday.Name = "btnSunday";
-            this.btnSunday.Size = new System.Drawing.Size(106, 29);
-            this.btnSunday.TabIndex = 15;
-            this.btnSunday.Text = "Sunday";
-            // 
             // btnSaturday
             // 
             this.btnSaturday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -126,6 +108,23 @@
             this.btnSaturday.Size = new System.Drawing.Size(106, 29);
             this.btnSaturday.TabIndex = 14;
             this.btnSaturday.Text = "Saturday";
+            // 
+            // btnNexrMonth
+            // 
+            this.btnNexrMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNexrMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNexrMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNexrMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNexrMonth.FillColor = System.Drawing.Color.Transparent;
+            this.btnNexrMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNexrMonth.ForeColor = System.Drawing.Color.White;
+            this.btnNexrMonth.Image = global::TheGioiViecLam.Properties.Resources.right_arrow;
+            this.btnNexrMonth.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnNexrMonth.Location = new System.Drawing.Point(903, 5);
+            this.btnNexrMonth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNexrMonth.Name = "btnNexrMonth";
+            this.btnNexrMonth.Size = new System.Drawing.Size(69, 33);
+            this.btnNexrMonth.TabIndex = 8;
             // 
             // btnFriday
             // 
@@ -191,6 +190,41 @@
             this.btnTuesday.TabIndex = 9;
             this.btnTuesday.Text = "Tuesday";
             // 
+            // btnSunday
+            // 
+            this.btnSunday.BackColor = System.Drawing.Color.Transparent;
+            this.btnSunday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSunday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSunday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSunday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSunday.FillColor = System.Drawing.SystemColors.Window;
+            this.btnSunday.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnSunday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.btnSunday.Location = new System.Drawing.Point(761, 9);
+            this.btnSunday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSunday.Name = "btnSunday";
+            this.btnSunday.Size = new System.Drawing.Size(106, 29);
+            this.btnSunday.TabIndex = 15;
+            this.btnSunday.Text = "Sunday";
+            // 
+            // btnPreviousMonth
+            // 
+            this.btnPreviousMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPreviousMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPreviousMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPreviousMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPreviousMonth.FillColor = System.Drawing.SystemColors.Window;
+            this.btnPreviousMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPreviousMonth.ForeColor = System.Drawing.Color.White;
+            this.btnPreviousMonth.Image = global::TheGioiViecLam.Properties.Resources.left_arrow;
+            this.btnPreviousMonth.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnPreviousMonth.Location = new System.Drawing.Point(0, 5);
+            this.btnPreviousMonth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPreviousMonth.Name = "btnPreviousMonth";
+            this.btnPreviousMonth.Size = new System.Drawing.Size(69, 42);
+            this.btnPreviousMonth.TabIndex = 7;
+            this.btnPreviousMonth.Click += new System.EventHandler(this.btnPreviousMonth_Click);
+            // 
             // btnMonday
             // 
             this.btnMonday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -209,7 +243,6 @@
             // 
             // pnTop
             // 
-            this.pnTop.Controls.Add(this.btnblock);
             this.pnTop.Controls.Add(this.dt);
             this.pnTop.Controls.Add(this.btnToday);
             this.pnTop.Controls.Add(this.numericNotify);
@@ -219,25 +252,6 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1097, 60);
             this.pnTop.TabIndex = 1;
-            // 
-            // btnblock
-            // 
-            this.btnblock.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(63)))), ((int)(((byte)(120)))));
-            this.btnblock.BorderRadius = 10;
-            this.btnblock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnblock.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnblock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnblock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnblock.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(63)))), ((int)(((byte)(120)))));
-            this.btnblock.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnblock.ForeColor = System.Drawing.Color.White;
-            this.btnblock.Location = new System.Drawing.Point(733, 19);
-            this.btnblock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnblock.Name = "btnblock";
-            this.btnblock.Size = new System.Drawing.Size(79, 24);
-            this.btnblock.TabIndex = 8;
-            this.btnblock.Text = "Block";
-            this.btnblock.Click += new System.EventHandler(this.btnblock_Click);
             // 
             // dt
             // 
@@ -330,41 +344,6 @@
             this.notify.Text = "Notify";
             this.notify.Visible = true;
             // 
-            // btnNexrMonth
-            // 
-            this.btnNexrMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNexrMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNexrMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNexrMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNexrMonth.FillColor = System.Drawing.Color.Transparent;
-            this.btnNexrMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNexrMonth.ForeColor = System.Drawing.Color.White;
-            this.btnNexrMonth.Image = global::TheGioiViecLam.Properties.Resources.right_arrow;
-            this.btnNexrMonth.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnNexrMonth.Location = new System.Drawing.Point(903, 5);
-            this.btnNexrMonth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNexrMonth.Name = "btnNexrMonth";
-            this.btnNexrMonth.Size = new System.Drawing.Size(69, 33);
-            this.btnNexrMonth.TabIndex = 8;
-            // 
-            // btnPreviousMonth
-            // 
-            this.btnPreviousMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPreviousMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPreviousMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPreviousMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPreviousMonth.FillColor = System.Drawing.SystemColors.Window;
-            this.btnPreviousMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPreviousMonth.ForeColor = System.Drawing.Color.White;
-            this.btnPreviousMonth.Image = global::TheGioiViecLam.Properties.Resources.left_arrow;
-            this.btnPreviousMonth.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnPreviousMonth.Location = new System.Drawing.Point(0, 5);
-            this.btnPreviousMonth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnPreviousMonth.Name = "btnPreviousMonth";
-            this.btnPreviousMonth.Size = new System.Drawing.Size(69, 42);
-            this.btnPreviousMonth.TabIndex = 7;
-            this.btnPreviousMonth.Click += new System.EventHandler(this.btnPreviousMonth_Click);
-            // 
             // ucCalender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -405,7 +384,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public System.Windows.Forms.Timer timerNotify;
         public System.Windows.Forms.NotifyIcon notify;
-        public Guna.UI2.WinForms.Guna2Button btnblock;
         public System.Windows.Forms.DateTimePicker dt;
         public Guna.UI2.WinForms.Guna2Button btnToday;
     }

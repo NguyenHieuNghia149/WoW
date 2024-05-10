@@ -42,6 +42,9 @@
             this.btnPost = new Guna.UI2.WinForms.Guna2Button();
             this.btnfindjob = new Guna.UI2.WinForms.Guna2Button();
             this.panelStatific = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnPrevious = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
+            this.lblDate = new System.Windows.Forms.Label();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -52,13 +55,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2VProgressBar5 = new Guna.UI2.WinForms.Guna2VProgressBar();
-            this.guna2VProgressBar6 = new Guna.UI2.WinForms.Guna2VProgressBar();
-            this.guna2VProgressBar8 = new Guna.UI2.WinForms.Guna2VProgressBar();
-            this.guna2VProgressBar4 = new Guna.UI2.WinForms.Guna2VProgressBar();
-            this.guna2VProgressBar3 = new Guna.UI2.WinForms.Guna2VProgressBar();
-            this.guna2VProgressBar2 = new Guna.UI2.WinForms.Guna2VProgressBar();
-            this.guna2VProgressBar1 = new Guna.UI2.WinForms.Guna2VProgressBar();
+            this.pbSaturday = new Guna.UI2.WinForms.Guna2VProgressBar();
+            this.pbSunday = new Guna.UI2.WinForms.Guna2VProgressBar();
+            this.pbFriday = new Guna.UI2.WinForms.Guna2VProgressBar();
+            this.pbTuesday = new Guna.UI2.WinForms.Guna2VProgressBar();
+            this.pbWednesday = new Guna.UI2.WinForms.Guna2VProgressBar();
+            this.pbThusday = new Guna.UI2.WinForms.Guna2VProgressBar();
+            this.pbMonday = new Guna.UI2.WinForms.Guna2VProgressBar();
             this.Chart = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panelSeeReview = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -70,7 +73,6 @@
             this.panelHistoryOrder = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.panelRecent.SuspendLayout();
@@ -96,7 +98,7 @@
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(12, 60);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(12, 12);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(376, 113);
             this.guna2CustomGradientPanel1.TabIndex = 7;
@@ -267,6 +269,9 @@
             this.panelStatific.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
             this.panelStatific.BorderRadius = 20;
             this.panelStatific.BorderThickness = 1;
+            this.panelStatific.Controls.Add(this.btnPrevious);
+            this.panelStatific.Controls.Add(this.btnNext);
+            this.panelStatific.Controls.Add(this.lblDate);
             this.panelStatific.Controls.Add(this.guna2CircleProgressBar1);
             this.panelStatific.Controls.Add(this.guna2CustomGradientPanel6);
             this.panelStatific.Controls.Add(this.Chart);
@@ -274,11 +279,59 @@
             this.panelStatific.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
             this.panelStatific.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
             this.panelStatific.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.panelStatific.Location = new System.Drawing.Point(12, 227);
+            this.panelStatific.Location = new System.Drawing.Point(12, 214);
             this.panelStatific.Name = "panelStatific";
             this.panelStatific.Size = new System.Drawing.Size(686, 400);
             this.panelStatific.TabIndex = 10;
             this.panelStatific.Click += new System.EventHandler(this.panelStatific_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrevious.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrevious.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrevious.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrevious.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrevious.FillColor = System.Drawing.Color.Transparent;
+            this.btnPrevious.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPrevious.ForeColor = System.Drawing.Color.White;
+            this.btnPrevious.Image = global::TheGioiViecLam.Properties.Resources.next_button__1_;
+            this.btnPrevious.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnPrevious.Location = new System.Drawing.Point(498, 352);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(88, 45);
+            this.btnPrevious.TabIndex = 49;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.Transparent;
+            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNext.FillColor = System.Drawing.Color.Transparent;
+            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Image = global::TheGioiViecLam.Properties.Resources.next_button;
+            this.btnNext.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnNext.Location = new System.Drawing.Point(592, 352);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(88, 45);
+            this.btnNext.TabIndex = 48;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // lblDate
+            // 
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("JetBrains Mono", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.lblDate.Location = new System.Drawing.Point(360, 13);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(320, 50);
+            this.lblDate.TabIndex = 47;
+            this.lblDate.Text = "MONTH, YEAR";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CircleProgressBar1
             // 
@@ -331,13 +384,13 @@
             this.guna2CustomGradientPanel6.Controls.Add(this.label5);
             this.guna2CustomGradientPanel6.Controls.Add(this.label4);
             this.guna2CustomGradientPanel6.Controls.Add(this.label10);
-            this.guna2CustomGradientPanel6.Controls.Add(this.guna2VProgressBar5);
-            this.guna2CustomGradientPanel6.Controls.Add(this.guna2VProgressBar6);
-            this.guna2CustomGradientPanel6.Controls.Add(this.guna2VProgressBar8);
-            this.guna2CustomGradientPanel6.Controls.Add(this.guna2VProgressBar4);
-            this.guna2CustomGradientPanel6.Controls.Add(this.guna2VProgressBar3);
-            this.guna2CustomGradientPanel6.Controls.Add(this.guna2VProgressBar2);
-            this.guna2CustomGradientPanel6.Controls.Add(this.guna2VProgressBar1);
+            this.guna2CustomGradientPanel6.Controls.Add(this.pbSaturday);
+            this.guna2CustomGradientPanel6.Controls.Add(this.pbSunday);
+            this.guna2CustomGradientPanel6.Controls.Add(this.pbFriday);
+            this.guna2CustomGradientPanel6.Controls.Add(this.pbTuesday);
+            this.guna2CustomGradientPanel6.Controls.Add(this.pbWednesday);
+            this.guna2CustomGradientPanel6.Controls.Add(this.pbThusday);
+            this.guna2CustomGradientPanel6.Controls.Add(this.pbMonday);
             this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(16, 66);
             this.guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
             this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(360, 269);
@@ -420,79 +473,79 @@
             this.label10.TabIndex = 37;
             this.label10.Text = "Mon";
             // 
-            // guna2VProgressBar5
+            // pbSaturday
             // 
-            this.guna2VProgressBar5.Location = new System.Drawing.Point(250, 15);
-            this.guna2VProgressBar5.Name = "guna2VProgressBar5";
-            this.guna2VProgressBar5.Size = new System.Drawing.Size(15, 202);
-            this.guna2VProgressBar5.TabIndex = 36;
-            this.guna2VProgressBar5.Text = "guna2VProgressBar5";
-            this.guna2VProgressBar5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2VProgressBar5.Value = 58;
+            this.pbSaturday.Location = new System.Drawing.Point(250, 15);
+            this.pbSaturday.Name = "pbSaturday";
+            this.pbSaturday.Size = new System.Drawing.Size(15, 202);
+            this.pbSaturday.TabIndex = 36;
+            this.pbSaturday.Text = "guna2VProgressBar5";
+            this.pbSaturday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.pbSaturday.Value = 58;
             // 
-            // guna2VProgressBar6
+            // pbSunday
             // 
-            this.guna2VProgressBar6.Location = new System.Drawing.Point(298, 18);
-            this.guna2VProgressBar6.Name = "guna2VProgressBar6";
-            this.guna2VProgressBar6.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.guna2VProgressBar6.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.guna2VProgressBar6.Size = new System.Drawing.Size(15, 199);
-            this.guna2VProgressBar6.TabIndex = 35;
-            this.guna2VProgressBar6.Text = "guna2VProgressBar6";
-            this.guna2VProgressBar6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2VProgressBar6.Value = 80;
+            this.pbSunday.Location = new System.Drawing.Point(298, 18);
+            this.pbSunday.Name = "pbSunday";
+            this.pbSunday.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.pbSunday.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.pbSunday.Size = new System.Drawing.Size(15, 199);
+            this.pbSunday.TabIndex = 35;
+            this.pbSunday.Text = "guna2VProgressBar6";
+            this.pbSunday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.pbSunday.Value = 80;
             // 
-            // guna2VProgressBar8
+            // pbFriday
             // 
-            this.guna2VProgressBar8.Location = new System.Drawing.Point(208, 15);
-            this.guna2VProgressBar8.Name = "guna2VProgressBar8";
-            this.guna2VProgressBar8.Size = new System.Drawing.Size(15, 202);
-            this.guna2VProgressBar8.TabIndex = 34;
-            this.guna2VProgressBar8.Text = "guna2VProgressBar8";
-            this.guna2VProgressBar8.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.pbFriday.Location = new System.Drawing.Point(208, 15);
+            this.pbFriday.Name = "pbFriday";
+            this.pbFriday.Size = new System.Drawing.Size(15, 202);
+            this.pbFriday.TabIndex = 34;
+            this.pbFriday.Text = "guna2VProgressBar8";
+            this.pbFriday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
-            // guna2VProgressBar4
+            // pbTuesday
             // 
-            this.guna2VProgressBar4.Location = new System.Drawing.Point(82, 18);
-            this.guna2VProgressBar4.Name = "guna2VProgressBar4";
-            this.guna2VProgressBar4.Size = new System.Drawing.Size(15, 199);
-            this.guna2VProgressBar4.TabIndex = 33;
-            this.guna2VProgressBar4.Text = "guna2VProgressBar4";
-            this.guna2VProgressBar4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2VProgressBar4.Value = 50;
+            this.pbTuesday.Location = new System.Drawing.Point(82, 18);
+            this.pbTuesday.Name = "pbTuesday";
+            this.pbTuesday.Size = new System.Drawing.Size(15, 199);
+            this.pbTuesday.TabIndex = 33;
+            this.pbTuesday.Text = "guna2VProgressBar4";
+            this.pbTuesday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.pbTuesday.Value = 50;
             // 
-            // guna2VProgressBar3
+            // pbWednesday
             // 
-            this.guna2VProgressBar3.Location = new System.Drawing.Point(124, 18);
-            this.guna2VProgressBar3.Name = "guna2VProgressBar3";
-            this.guna2VProgressBar3.Size = new System.Drawing.Size(15, 199);
-            this.guna2VProgressBar3.TabIndex = 32;
-            this.guna2VProgressBar3.Text = "guna2VProgressBar3";
-            this.guna2VProgressBar3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.pbWednesday.Location = new System.Drawing.Point(124, 18);
+            this.pbWednesday.Name = "pbWednesday";
+            this.pbWednesday.Size = new System.Drawing.Size(15, 199);
+            this.pbWednesday.TabIndex = 32;
+            this.pbWednesday.Text = "guna2VProgressBar3";
+            this.pbWednesday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
-            // guna2VProgressBar2
+            // pbThusday
             // 
-            this.guna2VProgressBar2.Location = new System.Drawing.Point(166, 15);
-            this.guna2VProgressBar2.Name = "guna2VProgressBar2";
-            this.guna2VProgressBar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2VProgressBar2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.guna2VProgressBar2.Size = new System.Drawing.Size(15, 202);
-            this.guna2VProgressBar2.TabIndex = 31;
-            this.guna2VProgressBar2.Text = "guna2VProgressBar2";
-            this.guna2VProgressBar2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2VProgressBar2.Value = 10;
+            this.pbThusday.Location = new System.Drawing.Point(166, 15);
+            this.pbThusday.Name = "pbThusday";
+            this.pbThusday.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.pbThusday.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.pbThusday.Size = new System.Drawing.Size(15, 202);
+            this.pbThusday.TabIndex = 31;
+            this.pbThusday.Text = "guna2VProgressBar2";
+            this.pbThusday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.pbThusday.Value = 10;
             // 
-            // guna2VProgressBar1
+            // pbMonday
             // 
-            this.guna2VProgressBar1.Location = new System.Drawing.Point(40, 15);
-            this.guna2VProgressBar1.Name = "guna2VProgressBar1";
-            this.guna2VProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(210)))), ((int)(((byte)(109)))));
-            this.guna2VProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(210)))), ((int)(((byte)(109)))));
-            this.guna2VProgressBar1.Size = new System.Drawing.Size(15, 202);
-            this.guna2VProgressBar1.TabIndex = 30;
-            this.guna2VProgressBar1.Text = "guna2VProgressBar1";
-            this.guna2VProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2VProgressBar1.Value = 43;
+            this.pbMonday.Location = new System.Drawing.Point(40, 15);
+            this.pbMonday.Name = "pbMonday";
+            this.pbMonday.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(210)))), ((int)(((byte)(109)))));
+            this.pbMonday.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(210)))), ((int)(((byte)(109)))));
+            this.pbMonday.Size = new System.Drawing.Size(15, 202);
+            this.pbMonday.TabIndex = 30;
+            this.pbMonday.Text = "guna2VProgressBar1";
+            this.pbMonday.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.pbMonday.Value = 43;
             // 
             // Chart
             // 
@@ -516,7 +569,7 @@
             this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
             this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
             this.guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(254)))));
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(719, 227);
+            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(719, 214);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(323, 400);
             this.guna2CustomGradientPanel4.TabIndex = 9;
@@ -624,25 +677,6 @@
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.Animated = true;
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2DateTimePicker1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2DateTimePicker1.BorderRadius = 20;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(28, 10);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(360, 36);
-            this.guna2DateTimePicker1.TabIndex = 11;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 4, 9, 0, 27, 30, 965);
-            // 
             // guna2GradientCircleButton1
             // 
             this.guna2GradientCircleButton1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -669,7 +703,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 716);
-            this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.guna2CustomGradientPanel4);
             this.Controls.Add(this.panelStatific);
             this.Controls.Add(this.btnfindjob);
@@ -725,7 +758,6 @@
         public Guna.UI2.WinForms.Guna2Button btnfindjob;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelStatific;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private System.Windows.Forms.Label Chart;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
@@ -737,13 +769,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2VProgressBar guna2VProgressBar5;
-        private Guna.UI2.WinForms.Guna2VProgressBar guna2VProgressBar6;
-        private Guna.UI2.WinForms.Guna2VProgressBar guna2VProgressBar8;
-        private Guna.UI2.WinForms.Guna2VProgressBar guna2VProgressBar4;
-        private Guna.UI2.WinForms.Guna2VProgressBar guna2VProgressBar3;
-        private Guna.UI2.WinForms.Guna2VProgressBar guna2VProgressBar2;
-        private Guna.UI2.WinForms.Guna2VProgressBar guna2VProgressBar1;
+        private Guna.UI2.WinForms.Guna2VProgressBar pbSaturday;
+        private Guna.UI2.WinForms.Guna2VProgressBar pbSunday;
+        private Guna.UI2.WinForms.Guna2VProgressBar pbFriday;
+        private Guna.UI2.WinForms.Guna2VProgressBar pbTuesday;
+        private Guna.UI2.WinForms.Guna2VProgressBar pbWednesday;
+        private Guna.UI2.WinForms.Guna2VProgressBar pbThusday;
+        private Guna.UI2.WinForms.Guna2VProgressBar pbMonday;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelSeeReview;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelCalender;
@@ -753,5 +785,8 @@
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblDate;
+        private Guna.UI2.WinForms.Guna2Button btnNext;
+        private Guna.UI2.WinForms.Guna2Button btnPrevious;
     }
 }

@@ -61,7 +61,6 @@ namespace TheGioiViecLam
             ucCalender1.timerNotify.Tick += TimerNotify_Tick;
             ucCalender1.cboxnotify.CheckedChanged += Cboxnotify_CheckedChanged;
             ucCalender1.numericNotify.ValueChanged += NumericNotify_ValueChanged;
-            ucCalender1.btnblock.Click += Btnblock_Click;
             LoadMatrix();
 
             AddNumbertoMatrix(ucCalender1.dt.Value);
@@ -143,12 +142,13 @@ namespace TheGioiViecLam
                 {
                     control.btnday.FillColor = Color.FromArgb(106, 212, 221);
                     control.btnOptionn.BackColor = Color.FromArgb(106, 212, 221);
+                    control.btnOptionn.BackColor = Color.FromArgb(106, 212, 221);
                 }
                 if (isEqualDate(useday, date)) // ngay danh daus
                 {
                     control.btnday.FillColor = Color.FromArgb(255, 32, 78);
                     control.btnday.ForeColor = Color.White;
-                   // control.btnOptionn.FillColor = Color.Transparent;
+                    // control.btnOptionn.FillColor = Color.Transparent;
                     control.btnOptionn.BackColor = Color.FromArgb(255, 32, 78);
 
                 }
