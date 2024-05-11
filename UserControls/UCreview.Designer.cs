@@ -45,14 +45,14 @@
             this.panelMain.Controls.Add(this.lblaccount);
             this.panelMain.Controls.Add(this.txtReview);
             this.panelMain.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMain.Location = new System.Drawing.Point(3, 3);
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(707, 245);
+            this.panelMain.Size = new System.Drawing.Size(872, 224);
             this.panelMain.TabIndex = 1;
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(16, 158);
+            this.pictureBox.Location = new System.Drawing.Point(16, 130);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(131, 83);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,20 +99,20 @@
             this.txtReview.PlaceholderText = "";
             this.txtReview.ReadOnly = true;
             this.txtReview.SelectedText = "";
-            this.txtReview.Size = new System.Drawing.Size(701, 100);
+            this.txtReview.Size = new System.Drawing.Size(852, 72);
             this.txtReview.TabIndex = 10;
-            this.txtReview.TextOffset = new System.Drawing.Point(0, -40);
+            this.txtReview.TextOffset = new System.Drawing.Point(0, -25);
             // 
             // UCreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(175)))), ((int)(((byte)(209)))));
             this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCreview";
-            this.Size = new System.Drawing.Size(713, 252);
+            this.Size = new System.Drawing.Size(872, 227);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

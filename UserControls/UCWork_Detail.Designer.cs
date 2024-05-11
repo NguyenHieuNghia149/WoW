@@ -153,7 +153,7 @@
             // 
             // panelMain
             // 
-            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(251)))), ((int)(((byte)(246)))));
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panelMain.Controls.Add(this.btnHavePicture);
             this.panelMain.Controls.Add(this.btn1Star);
             this.panelMain.Controls.Add(this.btn2Star);
@@ -165,17 +165,18 @@
             this.panelMain.Controls.Add(this.label5);
             this.panelMain.Controls.Add(this.lblNumberReview);
             this.panelMain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.panelMain.Location = new System.Drawing.Point(3, 585);
+            this.panelMain.Location = new System.Drawing.Point(28, 585);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(865, 113);
+            this.panelMain.Size = new System.Drawing.Size(818, 113);
             this.panelMain.TabIndex = 152;
             // 
             // btnHavePicture
             // 
             this.btnHavePicture.BorderRadius = 10;
-            this.btnHavePicture.BorderThickness = 1;
-            this.btnHavePicture.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.btnHavePicture.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnHavePicture.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnHavePicture.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.btnHavePicture.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(136)))), ((int)(((byte)(198)))));
+            this.btnHavePicture.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnHavePicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHavePicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHavePicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -192,9 +193,10 @@
             // btn1Star
             // 
             this.btn1Star.BorderRadius = 10;
-            this.btn1Star.BorderThickness = 1;
-            this.btn1Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.btn1Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn1Star.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn1Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.btn1Star.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(136)))), ((int)(((byte)(198)))));
+            this.btn1Star.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btn1Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn1Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn1Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -211,9 +213,10 @@
             // btn2Star
             // 
             this.btn2Star.BorderRadius = 10;
-            this.btn2Star.BorderThickness = 1;
-            this.btn2Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.btn2Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn2Star.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn2Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.btn2Star.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(136)))), ((int)(((byte)(198)))));
+            this.btn2Star.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btn2Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn2Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn2Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -230,9 +233,10 @@
             // btn3Star
             // 
             this.btn3Star.BorderRadius = 10;
-            this.btn3Star.BorderThickness = 1;
-            this.btn3Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.btn3Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn3Star.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn3Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.btn3Star.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(136)))), ((int)(((byte)(198)))));
+            this.btn3Star.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btn3Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn3Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn3Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -249,9 +253,10 @@
             // btn4Star
             // 
             this.btn4Star.BorderRadius = 10;
-            this.btn4Star.BorderThickness = 1;
-            this.btn4Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.btn4Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn4Star.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn4Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.btn4Star.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(136)))), ((int)(((byte)(198)))));
+            this.btn4Star.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btn4Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn4Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn4Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -268,9 +273,10 @@
             // btn5Star
             // 
             this.btn5Star.BorderRadius = 10;
-            this.btn5Star.BorderThickness = 1;
-            this.btn5Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.btn5Star.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn5Star.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn5Star.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.btn5Star.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(136)))), ((int)(((byte)(198)))));
+            this.btn5Star.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btn5Star.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn5Star.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn5Star.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -287,10 +293,10 @@
             // btnAll
             // 
             this.btnAll.BorderRadius = 10;
-            this.btnAll.BorderThickness = 1;
-            this.btnAll.Checked = true;
-            this.btnAll.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
-            this.btnAll.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnAll.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnAll.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.btnAll.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(136)))), ((int)(((byte)(198)))));
+            this.btnAll.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -311,6 +317,7 @@
             this.ratingStar.Location = new System.Drawing.Point(30, 60);
             this.ratingStar.Name = "ratingStar";
             this.ratingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.ratingStar.ReadOnly = true;
             this.ratingStar.Size = new System.Drawing.Size(145, 28);
             this.ratingStar.TabIndex = 2;
             // 
@@ -319,7 +326,7 @@
             this.label5.AllowDrop = true;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Coral;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(92)))), ((int)(((byte)(25)))));
             this.label5.Location = new System.Drawing.Point(84, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 29);
@@ -330,7 +337,7 @@
             // 
             this.lblNumberReview.AutoSize = true;
             this.lblNumberReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumberReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(109)))), ((int)(((byte)(72)))));
+            this.lblNumberReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(92)))), ((int)(((byte)(25)))));
             this.lblNumberReview.Location = new System.Drawing.Point(23, 8);
             this.lblNumberReview.Name = "lblNumberReview";
             this.lblNumberReview.Size = new System.Drawing.Size(62, 38);
@@ -804,13 +811,6 @@
         #endregion
         private System.Windows.Forms.Label lblReview;
         private Guna.UI2.WinForms.Guna2Panel panelMain;
-        private Guna.UI2.WinForms.Guna2Button btnHavePicture;
-        private Guna.UI2.WinForms.Guna2Button btn1Star;
-        private Guna.UI2.WinForms.Guna2Button btn2Star;
-        private Guna.UI2.WinForms.Guna2Button btn3Star;
-        private Guna.UI2.WinForms.Guna2Button btn4Star;
-        private Guna.UI2.WinForms.Guna2Button btn5Star;
-        private Guna.UI2.WinForms.Guna2Button btnAll;
         public Guna.UI2.WinForms.Guna2RatingStar ratingStar;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label lblNumberReview;
@@ -847,5 +847,12 @@
         public System.Windows.Forms.Panel panelDetail;
         public System.Windows.Forms.Label lblfavourite;
         public Guna.UI2.WinForms.Guna2RatingStar rating;
+        public Guna.UI2.WinForms.Guna2Button btnHavePicture;
+        public Guna.UI2.WinForms.Guna2Button btn1Star;
+        public Guna.UI2.WinForms.Guna2Button btn2Star;
+        public Guna.UI2.WinForms.Guna2Button btn3Star;
+        public Guna.UI2.WinForms.Guna2Button btn4Star;
+        public Guna.UI2.WinForms.Guna2Button btn5Star;
+        public Guna.UI2.WinForms.Guna2Button btnAll;
     }
 }

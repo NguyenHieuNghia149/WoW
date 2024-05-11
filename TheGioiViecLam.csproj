@@ -68,9 +68,8 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\Dao.cs" />
+    <Compile Include="DAO\CalenderDao.cs" />
     <Compile Include="DAO\ImageDao.cs" />
-    <Compile Include="DAO\JobDao.cs" />
     <Compile Include="FCalenderWorker.cs">
       <SubType>Form</SubType>
     </Compile>

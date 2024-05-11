@@ -29,7 +29,6 @@ namespace TheGioiViecLam.DAO
             img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
             return m.ToArray();
         }
-        //Chuyen file anh asng byte[]
         public byte[] PathtoByteArray(string path)
         {
             MemoryStream m = new MemoryStream();

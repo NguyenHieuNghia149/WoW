@@ -16,7 +16,7 @@ namespace TheGioiViecLam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FSignInforWorkers());
+            Application.Run(new FSignIn());
         }
     }
 }

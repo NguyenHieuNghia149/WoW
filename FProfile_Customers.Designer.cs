@@ -125,6 +125,7 @@
             this.pictureBox.Location = new System.Drawing.Point(30, 94);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(244, 263);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 61;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.guna2PictureBox1_Click);

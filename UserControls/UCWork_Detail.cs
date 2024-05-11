@@ -18,6 +18,7 @@ namespace TheGioiViecLam
         {
             InitializeComponent();
             panelDetail.AutoScroll = true;
+            btnAll.Checked = true;
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)

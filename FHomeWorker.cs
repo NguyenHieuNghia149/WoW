@@ -28,13 +28,7 @@ namespace TheGioiViecLam
             InitializeComponent();
             this.FDisplay_Workers = fDisplay_Workers;
             Load();
-            LoadStatitic(new List<Guna2VProgressBar> { pbMonday }, 2,month,year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbTuesday }, 3, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbWednesday }, 4, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbThusday }, 5, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbFriday }, 6, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbSaturday }, 7, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbSunday }, 8, month, year);
+            ReloadProgressBars(month, year);
         }
       
         private void FHomeWorker_Load(object sender, EventArgs e)
@@ -77,10 +71,6 @@ namespace TheGioiViecLam
             FDisplay_Workers.btnSearchRequire.Checked = true;
         }
 
-        private void panelHistoryOrder_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void Load()
         {
             try
@@ -112,7 +102,7 @@ namespace TheGioiViecLam
             month = date.Month;
             year = date.Year;
             
-            String monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
+            string monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
             lblDate.Text = monthname + " " + year;
 
         }
@@ -125,64 +115,88 @@ namespace TheGioiViecLam
         private void btnNext_Click(object sender, EventArgs e)
         {
             month++;
-            String monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
+            if (month > 12)
+            {
+                month = 1;
+                year++;
+            }
+            string monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
             lblDate.Text = monthname + " " + year;
-            LoadStatitic(new List<Guna2VProgressBar> { pbMonday }, 2, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbTuesday }, 3, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbWednesday }, 4, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbThusday }, 5, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbFriday }, 6, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbSaturday }, 7, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbSunday }, 8, month, year);
-
+            ReloadProgressBars(month, year);
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             month--;
-            String monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
+            if (month < 1)
+            {
+                month = 12;
+                year--;
+            }
+            string monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
             lblDate.Text = monthname + " " + year;
+            ReloadProgressBars(month, year);
+        }
+
+        private void ReloadProgressBars(int month, int year)
+        {
             LoadStatitic(new List<Guna2VProgressBar> { pbMonday }, 2, month, year);
             LoadStatitic(new List<Guna2VProgressBar> { pbTuesday }, 3, month, year);
             LoadStatitic(new List<Guna2VProgressBar> { pbWednesday }, 4, month, year);
             LoadStatitic(new List<Guna2VProgressBar> { pbThusday }, 5, month, year);
             LoadStatitic(new List<Guna2VProgressBar> { pbFriday }, 6, month, year);
             LoadStatitic(new List<Guna2VProgressBar> { pbSaturday }, 7, month, year);
-            LoadStatitic(new List<Guna2VProgressBar> { pbSunday }, 8, month, year);
+            LoadStatitic(new List<Guna2VProgressBar> { pbSunday }, 1, month, year);
         }
 
-        private void LoadStatitic(List<Guna2VProgressBar> progressBarList, int day,int month, int year)
+        private void LoadStatitic(List<Guna2VProgressBar> progressBarList, int day, int months, int years)
         {
             try
             {
                 conn.Open();
-                string query = string.Format("select count(*) as countJob from Orders, Post where Orders.IDP = Post.IDP and Post.Email = '{0}' and (Orders.OStatus = 'Unconfirm' or Orders.OStatus = 'Confirm') and DATEPART(dw, Orders.ODate) = '{1}' and  MONTH(Orders.ODate) = {2} AND YEAR(Orders.ODate) = {3}", account, day,month,year);
+                foreach (var progressBar in progressBarList)
+                {
+                    progressBar.Value = 0;
+                }
+                    string query = string.Format("    SELECT   DATEPART(dw, Orders.ODate) AS DayOfWeek,    COUNT(*) * 100.0 / (SELECT COUNT(*) FROM Orders, Post WHERE Orders.IDP = Post.IDP AND Post.Email = '{0}' AND (Orders.OStatus = 'Unconfirm') AND MONTH(Orders.ODate) = '{1}' AND YEAR(Orders.ODate) = '{2}') AS Percentage FROM    Orders, Post WHERE     Orders.IDP = Post.IDP     AND Post.Email = '{0}'    AND (Orders.OStatus = 'Unconfirm')   AND MONTH(Orders.ODate) = '{1}'   AND YEAR(Orders.ODate) = '{2}' GROUP BY   DATEPART(dw, Orders.ODate)", account, months, years);
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    int countJob = (int)cmd.ExecuteScalar();
-                    int value = countJob * 10;
-                    foreach (var progressBar in progressBarList)
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
                     {
-                        progressBar.Value = value;
-                        if ( value <= 30 )
-                        {
-                            progressBar.ProgressColor = Color.FromArgb(195, 255, 147);
-                            progressBar.ProgressColor2 = Color.FromArgb(195, 255, 147);
-                        }
-                        else if (value > 30 && value < 60 )
-                        {
-                            progressBar.ProgressColor = Color.FromArgb(255, 101, 0);
-                            progressBar.ProgressColor2 = Color.FromArgb(255, 101, 0);
-                        }
-                        else
-                        {
-                            progressBar.ProgressColor = Color.FromArgb(196, 12, 12);
-                            progressBar.ProgressColor2 = Color.FromArgb(196, 12, 12);
-                        }
-                            
+                        int dayOfWeek = Convert.ToInt32(reader["DayOfWeek"]);
+                        double percentage = Convert.ToDouble(reader["Percentage"]);
 
+                        if (dayOfWeek == day)
+                        {
+                         
+                            foreach (var progressBar in progressBarList)
+                            {
+                                progressBar.Value = (int)percentage;
+                                if (percentage <= 20)
+                                {
+                                    progressBar.ProgressColor = Color.FromArgb(243, 208, 215);
+                                    progressBar.ProgressColor2 = Color.FromArgb(255, 230, 230);
+                                }
+                                else if (percentage > 20 && percentage < 50)
+                                {
+                                    progressBar.ProgressColor = Color.FromArgb(225, 175, 209);
+                                    progressBar.ProgressColor2 = Color.FromArgb(225, 175, 209);
+                                }
+                                else if(percentage == 100)
+                                {
+                                    progressBar.ProgressColor = Color.FromArgb(116, 105, 182);
+                                    progressBar.ProgressColor2 = Color.FromArgb(116, 105, 182);
+                                }
+                                else
+                                {
+                                    progressBar.ProgressColor = Color.FromArgb(116, 105, 182);
+                                    progressBar.ProgressColor2 = Color.FromArgb(173, 136, 198);
+                                }
+                            }
+                        }
                     }
-                   
+                    reader.Close();
                 }
             }
             catch (Exception exc)
@@ -194,6 +208,7 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
+
 
 
     }
