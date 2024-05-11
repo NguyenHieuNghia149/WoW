@@ -24,11 +24,11 @@ namespace TheGioiViecLam
         {
             InitializeComponent();
             this.account = account;
+            Load_UCHistoryRequire_FromDatabase(account);
         }
         private void Load_UCHistoryRequire_FromDatabase(string account)
         {
             panel_Body.AutoScroll = true; // Tạo thanh cuộn
-
             try
             {
                 conn.Open();
@@ -115,12 +115,16 @@ namespace TheGioiViecLam
             Load_UCHistoryRequire_FromDatabase(account);
 
         }
-
         private void btnPost_Click(object sender, EventArgs e)
         {
             FPost_RequireJobs_Customers form = new FPost_RequireJobs_Customers(account);
             //this.Hide();
             form.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

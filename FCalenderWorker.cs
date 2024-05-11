@@ -211,6 +211,7 @@ namespace TheGioiViecLam
                     Control control = matrix[i][j];
                     (control as ucDayofCalender).btnday.Text = "";
                     (control as ucDayofCalender).btnday.FillColor = Color.White;
+                    (control as ucDayofCalender).btnOptionn.BackColor = Color.White;
                 }
             }
         }

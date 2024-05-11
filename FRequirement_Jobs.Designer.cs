@@ -46,6 +46,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 640);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel_Body
             // 
@@ -64,7 +65,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1039, 67);
+            this.panel2.Size = new System.Drawing.Size(1039, 65);
             this.panel2.TabIndex = 0;
             // 
             // btnPost

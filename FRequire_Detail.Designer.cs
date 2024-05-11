@@ -331,7 +331,6 @@
             // 
             this.panel_His.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.panel_His.BackColor = System.Drawing.Color.White;
-            this.panel_His.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_His.Controls.Add(this.txtDetail);
             this.panel_His.Controls.Add(this.txtCity);
             this.panel_His.Controls.Add(this.lblJobName);
@@ -372,7 +371,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1136, 504);
             this.Controls.Add(this.panel_His);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRequire_Detail";
             this.Text = "FRequire_Detail";
             this.panel_His.ResumeLayout(false);

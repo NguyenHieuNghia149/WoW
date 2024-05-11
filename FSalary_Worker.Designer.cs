@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont12 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid4 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick4 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont13 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid5 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick5 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont14 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid6 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel2 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cCharge = new Guna.Charts.WinForms.GunaLineDataset();
             this.ChartSalary = new Guna.Charts.WinForms.GunaChart();
             this.gunaPieDataset1 = new Guna.Charts.WinForms.GunaPieDataset();
@@ -57,11 +57,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblMaxCharge = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelStatific = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnPrevious = new Guna.UI2.WinForms.Guna2Button();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPost)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -80,37 +80,37 @@
             this.ChartSalary.BackColor = System.Drawing.Color.Transparent;
             this.ChartSalary.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] {
             this.cCharge});
-            chartFont9.FontName = "Arial";
-            this.ChartSalary.Legend.LabelFont = chartFont9;
+            chartFont1.FontName = "Arial";
+            this.ChartSalary.Legend.LabelFont = chartFont1;
             this.ChartSalary.Location = new System.Drawing.Point(14, 215);
             this.ChartSalary.Name = "ChartSalary";
             this.ChartSalary.Size = new System.Drawing.Size(530, 341);
             this.ChartSalary.TabIndex = 7;
-            chartFont10.FontName = "Arial";
-            chartFont10.Size = 12;
-            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.ChartSalary.Title.Font = chartFont10;
-            chartFont11.FontName = "Arial";
-            this.ChartSalary.Tooltips.BodyFont = chartFont11;
-            chartFont12.FontName = "Arial";
-            chartFont12.Size = 9;
-            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.ChartSalary.Tooltips.TitleFont = chartFont12;
-            this.ChartSalary.XAxes.GridLines = grid4;
-            chartFont13.FontName = "Arial";
-            tick4.Font = chartFont13;
-            this.ChartSalary.XAxes.Ticks = tick4;
-            this.ChartSalary.YAxes.GridLines = grid5;
-            chartFont14.FontName = "Arial";
-            tick5.Font = chartFont14;
-            this.ChartSalary.YAxes.Ticks = tick5;
-            this.ChartSalary.ZAxes.GridLines = grid6;
-            chartFont15.FontName = "Arial";
-            pointLabel2.Font = chartFont15;
-            this.ChartSalary.ZAxes.PointLabels = pointLabel2;
-            chartFont16.FontName = "Arial";
-            tick6.Font = chartFont16;
-            this.ChartSalary.ZAxes.Ticks = tick6;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 12;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.ChartSalary.Title.Font = chartFont2;
+            chartFont3.FontName = "Arial";
+            this.ChartSalary.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.ChartSalary.Tooltips.TitleFont = chartFont4;
+            this.ChartSalary.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            this.ChartSalary.XAxes.Ticks = tick1;
+            this.ChartSalary.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            this.ChartSalary.YAxes.Ticks = tick2;
+            this.ChartSalary.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            this.ChartSalary.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            this.ChartSalary.ZAxes.Ticks = tick3;
             // 
             // gunaPieDataset1
             // 
@@ -165,17 +165,17 @@
             // 
             // chartPost
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartPost.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartPost.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartPost.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartPost.Legends.Add(legend1);
             this.chartPost.Location = new System.Drawing.Point(633, 215);
             this.chartPost.Name = "chartPost";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "Legend1";
-            series2.Name = "s1";
-            this.chartPost.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "s1";
+            this.chartPost.Series.Add(series1);
             this.chartPost.Size = new System.Drawing.Size(418, 341);
             this.chartPost.TabIndex = 8;
             this.chartPost.Text = "chart1";
@@ -207,7 +207,7 @@
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 10;
-            this.guna2CustomGradientPanel1.Controls.Add(this.label3);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblTotal);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
             this.guna2CustomGradientPanel1.Controls.Add(this.lblMaxCharge);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
@@ -217,6 +217,30 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(530, 72);
             this.guna2CustomGradientPanel1.TabIndex = 9;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.lblTotal.Location = new System.Drawing.Point(384, 13);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(41, 34);
+            this.lblTotal.TabIndex = 3;
+            this.lblTotal.Text = "0 ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
+            this.label4.Location = new System.Drawing.Point(282, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 34);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Total:";
             // 
             // panelStatific
             // 
@@ -275,30 +299,6 @@
             this.btnNext.TabIndex = 48;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
-            this.label3.Location = new System.Drawing.Point(384, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 34);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "0 ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(105)))), ((int)(((byte)(182)))));
-            this.label4.Location = new System.Drawing.Point(282, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 34);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Total:";
-            // 
             // FSalary_Worker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -337,7 +337,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelStatific;
         private Guna.UI2.WinForms.Guna2Button btnPrevious;
         private Guna.UI2.WinForms.Guna2Button btnNext;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label4;
     }
 }

@@ -354,15 +354,15 @@ INSERT INTO Cities (ID, City, District) VALUES
 (30, N'Hà Nội', N'Quận Hà Đông');
 
 GO
-CREATE FUNCTION fnSelectMaxSalary(@wEmail char(50), @month char(20))
+CREATE FUNCTION fnSelectMaxSalary(@wEmail char(50), @year char(50))
 RETURNS INT 
 AS
 BEGIN
 	DECLARE @maxSalary INT
 	--SELECT @IDP = IDP from Orders WHERE CEmail = @cEmail
 	--SELECT @wEmail = Email FROM Post WHERE IDP = @IDP
-	SELECT @maxSalary = MAX(CAST(Cost AS INT)) FROM Post INNER JOIN Orders ON Post.IDP = Orders.IDP 
-	WHERE Post.Email = @wEmail AND @month = MONTH (ODate) AND Orders.OStatus = 'Done'
+	SELECT @maxSalary = SUM(CAST(Cost AS INT)) FROM Post INNER JOIN Orders ON Post.IDP = Orders.IDP 
+	WHERE Post.Email = @wEmail AND Orders.OStatus = 'Done' and YEAR(Orders.ODate) = @year
 	RETURN @maxSalary
 END
 GO
