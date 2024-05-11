@@ -47,7 +47,7 @@
             this.panelMain.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(872, 224);
+            this.panelMain.Size = new System.Drawing.Size(869, 224);
             this.panelMain.TabIndex = 1;
             // 
             // pictureBox
@@ -121,11 +121,10 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Panel panelMain;
         public System.Windows.Forms.PictureBox pictureBox;
         public Guna.UI2.WinForms.Guna2RatingStar RatingStar;
         public System.Windows.Forms.Label lblaccount;
         public Guna.UI2.WinForms.Guna2TextBox txtReview;
+        public Guna.UI2.WinForms.Guna2Panel panelMain;
     }
 }

@@ -366,3 +366,10 @@ BEGIN
 	RETURN @maxSalary
 END
 GO
+
+CREATE TABLE [dbo].[BusyDay] (
+    [Date]       DATETIME   NOT NULL,
+    [OptionType] INT        NULL,
+    [WEmail]     NCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Date] ASC)
+);

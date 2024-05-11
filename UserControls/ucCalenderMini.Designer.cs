@@ -235,6 +235,7 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(356, 242);
             this.panelMain.TabIndex = 33;
+            this.panelMain.Click += new System.EventHandler(this.UcCalenderMini_CellClicked);
             // 
             // label7
             // 

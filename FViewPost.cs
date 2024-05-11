@@ -53,11 +53,12 @@ namespace TheGioiViecLam
                     string Experience = reader["Experience"].ToString();
                     string IDP = reader["IDP"].ToString();
                     string WID = reader["WID"].ToString();
+                    string wEmail = reader["Email"].ToString() ;
                     byte[] b = reader["img"] as byte[];
 
                     UCWorkInFor ucWorkInFor = new UCWorkInFor();
                     ucWorkInFor.btnDelete.Click += (s, ev) => btnDelete_Click(IDP, s, ev);
-                    ucWorkInFor.panelMain.Click += (s,ev) => UCWorkInFor_Click(WID, IDP, s, ev);
+                    ucWorkInFor.panelMain.Click += (s,ev) => UCWorkInFor_Click(wEmail, WID, IDP, s, ev);
                     ucWorkInFor.txtJobName.Text = JobName;
                     ucWorkInFor.txtWTime.Text = WTime;
                     ucWorkInFor.txtCost.Text = Cost;
@@ -87,9 +88,9 @@ namespace TheGioiViecLam
                 conn.Close();
             }
         }
-        public void UCWorkInFor_Click(string WID, string IDP, object sender, EventArgs e)
+        public void UCWorkInFor_Click(string wEmail,string WID, string IDP, object sender, EventArgs e)
         {
-            FWorkdetail form = new FWorkdetail(WID, IDP, account);
+            FWorkdetail form = new FWorkdetail(wEmail,WID, IDP, account);
             form.Show();
         
         }

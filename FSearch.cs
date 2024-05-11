@@ -36,9 +36,9 @@ namespace TheGioiViecLam
             paneFilter.Visible = false;
         }
 
-        private void ucWorkInFor_Click(string wid, string postID, object sender, EventArgs e)
+        private void ucWorkInFor_Click(string wEmail, string wid, string postID, object sender, EventArgs e)
         {
-            FWorkdetail form = new FWorkdetail(wid, postID, account);
+            FWorkdetail form = new FWorkdetail(wEmail,wid, postID, account);
             form.Show();
         }
 
@@ -138,11 +138,12 @@ namespace TheGioiViecLam
                     string location = row["Address"].ToString();
                     string postID = row["IDP"].ToString();
                     string WID = row["WID"].ToString();
+                    string WEmail = row["Email"].ToString();
                     float Rating = Convert.ToInt32(row["Rating"]);
                     byte[] b = row["img"] as byte[];
 
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
-                    uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
+                    uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(WEmail,WID, postID, s, ev);
 
                     if (CheckIDPInSaves(postID))
                     {
@@ -275,16 +276,17 @@ namespace TheGioiViecLam
                     string location = reader["Address"].ToString();
                     string postID = reader["IDP"].ToString(); // Lấy giá trị IDP
                     string WID = reader["WID"].ToString();
+                    string wEmail = reader["Email"].ToString();
                     float Rating = Convert.ToInt32(reader["Rating"]);
                     byte[] b = reader["img"] as byte[];
 
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
-                    uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
+                    uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(wEmail,WID, postID, s, ev);
                     if (CheckIDPInSaves(postID))
                     {
                         uCWorkInFor.btnSave.FillColor = System.Drawing.Color.Gray;
                     }
-                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(WID, postID, s, ev);
+                    uCWorkInFor.Click += (s, ev) => ucWorkInFor_Click(wEmail, WID, postID, s, ev);
                     if (uCWorkInFor.btnSave.FillColor == System.Drawing.Color.FromArgb(238, 66, 102))
                     {
                         uCWorkInFor.btnSave.Click += (s, ev) => BtnSave_Click(postID, s, ev);

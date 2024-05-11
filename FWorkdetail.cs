@@ -18,16 +18,18 @@ namespace TheGioiViecLam
         private string selectedPostID;
         private string account;
         private string wid;
+        private string wEmail;
        
-        public FWorkdetail(string wid,string postID, string account)
+        public FWorkdetail(string wEmail,string wid,string postID, string account)
         {
             InitializeComponent();
-            selectedPostID = postID;
+            this.selectedPostID = postID;
             ucW = new UCWork_Detail(); // Khởi tạo UserControl
             panel1.Controls.Add(ucW); // Thêm UserControl vào form
             ucW.Dock = DockStyle.Fill; // Cho phép UserControl lấp đầy toàn bộ kích thước của form
             this.account = account;
             this.wid = wid;
+            this.wEmail = wEmail;
             ucW.AutoScroll = true;
         }
 
@@ -121,11 +123,12 @@ namespace TheGioiViecLam
 
         private void BtnBook_Click(object sender, EventArgs e)
         {
-            FSelectTime form = new FSelectTime(selectedPostID, account);
+            FSelectTime form = new FSelectTime(selectedPostID, account,wEmail);
             form.ShowDialog();
         }
         private void FWorkdetail_Load(object sender, EventArgs e)
         {
+            LoadReviewAll();
             LoadInFor(0);
             ucW.btnBook.Click += BtnBook_Click;
             ucW.btnAll.Click += BtnAll_Click;
@@ -138,21 +141,17 @@ namespace TheGioiViecLam
         }
         private void LoadInFor(int star)
         {
-            
             if(star == 0)
             {
-             
                 LoadReviewAll();
             }
             else
             {
-             
                 LoadReview(star);
             }
 
             try
             {
-             
                 conn.Open();
                 string query = "SELECT * FROM dbo.Post WHERE IDP = @PostID";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -212,6 +211,7 @@ namespace TheGioiViecLam
             {
                 conn.Close();
             }
+
             try
             {
                 conn.Open();
@@ -238,6 +238,11 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
+                string query = string.Format("SELECT Review.Rating as Rating, Review.Review as review, Review.Img as img, Customer.Fullname as Fullname FROM Review INNER JOIN Customer ON Review.CEmail = Customer.CEmail WHERE Review.CEmail = '{0}' AND Review.IDP = '{1}' AND Review.WID = '{2}'", account, selectedPostID, wid);
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet);
+               
                 foreach (Control control in ucW.panelDetail.Controls)
                 {
                     if (control is UCreview)
@@ -245,31 +250,19 @@ namespace TheGioiViecLam
                         ucW.panelDetail.Controls.Remove(control);
                     }
                 }
-                string sqlStr2 = @"SELECT Review.Rating, Review.Review, Review.Img, Customer.Fullname, Review.Img
-            FROM Review
-            INNER JOIN Customer ON Review.CEmail = Customer.CEmail
-            WHERE Review.CEmail = @CEmail AND Review.IDP = @IDP AND Review.WID = @WID";
-                SqlCommand cmd2 = new SqlCommand(sqlStr2, conn);
-                cmd2.Parameters.AddWithValue("@CEmail", account);
-                cmd2.Parameters.AddWithValue("@IDP", selectedPostID);
-                cmd2.Parameters.AddWithValue("@WID", wid);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd2); // Đổi từ sqlStr thành cmd2
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet);
+
                 int y = 710; // Biến để điều chỉnh vị trí theo trục y của các UC
-            
                 foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
+                    UCreview uCreview = new UCreview();
                     int Rating = Convert.ToInt32(row["Rating"]);
-                    string Review = row["Review"].ToString();
-                    string Img = row["Img"].ToString();
+                    string Review = row["review"].ToString();
                     string name = row["Fullname"].ToString();
                     byte[] b = row["img"] as byte[];
-                    UCreview uCreview = new UCreview();
                     uCreview.txtReview.Text = Review;
                     uCreview.RatingStar.Value = Rating;
                     uCreview.lblaccount.Text = name;
-
+                    
                     if (b != null)
                     {
                         MemoryStream ms = new MemoryStream(b);
@@ -296,7 +289,7 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sqlStr2 = @"SELECT Review.Rating, Review.Review, Review.Img, Customer.Fullname, Review.Img
+                string sqlStr2 = @"SELECT Review.Rating, Review.Review, Review.Img, Customer.Fullname
                   FROM Review
                   INNER JOIN Customer ON Review.CEmail = Customer.CEmail
                   WHERE Review.CEmail = @CEmail AND Review.IDP = @IDP AND Review.WID = @WID AND Review.Rating = @star";
@@ -320,7 +313,6 @@ namespace TheGioiViecLam
                 {
                     int Rating = Convert.ToInt32(row["Rating"]);
                     string Review = row["Review"].ToString();
-                    string Img = row["Img"].ToString();
                     string name = row["Fullname"].ToString();
                     byte[] b = row["img"] as byte[];
                     UCreview uCreview = new UCreview();

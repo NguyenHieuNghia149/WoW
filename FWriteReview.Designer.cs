@@ -58,14 +58,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(766, 694);
+            this.panel1.Size = new System.Drawing.Size(766, 512);
             this.panel1.TabIndex = 5;
             // 
             // lblAddimage
             // 
             this.lblAddimage.AutoSize = true;
             this.lblAddimage.BackColor = System.Drawing.Color.LightGray;
-            this.lblAddimage.Location = new System.Drawing.Point(226, 527);
+            this.lblAddimage.Location = new System.Drawing.Point(226, 340);
             this.lblAddimage.Name = "lblAddimage";
             this.lblAddimage.Size = new System.Drawing.Size(65, 24);
             this.lblAddimage.TabIndex = 6;
@@ -78,10 +78,11 @@
             this.pictureboxPost.BorderRadius = 20;
             this.pictureboxPost.FillColor = System.Drawing.Color.Gainsboro;
             this.pictureboxPost.ImageRotate = 0F;
-            this.pictureboxPost.Location = new System.Drawing.Point(69, 482);
+            this.pictureboxPost.Location = new System.Drawing.Point(69, 295);
             this.pictureboxPost.Margin = new System.Windows.Forms.Padding(4);
             this.pictureboxPost.Name = "pictureboxPost";
             this.pictureboxPost.Size = new System.Drawing.Size(150, 106);
+            this.pictureboxPost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureboxPost.TabIndex = 7;
             this.pictureboxPost.TabStop = false;
             this.pictureboxPost.Click += new System.EventHandler(this.pictureboxPost_Click);
@@ -95,12 +96,13 @@
             this.btnSend.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.btnSend.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
-            this.btnSend.Location = new System.Drawing.Point(69, 620);
+            this.btnSend.Location = new System.Drawing.Point(69, 433);
             this.btnSend.Margin = new System.Windows.Forms.Padding(4);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(647, 51);
             this.btnSend.TabIndex = 5;
             this.btnSend.Text = "SEND";
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // txtdetail
             // 
@@ -117,21 +119,21 @@
             this.txtdetail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdetail.ForeColor = System.Drawing.Color.Black;
             this.txtdetail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdetail.Location = new System.Drawing.Point(69, 244);
+            this.txtdetail.Location = new System.Drawing.Point(69, 177);
             this.txtdetail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtdetail.Name = "txtdetail";
             this.txtdetail.PasswordChar = '\0';
             this.txtdetail.PlaceholderText = "Review";
             this.txtdetail.SelectedText = "";
-            this.txtdetail.Size = new System.Drawing.Size(647, 240);
+            this.txtdetail.Size = new System.Drawing.Size(647, 102);
             this.txtdetail.TabIndex = 4;
-            this.txtdetail.TextOffset = new System.Drawing.Point(0, -100);
+            this.txtdetail.TextOffset = new System.Drawing.Point(0, -35);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(284, 196);
+            this.label1.Location = new System.Drawing.Point(287, 142);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 29);
@@ -156,6 +158,7 @@
             this.ptReview.Margin = new System.Windows.Forms.Padding(4);
             this.ptReview.Name = "ptReview";
             this.ptReview.Size = new System.Drawing.Size(150, 106);
+            this.ptReview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptReview.TabIndex = 1;
             this.ptReview.TabStop = false;
             // 
@@ -188,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 694);
+            this.ClientSize = new System.Drawing.Size(766, 512);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);

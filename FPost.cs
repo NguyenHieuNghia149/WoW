@@ -151,7 +151,6 @@ namespace TheGioiViecLam
         }
         private void btnPost_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(txtIDP.Text);
             try
             {
                 /*if (conn.State == ConnectionState.Open)

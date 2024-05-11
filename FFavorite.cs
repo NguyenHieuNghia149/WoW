@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace TheGioiViecLam
@@ -58,9 +59,10 @@ namespace TheGioiViecLam
                     string time = row["Time"].ToString();
                     string postID = row["IDP"].ToString();
                     string wid = row["WID"].ToString() ;
+                    string wEmail = row["Email"].ToString();
                     int Rating = Convert.ToInt32(row["Rating"]);
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
-                    uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(wid,postID, s, ev);
+                    uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(wEmail,wid,postID, s, ev);
                     uCWorkInFor.btnDelete.Click += (s, ev) => Delete_Click(postID, s, ev);
                     uCWorkInFor.txtJobName.Text = job;
                     uCWorkInFor.txtCost.Text = price;
@@ -85,9 +87,9 @@ namespace TheGioiViecLam
             }
         }
 
-        private void ucWorkInFor_Click(string wid,string postID, object sender, EventArgs e)
+        private void ucWorkInFor_Click(string wEmail,string wid,string postID, object sender, EventArgs e)
         {
-            FWorkdetail form = new FWorkdetail(wid, postID, account);
+            FWorkdetail form = new FWorkdetail(wEmail,wid, postID, account);
             form.Show();
             if (sender is UCWorkInFor uCWorkInFor)
             {

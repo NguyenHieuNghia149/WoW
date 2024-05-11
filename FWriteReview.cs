@@ -29,7 +29,7 @@ namespace TheGioiViecLam
             this.IDP = IDP;
             this.WID = WID;
             this.account = account;
-            btnSend.Click += (s,ev) => btnSend_Click (account, IDP, WID,s,ev);
+           // btnSend.Click += (s,ev) => btnSend_Click (account, IDP, WID,s,ev);
         }
 
         private void btnSend_Click(string account, string IDP, string WID, object sender, EventArgs e)
@@ -102,6 +102,28 @@ namespace TheGioiViecLam
             {
                 pictureboxPost.Image = Image.FromFile(open.FileName);
                 this.Text = open.FileName;
+            }
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                byte[] b = imageDao.imageToByteArray(pictureboxPost.Image);
+                string sqlStr = string.Format("INSERT INTO Review(Review, Rating, IDP, WID, CEmail,Img) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}',@img)", txtdetail.Text, guna2RatingStar1.Value, IDP, WID, account);
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                cmd.Parameters.Add("@img", SqlDbType.VarBinary, -1).Value = b;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm thành công");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
         }
     }
