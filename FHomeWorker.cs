@@ -102,7 +102,7 @@ namespace TheGioiViecLam
             month = date.Month;
             year = date.Year;
             
-            string monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month];
+            string monthname = DateTimeFormatInfo.CurrentInfo.MonthNames[month-1];
             lblDate.Text = monthname + " " + year;
 
         }
@@ -158,7 +158,7 @@ namespace TheGioiViecLam
                 {
                     progressBar.Value = 0;
                 }
-                    string query = string.Format("    SELECT   DATEPART(dw, Orders.ODate) AS DayOfWeek,    COUNT(*) * 100.0 / (SELECT COUNT(*) FROM Orders, Post WHERE Orders.IDP = Post.IDP AND Post.Email = '{0}' AND (Orders.OStatus = 'Unconfirm') AND MONTH(Orders.ODate) = '{1}' AND YEAR(Orders.ODate) = '{2}') AS Percentage FROM    Orders, Post WHERE     Orders.IDP = Post.IDP     AND Post.Email = '{0}'    AND (Orders.OStatus = 'Unconfirm')   AND MONTH(Orders.ODate) = '{1}'   AND YEAR(Orders.ODate) = '{2}' GROUP BY   DATEPART(dw, Orders.ODate)", account, months, years);
+                    string query = string.Format("    SELECT   DATEPART(dw, Orders.ODate) AS DayOfWeek,    COUNT(*) * 100.0 / (SELECT COUNT(*) FROM Orders, Post WHERE Orders.IDP = Post.IDP AND Post.Email = '{0}' AND (Orders.OStatus = 'Done') AND MONTH(Orders.ODate) = '{1}' AND YEAR(Orders.ODate) = '{2}') AS Percentage FROM    Orders, Post WHERE     Orders.IDP = Post.IDP     AND Post.Email = '{0}'    AND (Orders.OStatus = 'Done')   AND MONTH(Orders.ODate) = '{1}'   AND YEAR(Orders.ODate) = '{2}' GROUP BY   DATEPART(dw, Orders.ODate)", account, months, years);
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     SqlDataReader reader = cmd.ExecuteReader();

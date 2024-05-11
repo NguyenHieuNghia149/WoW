@@ -5,16 +5,16 @@ USE WorldofWork
 go
 Create table dbo.Customer(	
 	OrderNum INT IDENTITY (1,1),
-	CID Nchar(20),
-	CEmail char(50),
-	CPassword Nchar(50),
-	Fullname Nchar(100),
-	Gender Nchar(10),
-	CBirthday Datetime,
-	City NCHAR(20),
-	District NCHAR(20),
+	CID Nchar(20) not null,
+	CEmail char(50) not null,
+	CPassword Nchar(50) not null,
+	Fullname Nchar(100) not null,
+	Gender Nchar(10) not null,
+	CBirthday Datetime not null,
+	City NCHAR(20) not null,
+	District NCHAR(20) not null,
 	PhoneNum NCHAR(20) UNIQUE,
-	CAddress Nchar(500),
+	CAddress Nchar(500) not null,
 	img varbinary(max),
 	primary key (CEmail)
 )
@@ -28,19 +28,18 @@ create table dbo.JobField
 )
 
 go
-
 create table dbo.Worker(
 	OderNum INT IDENTITY (1,1),
 	WID Nchar(20) PRIMARY KEY,
-	WEmail char(50),
-	WPassword char(50),
-	Fullname Nvarchar(150),
-	Gender Nchar(10),
-	Birthday DateTime,
-	City Nchar(100),
-	District Nchar(100),
-	PhoneNum Nchar(20),
-	WAddress text,
+	WEmail char(50) UNIQUE,
+	WPassword char(50) not null,
+	Fullname Nvarchar(150) not null,
+	Gender Nchar(10) not null,
+	Birthday DateTime not null,
+	City Nchar(100) not null,
+	District Nchar(100) not null,
+	PhoneNum Nchar(20) UNIQUE,
+	WAddress text  not null,
 	img varbinary(max),
 )
 
@@ -49,20 +48,20 @@ go
 CREATE TABLE Post (
     [OrderNum]   INT             IDENTITY (1, 1) NOT NULL,
     [IDP]        INT      unique,
-    [WID]        NCHAR (20)      NULL,
-    [Fullname]   NCHAR (100)     NULL,
-    [Email]      NCHAR (20)      NULL,
-    [JobField]   NCHAR (100)     NULL,
-    [JobName]    NCHAR (100)     NULL,
-    [WTime]      NCHAR (20)      NULL,
-    [Cost]       NCHAR (20)      NULL,
-    [PhoneNum]   NCHAR (20)      NULL,
-    [Detail]     TEXT            NULL,
-    [City]       NCHAR (100)     NULL,
-    [District]   NCHAR (100)     NULL,
-    [Experience] NCHAR (20)      NULL,
-    [img]        VARBINARY (MAX) NULL,
-	[Address]    NVARCHAR(max) NUll,
+    [WID]        NCHAR (20)      NOT NULL,
+    [Fullname]   NCHAR (100)    NOT NULL,
+    [Email]      NCHAR (20)     NOT NULL,
+    [JobField]   NCHAR (100)    NOT NULL,
+    [JobName]    NCHAR (100)  NOT NULL,
+    [WTime]      NCHAR (20)    NOT NULL,
+    [Cost]       NCHAR (20)    NOT NULL,
+    [PhoneNum]   NCHAR (20)    NOT NULL,
+    [Detail]     TEXT           NOT NULL,
+    [City]       NCHAR (100)   NOT NULL,
+    [District]   NCHAR (100)   NOT NULL,
+    [Experience] NCHAR (20)   NOT NULL,
+    [img]        VARBINARY (MAX) NOT NULL,
+	[Address]    NVARCHAR(max) NOT NULL,
     PRIMARY KEY CLUSTERED ([IDP] ASC),
     FOREIGN KEY ([WID]) REFERENCES [dbo].[Worker] ([WID]),
 );
@@ -144,14 +143,11 @@ BEGIN
 	INSERT INTO Post(IDP,Email,JobName,WTime,Cost,Detail,Experience,PhoneNum,City,District,JobField,img,WID,FullName,WAddress)
 	VALUES(@IDP,@Email,@JobName,@WTime,@Cost,@Detail,@Experience,@PhoneNum,@City,@District,@JobField,@img,@WID,@FullName,@Address)
 END
-GO
 
--- SELECT * FROM Post
+GO
 EXEC pd_Insert_Post_ 1,'Anh@gmail.com','Sua xe','3-4','20','Toi rua xe rat nhanh','3-4','089918293812',N'Hà Nội',N'Quận Cầu Giấy','Repair and maintenance',NULL
 EXEC pd_Insert_Post_ 2,'Hung@gmail.com','Sua xe','3-4','20','Toi rua xe rat nhanh','3-4','089918293812',N'Hà Nội',N'Quận Cầu Giấy','Repair and maintenance',NULL
-
--- SELECT MAX(IDP) + 1 AS IDPNext FROM Post
-
+go
 ----Procedure delete vao Post co WID
 CREATE PROCEDURE pd_delete_Post_Order
 (@IDP int) AS
@@ -160,11 +156,8 @@ BEGIN
 	DELETE FROM Post WHERE IDP = @IDP
 END
 
-------------------------------------------------------------------------------------------------
-
 go
 ----Nhap vao Orders
-
 ----Nhap vao Saves
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00001',3,'Nam@gmail.com')
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00002',3,N'Phuong@gmail.com')
@@ -172,28 +165,25 @@ INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00003',4,N'Ha@gmail.com')
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00004',5,N'Hoi@gmail.com')
 INSERT INTO Saves(CID,IDP,CEmail) VALUES(N'C00005',5,N'Ngan@gmail.com')
 GO
-
 -- SELECT Customer.Fullname as fullname,Orders.OrderNum as OrderNum, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = 'Anh@gmail.com' and Customer.CEmail = Orders.CEmail
-
 ----------Data cho FRequirement_Jobs----------
 CREATE TABLE Requirement(
 	OrderNum INT IDENTITY (1, 1),
 	RequireID INT,
-	CEmail Char(50),
-	CGender Nchar(20),
-	FullName Nchar(20),
-	City Nchar(20),
-	District Nchar(20),
-	PhoneNum Nchar(20),
-	CAddress Nchar(500),
-	JobName Nchar(500),
-	Detail Nchar(500),
-	Address NVARCHAR(100),
+	CEmail Char(50) NOT NULL,
+	CGender Nchar(20) NOT NULL,
+	FullName Nchar(20) NOT NULL,
+	City Nchar(20) NOT NULL,
+	District Nchar(20) NOT NULL,
+	PhoneNum Nchar(20) NOT NULL,
+	CAddress Nchar(500) NOT NULL,
+	JobName Nchar(500) NOT NULL,
+	Detail Nchar(500) NOT NULL,
+	Address NVARCHAR(100) NOT NULL,
 	Primary key (RequireID,CEmail),
 	foreign key (CEmail)  references Customer(CEmail),
 )
 GO
-
 --Procedure nhap Requirement---
 CREATE PROCEDURE pd_Requirement_Insert(@RequireID INT,@CEmail Char(50),@JobName Nchar(500),@Detail Nchar(500)) AS
 BEGIN
@@ -229,6 +219,7 @@ CREATE TABLE [dbo].[Review] (
 --thêm view
 go
 
+
 CREATE VIEW PostsWithAverageRating AS
 SELECT 
     p.IDP, 
@@ -243,6 +234,7 @@ SELECT
     jf.FieldName, -- Thêm trường IDJF từ bảng JobField thông qua bảng Job
     p.City,
 	p.img,
+	p.Address,
     ROUND(ISNULL(AVG(r.Rating), 0), 0) AS Rating 
 FROM 
     Post p 
@@ -251,7 +243,7 @@ LEFT JOIN
 LEFT JOIN
     JobField jf ON p.JobField = jf.FieldName -- Liên kết bảng JobField để lấy IDJF
 GROUP BY 
-    p.IDP, p.WTime, p.JobName, p.Cost, p.Experience, p.District, p.WID, p.City, p.Email, p.PhoneNum, jf.FieldName,p.img; -- Thêm j.IDJF vào danh sách GROUP BY
+    p.IDP, p.WTime, p.JobName, p.Cost, p.Experience, p.District, p.WID, p.City, p.Email, p.PhoneNum, jf.FieldName,p.img,p.Address; -- T -- Thêm j.IDJF vào danh sách GROUP BY
 GO
 
 -- THEM BANG CHO WORKER BOOK
@@ -278,7 +270,6 @@ ELSE
 RETURN @n
 END
 GO
-
 -- THEM BANG LUONG CHO WORKER
 CREATE TABLE Salary(
 	OrderNum INT IDENTITY (1, 1),
@@ -289,8 +280,8 @@ CREATE TABLE Salary(
 	IDP int,
 	foreign key (WID)  references Worker(WID)
 )
-GO
 
+GO
 CREATE PROCEDURE spInsertSalary(@wEmail char(50), @idp int) AS
 BEGIN
 	DECLARE @wid Nchar(20), @receiveTime DATE, @charge char(50)
@@ -299,18 +290,14 @@ BEGIN
 	SELECT @charge = Cost FROM Post WHERE IDP = @idp
 	INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES (@receiveTime,@wid,@wEmail,@charge,@idp)
 END
-GO
-select * from Post
--- SELECT * FROM Salary
 
-EXEC spInsertSalary 'Anh@gmail.com',1
+GO
 INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-01-01','W00001','Anh@gmail.com','100',1)
 INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-02-01','W00001','Anh@gmail.com','250',1)
 INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-03-01','W00001','Anh@gmail.com','150',1)
 INSERT INTO Salary(ReceiveTime,WID,WEmail,Charge,IDP) VALUES ('2024-04-01','W00001','Anh@gmail.com','200',1)
 GO
 
-DROP FUNCTION fnSelectSalary
 GO
 CREATE FUNCTION fnSelectSalary(@wEmail char(50), @month char(20))
 RETURNS INT 
@@ -323,28 +310,16 @@ BEGIN
 	WHERE Post.Email = @wEmail AND @month = MONTH (ODate) AND Orders.OStatus = 'Done'
 	RETURN @sumSalary
 END
+
 GO
-
-SELECT * FROM Orders
-
-SELECT IDP FROM Orders WHERE CEmail = ''
---SELECT TOP 1 Post.JobName, Post.Cost, Orders.ODate, Orders.OStatus 
---FROM Orders 
---INNER JOIN Post ON Orders.IDP = Post.IDP 
---ORDER BY ODate DESC
-
---select * from Review
-
-
-
 Create table Cities
 (
 	iD int primary key,
 	City NVARCHAR(max),
 	District NVARCHAR(max)
 )
-go
 
+go
 INSERT INTO Cities (ID, City, District) VALUES
 (1, N'Hồ Chí Minh', N'Quận 1'),
 (2, N'Hồ Chí Minh', N'Quận 2'),
@@ -377,15 +352,8 @@ INSERT INTO Cities (ID, City, District) VALUES
 (28, N'Hà Nội', N'Quận Nam Từ Liêm'),
 (29, N'Hà Nội', N'Quận Bắc Từ Liêm'),
 (30, N'Hà Nội', N'Quận Hà Đông');
+
 GO
-
-select * from Post 
-
-select distinct JobName from Post where Email = 'Anh@gmail.com' 
-select count(JobName) as N from Post where Email = 'Anh@gmail.com' 
-select * from Salary
-select max(charge) as N from Salary
-
 CREATE FUNCTION fnSelectMaxSalary(@wEmail char(50), @month char(20))
 RETURNS INT 
 AS
@@ -398,33 +366,3 @@ BEGIN
 	RETURN @maxSalary
 END
 GO
-
-SELECT 
-    Customer.Fullname as fullname, 
-    Orders.OrderNum as OrderNum, 
-    Customer.CEmail as CEmail, 
-    Customer.PhoneNum as phonenumber, 
-    Post.IDP as IDpost, 
-    Post.JobName as jobname, 
-    Post.Cost as cost, 
-    Post.Experience as experience, 
-    Post.WTime as Wtime, 
-    Orders.IDP, 
-    OStatus, 
-    ODate, 
-    FromHours, 
-    FromMinutes, 
-    Post.Fullname as WorkerName,
-    Customer.CAddress as CAddress 
-FROM 
-    Post,
-    Orders,
-    Customer 
-WHERE
-	IDP = Orders.IDP 
-    AND Customer.CEmail = Orders.CEmail
-    AND Orders.OStatus = 'Unconfirm'; -- Thêm điều kiện lọc theo trạng thái 'Unconfirm'
-
-SELECT * from Orders Where OStatus = 'Unconfirm'
-
-SELECT count(*) as n from Orders,Post where Orders.IDP = Post.IDP and Post.Email = 'Hung@gmail.com' and Orders.OStatus = 'Done'
