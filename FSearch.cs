@@ -137,7 +137,7 @@ namespace TheGioiViecLam
                     string experience = row["Experience"].ToString();
                     string location = row["Address"].ToString();
                     string postID = row["IDP"].ToString();
-                    string WID = row["WID"].ToString();
+                    string WID = row["Email"].ToString();
                     float Rating = Convert.ToInt32(row["Rating"]);
                     byte[] b = row["img"] as byte[];
 

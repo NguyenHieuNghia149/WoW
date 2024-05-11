@@ -71,12 +71,6 @@
     <Compile Include="DAO\Dao.cs" />
     <Compile Include="DAO\ImageDao.cs" />
     <Compile Include="DAO\JobDao.cs" />
-    <Compile Include="FCalenderCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FCalenderCustomer.Designer.cs">
-      <DependentUpon>FCalenderCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="FCalenderWorker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,9 +386,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FAskToReview.resx">
       <DependentUpon>FAskToReview.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FCalenderCustomer.resx">
-      <DependentUpon>FCalenderCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCalenderWorker.resx">
       <DependentUpon>FCalenderWorker.cs</DependentUpon>

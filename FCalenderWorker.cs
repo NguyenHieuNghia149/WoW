@@ -17,7 +17,6 @@ namespace TheGioiViecLam
     public partial class FCalenderWorker : Form
     {
         #region Peoperties
-        Control control = new ucDayofCalender();
         private List<List<ucDayofCalender>> matrix;
 
         public List<List<ucDayofCalender>> Matrix
@@ -74,13 +73,15 @@ namespace TheGioiViecLam
         void LoadMatrix()
         {
             matrix = new List<List<ucDayofCalender>>();
+
+            DateTime startDate = DateTime.Today.AddDays(-1 - DateTime.Today.Day);
             for (int i = 0; i < Cons.DayofColum; i++)
             {
-
                 matrix.Add(new List<ucDayofCalender>());
                 for (int j = 0; j < Cons.DayofWeek; j++)
                 {
-                    ucDayofCalender newControl = new ucDayofCalender();
+                    DateTime currentDate = startDate.AddDays((i * Cons.DayofWeek) + j);
+                    ucDayofCalender newControl = new ucDayofCalender(currentDate, account); // Truyền ngày vào UserControl
                     newControl.Location = new Point(j * (newControl.Width + Cons.margin), i * (newControl.Height + Cons.margin));
                     ucCalender1.pnMatrix.Controls.Add(newControl);
                     matrix[i].Add(newControl);

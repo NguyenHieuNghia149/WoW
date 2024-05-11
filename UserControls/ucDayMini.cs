@@ -16,5 +16,10 @@ namespace TheGioiViecLam.UserControls
         {
             InitializeComponent();
         }
+
+        private void btnday_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -20,19 +20,23 @@ namespace TheGioiViecLam
         DBConnection db = new DBConnection();
         private string postID;
         private string account;
+        private string WEmail;
         private List<List<ucDayMini>> matrix;
-
+        private int SelectedRowIndex { get; set; }
+        private int SelectedColumnIndex { get; set; }
         public List<List<ucDayMini>> Matrix
         {
             get { return matrix; }
             set { matrix = value; }
         }
         private List<string> dayofWeek = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-        public FSelectTime( string postID, string account)
+        public FSelectTime( string postID, string account, string wEmail)
         {
             this.postID = postID;
             this.account = account;
+            this.WEmail = wEmail;
             InitializeComponent();
+            ucCalenderMini1.Click += UcCalenderMini_CellClicked;
             LoadMatrix();
             ucCalenderMini1.dt.ValueChanged += dt_ValueChanged;
             ucCalenderMini1.btnNext.Click += BtnNext_Click;
@@ -49,6 +53,18 @@ namespace TheGioiViecLam
                 }
             }
         }
+        private void UcCalenderMini_CellClicked(object sender, EventArgs e)
+        {
+            // Chúng ta cần xác định ô ngày đã được bấm
+            ucCalenderMini clickedCalendar = (ucCalenderMini)sender;
+
+            // Cập nhật SelectedRowIndex và SelectedColumnIndex của ucCalenderMini
+            SelectedRowIndex = clickedCalendar.SelectedRowIndex;
+            SelectedColumnIndex = clickedCalendar.SelectedColumnIndex;
+
+            // Sau đó bạn có thể sử dụng hoặc cập nhật SelectedRowIndex và SelectedColumnIndex theo nhu cầu của bạn.
+        }
+
         private void BtnToday_Click(object sender, EventArgs e)
         {
             SetDefaultDate();
@@ -124,6 +140,28 @@ namespace TheGioiViecLam
                 ucDayMini control = matrix[line][collum];
                 control.btnday.Text = i.ToString();
                 control.btnday.Tag = i;
+
+                // Kiểm tra trong cơ sở dữ liệu xem có bản ghi tương ứng với ngày hiện tại không
+                if (IsDateBusy(useday))
+                {
+                    // Nếu có, đổi màu sắc của ô ngày dựa trên OptionType
+                    int option = GetOptionTypeForDate(useday);
+                    switch (option)
+                    {
+                        case 1:
+                            control.btnday.FillColor = Color.FromArgb(195, 255, 147); 
+                            break;
+                        case 2:
+                            control.btnday.FillColor = Color.FromArgb(255, 175, 97);
+                            break;
+                        case 3:
+                            control.btnday.FillColor = Color.FromArgb(21, 52, 72);
+                            break;
+                        default:
+
+                            break;
+                    }
+                }
                 if (useday == today)
                 {
                     control.btnday.FillColor = Color.FromArgb(205, 232, 229);
@@ -133,31 +171,89 @@ namespace TheGioiViecLam
                     line++;
                 }
                 useday = useday.AddDays(1);
+
                 if (useday.Day == DayofMonth(useday))
                 {
-                    // If it is, move to the next month
-                    useday = useday.AddMonths(1);
-                    line = 0; // Reset the line counter
-
-                    // Loop until the end of the next month (or until the next Sunday)
-                    while (useday.DayOfWeek != DayOfWeek.Sunday)
-                    {
-                        collum = dayofWeek.IndexOf(useday.DayOfWeek.ToString());
-                        control = matrix[line][collum];
-                        control.btnday.Text = "";
-                        control.btnday.FillColor = Color.LightGray; // Set color for next month's days
-
-                        if (collum >= 6)
-                        {
-                            line++;
-                        }
-                        useday = useday.AddDays(1);
-                    }
+                    // Nếu là ngày cuối cùng của tháng, kiểm tra và thêm các ô ngày cho tháng tiếp theo
+                    AddNextMonthDays(ref useday, ref line);
                 }
             }
+        }
+        bool IsDateBusy(DateTime date)
+        {
+            bool result = false;
+            try
+            {
+                conn.Open();
+                string sql = "SELECT COUNT(*) FROM BusyDay WHERE Date = @Date AND WEmail = @Email";
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.AddWithValue("@Date", date);
+                command.Parameters.AddWithValue("@Email", WEmail);
+                int count = (int)command.ExecuteScalar();
+                if (count > 0)
+                {
+                    result = true; // Có bản ghi tương ứng với ngày và email trong cơ sở dữ liệu
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
 
-            // Check if the current date is the last day of the month
 
+        // Lấy OptionType cho ngày từ cơ sở dữ liệu
+        int GetOptionTypeForDate(DateTime date)
+        {
+            int option = 0;
+            try
+            {
+                conn.Open();
+                string sql = "SELECT OptionType FROM BusyDay WHERE Date = @Date";
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.AddWithValue("@Date", date);
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    option = Convert.ToInt32(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return option;
+        }
+
+        // Thêm các ô ngày cho tháng tiếp theo nếu ngày hiện tại là ngày cuối cùng của tháng
+        void AddNextMonthDays(ref DateTime useday, ref int line)
+        {
+            useday = useday.AddMonths(1); // Chuyển sang tháng tiếp theo
+            line = 0; // Đặt lại số dòng về 0
+
+            // Lặp qua đến khi gặp ngày Chủ Nhật hoặc hết tháng
+            while (useday.DayOfWeek != DayOfWeek.Sunday)
+            {
+                int collum = dayofWeek.IndexOf(useday.DayOfWeek.ToString());
+                ucDayMini control = matrix[line][collum];
+                control.btnday.Text = "";
+                control.btnday.FillColor = Color.LightGray; // Thiết lập màu xám cho các ô ngày của tháng sau
+
+                if (collum >= 6)
+                {
+                    line++;
+                }
+                useday = useday.AddDays(1); // Chuyển sang ngày tiếp theo
+            }
         }
 
 
@@ -195,8 +291,69 @@ namespace TheGioiViecLam
         {
             int hours = (int)numericHours.Value;
             int minutes = (int)NumericMinutes.Value;
-            string sql = string.Format("insert into Orders(CEmail,IDP,ODate,FromHours,FromMinutes,OStatus) values ('{0}','{1}','{2}','{3}','{4}','{5}')", account, postID, ucCalenderMini1.dt.Value, hours, minutes, "Unconfirm");
-            db.Execute(sql);
+            DateTime selectedDate = ucCalenderMini1.dt.Value;
+
+            // Thực hiện truy vấn để lấy OptionType từ cơ sở dữ liệu
+            int option = GetOptionTypeForDate(selectedDate);
+
+            // Kiểm tra OptionType và thực hiện xử lý tương ứng
+            switch (option)
+            {
+                case 1:
+                    if (hours >= 7 && hours <= 11)
+                    {
+                        MessageBox.Show("Không thể chọn từ 7h đến 11h vì đang có lịch hẹn.", "Thông báo");
+                        return;
+                    }
+                    break;
+                case 2:
+                    if (hours >= 13 && hours <= 19)
+                    {
+                        MessageBox.Show("Không thể chọn từ 13h đến 19h vì đang có lịch hẹn.", "Thông báo");
+                        return;
+                    }
+                    break;
+                case 3:
+                    MessageBox.Show("Không thể chọn vào ngày này vì đã bị khóa.", "Thông báo");
+                    return;
+                default:
+                    break;
+            }
+
+            // Kiểm tra các giờ không được chọn mặc định
+            if (hours < 7 || (hours >= 11 && hours < 13) || hours >= 19)
+            {
+                MessageBox.Show("Không thể chọn vào khung giờ này.", "Thông báo");
+                return;
+            }
+
+            // Thực hiện lưu thông tin đặt lịch vào cơ sở dữ liệu
+            try
+            {
+                conn.Open();
+                string sql = "INSERT INTO Orders (CEmail, IDP, ODate, FromHours, FromMinutes, OStatus) VALUES (@CEmail, @IDP, @ODate, @FromHours, @FromMinutes, @OStatus)";
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.AddWithValue("@CEmail", account);
+                command.Parameters.AddWithValue("@IDP", postID);
+                command.Parameters.AddWithValue("@ODate", selectedDate);
+                command.Parameters.AddWithValue("@FromHours", hours);
+                command.Parameters.AddWithValue("@FromMinutes", minutes);
+                command.Parameters.AddWithValue("@OStatus", "Unconfirm");
+                command.ExecuteNonQuery();
+
+                // Thông báo thành công
+                MessageBox.Show("Đặt lịch thành công.", "Thông báo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            // Đóng form
             this.Close();
         }
 

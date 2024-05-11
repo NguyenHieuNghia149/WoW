@@ -47,6 +47,7 @@
             this.btnday.TabIndex = 6;
             this.btnday.Text = "1";
             this.btnday.TextOffset = new System.Drawing.Point(-10, -5);
+            this.btnday.Click += new System.EventHandler(this.btnday_Click);
             // 
             // ucDayMini
             // 
@@ -55,7 +56,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(78)))), ((int)(((byte)(128)))));
             this.Controls.Add(this.btnday);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucDayMini";
             this.Size = new System.Drawing.Size(42, 30);
             this.ResumeLayout(false);
