@@ -6,11 +6,13 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheGioiViecLam.model;
 using TheGioiViecLam.UserControls;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TheGioiViecLam
 {
@@ -40,7 +42,7 @@ namespace TheGioiViecLam
             uc.lblCost.Text = row["cost"].ToString();
             uc.lblstatus.Text = row["OStatus"].ToString();
             uc.lblHours.Text = row["FromHours"].ToString();
-            uc.lblMinutes.Text = row["FromHours"].ToString();
+            uc.lblMinutes.Text = row["FromMinutes"].ToString();
             byte[] b = row["img"] as byte[];
             if (b != null)
             {
@@ -50,6 +52,7 @@ namespace TheGioiViecLam
 
             string WID = row["WID"].ToString();
             string IDP = row["IDP"].ToString();
+            string WEmail = row["WEmail"].ToString();
             switch (uc.lblstatus.Text)
             {
                 case "Confirmed                                                                                           ":
@@ -79,6 +82,7 @@ namespace TheGioiViecLam
                     uc.btnbomb.Enabled = false;
                     //uc.btnAgain.Click += (s, ev) => btnagain_Click();
                     uc.btnReview.Click += (s, ev) => btnreview_Click(account, IDP,WID,uc,ev);
+                    uc.btnAgain.Click += (s, ev) => btnAgain_Click(account, IDP, WEmail, s, ev);
                     break;
                 default:
                     // Xử lý trạng thái khác nếu cần
@@ -118,7 +122,7 @@ namespace TheGioiViecLam
 
                 conn.Open();
                 string sql = string.Format("SELECT Customer.Fullname as fullname, Post.WID as WID, Customer.PhoneNum as phonenumber," +
-                    " Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time,Post.JobField as JobField,Post.img as img," +
+                    " Post.JobName as jobname,Post.Email as WEmail, Post.Cost as cost, Post.Experience as experience, Post.WTime as time,Post.JobField as JobField,Post.img as img," +
                     " Orders.IDP as IDP, OStatus, ODate, FromHours, FromMinutes, Customer.Fullname as CIDWorkerName, Customer.CID FROM Post " +
                     " INNER JOIN Orders ON Post.IDP = Orders.IDP " +
                     " INNER JOIN Customer ON Customer.CEmail = Orders.CEmail " +
@@ -181,7 +185,11 @@ namespace TheGioiViecLam
             }
         }
 
-
+        public void btnAgain_Click(string account, string IDP, string WEmail, object sender, EventArgs e)
+        {
+            FSelectTime form = new FSelectTime(IDP,account,WEmail);
+            form.ShowDialog();
+        }
         public void btnreview_Click(string account, string IDP, string WID, object sender, EventArgs e)
         {
             FWriteReview fWriteReview = new FWriteReview(account ,IDP, WID);

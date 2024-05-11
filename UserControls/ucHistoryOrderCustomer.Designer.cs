@@ -155,7 +155,7 @@
             this.btnbomb.Name = "btnbomb";
             this.btnbomb.Size = new System.Drawing.Size(180, 45);
             this.btnbomb.TabIndex = 2;
-            this.btnbomb.Text = "Bomb";
+            this.btnbomb.Text = "Cancel";
             // 
             // btnReview
             // 

@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using TheGioiViecLam.UserControls;
 
 namespace TheGioiViecLam
 {
@@ -39,7 +41,7 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string sql = string.Format("select PostsWithAverageRating.Rating as Rating ,PostsWithAverageRating.IDP as IDP,PostsWithAverageRating.WID as WID, PostsWithAverageRating.JobName as JobName, PostsWithAverageRating.Cost as Cost,PostsWithAverageRating.Address as Address," +
+                string sql = string.Format("select PostsWithAverageRating.Rating as Rating ,PostsWithAverageRating.img as img,PostsWithAverageRating.IDP as IDP,PostsWithAverageRating.WID as WID, PostsWithAverageRating.JobName as JobName, PostsWithAverageRating.Email as WEmail, PostsWithAverageRating.Cost as Cost,PostsWithAverageRating.Address as Address," +
                     " PostsWithAverageRating.Experience as Experience,PostsWithAverageRating.WTime as Time, PostsWithAverageRating.District as District," +
                     " CEmail from Saves,PostsWithAverageRating where  PostsWithAverageRating.IDP = Saves.IDP and Saves.CEmail = '{0}'", account);
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
@@ -59,8 +61,9 @@ namespace TheGioiViecLam
                     string time = row["Time"].ToString();
                     string postID = row["IDP"].ToString();
                     string wid = row["WID"].ToString() ;
-                    string wEmail = row["Email"].ToString();
+                    string wEmail = row["WEmail"].ToString();
                     int Rating = Convert.ToInt32(row["Rating"]);
+                    byte[] b = row["img"] as byte[];
                     UCWorkInFor uCWorkInFor = new UCWorkInFor();
                     uCWorkInFor.panelMain.Click += (s, ev) => ucWorkInFor_Click(wEmail,wid,postID, s, ev);
                     uCWorkInFor.btnDelete.Click += (s, ev) => Delete_Click(postID, s, ev);
@@ -70,6 +73,11 @@ namespace TheGioiViecLam
                     uCWorkInFor.txtLocation.Text = location;
                     uCWorkInFor.txtWTime.Text = time;
                     uCWorkInFor.ratingStar.Value = Rating;
+                    if (b != null)
+                    {
+                        MemoryStream ms = new MemoryStream(b);
+                        uCWorkInFor.picturePost .Image = Image.FromStream(ms);
+                    }
                     uCWorkInFor.Location = new Point(50, y);
                     uCWorkInFor.btnSave.Visible = false;
                     uCWorkInFor.btnSave.Enabled = false;
