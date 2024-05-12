@@ -57,6 +57,7 @@
             this.btn_Search = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PanelBottom = new System.Windows.Forms.Panel();
             this.workerTableAdapter = new TheGioiViecLam.WorldOfWorkDataSetTableAdapters.WorkerTableAdapter();
+            this.lblHome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.worldOfWorkDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
@@ -144,6 +145,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblHome);
             this.panel1.Controls.Add(this.paneFilter);
             this.panel1.Controls.Add(this.cbx_districts);
             this.panel1.Controls.Add(this.cbx_cities);
@@ -401,7 +403,6 @@
             // 
             // btnFilter
             // 
-            this.btnFilter.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnFilter.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.btnFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -422,7 +423,6 @@
             // 
             // btn_Search
             // 
-            this.btn_Search.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -451,6 +451,18 @@
             // 
             this.workerTableAdapter.ClearBeforeFill = true;
             // 
+            // lblHome
+            // 
+            this.lblHome.AutoSize = true;
+            this.lblHome.Font = new System.Drawing.Font("JetBrains Mono", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(1)))));
+            this.lblHome.Location = new System.Drawing.Point(12, 9);
+            this.lblHome.Name = "lblHome";
+            this.lblHome.Size = new System.Drawing.Size(136, 37);
+            this.lblHome.TabIndex = 13;
+            this.lblHome.Text = "JobName";
+            this.lblHome.Click += new System.EventHandler(this.lbl_Home_Click);
+            // 
             // FSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -466,6 +478,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.worldOfWorkDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.paneFilter.ResumeLayout(false);
             this.paneFilter.PerformLayout();
             this.ResumeLayout(false);
@@ -502,5 +515,6 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblValue;
         public Guna.UI2.WinForms.Guna2Button btnApply;
+        private System.Windows.Forms.Label lblHome;
     }
 }

@@ -52,6 +52,7 @@ namespace TheGioiViecLam
         }
         public void FHome_Load(object sender, EventArgs e)
         {
+            lblHome.Text = jobfield;
             LoadData();
         }
         private void LoadData()
@@ -221,7 +222,10 @@ namespace TheGioiViecLam
         {
             string searchText = txt_Search.Text.Trim();
             string[] keywords = searchText.Split(' ');
-
+           /* if(searchText =="")
+            {
+                LoadUCThueFromDatabase();
+            }    */
             try
             {
                 conn.Open();
