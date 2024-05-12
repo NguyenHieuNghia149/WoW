@@ -70,10 +70,19 @@
   <ItemGroup>
     <Compile Include="DAO\CalenderDao.cs" />
     <Compile Include="DAO\ImageDao.cs" />
-    <Compile Include="FCalenderWorker.cs">
+    <Compile Include="DAO\LoadDao.cs" />
+    <Compile Include="MCustomer\FSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCalenderWorker.Designer.cs">
+    <Compile Include="MCustomer\FSignUp.Designer.cs">
+      <DependentUpon>FSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Human.cs" />
+    <Compile Include="model\Review.cs" />
+    <Compile Include="MWorker\FCalenderWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MWorker\FCalenderWorker.Designer.cs">
       <DependentUpon>FCalenderWorker.cs</DependentUpon>
     </Compile>
     <Compile Include="FCompletedJob.cs">
@@ -88,28 +97,28 @@
     <Compile Include="FDailyJob.Designer.cs">
       <DependentUpon>FDailyJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="FHomeCustomer.cs">
+    <Compile Include="MCustomer\FHomeCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FHomeCustomer.Designer.cs">
+    <Compile Include="MCustomer\FHomeCustomer.Designer.cs">
       <DependentUpon>FHomeCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FHomeWorker.cs">
+    <Compile Include="MWorker\FHomeWorker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FHomeWorker.Designer.cs">
+    <Compile Include="MWorker\FHomeWorker.Designer.cs">
       <DependentUpon>FHomeWorker.cs</DependentUpon>
     </Compile>
-    <Compile Include="FJobCalenderCustomer.cs">
+    <Compile Include="MCustomer\FJobCalenderCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FJobCalenderCustomer.Designer.cs">
+    <Compile Include="MCustomer\FJobCalenderCustomer.Designer.cs">
       <DependentUpon>FJobCalenderCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FPlan_Worker.cs">
+    <Compile Include="MWorker\FPlan_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FPlan_Worker.Designer.cs">
+    <Compile Include="MWorker\FPlan_Worker.Designer.cs">
       <DependentUpon>FPlan_Worker.cs</DependentUpon>
     </Compile>
     <Compile Include="FPost.cs">
@@ -123,12 +132,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CandidateSupportCenter.resx</DependentUpon>
     </Compile>
-    <Compile Include="FAskToReview.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FAskToReview.Designer.cs">
-      <DependentUpon>FAskToReview.cs</DependentUpon>
-    </Compile>
     <Compile Include="FCandidateSupportCenter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,16 +139,16 @@
       <DependentUpon>FCandidateSupportCenter.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\DBConnection.cs" />
-    <Compile Include="FDisplay_Customers.cs">
+    <Compile Include="MCustomer\FDisplay_Customers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDisplay_Customers.Designer.cs">
+    <Compile Include="MCustomer\FDisplay_Customers.Designer.cs">
       <DependentUpon>FDisplay_Customers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FDisplay_Workers.cs">
+    <Compile Include="MWorker\FDisplay_Workers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDisplay_Workers.Designer.cs">
+    <Compile Include="MWorker\FDisplay_Workers.Designer.cs">
       <DependentUpon>FDisplay_Workers.cs</DependentUpon>
     </Compile>
     <Compile Include="FFavorite.cs">
@@ -184,22 +187,22 @@
     <Compile Include="FOrders.Designer.cs">
       <DependentUpon>FOrders.cs</DependentUpon>
     </Compile>
-    <Compile Include="FPost_RequireJobs_Customers.cs">
+    <Compile Include="MCustomer\FPost_RequireJobs_Customers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FPost_RequireJobs_Customers.Designer.cs">
+    <Compile Include="MCustomer\FPost_RequireJobs_Customers.Designer.cs">
       <DependentUpon>FPost_RequireJobs_Customers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FProfile_Customers.cs">
+    <Compile Include="MCustomer\FProfile_Customers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FProfile_Customers.Designer.cs">
+    <Compile Include="MCustomer\FProfile_Customers.Designer.cs">
       <DependentUpon>FProfile_Customers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FProfile_Workers.cs">
+    <Compile Include="MWorker\FProfile_Workers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FProfile_Workers.Designer.cs">
+    <Compile Include="MWorker\FProfile_Workers.Designer.cs">
       <DependentUpon>FProfile_Workers.cs</DependentUpon>
     </Compile>
     <Compile Include="FRequirement_Jobs.cs">
@@ -220,28 +223,22 @@
     <Compile Include="FSelectTime.Designer.cs">
       <DependentUpon>FSelectTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSignInforWorkers.cs">
+    <Compile Include="MWorker\FSignInforWorkers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSignInforWorkers.Designer.cs">
+    <Compile Include="MWorker\FSignInforWorkers.Designer.cs">
       <DependentUpon>FSignInforWorkers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSignUp.cs">
+    <Compile Include="MCustomer\FSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSignUp.Designer.cs">
-      <DependentUpon>FSignUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FSignIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FSignIn.Designer.cs">
+    <Compile Include="MCustomer\FSignIn.Designer.cs">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSignUpforWorkers.cs">
+    <Compile Include="MWorker\FSignUpforWorkers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSignUpforWorkers.Designer.cs">
+    <Compile Include="MWorker\FSignUpforWorkers.Designer.cs">
       <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
     </Compile>
     <Compile Include="FViewPost.cs">
@@ -250,41 +247,23 @@
     <Compile Include="FViewPost.Designer.cs">
       <DependentUpon>FViewPost.cs</DependentUpon>
     </Compile>
-    <Compile Include="FViewRequire_Detail_Worker.cs">
+    <Compile Include="MWorker\FViewRequire_Detail_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FViewRequire_Detail_Worker.Designer.cs">
+    <Compile Include="MWorker\FViewRequire_Detail_Worker.Designer.cs">
       <DependentUpon>FViewRequire_Detail_Worker.cs</DependentUpon>
     </Compile>
-    <Compile Include="FViewRequire_Worker.cs">
+    <Compile Include="MWorker\FViewRequire_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FViewRequire_Worker.Designer.cs">
+    <Compile Include="MWorker\FViewRequire_Worker.Designer.cs">
       <DependentUpon>FViewRequire_Worker.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FWaitConfirmOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FWaitConfirmOrder.Designer.cs">
-      <DependentUpon>FWaitConfirmOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="FWorkdetail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FWorkdetail.Designer.cs">
       <DependentUpon>FWorkdetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FWriteReport_Customers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FWriteReport_Customers.Designer.cs">
-      <DependentUpon>FWriteReport_Customers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FWriteReport_Workers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FWriteReport_Workers.Designer.cs">
-      <DependentUpon>FWriteReport_Workers.cs</DependentUpon>
     </Compile>
     <Compile Include="FWriteReview.cs">
       <SubType>Form</SubType>
@@ -300,10 +279,10 @@
     <Compile Include="model\Post.cs" />
     <Compile Include="model\Save.cs" />
     <Compile Include="model\Worker.cs" />
-    <Compile Include="FSalary_Worker.cs">
+    <Compile Include="MWorker\FSalary_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSalary_Worker.Designer.cs">
+    <Compile Include="MWorker\FSalary_Worker.Designer.cs">
       <DependentUpon>FSalary_Worker.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -383,10 +362,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CandidateSupportCenter.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FAskToReview.resx">
-      <DependentUpon>FAskToReview.cs</DependentUpon>
+    <EmbeddedResource Include="MCustomer\FSignUp.resx">
+      <DependentUpon>FSignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCalenderWorker.resx">
+    <EmbeddedResource Include="MWorker\FCalenderWorker.resx">
       <DependentUpon>FCalenderWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidateSupportCenter.resx">
@@ -398,10 +377,10 @@
     <EmbeddedResource Include="FDailyJob.resx">
       <DependentUpon>FDailyJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDisplay_Customers.resx">
+    <EmbeddedResource Include="MCustomer\FDisplay_Customers.resx">
       <DependentUpon>FDisplay_Customers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDisplay_Workers.resx">
+    <EmbeddedResource Include="MWorker\FDisplay_Workers.resx">
       <DependentUpon>FDisplay_Workers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FFavorite.resx">
@@ -410,13 +389,13 @@
     <EmbeddedResource Include="FForgetPassword.resx">
       <DependentUpon>FForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FHomeCustomer.resx">
+    <EmbeddedResource Include="MCustomer\FHomeCustomer.resx">
       <DependentUpon>FHomeCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FHomeWorker.resx">
+    <EmbeddedResource Include="MWorker\FHomeWorker.resx">
       <DependentUpon>FHomeWorker.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FJobCalenderCustomer.resx">
+    <EmbeddedResource Include="MCustomer\FJobCalenderCustomer.resx">
       <DependentUpon>FJobCalenderCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRequire_Detail.resx">
@@ -431,19 +410,19 @@
     <EmbeddedResource Include="FOrders.resx">
       <DependentUpon>FOrders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FPlan_Worker.resx">
+    <EmbeddedResource Include="MWorker\FPlan_Worker.resx">
       <DependentUpon>FPlan_Worker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FPost.resx">
       <DependentUpon>FPost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FPost_RequireJobs_Customers.resx">
+    <EmbeddedResource Include="MCustomer\FPost_RequireJobs_Customers.resx">
       <DependentUpon>FPost_RequireJobs_Customers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FProfile_Customers.resx">
+    <EmbeddedResource Include="MCustomer\FProfile_Customers.resx">
       <DependentUpon>FProfile_Customers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FProfile_Workers.resx">
+    <EmbeddedResource Include="MWorker\FProfile_Workers.resx">
       <DependentUpon>FProfile_Workers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRequirement_Jobs.resx">
@@ -455,43 +434,31 @@
     <EmbeddedResource Include="FSelectTime.resx">
       <DependentUpon>FSelectTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSignInforWorkers.resx">
+    <EmbeddedResource Include="MWorker\FSignInforWorkers.resx">
       <DependentUpon>FSignInforWorkers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSignUp.resx">
-      <DependentUpon>FSignUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FSignIn.resx">
+    <EmbeddedResource Include="MCustomer\FSignIn.resx">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSignUpforWorkers.resx">
+    <EmbeddedResource Include="MWorker\FSignUpforWorkers.resx">
       <DependentUpon>FSignUpforWorkers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FViewPost.resx">
       <DependentUpon>FViewPost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FViewRequire_Detail_Worker.resx">
+    <EmbeddedResource Include="MWorker\FViewRequire_Detail_Worker.resx">
       <DependentUpon>FViewRequire_Detail_Worker.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FViewRequire_Worker.resx">
+    <EmbeddedResource Include="MWorker\FViewRequire_Worker.resx">
       <DependentUpon>FViewRequire_Worker.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FWaitConfirmOrder.resx">
-      <DependentUpon>FWaitConfirmOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FWorkdetail.resx">
       <DependentUpon>FWorkdetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FWriteReport_Customers.resx">
-      <DependentUpon>FWriteReport_Customers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FWriteReport_Workers.resx">
-      <DependentUpon>FWriteReport_Workers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FWriteReview.resx">
       <DependentUpon>FWriteReview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSalary_Worker.resx">
+    <EmbeddedResource Include="MWorker\FSalary_Worker.resx">
       <DependentUpon>FSalary_Worker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

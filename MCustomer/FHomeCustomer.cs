@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheGioiViecLam.DAO;
 using TheGioiViecLam.model;
 using TheGioiViecLam.UserControls;
 
@@ -17,6 +18,8 @@ namespace TheGioiViecLam
     public partial class FHomeCustomer : Form
     {
         private string account;
+        private LoadDao loadDao;
+
         private FDisplay_Customers FDisplay_Customers;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
 
@@ -26,8 +29,9 @@ namespace TheGioiViecLam
             InitializeComponent();
             Familyandcare.AutoScroll = true;
             this.FDisplay_Customers = fDisplay_Customers;
-            LoadHistoryOrder();
-            LoadFavourite();
+            loadDao = new LoadDao(Properties.Settings.Default.connStr, account);
+            loadDao.LoadHistoryOrder(lblJobname, lblCost, lblTime);
+            loadDao.LoadFavourite(lblJobNameFavourite, lblCostFavourite, lblNameWorker);
         }
 
         private void guna2PictureBox9_Click(object sender, EventArgs e)
@@ -110,72 +114,6 @@ namespace TheGioiViecLam
         {
             FDisplay_Customers.OpenChildForm(new FOrders(account));
             FDisplay_Customers.btnorders.Checked = true;
-        }
-
-
-        void LoadHistoryOrder()
-        {
-            try 
-            {
-                conn.Open();
-                string query = string.Format("SELECT TOP 1 Post.JobName as jobname, Post.Cost as cost, Orders.ODate as date, Orders.OStatus as status FROM Orders INNER JOIN Post ON Orders.IDP = Post.IDP WHERE CEmail = '{0}' ORDER BY ODate DESC", account);
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataSet dataSet = new DataSet();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while(reader.Read())
-                {
-                    string jobname = reader["jobname"].ToString();
-                    string cost = reader["cost"].ToString();
-                    string status = reader["status"].ToString();
-                    DateTime date = reader.GetDateTime(reader.GetOrdinal("date"));
-                    
-                    lblJobname.Text =jobname;
-                    lblCost.Text ="Cost: "+cost;
-                    lblTime.Text = "Time: " + date.ToString();
-
-                }
-                reader.Close();
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
-        void LoadFavourite()
-        {
-            try
-            {
-                conn.Open();
-                string query = string.Format("SELECT TOP 1 Post.JobName as jobname, Post.Cost as cost,PoSt.Fullname as fullname FROM Saves INNER JOIN Post ON Saves.IDP = Post.IDP WHERE CEmail = '{0}'", account);
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataSet dataSet = new DataSet();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    string jobname = reader["jobname"].ToString();
-                    string cost = reader["cost"].ToString();
-                    string fullname = reader["fullname"].ToString() ;
-                    lblJobNameFavourite.Text = jobname;
-                    lblCostFavourite.Text = "Cost: " + cost;
-                    lblNameWorker.Text = "Worker name: " + fullname;
-                }
-                reader.Close();
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
         }
     }
 }

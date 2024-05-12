@@ -117,8 +117,7 @@ namespace TheGioiViecLam
         private void lblCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //FDisplay_Customers form = new FDisplay_Customers(account);
-            //form.ShowDialog();
+
         }
     }
 }

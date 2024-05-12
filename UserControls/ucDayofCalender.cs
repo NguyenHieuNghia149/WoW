@@ -22,6 +22,7 @@ namespace TheGioiViecLam.UserControls
             InitializeComponent();
             this.Date = Date;
             this.account = account;
+            CheckIfDaySelected(Date);
         }
 
         private void cbBreakMorning_Click(object sender, EventArgs e)
@@ -73,5 +74,48 @@ namespace TheGioiViecLam.UserControls
                 conn.Close();
             }
         }
+        private void CheckIfDaySelected(DateTime date)
+        {
+            try
+            {
+                conn.Open();
+                string sql = "SELECT OptionType FROM BusyDay WHERE Date = @Date AND WEmail = @Email";
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.AddWithValue("@Date", date);
+                command.Parameters.AddWithValue("@Email", account);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    int optionType = Convert.ToInt32(reader["OptionType"]);
+                    // Dựa vào optionType, kiểm tra và tích các checkbox tương ứng
+                    switch (optionType)
+                    {
+                        case 1:
+                            cbBreakMorning.Checked = true;
+                            this.BackColor = Color.FromArgb(195, 255, 147);
+                            break;
+                        case 2:
+                            cbBreakAfternoon.Checked = true;
+                            this.BackColor = Color.FromArgb(255, 175, 97);
+                            break;
+                        case 3:
+                            cbBreakFullDay.Checked = true;
+                            this.BackColor = Color.FromArgb(21, 52, 72);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
+

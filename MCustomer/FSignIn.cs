@@ -21,12 +21,6 @@ namespace TheGioiViecLam
             InitializeComponent();
            
         }
-
-        private void FormSignIn_Load(object sender, EventArgs e)
-        {
-
-        }
-     
         private void btnSignin_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;

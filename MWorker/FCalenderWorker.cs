@@ -65,11 +65,6 @@ namespace TheGioiViecLam
             AddNumbertoMatrix(ucCalender1.dt.Value);
             jobs = GetData(); 
         }
-        private void Btnblock_Click(object sender, EventArgs e)
-        {
-
-        }
-
         void LoadMatrix()
         {
             matrix = new List<List<ucDayofCalender>>();
@@ -124,6 +119,7 @@ namespace TheGioiViecLam
                 control.lblbuoisang.Visible = false;
                 control.lblbuoichieu.Visible = false;
                 control.panelOption.Visible = false;
+                control.panelOption.BackColor = Color.White;
                 
                 int jobCountForMorning = CountJobForDay(useday, 11, 59);
                 int jobCountForAfter = CountJobForAfter(useday, 18, 59);

@@ -24,6 +24,8 @@ namespace TheGioiViecLam
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public string account;
         ImageDao imageDao = new ImageDao();
+        private LoadDao loadDao;
+
         public FProfile_Customers(string account)
         {
             InitializeComponent();

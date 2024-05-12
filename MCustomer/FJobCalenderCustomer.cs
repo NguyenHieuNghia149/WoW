@@ -243,10 +243,10 @@ namespace TheGioiViecLam
                     job.Address = reader["CAddress"].ToString();
                     job.Status = reader["OStatus"].ToString();
                     jobs.Add(job);
-                    /*                    if (job.Status == "Unconfirm                                                                                           " || job.Status == "Confirmed                                                                                           ")
-                                        {
-                                            jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
-                                        }*/
+                    if (job.Status == "Unconfirm                                                                                           " || job.Status == "Confirmed                                                                                           ")
+                    {
+                        jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
+                    }
 
                 }
                 reader.Close();

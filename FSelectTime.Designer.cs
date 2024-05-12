@@ -191,7 +191,6 @@
             this.Name = "FSelectTime";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FSelectTime";
-            this.Load += new System.EventHandler(this.FSelectTime_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NumericMinutes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericHours)).EndInit();
             this.ResumeLayout(false);

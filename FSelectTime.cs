@@ -55,14 +55,9 @@ namespace TheGioiViecLam
         }
         private void UcCalenderMini_CellClicked(object sender, EventArgs e)
         {
-            // Chúng ta cần xác định ô ngày đã được bấm
             ucCalenderMini clickedCalendar = (ucCalenderMini)sender;
-
-            // Cập nhật SelectedRowIndex và SelectedColumnIndex của ucCalenderMini
             SelectedRowIndex = clickedCalendar.SelectedRowIndex;
             SelectedColumnIndex = clickedCalendar.SelectedColumnIndex;
-
-            // Sau đó bạn có thể sử dụng hoặc cập nhật SelectedRowIndex và SelectedColumnIndex theo nhu cầu của bạn.
         }
 
         private void BtnToday_Click(object sender, EventArgs e)
@@ -192,7 +187,7 @@ namespace TheGioiViecLam
                 int count = (int)command.ExecuteScalar();
                 if (count > 0)
                 {
-                    result = true; // Có bản ghi tương ứng với ngày và email trong cơ sở dữ liệu
+                    result = true;
                 }
             }
             catch (Exception ex)
@@ -205,9 +200,6 @@ namespace TheGioiViecLam
             }
             return result;
         }
-
-
-        // Lấy OptionType cho ngày từ cơ sở dữ liệu
         int GetOptionTypeForDate(DateTime date)
         {
             int option = 0;
@@ -234,25 +226,24 @@ namespace TheGioiViecLam
             return option;
         }
 
-        // Thêm các ô ngày cho tháng tiếp theo nếu ngày hiện tại là ngày cuối cùng của tháng
         void AddNextMonthDays(ref DateTime useday, ref int line)
         {
-            useday = useday.AddMonths(1); // Chuyển sang tháng tiếp theo
-            line = 0; // Đặt lại số dòng về 0
+            useday = useday.AddMonths(1); 
+            line = 0; 
 
-            // Lặp qua đến khi gặp ngày Chủ Nhật hoặc hết tháng
+
             while (useday.DayOfWeek != DayOfWeek.Sunday)
             {
                 int collum = dayofWeek.IndexOf(useday.DayOfWeek.ToString());
                 ucDayMini control = matrix[line][collum];
                 control.btnday.Text = "";
-                control.btnday.FillColor = Color.LightGray; // Thiết lập màu xám cho các ô ngày của tháng sau
+                control.btnday.FillColor = Color.LightGray; 
 
                 if (collum >= 6)
                 {
                     line++;
                 }
-                useday = useday.AddDays(1); // Chuyển sang ngày tiếp theo
+                useday = useday.AddDays(1); 
             }
         }
 
@@ -293,10 +284,8 @@ namespace TheGioiViecLam
             int minutes = (int)NumericMinutes.Value;
             DateTime selectedDate = ucCalenderMini1.dt.Value;
 
-            // Thực hiện truy vấn để lấy OptionType từ cơ sở dữ liệu
             int option = GetOptionTypeForDate(selectedDate);
 
-            // Kiểm tra OptionType và thực hiện xử lý tương ứng
             switch (option)
             {
                 case 1:
@@ -320,14 +309,12 @@ namespace TheGioiViecLam
                     break;
             }
 
-            // Kiểm tra các giờ không được chọn mặc định
             if (hours < 7 || (hours >= 11 && hours < 13) || hours >= 19)
             {
                 MessageBox.Show("Không thể chọn vào khung giờ này.", "Thông báo");
                 return;
             }
 
-            // Thực hiện lưu thông tin đặt lịch vào cơ sở dữ liệu
             try
             {
                 conn.Open();
@@ -341,7 +328,6 @@ namespace TheGioiViecLam
                 command.Parameters.AddWithValue("@OStatus", "Unconfirm");
                 command.ExecuteNonQuery();
 
-                // Thông báo thành công
                 MessageBox.Show("Đặt lịch thành công.", "Thông báo");
             }
             catch (Exception ex)
@@ -353,13 +339,7 @@ namespace TheGioiViecLam
                 conn.Close();
             }
 
-            // Đóng form
             this.Close();
-        }
-
-        private void FSelectTime_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

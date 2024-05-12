@@ -28,6 +28,7 @@ namespace TheGioiViecLam
         public int cost;
         public float review;
         public string status;
+        private bool isFilterApplied = false;
         public FSearch(string account, string jobfield)
         {
             InitializeComponent();
@@ -249,8 +250,11 @@ namespace TheGioiViecLam
                     }
                     query += ")";
                 }
-                query += " AND Cost < @Cost";
-                query += " AND Rating >= @Rating";
+                if (isFilterApplied)
+                {
+                    query += " AND Cost < @Cost";
+                    query += " AND Rating >= @Rating";
+                }
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 if (cbx_cities.SelectedItem != null && cbx_districts.SelectedItem != null)
@@ -346,6 +350,7 @@ namespace TheGioiViecLam
 
         private void btnApply_Click(object sender, EventArgs e)
         {
+            isFilterApplied = true;
             string numberString = lblValue.Text.Replace("$", "").Trim();
             if (!string.IsNullOrEmpty(numberString))
             {

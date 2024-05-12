@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheGioiViecLam.DAO;
 using TheGioiViecLam.model;
 using TheGioiViecLam.UserControls;
 
@@ -20,6 +21,8 @@ namespace TheGioiViecLam
         private string OrderNum;
         private string account;
         private string CEmail;
+        private CalenderDao calenderDao;
+
         private List<Order> jobs;
         private DateTime date;
         public DateTime Date { get => date; set => date = value; }
@@ -37,6 +40,8 @@ namespace TheGioiViecLam
             fPanel.Width = pnJob.Width;
             fPanel.Height = pnJob.Height;
             pnJob.Controls.Add(fPanel);
+            calenderDao = new CalenderDao(account);
+
             dt.Value = date;
             ShowJobByDate(date);
         }
@@ -59,54 +64,6 @@ namespace TheGioiViecLam
                 }
             }
         }
-        private List<Order> GetData()
-        {
-            List<Order> jobs = new List<Order>();
-            try
-            {
-                conn.Open();
-                string sql = string.Format("SELECT Customer.Fullname as fullname, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = '{0}' and Customer.CEmail = Orders.CEmail", account);
-                SqlCommand command = new SqlCommand(sql, conn);
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Order job = new Order();
-
-                    // Kiểm tra xem cột có giá trị null không trước khi chuyển đổi kiểu dữ liệu
-                    if (!reader.IsDBNull(reader.GetOrdinal("ODate")))
-                    {
-                        job.Date = reader.GetDateTime(reader.GetOrdinal("ODate"));
-                    }
-                    job.CEmail = reader["CEmail"].ToString();
-                    job.Workername = reader["WorkerName"].ToString();
-                    job.Jobname = reader["jobname"].ToString();
-                    job.FromHours = reader["FromHours"].ToString();
-                    job.FromMinutes = reader["FromMinutes"].ToString();
-                    job.Cost = reader["cost"].ToString();
-                    job.Customername = reader["fullname"].ToString();
-                    job.Phonenumber = reader["phonenumber"].ToString();
-                    job.Address = reader["CAddress"].ToString();
-                    job.Status = reader["OStatus"].ToString();
-                    // Kiểm tra xem trạng thái là "Unconfirm" hay không
-                    if (job.Status == "Unconfirm                                                                                           " || job.Status == "Confirmed                                                                                           ")
-                    {
-                        jobs.Add(job); // Chỉ thêm công việc vào danh sách nếu trạng thái là "Unconfirm"
-                    }
-                }
-                reader.Close();
-                return jobs;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-                return null;
-            }
-            finally
-            {
-                conn.Close(); // Đảm bảo đóng kết nối sau khi sử dụng xong
-            }
-        }
         private void ajob_Done( object sender, EventArgs e,string OrderNum,string CEmail)
         {
             try
@@ -118,7 +75,7 @@ namespace TheGioiViecLam
                 cmd.Parameters.AddWithValue("@CEmail", CEmail);
                 int rowsAffected = cmd.ExecuteNonQuery();
                 conn.Close();
-                jobs = GetData();
+                jobs = calenderDao.GetData();
                 ShowJobByDate(date);
             }
             catch (Exception ex)
@@ -143,7 +100,7 @@ namespace TheGioiViecLam
                 int rowsAffected = cmd.ExecuteNonQuery();
                 conn.Close();
 
-                jobs = GetData();
+                jobs = calenderDao.GetData();
                 ShowJobByDate(date);
             }
             catch (Exception ex)
@@ -166,7 +123,7 @@ namespace TheGioiViecLam
                 int rowsAffected = cmd.ExecuteNonQuery();
                 conn.Close();
 
-                jobs = GetData();
+                jobs = calenderDao.GetData();
                 ShowJobByDate(date);
             }
             catch (Exception ex)
