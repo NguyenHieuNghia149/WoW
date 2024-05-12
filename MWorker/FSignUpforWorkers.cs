@@ -9,7 +9,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TheGioiViecLam.model;
 
 namespace TheGioiViecLam
 {
@@ -46,10 +45,9 @@ namespace TheGioiViecLam
             string district = cbbDistrict.Text;
             string address = txtAddress.Text;
             string phonenumber = txtPhoneNumber.Text;
-
             if (!CheckPassword(password))
             {
-                MessageBox.Show("Please enter a password that contains at least 6 characters, a combination of symbols, numbers, uppercase letters, and lowercase letters.");
+                MessageBox.Show("Please inter password must contain at least 6 characters. Combination of symbols, numbers, uppercase letters, lowercase letters.");
                 return;
             }
 
@@ -61,32 +59,28 @@ namespace TheGioiViecLam
 
             if (!CheckEmail(email))
             {
-                MessageBox.Show("Please enter the email in the correct format.");
+                MessageBox.Show("Please enter email in correct format.");
                 return;
             }
 
-            DBConnection db = new DBConnection();
-            if (db.LoginWorker($"SELECT * FROM Worker WHERE WEmail = '{email}'").Count() != 0)
+            if (db.Login("Select * from Worker where WEmail = '" + email + "'").Count() != 0)
             {
-                MessageBox.Show("The email is already in use!");
+                MessageBox.Show("Email is exist!!");
                 return;
             }
 
             try
             {
-                // Tạo đối tượng Worker
-                Worker worker = new Worker(id, email, password, fullname, gender, birthday, city, district, phonenumber, address);
-                // Thêm Worker vào cơ sở dữ liệu
-                db.AddWorker(worker);
-
-                // Hiển thị form đăng nhập cho Workers
+                string sql = string.Format("INSERT INTO Worker(WID,WEmail,WPassword,Fullname,Gender,Birthday,City,District,Phonenum,WAddress) VALUES('{0}', '{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", id, email, password, fullname, gender, birthday, city, district, phonenumber, address);
+                db.Execute(sql);
                 FSignInforWorkers form = new FSignInforWorkers();
                 form.Show();
                 this.Hide();
+
             }
             catch
             {
-                MessageBox.Show("The email is already registered. Please register with another email!");
+                MessageBox.Show("The email is already registered, please register another email!");
             }
         }
 

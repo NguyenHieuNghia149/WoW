@@ -20,20 +20,20 @@ namespace TheGioiViecLam
             InitializeComponent();
             LoadCitiesIntoComboBox();
         }
-       
+
         private bool CheckPassword(string pass) // kiem tra password
         {
 
             return Regex.IsMatch(pass, @"^(?=.*[a-zA-Z0-9])(?=.*[!@#?$%^&*()-+]).{6,24}$");
         }
 
-        private bool CheckEmail(string email) 
+        private bool CheckEmail(string email)
         {
             return Regex.IsMatch(email, @"^[a-zA-Z0-9_]{3,20}@gmail.com(.vn|)$");
         }
         private void btnSignup_Click(object sender, EventArgs e)
         {
-         
+
             string password = txtPassword.Text;
             string email = txtEmail.Text;
             string passwordconfirm = txtPasswordConfirm.Text;
@@ -42,22 +42,22 @@ namespace TheGioiViecLam
             string gender = txtGender.Text;
             DateTime birthday = dtBirthday.Value;
             string city = cbbCity.Text;
-            string district = cbbDistrict.Text; 
+            string district = cbbDistrict.Text;
             string address = txtAddress.Text;
             string phonenumber = txtPhoneNumber.Text;
-            if(!CheckPassword(password)) 
-            { 
-                MessageBox.Show("Please inter password must contain at least 6 characters. Combination of symbols, numbers, uppercase letters, lowercase letters."); 
-                return; 
+            if (!CheckPassword(password))
+            {
+                MessageBox.Show("Please inter password must contain at least 6 characters. Combination of symbols, numbers, uppercase letters, lowercase letters.");
+                return;
             }
 
-            if(passwordconfirm != password)
+            if (passwordconfirm != password)
             {
                 MessageBox.Show("Please confirm the correct password.");
                 return;
             }
 
-            if(!CheckEmail(email))
+            if (!CheckEmail(email))
             {
                 MessageBox.Show("Please enter email in correct format.");
                 return;
@@ -71,12 +71,12 @@ namespace TheGioiViecLam
 
             try
             {
-                string sql = string.Format("INSERT INTO Customer(CID,CEmail,CPassword,Fullname,Gender,CBirthday,City,District,Phonenum,CAddress) VALUES('{0}', '{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",id, email, password, fullname, gender, birthday, city, district, phonenumber,address);
+                string sql = string.Format("INSERT INTO Customer(CID,CEmail,CPassword,Fullname,Gender,CBirthday,City,District,Phonenum,CAddress) VALUES('{0}', '{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", id, email, password, fullname, gender, birthday, city, district, phonenumber, address);
                 db.Execute(sql);
                 FSignIn form = new FSignIn();
                 form.Show();
                 this.Hide();
-                
+
             }
             catch
             {

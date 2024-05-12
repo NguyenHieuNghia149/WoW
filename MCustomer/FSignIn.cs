@@ -19,8 +19,14 @@ namespace TheGioiViecLam
         public FSignIn()
         {
             InitializeComponent();
-           
+
         }
+
+        private void FormSignIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSignin_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
@@ -49,9 +55,9 @@ namespace TheGioiViecLam
                     MessageBox.Show("Your email or password is incorrect!!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-           
+
         }
-   
+
 
         private void lblCreateAccount_Click(object sender, EventArgs e)
         {
@@ -74,6 +80,6 @@ namespace TheGioiViecLam
             this.Hide();
         }
 
-      
+
     }
 }

@@ -77,7 +77,6 @@
     <Compile Include="MCustomer\FSignUp.Designer.cs">
       <DependentUpon>FSignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\Human.cs" />
     <Compile Include="model\Review.cs" />
     <Compile Include="MWorker\FCalenderWorker.cs">
       <SubType>Form</SubType>

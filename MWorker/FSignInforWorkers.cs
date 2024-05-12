@@ -22,12 +22,12 @@ namespace TheGioiViecLam
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            FSignIn form = new FSignIn();   
+            FSignIn form = new FSignIn();
             form.Show();
             this.Hide();
         }
 
-       
+
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
