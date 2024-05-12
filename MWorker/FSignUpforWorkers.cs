@@ -32,6 +32,10 @@ namespace TheGioiViecLam
         {
             return Regex.IsMatch(email, @"^[a-zA-Z0-9_]{3,20}@gmail.com(.vn|)$");
         }
+        private bool CheckPhone(string phone)
+        {
+            return Regex.IsMatch(phone, @"^[0 - 9]{10}$");
+        }
         private void btnSignup_Click(object sender, EventArgs e)
         {
             string password = txtPassword.Text;
@@ -62,7 +66,11 @@ namespace TheGioiViecLam
                 MessageBox.Show("Please enter email in correct format.");
                 return;
             }
-
+            if (!CheckPhone(phonenumber))
+            {
+                MessageBox.Show("Please enter phonenumber in correct format.");
+                return;
+            }
             if (db.Login("Select * from Worker where WEmail = '" + email + "'").Count() != 0)
             {
                 MessageBox.Show("Email is exist!!");

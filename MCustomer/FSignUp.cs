@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
+using System.Windows.Media.Media3D;
 namespace TheGioiViecLam
 {
     public partial class FSignUp : Form
@@ -30,6 +31,11 @@ namespace TheGioiViecLam
         private bool CheckEmail(string email)
         {
             return Regex.IsMatch(email, @"^[a-zA-Z0-9_]{3,20}@gmail.com(.vn|)$");
+        }
+
+        private bool CheckPhone(string phone)
+        {
+            return Regex.IsMatch(phone, @"^[0 - 9]{10}$");
         }
         private void btnSignup_Click(object sender, EventArgs e)
         {
@@ -60,6 +66,11 @@ namespace TheGioiViecLam
             if (!CheckEmail(email))
             {
                 MessageBox.Show("Please enter email in correct format.");
+                return;
+            }
+            if(!CheckPhone(phonenumber))
+            {
+                MessageBox.Show("Please enter phonenumber in correct format.");
                 return;
             }
 
