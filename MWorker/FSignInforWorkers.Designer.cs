@@ -58,7 +58,7 @@
             this.txtPassword.Location = new System.Drawing.Point(45, 235);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(447, 45);
@@ -150,6 +150,7 @@
             this.lblForgetpass.Size = new System.Drawing.Size(142, 21);
             this.lblForgetpass.TabIndex = 25;
             this.lblForgetpass.Text = "Forgot password?";
+            this.lblForgetpass.Click += new System.EventHandler(this.lblForgetpass_Click);
             // 
             // btnSignin
             // 

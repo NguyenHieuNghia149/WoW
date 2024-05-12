@@ -77,7 +77,7 @@
             this.txtPassword.Location = new System.Drawing.Point(396, 359);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
@@ -182,6 +182,7 @@
             this.lblFGpassword.Size = new System.Drawing.Size(145, 20);
             this.lblFGpassword.TabIndex = 30;
             this.lblFGpassword.Text = "Forgot Password?";
+            this.lblFGpassword.Click += new System.EventHandler(this.lblFGpassword_Click);
             // 
             // lblsignin
             // 

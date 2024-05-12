@@ -68,7 +68,7 @@ namespace TheGioiViecLam
 
         private void lblFGpassword_Click(object sender, EventArgs e)
         {
-            FForgetPassword form = new FForgetPassword();
+            FForgetPassword form = new FForgetPassword("Customer");
             form.Show();
             this.Hide();
         }

@@ -52,7 +52,6 @@ namespace TheGioiViecLam
         }
         public void FHome_Load(object sender, EventArgs e)
         {
-            lblHome.Text = jobfield;
             LoadData();
         }
         private void LoadData()

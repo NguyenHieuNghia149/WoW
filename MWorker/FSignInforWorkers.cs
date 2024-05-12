@@ -71,5 +71,12 @@ namespace TheGioiViecLam
             form.Show();
             this.Hide();
         }
+
+        private void lblForgetpass_Click(object sender, EventArgs e)
+        {
+            FForgetPassword form = new FForgetPassword("Worker");
+            form.Show();
+            this.Hide();
+        }
     }
 }

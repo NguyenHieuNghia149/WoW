@@ -73,8 +73,8 @@ namespace TheGioiViecLam
                     break;
                 case "Deny                                                                                                ":
                     uc.lblstatus.ForeColor = Color.FromArgb(255, 32, 78);
-                    uc.btnbomb.Enabled = false;
-                    //uc.btnAgain.Click += (s, ev) => btnagain_Click();
+                    uc.btnbomb.Visible = false;
+                    uc.btnAgain.Click += (s, ev) => btnAgain_Click(account, IDP, WEmail, s, ev);
                     uc.btnReview.Click += (s, ev) => btnreview_Click(account, IDP,WID,uc,ev);
                     break;
                 case "Done                                                                                                ":
