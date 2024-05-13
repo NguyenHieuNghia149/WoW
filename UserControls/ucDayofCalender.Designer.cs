@@ -164,7 +164,7 @@
             this.btnOptionn.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnOptionn.ImageRotate = 0F;
             this.btnOptionn.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnOptionn.Location = new System.Drawing.Point(92, 5);
+            this.btnOptionn.Location = new System.Drawing.Point(92, 8);
             this.btnOptionn.Name = "btnOptionn";
             this.btnOptionn.PressedState.ImageSize = new System.Drawing.Size(15, 15);
             this.btnOptionn.Size = new System.Drawing.Size(10, 18);

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheGioiViecLam.DAO;
 using TheGioiViecLam.model;
 using TheGioiViecLam.UserControls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
@@ -35,8 +36,8 @@ namespace TheGioiViecLam
 
 
         public int AppTime { get => appTime; set => appTime = value; }
+        OrderDao orderDao = new OrderDao();
 
-        // calendercs calendercs = new calendercs();
         List<Order> jobs = new List<Order>();
         private string postID;
         private string account;

@@ -71,6 +71,7 @@
     <Compile Include="DAO\CalenderDao.cs" />
     <Compile Include="DAO\ImageDao.cs" />
     <Compile Include="DAO\LoadDao.cs" />
+    <Compile Include="DAO\OrderDao.cs" />
     <Compile Include="MCustomer\FSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,12 +329,6 @@
     <Compile Include="UserControls\UCreview.Designer.cs">
       <DependentUpon>UCreview.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucServiceReview.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucServiceReview.Designer.cs">
-      <DependentUpon>ucServiceReview.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UCWorkInFor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -484,9 +479,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCreview.resx">
       <DependentUpon>UCreview.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucServiceReview.resx">
-      <DependentUpon>ucServiceReview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCWorkInFor.resx">
       <DependentUpon>UCWorkInFor.cs</DependentUpon>

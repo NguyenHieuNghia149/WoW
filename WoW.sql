@@ -61,6 +61,7 @@ CREATE TABLE Post (
     [Experience] NCHAR (20)   NOT NULL,
     [img]        VARBINARY (MAX) NOT NULL,
 	[Address]    NVARCHAR(max) NOT NULL,
+	[PDate]    DateTime NOT NULL,
     PRIMARY KEY CLUSTERED ([IDP] ASC),
     FOREIGN KEY ([WID]) REFERENCES [dbo].[Worker] ([WID]),
 );
@@ -172,14 +173,14 @@ END
 Go
 CREATE PROCEDURE pd_Insert_Post_(@IDP int,@Email CHAR(20),@JobName NCHAR(20),
 	@WTime NCHAR(20),@Cost NCHAR(20),@Detail NCHAR(20),@Experience NCHAR(20),@PhoneNum NCHAR(20), 
-	@City NVARCHAR(100), @District NVARCHAR(100),@JobField NCHAR(100),@img varbinary(max), @Address NVARCHAR(MAX)  ) AS
+	@City NVARCHAR(100), @District NVARCHAR(100),@JobField NCHAR(100),@img varbinary(max), @Address NVARCHAR(MAX) ,@Date Datetime ) AS
 BEGIN
 	DECLARE @WID NCHAR(20), @Fullname NCHAR(100)
 	SELECT @WID = WID FROM Worker WHERE WEmail = @Email
 	SELECT @Fullname = Fullname FROM Worker WHERE WEmail = @Email
 
-	INSERT INTO Post(IDP,Email,JobName,WTime,Cost,Detail,Experience,PhoneNum,City,District,JobField,img,WID,FullName,Address)
-	VALUES(@IDP,@Email,@JobName,@WTime,@Cost,@Detail,@Experience,@PhoneNum,@City,@District,@JobField,@img,@WID,@FullName,@Address)
+	INSERT INTO Post(IDP,Email,JobName,WTime,Cost,Detail,Experience,PhoneNum,City,District,JobField,img,WID,FullName,Address,PDate)
+	VALUES(@IDP,@Email,@JobName,@WTime,@Cost,@Detail,@Experience,@PhoneNum,@City,@District,@JobField,@img,@WID,@FullName,@Address,@Date)
 END
 
 go

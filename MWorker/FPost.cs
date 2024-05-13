@@ -157,7 +157,7 @@ namespace TheGioiViecLam
                     conn.Close();*/
                 conn.Open();
                 byte[] b = imageDao.imageToByteArray(picturePost.Image);
-                string query = string.Format("EXEC pd_Insert_Post_ @IDP, @Account, @Job, @Time, @Cost, @Detail, @Experience, @PhoneNum, @Cities, @District, @JobJield, @Image,@Address");
+                string query = string.Format("EXEC pd_Insert_Post_ @IDP, @Account, @Job, @Time, @Cost, @Detail, @Experience, @PhoneNum, @Cities, @District, @JobJield, @Image,@Address,@Date");
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet dataSet = new DataSet();
@@ -173,6 +173,8 @@ namespace TheGioiViecLam
                 cmd.Parameters.AddWithValue("@District", cbbDistrict.Text);
                 cmd.Parameters.AddWithValue("@JobJield", cbbJobJield.Text);
                 cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
+                cmd.Parameters.AddWithValue("@Date", DateTime.Now);
+
                 cmd.Parameters.Add("@Image", SqlDbType.VarBinary, -1).Value = b;
 
                 cmd.ExecuteNonQuery();
