@@ -9,7 +9,6 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TheGioiViecLam.DAO;
 using TheGioiViecLam.model;
 using TheGioiViecLam.UserControls;
 
@@ -33,7 +32,7 @@ namespace TheGioiViecLam
 
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
 
-        OrderDao orderDao = new OrderDao();
+
         public int AppTime { get => appTime; set => appTime = value; }
         List<Order> jobs = new List<Order>();
 
@@ -116,12 +115,12 @@ namespace TheGioiViecLam
                 ucDayofCalender control = matrix[line][collum];
                 control.btnday.Text = i.ToString();
                 control.btnday.Click += Btn_Click;
-                control.btnOptionn.Click += (s, ev) => btnOption_Click(control.panelOption,s,ev);
+                control.btnOptionn.Click += (s, ev) => btnOption_Click(control.panelOption, s, ev);
                 control.lblbuoisang.Visible = false;
                 control.lblbuoichieu.Visible = false;
                 control.panelOption.Visible = false;
                 control.panelOption.BackColor = Color.White;
-                
+
                 int jobCountForMorning = CountJobForDay(useday, 11, 59);
                 int jobCountForAfter = CountJobForAfter(useday, 18, 59);
                 // Xóa màu đỏ của ngày trước đó
@@ -129,7 +128,7 @@ namespace TheGioiViecLam
                 {
                     control.btnday.FillColor = Color.White;
                     control.btnday.ForeColor = Color.Black; // Đảm bảo màu chữ trở lại màu đen
-                   // Đảm bảo màu chữ trở lại màu đen
+                                                            // Đảm bảo màu chữ trở lại màu đen
 
                 }
                 if (useday.DayOfWeek == DayOfWeek.Sunday)
@@ -141,14 +140,6 @@ namespace TheGioiViecLam
                     control.btnday.FillColor = Color.FromArgb(106, 212, 221);
                     control.btnOptionn.BackColor = Color.FromArgb(106, 212, 221);
                     control.btnOptionn.BackColor = Color.FromArgb(106, 212, 221);
-                }
-                if (isEqualDate(useday, date)) // ngay danh daus
-                {
-                    control.btnday.FillColor = Color.FromArgb(255, 32, 78);
-                    control.btnday.ForeColor = Color.White;
-                    // control.btnOptionn.FillColor = Color.Transparent;
-                    control.btnOptionn.BackColor = Color.FromArgb(255, 32, 78);
-
                 }
 
                 if (jobCountForMorning > 0)
@@ -173,52 +164,7 @@ namespace TheGioiViecLam
                 useday = useday.AddDays(1);
             }
         }
-        private List<Order> GetData()
-        {
-            List<Order> jobs = new List<Order>();
-            try
-            {
-                conn.Open();
-                string sql = string.Format("SELECT Customer.Fullname as fullname,Orders.OrderNum as OrderNum, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = '{0}' and Customer.CEmail = Orders.CEmail", account);
-                SqlCommand command = new SqlCommand(sql, conn);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    Order job = new Order();
-                    if (!reader.IsDBNull(reader.GetOrdinal("ODate")))
-                    {
-                        job.Date = reader.GetDateTime(reader.GetOrdinal("ODate"));
-                    }
-                    job.CEmail = reader["CEmail"].ToString();
-                    job.Workername = reader["WorkerName"].ToString();
-                    job.Jobname = reader["jobname"].ToString();
-                    job.FromHours = reader["FromHours"].ToString();
-                    job.FromMinutes = reader["FromMinutes"].ToString();
-                    job.Cost = reader["cost"].ToString();
-                    job.Customername = reader["fullname"].ToString();
-                    job.Phonenumber = reader["phonenumber"].ToString();
-                    job.Address = reader["CAddress"].ToString();
-                    job.Status = reader["OStatus"].ToString();
-                    OrderNum = reader["OrderNum"].ToString();
-                    CEmail = reader["CEmail"].ToString();
-                    if (job.Status == "Unconfirm                                                                                           " || job.Status == "Confirmed                                                                                           ")
-                    {
-                        jobs.Add(job);
-                    }
-                }
-                reader.Close();
-                return jobs;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-                return null;
-            }
-            finally
-            {
-                conn.Close(); // Đảm bảo đóng kết nối sau khi sử dụng xong
-            }
-        }
+
         int CountJobForDay(DateTime date, int startshours, int startsminutes)
         {
             return jobs.Count(job =>
@@ -309,6 +255,53 @@ namespace TheGioiViecLam
             }
         }
 
+        private List<Order> GetData()
+        {
+            List<Order> jobs = new List<Order>();
+            try
+            {
+                conn.Open();
+                string sql = string.Format("SELECT Customer.Fullname as fullname,Orders.OrderNum as OrderNum, Customer.CEmail as CEmail, Customer.PhoneNum as phonenumber,Post.IDP as IDpost, Post.JobName as jobname, Post.Cost as cost, Post.Experience as experience, Post.WTime as time, Orders.IDP, OStatus, ODate, FromHours, FromMinutes, Post.Fullname as WorkerName,Customer.CAddress as CAddress FROM Post,Orders, Customer WHERE Post.IDP = Orders.IDP and Post.Email = '{0}' and Customer.CEmail = Orders.CEmail", account);
+                SqlCommand command = new SqlCommand(sql, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Order job = new Order();
+                    if (!reader.IsDBNull(reader.GetOrdinal("ODate")))
+                    {
+                        job.Date = reader.GetDateTime(reader.GetOrdinal("ODate"));
+                    }
+                    job.CEmail = reader["CEmail"].ToString();
+                    job.Workername = reader["WorkerName"].ToString();
+                    job.Jobname = reader["jobname"].ToString();
+                    job.FromHours = reader["FromHours"].ToString();
+                    job.FromMinutes = reader["FromMinutes"].ToString();
+                    job.Cost = reader["cost"].ToString();
+                    job.Customername = reader["fullname"].ToString();
+                    job.Phonenumber = reader["phonenumber"].ToString();
+                    job.Address = reader["CAddress"].ToString();
+                    job.Status = reader["OStatus"].ToString();
+                    OrderNum = reader["OrderNum"].ToString();
+                    CEmail = reader["CEmail"].ToString();
+                    if (job.Status == "Unconfirm                                                                                           " || job.Status == "Confirmed                                                                                           ")
+                    {
+                        jobs.Add(job);
+                    }
+                }
+                reader.Close();
+                return jobs;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                conn.Close(); // Đảm bảo đóng kết nối sau khi sử dụng xong
+            }
+        }
+
         private List<FDailyJob> dailyJobForms = new List<FDailyJob>();
 
         private void Btn_Click(object sender, EventArgs e)
@@ -326,29 +319,29 @@ namespace TheGioiViecLam
             else
             {
                 // Tạo một cửa sổ mới và thêm vào danh sách
-                FDailyJob newForm = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)), account, jobs, OrderNum,CEmail);
+                FDailyJob newForm = new FDailyJob(new DateTime(ucCalender1.dt.Value.Year, ucCalender1.dt.Value.Month, Convert.ToInt32((sender as Control).Text)), account, jobs, OrderNum, CEmail);
                 newForm.FormClosed += DailyJobForm_FormClosed; // Xử lý sự kiện khi cửa sổ đóng
                 newForm.ShowDialog();
                 dailyJobForms.Add(newForm);
             }
         }
-        private void btnOption_Click(Control control,object sender, EventArgs e)
+        private void btnOption_Click(Control control, object sender, EventArgs e)
         {
             if (control.Visible == false)
             {
-                control.Visible= true;
+                control.Visible = true;
             }
             else
             {
-               control.Visible = false;
+                control.Visible = false;
             }
         }
 
-            // Xử lý sự kiện khi cửa sổ FDailyJob đóng
-            private void DailyJobForm_FormClosed(object sender, FormClosedEventArgs e)
+        // Xử lý sự kiện khi cửa sổ FDailyJob đóng
+        private void DailyJobForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             FDailyJob closedForm = sender as FDailyJob;
-            dailyJobForms.Remove(closedForm); 
+            dailyJobForms.Remove(closedForm); // Xóa cửa sổ đã đóng khỏi danh sách
         }
 
     }

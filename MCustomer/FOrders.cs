@@ -170,7 +170,6 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                MessageBox.Show(IDP, account);
                 string query = string.Format("DELETE FROM Orders WHERE IDP = '{0}' AND CEmail = '{1}'", IDP, account);
                 SqlCommand cmd = new SqlCommand(query, conn);
                 int rowsAffected = cmd.ExecuteNonQuery();
@@ -181,6 +180,7 @@ namespace TheGioiViecLam
             }
             finally
             {
+                LoadOrders("Unconfirm                                                                                           ");
                 conn.Close();
             }
         }

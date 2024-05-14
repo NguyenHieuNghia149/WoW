@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TheGioiViecLam.UserControls
@@ -17,6 +11,7 @@ namespace TheGioiViecLam.UserControls
 
         public DateTime Date { get; private set; }
         public string account;
+
         public ucDayofCalender(DateTime Date, string account)
         {
             InitializeComponent();
@@ -27,41 +22,65 @@ namespace TheGioiViecLam.UserControls
 
         private void cbBreakMorning_Click(object sender, EventArgs e)
         {
-            // Lưu tùy chọn bận buổi sáng và hủy chọn các tùy chọn khác
-            SaveBusyOption(Date, 1);
-            cbBreakAfternoon.Checked = false;
-            cbBreakFullDay.Checked = false;
+            if (cbBreakMorning.Checked)
+            {
+                SaveBusyOption(Date, 1);
+                cbBreakAfternoon.Checked = false;
+                cbBreakFullDay.Checked = false;
+            }
+            else
+            {
+                DeleteBusyOption(Date);
+            }
+            CheckIfDaySelected(Date);
         }
 
         private void cbBreakAfternoon_Click(object sender, EventArgs e)
         {
-            // Lưu tùy chọn bận buổi chiều và hủy chọn các tùy chọn khác
-            SaveBusyOption(Date, 2);
-            cbBreakMorning.Checked = false;
-            cbBreakFullDay.Checked = false;
+            if (cbBreakAfternoon.Checked)
+            {
+                SaveBusyOption(Date, 2);
+                cbBreakMorning.Checked = false;
+                cbBreakFullDay.Checked = false;
+            }
+            else
+            {
+                DeleteBusyOption(Date);
+            }
+            CheckIfDaySelected(Date);
         }
+
         private void cbBreakFullDay_Click(object sender, EventArgs e)
         {
-            SaveBusyOption(Date, 3);
-            cbBreakMorning.Checked = false;
-            cbBreakAfternoon.Checked = false;
+            if (cbBreakFullDay.Checked)
+            {
+                SaveBusyOption(Date, 3);
+                cbBreakMorning.Checked = false;
+                cbBreakAfternoon.Checked = false;
+            }
+            else
+            {
+                DeleteBusyOption(Date);
+            }
+            CheckIfDaySelected(Date);
         }
+
         private void SaveBusyOption(DateTime date, int option)
         {
             try
             {
                 conn.Open();
-                string sql = @"IF EXISTS (SELECT * FROM BusyDay WHERE Date = @Date)
-                  BEGIN
-                      UPDATE BusyDay SET OptionType = @Option WHERE Date = @Date and WEmail = @Email
-                  END
-                  ELSE
-                  BEGIN
-                      INSERT INTO BusyDay (Date, OptionType,WEmail) VALUES (@Date, @Option,@Email)
-                  END";
+                string sql = @"IF EXISTS (SELECT * FROM BusyDay WHERE Date = @Date AND WEmail = @Email)
+                BEGIN
+                    UPDATE BusyDay SET OptionType = @Option WHERE Date = @Date AND WEmail = @Email
+                END
+                ELSE
+                BEGIN
+                    INSERT INTO BusyDay (Date, OptionType, WEmail) VALUES (@Date, @Option, @Email)
+                END";
                 SqlCommand command = new SqlCommand(sql, conn);
                 command.Parameters.AddWithValue("@Date", date);
-                command.Parameters.AddWithValue("@Option", option); 
+                command.Parameters.AddWithValue("@Option", option);
                 command.Parameters.AddWithValue("@Email", account);
                 command.ExecuteNonQuery();
             }
@@ -74,6 +93,28 @@ namespace TheGioiViecLam.UserControls
                 conn.Close();
             }
         }
+
+        private void DeleteBusyOption(DateTime date)
+        {
+            try
+            {
+                conn.Open();
+                string sql = "DELETE FROM BusyDay WHERE Date = @Date AND WEmail = @Email";
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.AddWithValue("@Date", date);
+                command.Parameters.AddWithValue("@Email", account);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         private void CheckIfDaySelected(DateTime date)
         {
             try
@@ -106,6 +147,13 @@ namespace TheGioiViecLam.UserControls
                             break;
                     }
                 }
+                else
+                {
+                    cbBreakMorning.Checked = false;
+                    cbBreakAfternoon.Checked = false;
+                    cbBreakFullDay.Checked = false;
+                    this.BackColor = DefaultBackColor;
+                }
             }
             catch (Exception ex)
             {
@@ -118,4 +166,3 @@ namespace TheGioiViecLam.UserControls
         }
     }
 }
-
