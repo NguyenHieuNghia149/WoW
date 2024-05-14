@@ -54,8 +54,8 @@ namespace TheGioiViecLam
             try
             {
                 conn.Open();
-                string query1 = string.Format("select count(JobName) as N from Post where Email = '{0}' AND YEAR(PDate) = '{1}'  ", account,year);
-                string query2 = string.Format("select distinct JobName from Post where Email = '{0}'   AND YEAR(PDate) = '{1}' ", account,year);
+                string query1 = string.Format("select count(JobName) as N from Post where Email = '{0}'  ", account);
+                string query2 = string.Format("select distinct JobName from Post where Email = '{0}'", account);
 
                 SqlCommand cmd1 = new SqlCommand(query1, conn);
                 SqlCommand cmd2 = new SqlCommand(query2, conn);
